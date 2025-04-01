@@ -1,0 +1,157 @@
+.form-group {
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.name-group {
+	display: flex;
+	gap: 1rem;
+}
+
+label {
+	color: #555;
+	margin-bottom: 5px;
+	display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+
+	width: 100%;
+	padding: var(--space-sm);
+	margin: var(--space-sm) 0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+	height: 25px;
+	width: 25px;
+	vertical-align: bottom;
+
+}
+
+a {
+
+	color: #0864bb;
+
+	&.btn {
+		min-width: min-content;
+		white-space: nowrap;
+		border-radius: 4px;
+		padding: var(--space-xs) var(--space-md);
+		transition-duration: 150ms;
+		background-color: var(--green-400);
+		color: white;
+		font-weight: bold;
+
+		&:hover {
+			filter: brightness(90%);
+
+		}
+	}
+
+	&.account-link {
+		min-width: min-content;
+		white-space: nowrap;
+		border-radius: 4px;
+		padding: var(--space-xs) var(--space-md);
+		transition-duration: 150ms;
+		background-color: var(--grey-100);
+		font-weight: bold;
+		color: var(--grey-800);
+
+		i {
+			font-size: var(--text-md);
+		}
+
+		&:hover {
+			filter: brightness(90%);
+
+		}
+
+	}
+
+}
+
+
+button.primary {
+	min-width: min-content;
+	border-radius: 4px;
+	padding: var(--space-xs) var(--space-md);
+	transition-duration: 150ms;
+	background-color: var(--green-400);
+	color: white;
+	font-size: var(--text-sm);
+	font-weight: bold;
+
+	&:hover {
+		filter: brightness(90%);
+
+	}
+
+}
+
+.error {
+	color: indianred
+}
+
+button.google {
+	display: flex;
+	justify-content: center;
+	gap: var(--space-lg);
+	align-items: center;
+	min-width: min-content;
+	border-radius: 4px;
+	padding: var(--space-xs) var(--space-md);
+	transition-duration: 150ms;
+	background-color: white;
+	border: solid 1px var(--grey-500);
+	width: 100%;
+	color: black;
+	font-size: var(--text);
+	font-weight: normal;
+	position: relative;
+
+	img {
+		position: absolute;
+		left: 0;
+		padding: 0 1rem;
+		;
+	}
+
+	span {
+		width: 100%;
+	}
+}
+
+button.warn {
+	background-color: indianred
+}
+
+button[disabled] {
+	background: var(--grey-200)
+}
+
+.faq {
+	ul {
+		list-style: disc;
+		padding: 0;
+		margin: 0;
+		padding-left: 36px;
+
+		li {
+			padding: 8px 12px;
+			border-bottom: 1px solid #ddd;
+			font-size: 16px;
+		}
+
+		li:last-child {
+			border-bottom: none;
+		}
+	}
+}

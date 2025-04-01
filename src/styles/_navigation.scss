@@ -1,0 +1,135 @@
+//links in the header should inherit color
+
+button.dropdown-button {
+	background: none;
+	border: 0;
+	color: unset;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 100%;
+	font: inherit;
+	line-height: inherit;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	vertical-align: baseline;
+	width: auto;
+}
+
+nav {
+	a {
+		color: inherit
+	}
+}
+
+.show {
+	display: block;
+}
+
+.header-wrapper {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	padding: var(--space-sm) 0;
+}
+
+.nav-wrapper {
+	height: 5rem;
+	display: flex;
+
+	&.show {
+		display: block;
+	}
+}
+
+
+
+.nav-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	gap: var(--space-md);
+	position: relative;
+	display: flex;
+	height: 100%;
+}
+
+.nav-item {
+	display: flex;
+	position: relative;
+}
+
+.nav-link {
+	gap: 0.5rem;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dropdown {
+	position: absolute;
+	display: inline-block;
+	background-color: white;
+	top: 100%;
+	right: calc(-1*var(--space-md));
+	min-width: 300px;
+	opacity: 0;
+	visibility: hidden;
+
+
+	/* // testing */
+	/* opacity: 1; */
+	/* visibility: visible; */
+	/* // */
+
+	transition: all 0.2s ease;
+	border: solid var(--grey-500) 1px;
+	border-radius: 4px;
+
+	&.show {
+		opacity: 1;
+		visibility: visible
+	}
+}
+
+
+//testing
+li.nav-item:hover .dropdown {
+	opacity: 1;
+	visibility: visible;
+	padding: 0;
+}
+
+.dropdown-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	padding: var(--space-sm);
+	list-style-type: none;
+	margin: 0;
+}
+
+.dropdown-item {
+	padding: 0;
+}
+
+.dropdown-link {
+	text-decoration: none;
+	display: block;
+}
+
+/* Hover effects */
+.nav-link:hover {
+	text-decoration: underline;
+}
+
+.dropdown-link:hover {
+	text-decoration: underline;
+}
+
+.mobile-header {
+	display: none;
+}

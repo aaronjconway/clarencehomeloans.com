@@ -1,0 +1,101 @@
+@use 'base';
+
+:root {
+	--font-heading: system-ui;
+	--font-body: system-ui;
+	/* set base values */
+	--text-base-size: 1.15rem;
+	--text-scale-ratio: 1.25;
+
+	/* type scale */
+	--text-xs: calc(var(--text-base-size) / pow(var(--text-scale-ratio), 2));
+	--text-sm: calc(var(--text-base-size) / var(--text-scale-ratio));
+	--text: var(--text-base-size);
+	--text-md: calc(var(--text-base-size) * var(--text-scale-ratio));
+	--text-lg: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 2));
+	--text-xl: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 3));
+	--text-xxl: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 4));
+	--text-xxxl: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 5));
+
+
+	/* line-height */
+	--heading-line-height: 1.1875;
+	--body-line-height: 1.55;
+
+	// spacing
+	--space: 1rem;
+	--space-xxs: calc(0.25 * var(--space));
+	--space-xs: calc(0.5 * var(--space));
+	--space-sm: calc(0.75 * var(--space));
+	--space-md: calc(1.5 * var(--space));
+	--space-lg: calc(2 * var(--space));
+	--space-xl: calc(4 * var(--space));
+	--space-xxl: calc(8 * var(--space));
+
+	@media (max-width: base.$lg) {
+		--text-base-size: 1.25rem;
+		--text-scale-ratio: 1.10;
+	}
+
+	@media (max-width: base.$md) {
+		--text-base-size: 1.125rem;
+		--text-scale-ratio: 1.10;
+	}
+
+	@media (max-width: base.$sm) {
+		--text-scale-ratio: 1.10;
+		--text-base-size: 16px;
+		--space: .8rem;
+	}
+
+}
+
+//body font size
+body {
+	font-size: var(--text-base-size);
+	font-family: var(--font-body);
+	color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: var(--heading-line-height);
+	font-weight: bold;
+	font-family: var(--font-heading);
+	margin-bottom: var(--space-xxs);
+}
+
+h1 {
+	font-size: var(--text-xxl);
+	margin-bottom: var(--space-xl);
+}
+
+h2 {
+	font-size: var(--text-xl);
+	margin-bottom: var(--space-lg)
+}
+
+h3 {
+	font-size: var(--text-lg);
+	margin-bottom: var(--space-md)
+}
+
+h4 {
+	font-size: var(--text-md);
+	margin-bottom: var(--space-sm)
+}
+
+p {
+	line-height: var(--body-line-height);
+	margin-bottom: var(--space)
+}
+
+.sub-title {
+	margin-bottom: var(--space-sm);
+	color: var(--green-500);
+	font-weight: bold;
+}
+
+/*links are text - typography*/

@@ -1,0 +1,49 @@
+table.documents {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+
+	th,
+	td {
+		border: 1px solid #ddd;
+		padding: 10px;
+		text-align: left;
+
+	}
+
+
+	th {
+		background-color: #f4f4f4;
+		font-weight: bold;
+	}
+
+	tr {
+		&:nth-child(even) {
+			background-color: #f9f9f9;
+		}
+
+	}
+}
+
+table.pending-upload {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 16px;
+
+
+	th,
+	td {
+		padding: 10px;
+		text-align: left;
+
+		&.right-align {
+			display: flex;
+			justify-content: end;
+		}
+	}
+
+	th {
+		font-weight: bold;
+	}
+}

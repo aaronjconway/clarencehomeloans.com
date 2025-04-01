@@ -1,0 +1,46 @@
+@use 'base';
+/*
+* spacing, layout and structure
+* */
+
+hr {
+	border: none;
+	border-bottom: 1px solid var(--grey-500)
+}
+
+section {
+	margin: 4rem 0;
+}
+
+.container {
+	max-width: base.$xl;
+	padding: 0 2%;
+	margin: 0 auto;
+
+	&.compressed {
+		/* max-width: base.$lg; */
+
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+//larger than 786px
+@media (min-width:786px) {
+
+	.container {
+		&.compact {
+			width: 66%;
+		}
+	}
+
+	section {
+		margin: var(--space-xl) 0;
+	}
+
+}
