@@ -11,8 +11,8 @@
     <div class="container">
         <div class="main-heading">
             <p class="sub-title">BENEFITS</p>
-            <h2 class="after">Why Work with Us?</h2>
-            <p class="sub-heading">High level information and transparency</p>
+            <h2 class="after">Why Work with a Broker?</h2>
+            <p class="sub-heading">Get the best pricing and service.</p>
         </div>
         <div class="features-grid">
             <div class="feature">
@@ -20,11 +20,11 @@
                     <Transparent width="100%" height="100%" />
                 </div>
                 <div class="feature-content">
-                    <div class="heading">Transparent</div>
-                    <div class="sub-heading">{`We do not sugar coat`}</div>
+                    <div class="heading">Options</div>
+                    <div class="sub-heading">{`A Solution for Everyone`}</div>
                     <div class="content">
-                        Our licensed ( yes licensed ) loan officers can get you
-                        conscise and realistic information.
+                        We have access to hundreds of lenders to get you the
+                        best rates and programs.
                     </div>
                 </div>
             </div>
@@ -33,13 +33,11 @@
                     <Money height={'100%'} width={'100%'} />
                 </div>
                 <div class="feature-content">
-                    <div class="heading">Free</div>
-                    <div class="sub-heading">
-                        {`No cost at any time`}
-                    </div>
+                    <div class="heading">Pricing</div>
+                    <div class="sub-heading">{`Wholesale rates`}</div>
                     <div class="content">
-                        Read more about how we make money and provide this
-                        service.
+                        Our low overhead allows us to provide extremely
+                        competitive pricing.
                     </div>
                 </div>
             </div>
@@ -49,12 +47,9 @@
                 </div>
                 <div class="feature-content">
                     <div class="heading">Speed</div>
-                    <div class="sub-heading">
-                        {`Fast response and analysis`}
-                    </div>
+                    <div class="sub-heading">{`Fast approval and close`}</div>
                     <div class="content">
-                        We typically provide same day answers with long term
-                        support for any stage home buyer.
+                        We routinely close loans in under 2 weeks.
                     </div>
                 </div>
             </div>
@@ -68,8 +63,8 @@
                         {`Easy to use online application`}
                     </div>
                     <div class="content">
-                        Our streamlined process makes it incredibly easy to view
-                        your proposal.
+                        Our streamlined online application makes it incredibly
+                        easy to sign documents and check your loan status.
                     </div>
                 </div>
             </div>

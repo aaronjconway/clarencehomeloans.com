@@ -1,15 +1,29 @@
 <script lang="ts">
     let { data } = $props()
+
+    // places the data into cateogy bucket and cleans up bad slugs
+    function aggregateCategories(data: any) {
+        let obj = {}
+        for (const key of data) {
+            const cat = key.Category
+            ;(obj[cat] ||= []).push(key)
+        }
+        return obj as any
+    }
+
+    const categories = aggregateCategories(data.result)
+    console.log(categories)
 </script>
 
 <section>
     <div class="container">
-        <div class="grid">
-            {#each data.result.Loan_Programs as loan}
-                {#if loan.loan_page}
+        <h2>Conventional</h2>
+        {#each categories.conventional as loan}
+            <div class="grid">
+                {#if loan.slug}
                     <a
                         class="card-link-wrapper"
-                        href={`/home-loans/${loan.loan_page.slug}`}
+                        href={`/home-loans/${loan.slug.slug}`}
                     >
                         <div class="card">
                             <div class="title">{loan.Name}</div>
@@ -25,8 +39,17 @@
                             </div>
                         </div>
                     </a>
-                {:else}
-                    <a class="card-link-wrapper" href={`/home-loans/${''}`}>
+                {/if}
+            </div>
+        {/each}
+        <h2>FHA</h2>
+        <div class="grid">
+            {#each categories.fha as loan}
+                {#if loan.slug}
+                    <a
+                        class="card-link-wrapper"
+                        href={`/home-loans/${loan.slug.slug}`}
+                    >
                         <div class="card">
                             <div class="title">{loan.Name}</div>
                             <div class="summary-wrapper">
@@ -64,7 +87,7 @@
         font-weight: 600;
         color: var(--grey-800);
         padding: 2px 8px;
-        font-size: 12px;
+        font-size: var(--space-sm);
     }
 
     .title {
@@ -80,7 +103,7 @@
     }
 
     .short-summary {
-        font-size: var(--text-sm);
+        font-size: var(--text);
         margin: 0;
     }
 
@@ -88,7 +111,6 @@
         color: unset;
 
         .card {
-            /* border: solid 1px var(--grey-500); */
             padding: var(--space-sm);
             border-radius: 4px;
             background: var(--grey-100);

@@ -3,9 +3,14 @@
 :root {
 	--font-heading: system-ui;
 	--font-body: system-ui;
+
 	/* set base values */
-	--text-base-size: 1.15rem;
-	--text-scale-ratio: 1.25;
+	--text-base-size: 1rem;
+	--text-scale-ratio: 1.15;
+
+	/* line-height */
+	--heading-line-height: 1.1875;
+	--body-line-height: 1.6;
 
 	/* type scale */
 	--text-xs: calc(var(--text-base-size) / pow(var(--text-scale-ratio), 2));
@@ -18,9 +23,6 @@
 	--text-xxxl: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 5));
 
 
-	/* line-height */
-	--heading-line-height: 1.1875;
-	--body-line-height: 1.55;
 
 	// spacing
 	--space: 1rem;
@@ -32,20 +34,17 @@
 	--space-xl: calc(4 * var(--space));
 	--space-xxl: calc(8 * var(--space));
 
-	@media (max-width: base.$lg) {
-		--text-base-size: 1.25rem;
-		--text-scale-ratio: 1.10;
+	@media (min-width:base.$sm) {
+		--text-scale-ratio: 1.20;
 	}
 
-	@media (max-width: base.$md) {
-		--text-base-size: 1.125rem;
-		--text-scale-ratio: 1.10;
+	@media (min-width:base.$md) {
+		--text-scale-ratio: 1.20;
 	}
 
-	@media (max-width: base.$sm) {
-		--text-scale-ratio: 1.10;
-		--text-base-size: 16px;
-		--space: .8rem;
+	@media (min-width:base.$xl) {
+		--text-base-size: 1.15rem;
+		--text-scale-ratio: 1.20;
 	}
 
 }
@@ -55,6 +54,7 @@ body {
 	font-size: var(--text-base-size);
 	font-family: var(--font-body);
 	color: var(--ink);
+	line-height: var(--body-line-height)
 }
 
 h1,

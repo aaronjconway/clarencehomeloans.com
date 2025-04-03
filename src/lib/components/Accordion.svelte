@@ -31,7 +31,6 @@
         color: var(--platinum-800);
         width: 100%;
         margin: 0;
-        border: solid 1px var(--grey-500);
         border-radius: 4px;
         background: var(--grey-100);
 
@@ -48,7 +47,7 @@
             display: flex;
             flex-direction: column;
             height: fit-content;
-            padding: 1rem 0;
+            padding: 1rem;
         }
     }
 </style>

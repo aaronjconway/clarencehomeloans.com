@@ -3,12 +3,12 @@
         {
             title: 'Tools',
             desc: 'Helpful tools for home buyers',
-            link: '/tools',
+            link: '/pending',
         },
         {
             title: 'Loan Programs',
             desc: 'Have a quick question we can answer?',
-            link: '/home-loans',
+            link: '/pending',
         },
         {
             title: 'Mortgage Education',

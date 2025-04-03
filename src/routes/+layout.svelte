@@ -20,8 +20,8 @@
     })
 </script>
 
-<!-- <Header /> -->
-<Header {data} />
+<Header />
+<!-- <Header {data} /> -->
 {#if children}
     {@render children()}
 {:else}

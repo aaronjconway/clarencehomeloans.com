@@ -4,6 +4,17 @@
     let { form }: { form: ActionData } = $props()
     import Phone from 'virtual:icons/openmoji/mobile-phone'
     import Email from 'virtual:icons/openmoji/e-mail'
+
+    let phone = $state('')
+    function formatPhone() {
+        let value = phone
+        value = value.replace(/\D/g, '')
+        var size = value.length
+        if (size > 0) value = '(' + value
+        if (size > 3) value = value.slice(0, 4) + ') ' + value.slice(4, 11)
+        if (size > 6) value = value.slice(0, 9) + '-' + value.slice(9)
+        phone = value
+    }
 </script>
 
 <section>
@@ -20,13 +31,15 @@
                     <div class="icon-wrapper">
                         <Phone width="100%" height="100%" />
                     </div>
-                    <a href="tel:6197720878">(619) 772 0878</a>
+                    <a href="tel:6027372576">(602) 737-2576</a>
                 </div>
                 <div class="contact-wrapper">
                     <div class="icon-wrapper">
                         <Email width="100%" height="100%" />
                     </div>
-                    <a href="mailto:info@gimmerate.com">info@gimmerate.com</a>
+                    <a href="mailto:aclarence@nexamortgage.com"
+                        >aclarence@nexamortgage.com</a
+                    >
                 </div>
             </div>
             <div class="right">
@@ -36,7 +49,7 @@
                         <p>We typically reach out within a few hours.</p>
                     </div>
                 {:else}
-                    <form method="POST" use:enhance>
+                    <form method="POST" use:enhance action="?/contact">
                         <div class="name-group">
                             <div class="form-group">
                                 <label for="first_name">First Name</label>
@@ -46,6 +59,11 @@
                                     name="first_name"
                                     required
                                 />
+                            </div>
+                            <div class="form-group beans">
+                                <label for="beans">
+                                    <input type="text" name="beans" />
+                                </label>
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Last Name</label>
@@ -65,6 +83,8 @@
                                 id="phone"
                                 name="phone"
                                 required
+                                bind:value={phone}
+                                oninput={formatPhone}
                             />
                         </div>
 
@@ -83,18 +103,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="privacy">
+                            <label for="privacy" class="privacy">
                                 <input
                                     type="checkbox"
                                     id="privacy"
                                     name="privacy"
                                     required
                                 />
-                                I agree to the
-                                <a
-                                    class="link"
-                                    href="/privacy-policy?from=contact"
-                                    >privay policy</a
+                                I agree to be contacted by Clarence Home Loans via
+                                call, email, and text. To opt out, you can reply
+                                'stop' at any time or click the unsubscribe link
+                                in the emails. Message and data rates may apply.
+                                <a href="/privacy-policy?from=contact"
+                                    >privacy policy</a
                                 >
                             </label>
                         </div>
@@ -108,6 +129,9 @@
 </section>
 
 <style lang="scss">
+    .privacy {
+        font-size: var(--text-sm);
+    }
     .wrapper {
         display: grid;
         grid-template-columns: 2fr;
@@ -134,5 +158,9 @@
         .wrapper {
             grid-template-columns: 1fr 1fr;
         }
+    }
+
+    .beans {
+        display: none;
     }
 </style>

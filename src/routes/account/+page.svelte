@@ -16,7 +16,7 @@
     <UploadBox {data} />
 </section>
 
-<h3>My Documents</h3>
+<h3>My Uploaded Documents</h3>
 <div class="table-wrapper">
     <!-- need for compatibility with s3. we are forced to have empty folder -->
     {#if docs && docs.length > 0 && docs[0]?.name != '.emptyFolderPlaceholder'}
@@ -36,7 +36,7 @@
                             <td
                                 >{format(
                                     doc.created_at,
-                                    'MMMM-dd-yyyy hh:mm a'
+                                    'MMMM dd yyyy hh:mm a'
                                 )}</td
                             >
                             <td
@@ -52,13 +52,13 @@
         Upload some documents!
     {/if}
 
-    <div class="form-wrapper">
-        <form action="?/deleteDocuments" method="post" use:enhance>
-            <button class="warn primary" type="submit"
-                >Delete All Documents</button
-            >
-        </form>
-    </div>
+    <!-- <div class="form-wrapper"> -->
+    <!--     <form action="?/deleteDocuments" method="post" use:enhance> -->
+    <!--         <button class="warn primary" type="submit" -->
+    <!--             >Delete All Documents</button -->
+    <!--         > -->
+    <!--     </form> -->
+    <!-- </div> -->
 </div>
 
 <UserDetails {data} />

@@ -1,16 +1,24 @@
 <script lang="ts">
     import { Splide, SplideSlide } from '@splidejs/svelte-splide'
-    import { reviews, type Review } from '$lib/data/reviews'
 
     let reviewDialog: HTMLDialogElement
     let reviewText = $state('')
 
+    interface Review {
+        content: string
+        author: string
+        review_date: Date
+    }
+
     function handleReadMore(review: Review) {
-        reviewText = review.text
+        reviewText = review.content
         reviewDialog.open ? reviewDialog.close() : reviewDialog.showModal()
     }
+
+    const { reviews } = $props()
 </script>
 
+<!-- <pre>{JSON.stringify(reviews, null, 4)}</pre> -->
 <section>
     <div class="container">
         <Splide aria-label="Testimonials">
@@ -18,12 +26,12 @@
                 <SplideSlide>
                     <div class="review-card">
                         <div class="review-stars">
-                            {#each Array(5) as star}
+                            {#each Array(5) as _}
                                 <i class="fa fa-star"></i>
                             {/each}
                         </div>
                         <div class="review-text">
-                            {@html review.text}
+                            {@html review.content}
                         </div>
                         <button
                             onclick={() => {
@@ -31,7 +39,7 @@
                             }}>read more</button
                         >
                         <div class="author">
-                            - {review.author_name}
+                            - {review.author}
                         </div>
                     </div>
                 </SplideSlide>

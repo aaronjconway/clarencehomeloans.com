@@ -2,20 +2,20 @@
     import Logo from '$lib/components/Logo.svelte'
     import Hamburger from '$lib/components/Hamburger.svelte'
     import CloseButton from './CloseButton.svelte'
-    import { goto, invalidateAll } from '$app/navigation'
+    // import { goto, invalidateAll } from '$app/navigation'
 
-    let { data } = $props()
-    let { supabase, session } = $derived(data)
+    // let { data } = $props()
+    // let { supabase , session  } = $derived(data)
 
-    const logout = async () => {
-        const { error } = await supabase.auth.signOut()
-        if (error) {
-            console.error(error)
-        }
-        invalidateAll()
-        handleCloseNav()
-        goto('/')
-    }
+    // const logout = async () => {
+    //     const { error } = await supabase.auth.signOut()
+    //     if (error) {
+    //         console.error(error)
+    //     }
+    //     invalidateAll()
+    //     handleCloseNav()
+    //     goto('/')
+    // }
 
     function handleCloseNav() {
         console.log('closing mobile menu')
@@ -60,17 +60,22 @@
                 { name: 'Licensing', link: '/licensing', type: 'link' },
             ],
         },
-        {
-            name: 'Education',
-            type: 'dropdown',
-            links: [
-                {
-                    name: 'Home Buying Education',
-                    link: '/pending',
-                    type: 'link',
-                },
-            ],
-        },
+        // {
+        //     name: 'Loan Options',
+        //     type: 'link',
+        //     link: '/home-loans',
+        // },
+        // {
+        //     name: 'Education',
+        //     type: 'dropdown',
+        //     links: [
+        //         {
+        //             name: 'Home Buying Education',
+        //             link: '/pending',
+        //             type: 'link',
+        //         },
+        //     ],
+        // },
     ]
 </script>
 
@@ -83,31 +88,31 @@
                 <nav class="nav">
                     <div class="mobile-header">
                         <div class="mobile-button-wrapper">
-                            {#if session}
-                                <div class="account">
-                                    <a
-                                        href="/account"
-                                        class="btn"
-                                        onclick={handleCloseNav}>My Account</a
-                                    >
-                                    <button class="primary" onclick={logout}
-                                        >Sign Out</button
-                                    >
-                                </div>
-                            {:else}
-                                <div class="account">
-                                    <a
-                                        href="/auth/login"
-                                        class="btn"
-                                        onclick={handleCloseNav}>Login</a
-                                    >
-                                    <a
-                                        href="/auth/signup"
-                                        onclick={handleCloseNav}
-                                        class="btn">Signup</a
-                                    >
-                                </div>
-                            {/if}
+                            <!-- {#if session} -->
+                            <!--     <div class="account"> -->
+                            <!--         <a -->
+                            <!--             href="/account" -->
+                            <!--             class="btn" -->
+                            <!--             onclick={handleCloseNav}>My Account</a -->
+                            <!--         > -->
+                            <!--         <button class="primary" onclick={logout} -->
+                            <!--             >Sign Out</button -->
+                            <!--         > -->
+                            <!--     </div> -->
+                            <!-- {:else} -->
+                            <!--     <div class="account"> -->
+                            <!--         <a -->
+                            <!--             href="/auth/login" -->
+                            <!--             class="btn" -->
+                            <!--             onclick={handleCloseNav}>Login</a -->
+                            <!--         > -->
+                            <!--         <a -->
+                            <!--             href="/auth/signup" -->
+                            <!--             onclick={handleCloseNav} -->
+                            <!--             class="btn">Signup</a -->
+                            <!--         > -->
+                            <!--     </div> -->
+                            <!-- {/if} -->
                         </div>
                         <CloseButton />
                     </div>
@@ -150,19 +155,19 @@
                         {/each}
                     </ul>
                 </nav>
-                {#if session}
-                    <div class="account">
-                        <a href="/account" class="btn">My Account</a>
-                        <button class="primary" onclick={logout}
-                            >Sign Out</button
-                        >
-                    </div>
-                {:else}
-                    <div class="account">
-                        <a href="/auth/login" class="btn">Login</a>
-                        <a href="/auth/signup" class="btn">Signup</a>
-                    </div>
-                {/if}
+                <!-- {#if session} -->
+                <!--     <div class="account"> -->
+                <!--         <a href="/account" class="btn">My Account</a> -->
+                <!--         <button class="primary" onclick={logout} -->
+                <!--             >Sign Out</button -->
+                <!--         > -->
+                <!--     </div> -->
+                <!-- {:else} -->
+                <!--     <div class="account"> -->
+                <!--         <a href="/auth/login" class="btn">Login</a> -->
+                <!--         <a href="/auth/signup" class="btn">Signup</a> -->
+                <!--     </div> -->
+                <!-- {/if} -->
             </div>
         </div>
     </div>

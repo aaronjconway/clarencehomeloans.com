@@ -1,9 +1,8 @@
 <section>
     <div class="container">
         <header>
-            <h2>How does this work?</h2>
-            <p>We make sure you're getting the best possible deal.</p>
-            <a href="/faq">Frequently Asked Questions</a>
+            <h2>Expert Guidance for Your Home Loan Journey</h2>
+            <p>We'll walk you through from start to finish.</p>
         </header>
         <div class="steps-wrapper">
             <div class="step">
@@ -12,9 +11,7 @@
                     <div class="step-header-text">Chat</div>
                 </div>
                 <div class="step-content">
-                    Have a seasoned professional evaluate your situation wether
-                    that's just getting started or you already have a loan
-                    estimate.
+                    Have a seasoned professional evaluate your needs.
                 </div>
             </div>
             <div class="step">
@@ -23,18 +20,16 @@
                     <div class="step-header-text">Strategize</div>
                 </div>
                 <div class="step-content">
-                    Conduct a detailed review of your unique scenario ensuring
-                    you have accurate information.
+                    Review your options and home buying plan.
                 </div>
             </div>
             <div class="step">
                 <div class="step-header">
                     <div class="step-number">3</div>
-                    <div class="step-header-text">Match</div>
+                    <div class="step-header-text">Shop</div>
                 </div>
                 <div class="step-content">
-                    Find a set of reliable and great priced lenders that meet
-                    your goals.
+                    Search with confidence that you're qualified and competitve.
                 </div>
             </div>
             <div class="step">
@@ -42,17 +37,18 @@
                     <div class="step-number-wrapper">
                         <div class="step-number">4</div>
                     </div>
-                    <div class="step-header-text">Choose</div>
+                    <div class="step-header-text">Own</div>
                 </div>
                 <div class="step-content">
-                    Get connected with that lender and keep us in the background
-                    to ensure a smooth process.
+                    Close and celebrate your new home.
                 </div>
             </div>
         </div>
         <div class="cta">
             <a class="btn" href="/process">Read more about the process</a>
         </div>
+        <p>Have more questions?</p>
+        <a href="/faq">Frequently Asked Questions</a>
     </div>
 </section>
 
