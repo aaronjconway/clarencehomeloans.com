@@ -3,7 +3,7 @@
     import Benefits from '$lib/components/sections/Benefits.svelte'
     import Testimonials from '$lib/components/sections/Testimonials.svelte'
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
-    // import BannerLinks from '$lib/components/sections/BannerLinks.svelte'
+    import BannerLinks from '$lib/components/sections/BannerLinks.svelte'
     import HowItWorks from '$lib/components/sections/HowItWorks.svelte'
 
     const { data } = $props()
@@ -15,7 +15,7 @@
 </svelte:head>
 
 <Hero />
-<!-- <BannerLinks /> -->
+<BannerLinks />
 <Testimonials {reviews} />
 <HowItWorks />
 <Benefits />
