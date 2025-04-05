@@ -8,7 +8,7 @@
         {
             title: 'Loan Programs',
             desc: 'Have a quick question we can answer?',
-            link: '/pending',
+            link: '/home-loans',
         },
         {
             title: 'Mortgage Education',

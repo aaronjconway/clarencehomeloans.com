@@ -1,26 +1,95 @@
 <script lang="ts">
     let { data } = $props()
 
-    // places the data into cateogy bucket and cleans up bad slugs
-    function aggregateCategories(data: any) {
-        let obj = {}
-        for (const key of data) {
-            const cat = key.Category
-            ;(obj[cat] ||= []).push(key)
+    let loanPrograms = data.loanPrograms
+
+    let tagSelection = $state('All')
+
+    // take in data aggregate on the
+    function aggregateCategories(data: any, tag: string) {
+        let obj: Record<string, Array<Object>> = {}
+        for (const item of data) {
+            const cat = item.Category
+            item.slug ??= { slug: '' }
+
+            if (tag == 'All') {
+                ;(obj[cat] ||= []).push(item)
+            }
+            if (item.tags.includes(tag)) {
+                ;(obj[cat] ||= []).push(item)
+            }
         }
         return obj as any
     }
 
-    const categories = aggregateCategories(data.result)
-    console.log(categories)
+    const categories = $derived(aggregateCategories(loanPrograms, tagSelection))
+    //TODO:--
+    //the slug.slug is gross
+
+    // TODO: match the tag values to the selection in the aggregate categories
+    // so you don't have to if blah so many times.
 </script>
 
 <section>
     <div class="container">
-        <h2>Conventional</h2>
-        {#each categories.conventional as loan}
+        <header>
+            <h1>Home loan options for everyone</h1>
+            <div class="button-group">
+                <label class:selected={tagSelection === 'All'}>
+                    <input type="radio" bind:group={tagSelection} value="All" />
+                    All
+                </label>
+                <label class:selected={tagSelection === 'Credit Flexible'}>
+                    <input
+                        type="radio"
+                        bind:group={tagSelection}
+                        value="Credit Flexible"
+                    />
+                    Low Credit Friendly
+                </label>
+
+                <label class:selected={tagSelection === 'FTHB'}>
+                    <input
+                        type="radio"
+                        bind:group={tagSelection}
+                        value="FTHB"
+                    />
+                    First Time Home Buyers
+                </label>
+
+                <label class:selected={tagSelection === 'Investors'}>
+                    <input
+                        type="radio"
+                        bind:group={tagSelection}
+                        value="Investors"
+                    />
+                    Alternative Loan Types
+                </label>
+                <label class:selected={tagSelection === 'Low Down'}>
+                    <input
+                        type="radio"
+                        bind:group={tagSelection}
+                        value="Low Down"
+                    />
+                    Lowest Down
+                </label>
+            </div>
+            <div class="selection-wrapper">
+                {#if tagSelection == 'Low Down'}
+                    <div>
+                        Keep your out of pocket expenses low with options
+                        between 0% and 3.5%
+                    </div>
+                {/if}
+            </div>
+        </header>
+        <div class="category-wrapper">
+            {#if categories.conventional.length > 0}
+                <h2>Conventional Loans</h2>
+                <hr />
+            {/if}
             <div class="grid">
-                {#if loan.slug}
+                {#each categories.conventional as loan}
                     <a
                         class="card-link-wrapper"
                         href={`/home-loans/${loan.slug.slug}`}
@@ -39,10 +108,13 @@
                             </div>
                         </div>
                     </a>
-                {/if}
+                {/each}
             </div>
-        {/each}
-        <h2>FHA</h2>
+        </div>
+        {#if categories.fha.length > 0}
+            <h2>FHA loans</h2>
+            <hr />
+        {/if}
         <div class="grid">
             {#each categories.fha as loan}
                 {#if loan.slug}
@@ -73,6 +145,60 @@
 <style lang="scss">
     @use '/src/styles/base';
 
+    .selection-wrapper {
+        text-align: center;
+        font-size: var(--text-md);
+        width: 100%;
+        margin-bottom: var(--space-xl);
+    }
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-weight: bold;
+        padding: var(--space);
+        margin-bottom: var(--space-xl);
+    }
+
+    .button-group label {
+        padding: var(--space);
+        border: solid 1px var(--grey-300);
+        border-radius: 4px;
+        cursor: pointer;
+        user-select: none;
+        transition: all 200ms;
+
+        &:hover {
+            background: var(--grey-200);
+            border: solid 1px var(--grey-400);
+        }
+    }
+
+    /* Hide actual radio buttons */
+    .button-group input[type='radio'] {
+        display: none;
+    }
+
+    /* Style when selected */
+    .button-group label.selected {
+        background-color: var(--green-400);
+        color: white;
+    }
+    label {
+        border: solid 1px;
+        width: fit-content;
+        border-radius: 0;
+    }
+
+    input {
+        border-radius: 0;
+    }
+
+    .category-wrapper {
+        margin-bottom: var(--space-xl);
+    }
+
     .tag-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -92,7 +218,7 @@
 
     .title {
         font-weight: bold;
-        font-size: var(--text-lg);
+        font-size: var(--text-md);
     }
 
     .summary-wrapper {
@@ -145,6 +271,14 @@
     @media (min-width: base.$lg) {
         .grid {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            font-weight: bold;
+            padding: var(--space);
+            margin-bottom: var(--space-xl);
         }
     }
 </style>

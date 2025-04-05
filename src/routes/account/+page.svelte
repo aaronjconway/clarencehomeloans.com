@@ -52,13 +52,15 @@
         Upload some documents!
     {/if}
 
-    <!-- <div class="form-wrapper"> -->
-    <!--     <form action="?/deleteDocuments" method="post" use:enhance> -->
-    <!--         <button class="warn primary" type="submit" -->
-    <!--             >Delete All Documents</button -->
-    <!--         > -->
-    <!--     </form> -->
-    <!-- </div> -->
+    {#if docs && docs.length > 0 && docs[0]?.name != '.emptyFolderPlaceholder'}
+        <div class="form-wrapper">
+            <form action="?/deleteDocuments" method="post" use:enhance>
+                <button class="warn primary" type="submit"
+                    >Delete All Documents</button
+                >
+            </form>
+        </div>
+    {/if}
 </div>
 
 <UserDetails {data} />

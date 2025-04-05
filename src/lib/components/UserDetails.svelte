@@ -7,8 +7,8 @@
 <section>
     <h3>Account</h3>
     <div class="wrapper">
-        <div class="header">User Info</div>
-        <hr />
+        <!-- <div class="header">User Info</div> -->
+        <!-- <hr /> -->
         <div class="item-wrapper">
             <label for="email">Email:</label>
             <div>{data.user.email}</div>
@@ -25,14 +25,14 @@
     </div>
 </section>
 
-<div class="warn header">DANGER</div>
-<hr />
+<!-- <div class="warn header">DANGER</div> -->
+<!-- <hr /> -->
 
-<div class="form-wrapper">
-    <form action="?/deleteAccount" method="post" use:enhance>
-        <button class="warn primary" type="submit">Delete Account</button>
-    </form>
-</div>
+<!-- <div class="form-wrapper"> -->
+<!--     <form action="?/deleteAccount" method="post" use:enhance> -->
+<!--         <button class="warn primary" type="submit">Delete Account</button> -->
+<!--     </form> -->
+<!-- </div> -->
 
 <style lang="scss">
     .header {
