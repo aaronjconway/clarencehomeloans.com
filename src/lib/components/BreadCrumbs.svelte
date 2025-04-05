@@ -1,13 +1,14 @@
 <script lang="ts">
     // import { titleCase } from 'title-case'
     import { page } from '$app/state'
-    const paths = page.url.split('/').filter((x) => x)
+    let path = $derived(page.url.pathname)
+    const paths = path.split('/').filter((x) => x)
 
     let parts = [
         {
             text: 'Home',
             href: '/',
-            current: page.url.pathname === '/' ? 'page' : undefined,
+            current: path === '/' ? 'page' : undefined,
         },
     ]
 
@@ -21,9 +22,9 @@
         //add the word page if it's a number
         parts.push({
             // text: titleCase(text.replace(/[-_]/g, ' ')),
-            text:(text.replace(/[-_]/g, ' '),
-            href,
-            current: page.url.pathname === href ? 'page' : undefined,
+            text: text.replace(/[-_]/g, ' '),
+            href: href,
+            current: path == href ? 'page' : undefined,
         })
     })
 </script>
@@ -48,11 +49,9 @@
 
 <style lang="scss">
     a {
-        color: var(--blue-600);
+        color: white;
     }
     nav.breadcrumb {
-        margin: var(--space) 0;
-        font-size: var(--text-sm);
     }
 
     nav.breadcrumb ol {
@@ -73,6 +72,7 @@
 
     nav.breadcrumb [aria-current='page'] {
         font-weight: 500;
-        text-decoration: none;
+        text-decoration: underline;
+        color: var(--green-100);
     }
 </style>

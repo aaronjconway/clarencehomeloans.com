@@ -1,18 +1,20 @@
 <script lang="ts">
+    import BreadCrumbs from '$lib/components/BreadCrumbs.svelte'
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
 
     const { data } = $props()
-    const loan = $derived(data.result?.[0])
+    const loan = $derived(data.loan?.[0])
 </script>
 
 <section class="header">
+    <BreadCrumbs />
     <div class="container">
         <div class="header-inner">
             <div>
                 <h1>{loan?.title}</h1>
                 <div class="summary">{loan?.short_summary}</div>
             </div>
-            <div>detials</div>
+            <!-- <div><pre>{JSON.stringify(loan, null, 4)}</pre></div> -->
         </div>
     </div>
 </section>
@@ -61,19 +63,22 @@
     .header {
         margin: 0;
         background: var(--green-600);
+        padding: var(--space-md) 0;
         color: white;
-        padding: var(--space-xl) 0;
-        h1 {
-            font-size: var(--text-xxxl);
+
+        .header-inner {
+            padding: var(--space-lg) 0;
+            display: grid;
+            gap: var(--space-lg);
         }
     }
 
     @media (min-width: base.$lg) {
         .header-inner {
+            padding: var(--space-lg) 0;
             display: grid;
-            .summary {
-                /* max-width: 66%; */
-            }
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
         }
     }
 </style>
