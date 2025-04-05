@@ -47,6 +47,14 @@
                     />
                     Low Credit Friendly
                 </label>
+                <label class:selected={tagSelection === 'Refinance'}>
+                    <input
+                        type="radio"
+                        bind:group={tagSelection}
+                        value="Refinance"
+                    />
+                    Refinance
+                </label>
 
                 <label class:selected={tagSelection === 'FTHB'}>
                     <input
@@ -57,11 +65,11 @@
                     First Time Home Buyers
                 </label>
 
-                <label class:selected={tagSelection === 'Investors'}>
+                <label class:selected={tagSelection === 'Alternative'}>
                     <input
                         type="radio"
                         bind:group={tagSelection}
-                        value="Investors"
+                        value="Alternative"
                     />
                     Alternative Loan Types
                 </label>
@@ -81,64 +89,146 @@
                         between 0% and 3.5%
                     </div>
                 {/if}
+                {#if tagSelection == 'Alternative'}
+                    <div>
+                        Loan types that are great for borrowers needing
+                        alternative documentation types.
+                    </div>
+                {/if}
+                {#if tagSelection == 'Low Credit'}
+                    <div>
+                        These loan types, such as FHA and VA loans, are great
+                        for borrowers with low or rebuilding credit, offering
+                        more flexible qualification requirements.
+                    </div>
+                {/if}
+                {#if tagSelection == 'FTHB'}
+                    <div>
+                        These loan types are ideal for first-time homebuyers,
+                        offering lower down payments and specialized pricing.
+                    </div>
+                {/if}
+                {#if tagSelection == 'Refinance'}
+                    <div>
+                        Whether you're looking to lower your interest rate,
+                        shorten your loan term, or tap into your home's equity,
+                        we've got a solution tailored to your needs.
+                    </div>
+                {/if}
             </div>
         </header>
-        <div class="category-wrapper">
-            {#if categories.conventional.length > 0}
+        {#if categories.conventional?.length > 0}
+            <div class="category-wrapper">
                 <h2>Conventional Loans</h2>
                 <hr />
-            {/if}
-            <div class="grid">
-                {#each categories.conventional as loan}
-                    <a
-                        class="card-link-wrapper"
-                        href={`/home-loans/${loan.slug.slug}`}
-                    >
-                        <div class="card">
-                            <div class="title">{loan.Name}</div>
-                            <div class="summary-wrapper">
-                                <p class="short-summary">
-                                    {loan.short_summary}
-                                </p>
+                <div class="grid">
+                    {#each categories.conventional as loan}
+                        <a
+                            class="card-link-wrapper"
+                            href={`/home-loans/${loan.slug.slug}`}
+                        >
+                            <div class="card">
+                                <div class="title">{loan.Name}</div>
+                                <div class="summary-wrapper">
+                                    <p class="short-summary">
+                                        {loan.short_summary}
+                                    </p>
+                                </div>
+                                <div class="tag-wrapper">
+                                    {#each loan.tags as tag}
+                                        <div class="tag">{tag}</div>
+                                    {/each}
+                                </div>
                             </div>
-                            <div class="tag-wrapper">
-                                {#each loan.tags as tag}
-                                    <div class="tag">{tag}</div>
-                                {/each}
-                            </div>
-                        </div>
-                    </a>
-                {/each}
+                        </a>
+                    {/each}
+                </div>
             </div>
-        </div>
-        {#if categories.fha.length > 0}
-            <h2>FHA loans</h2>
-            <hr />
         {/if}
-        <div class="grid">
-            {#each categories.fha as loan}
-                {#if loan.slug}
-                    <a
-                        class="card-link-wrapper"
-                        href={`/home-loans/${loan.slug.slug}`}
-                    >
-                        <div class="card">
-                            <div class="title">{loan.Name}</div>
-                            <div class="summary-wrapper">
-                                <p class="short-summary">
-                                    {loan.short_summary}
-                                </p>
+        {#if categories.fha?.length > 0}
+            <div class="category-wrapper">
+                <h2>FHA loans</h2>
+                <hr />
+                <div class="grid">
+                    {#each categories.fha as loan}
+                        <a
+                            class="card-link-wrapper"
+                            href={`/home-loans/${loan.slug.slug}`}
+                        >
+                            <div class="card">
+                                <div class="title">{loan.Name}</div>
+                                <div class="summary-wrapper">
+                                    <p class="short-summary">
+                                        {loan.short_summary}
+                                    </p>
+                                </div>
+                                <div class="tag-wrapper">
+                                    {#each loan.tags as tag}
+                                        <div class="tag">{tag}</div>
+                                    {/each}
+                                </div>
                             </div>
-                            <div class="tag-wrapper">
-                                {#each loan.tags as tag}
-                                    <div class="tag">{tag}</div>
-                                {/each}
+                        </a>
+                    {/each}
+                </div>
+            </div>
+        {/if}
+        {#if categories.va?.length > 0}
+            <div class="category-wrapper">
+                <h2>VA loans</h2>
+                <hr />
+                <div class="grid">
+                    {#each categories.va as loan}
+                        <a
+                            class="card-link-wrapper"
+                            href={`/home-loans/${loan.slug.slug}`}
+                        >
+                            <div class="card">
+                                <div class="title">{loan.Name}</div>
+                                <div class="summary-wrapper">
+                                    <p class="short-summary">
+                                        {loan.short_summary}
+                                    </p>
+                                </div>
+                                <div class="tag-wrapper">
+                                    {#each loan.tags as tag}
+                                        <div class="tag">{tag}</div>
+                                    {/each}
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                {/if}
-            {/each}
-        </div>
+                        </a>
+                    {/each}
+                </div>
+            </div>
+        {/if}
+        {#if categories.alternative?.length > 0}
+            <div class="category-wrapper">
+                <h2>Alternative Loan Types</h2>
+                <hr />
+                <div class="grid">
+                    {#each categories.alternative as loan}
+                        <a
+                            class="card-link-wrapper"
+                            href={`/home-loans/${loan.slug.slug}`}
+                        >
+                            <div class="card">
+                                <div class="title">{loan.Name}</div>
+                                <div class="summary-wrapper">
+                                    <p class="short-summary">
+                                        {loan.short_summary}
+                                    </p>
+                                </div>
+                                <div class="tag-wrapper">
+                                    {#each loan.tags as tag}
+                                        <div class="tag">{tag}</div>
+                                    {/each}
+                                </div>
+                            </div>
+                        </a>
+                    {/each}
+                </div>
+            </div>
+        {/if}
     </div>
 </section>
 

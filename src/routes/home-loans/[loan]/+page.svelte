@@ -27,7 +27,7 @@
         {/if}
     </div>
     <div class="container">
-        {#if loan}
+        {#if loan?.ad1}
             <SimpleCta
                 title={loan.ad1.title}
                 subTitle={loan.ad1.subtitle}
@@ -36,7 +36,7 @@
         {/if}
     </div>
     <div class="container content">
-        {#if loan}
+        {#if loan?.content2}
             <div>
                 {@html loan.content2}
             </div>
