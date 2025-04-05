@@ -5,7 +5,8 @@
     import Footer from '$lib/components/Footer.svelte'
 
     import { invalidate } from '$app/navigation'
-
+    import posthog from 'posthog-js'
+    import { browser } from '$app/environment'
     let { data, children } = $props()
     let { session, supabase } = $derived(data)
 
@@ -15,6 +16,13 @@
                 invalidate('supabase:auth')
             }
         })
+
+        if (browser) {
+            posthog.init('phc_GWo5w9PZVQQhzYvy0BOFA1P1M5m25jcUH4BKY2qQHsT', {
+                api_host: 'https://us.i.posthog.com',
+                person_profiles: 'always',
+            })
+        }
 
         return () => data.subscription.unsubscribe()
     })

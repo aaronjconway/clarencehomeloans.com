@@ -26,14 +26,14 @@
 		"@uppy/svelte": "^4.3.0",
 		"@uppy/tus": "^4.2.2",
 		"date-fns": "^4.1.0",
+		"font-awesome": "^4.7.0",
 		"globals": "^16.0.0",
 		"mdsvex": "^0.12.3",
 		"prettier": "^3.5.3",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
-		"rehype-external-links": "^3.0.0",
 		"rehype-autolink-headings": "^7.1.0",
-		"font-awesome": "^4.7.0",
+		"rehype-external-links": "^3.0.0",
 		"rehype-slug": "^6.0.0",
 		"remark-abbr": "^1.4.2",
 		"sass": "^1.86.0",
@@ -48,6 +48,7 @@
 	"dependencies": {
 		"@directus/sdk": "^19.1.0",
 		"@supabase/ssr": "^0.6.1",
-		"@supabase/supabase-js": "^2.49.4"
+		"@supabase/supabase-js": "^2.49.4",
+		"posthog-js": "^1.234.9"
 	}
 }
