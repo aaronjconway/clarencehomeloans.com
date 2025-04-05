@@ -47,8 +47,8 @@
 	"type": "module",
 	"dependencies": {
 		"@directus/sdk": "^19.1.0",
+		"@qwik.dev/partytown": "^0.11.0",
 		"@supabase/ssr": "^0.6.1",
-		"@supabase/supabase-js": "^2.49.4",
-		"posthog-js": "^1.234.9"
+		"@supabase/supabase-js": "^2.49.4"
 	}
 }

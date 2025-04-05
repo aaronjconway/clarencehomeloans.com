@@ -3,6 +3,7 @@ import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/publi
 import type { LayoutLoad } from './$types'
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
+
 	depends('supabase:auth')
 
 	const reviews = await fetch('/api/testimonials')
