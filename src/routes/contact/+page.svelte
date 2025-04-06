@@ -115,7 +115,7 @@
                                 'stop' at any time or click the unsubscribe link
                                 in the emails. Message and data rates may apply.
                                 <a href="/privacy-policy?from=contact"
-                                    >privacy policy</a
+                                    >Privacy policy</a
                                 >
                             </label>
                         </div>

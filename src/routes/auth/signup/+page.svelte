@@ -22,12 +22,15 @@
         </div>
 
         <div class="form-group">
-            <label for="privacy">
+            <label class="privacy" for="privacy">
                 <input type="checkbox" id="privacy" name="privacy" required />
-                I agree to the
-                <a class="link" href="/privacy-policy?from=contact"
-                    >privacy policy</a
-                >
+                <span>
+                    I agree to be contacted by Clarence Home Loans via call,
+                    email, and text. To opt out, you can reply 'stop' at any
+                    time or click the unsubscribe link in the emails. Message
+                    and data rates may apply.
+                    <a href="/privacy-policy?from=contact">Privacy policy</a>
+                </span>
             </label>
         </div>
         <button type="submit" class="primary">Submit</button>
@@ -42,11 +45,7 @@
         width: 100%;
         gap: var(--space-sm);
     }
-    .button-wrapper {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1rem;
-    }
+
     .form-wrapper {
         display: flex;
         flex-direction: column;
@@ -61,14 +60,20 @@
             width: 100%;
         }
 
-        label,
         input {
             margin: 0;
+            margin-bottom: var(--space);
         }
 
         label {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            padding: 0;
+            margin: 0;
+            margin-top: var(--space-md);
         }
+    }
+
+    label.privacy {
+        display: flex;
+        gap: var(--space);
     }
 </style>

@@ -71,14 +71,15 @@
             width: 100%;
         }
 
-        label,
         input {
             margin: 0;
+            margin-bottom: var(--space);
         }
 
         label {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            padding: 0;
+            margin: 0;
+            margin-top: var(--space-md);
         }
     }
 </style>
