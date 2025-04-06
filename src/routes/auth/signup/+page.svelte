@@ -7,7 +7,7 @@
 
 <div class="form-wrapper">
     <div class="oauth-wrapper">
-        <OauthButton buttonText={'Sign up with Apple '} provider={'Apple'} />
+        <!-- <OauthButton buttonText={'Sign up with Apple '} provider={'Apple'} /> -->
         <OauthButton buttonText={'Sign up with Google '} provider={'Google'} />
     </div>
     <form method="POST" action="?/signup" use:enhance>

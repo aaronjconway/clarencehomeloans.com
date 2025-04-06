@@ -8,7 +8,7 @@
 
 <div class="form-wrapper">
     <div class="oauth-wrapper">
-        <OauthButton provider={'Apple'} />
+        <!-- <OauthButton provider={'Apple'} /> -->
         <OauthButton provider={'Google'} />
     </div>
     <form method="POST" action="?/login" use:enhance autocomplete="on">
