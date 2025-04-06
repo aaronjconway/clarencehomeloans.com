@@ -75,5 +75,6 @@
     label.privacy {
         display: flex;
         gap: var(--space);
+        font-size: var(--text-sm);
     }
 </style>
