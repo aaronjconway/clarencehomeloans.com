@@ -41,12 +41,12 @@ a {
 
 	&.btn {
 		min-width: min-content;
-		white-space: nowrap;
 		border-radius: 4px;
 		padding: var(--space-xs) var(--space-md);
 		transition-duration: 150ms;
 		background-color: var(--green-400);
 		color: white;
+		font-size: var(--text);
 		font-weight: bold;
 
 		&:hover {
@@ -86,7 +86,7 @@ button.primary {
 	transition-duration: 150ms;
 	background-color: var(--green-400);
 	color: white;
-	font-size: var(--text-sm);
+	font-size: var(--text);
 	font-weight: bold;
 
 	&:hover {
