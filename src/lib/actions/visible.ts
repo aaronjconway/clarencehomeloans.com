@@ -33,7 +33,6 @@ function createObserver(el: HTMLElement, options?: VisibleActionOptions) {
         el.toggleAttribute('data-invisible', !isVisible);
         options?.onChange?.(isVisible);
         if (isVisible && options?.once) {
-            console.log('visible once')
             observer.disconnect();
         }
     }, options);

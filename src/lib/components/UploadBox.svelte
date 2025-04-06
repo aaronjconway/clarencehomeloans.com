@@ -20,8 +20,6 @@
         return
     })
 
-    console.log(c)
-
     const uppy = new Uppy({
         onBeforeFileAdded(currentFile) {
             let n = 1

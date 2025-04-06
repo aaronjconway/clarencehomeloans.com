@@ -3,24 +3,14 @@
     import type { ActionData } from './$types'
     let { form }: { form: ActionData } = $props()
     import OauthButton from '$lib/components/OauthButton.svelte'
+    import PasswordInput from '$lib/components/PasswordInput.svelte'
 </script>
 
 <div class="form-wrapper">
     <div class="oauth-wrapper">
-        <!-- <OauthButton buttonText={'Sign up with Apple '} provider={'Apple'} /> -->
         <OauthButton buttonText={'Sign up with Google '} provider={'Google'} />
     </div>
     <form method="POST" action="?/signup" use:enhance>
-        <!-- <div class="name-group"> -->
-        <!--     <div class="form-group"> -->
-        <!--         <label for="first_name">First Name</label> -->
-        <!--         <input type="text" id="first_name" name="first_name" required /> -->
-        <!--     </div> -->
-        <!--     <div class="form-group"> -->
-        <!--         <label for="last_name">Last Name</label> -->
-        <!--         <input type="text" id="last_name" name="last_name" required /> -->
-        <!--     </div> -->
-        <!-- </div> -->
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
@@ -28,7 +18,7 @@
 
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required />
+            <PasswordInput name={'password'} />
         </div>
 
         <div class="form-group">
@@ -56,9 +46,6 @@
         display: flex;
         gap: 1rem;
         margin-top: 1rem;
-    }
-    .forgot-pass {
-        margin-top: var(--space-md);
     }
     .form-wrapper {
         display: flex;

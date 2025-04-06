@@ -18,9 +18,7 @@
     }
 
     function handleCloseNav() {
-        console.log('closing mobile menu')
         const mobileMenu = document.getElementById('nav_wrapper')
-        console.log(mobileMenu)
         mobileMenu?.classList.remove('show')
         return
     }

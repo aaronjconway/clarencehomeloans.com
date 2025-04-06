@@ -4,8 +4,6 @@ import type { LayoutServerLoad } from '../$types'
 
 export const load: LayoutServerLoad = async ({ depends, locals: { safeGetSession, supabase } }) => {
 
-	console.log('layoutserverload')
-
 	depends('supabase:documents')
 
 	const { session, user } = await safeGetSession()
