@@ -32,10 +32,6 @@ export const actions: Actions = {
 		const { data, error } = await supabase.auth.signUp({ email, password })
 		console.log(data)
 
-		if (data.user?.aud == 'authenticated') {
-			return { message: 'Please log in with your existing method.' }
-		}
-
 		if (error) {
 			return { message: error.message }
 		} else {
