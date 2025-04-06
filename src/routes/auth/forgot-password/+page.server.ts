@@ -7,7 +7,7 @@ export const actions: Actions = {
 
 
 		const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-			redirectTo: '/account/resetPassword'
+			redirectTo: 'https://clarencehomeloans.com/account/password-reset'
 		})
 
 		if (error) {
