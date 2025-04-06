@@ -95,7 +95,7 @@
                         alternative documentation types.
                     </div>
                 {/if}
-                {#if tagSelection == 'Low Credit'}
+                {#if tagSelection == 'Credit Flexible'}
                     <div>
                         These loan types, such as FHA and VA loans, are great
                         for borrowers with low or rebuilding credit, offering
