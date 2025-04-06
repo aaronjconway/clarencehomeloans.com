@@ -1,37 +1,16 @@
 <script lang="ts">
+    import OauthButton from '$lib/components/OauthButton.svelte'
     import { enhance } from '$app/forms'
     import type { ActionData } from './$types'
 
     let { form }: { form: ActionData } = $props()
-
-    let loading = $state(false)
-
-    function handleSubmit() {
-        loading = true
-        return async () => {
-            loading = false
-        }
-    }
 </script>
 
 <div class="form-wrapper">
-    <form
-        method="POST"
-        action="?/google"
-        use:enhance={() => {
-            handleSubmit()
-        }}
-    >
-        <button class="google" type="submit" disabled={loading}>
-            <img
-                id="logo"
-                class="btn_logo"
-                src="/google-g-logo.svg"
-                alt="Google"
-            /><span>{!loading ? 'Sign in with Google' : 'Signing in...'}</span>
-        </button>
-    </form>
-
+    <div class="oauth-wrapper">
+        <OauthButton provider={'Apple'} />
+        <OauthButton provider={'Google'} />
+    </div>
     <form method="POST" action="?/login" use:enhance autocomplete="on">
         <label for="email"> Email </label>
         <input
@@ -64,6 +43,12 @@
 </div>
 
 <style lang="scss">
+    .oauth-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-sm);
+    }
     .button-wrapper {
         display: flex;
         gap: 1rem;

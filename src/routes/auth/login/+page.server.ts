@@ -3,7 +3,26 @@ import { redirect } from '@sveltejs/kit'
 import type { Actions } from './$types'
 
 export const actions: Actions = {
-	google: async ({ locals: { supabase } }) => {
+	signInWithApple: async ({ locals: { supabase } }) => {
+
+		const { error, data } = await supabase.auth.signInWithOAuth({
+			provider: 'apple',
+			options: {
+				redirectTo: '/auth/callback'
+			}
+		})
+
+		if (data.url) {
+			redirect(303, data.url)
+		}
+
+		if (error) {
+			return { message: error.message }
+		} else {
+			redirect(303, '/account')
+		}
+	},
+	signInWithGoogle: async ({ locals: { supabase } }) => {
 
 		const { error, data } = await supabase.auth.signInWithOAuth({
 			provider: 'google',
