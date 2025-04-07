@@ -58,11 +58,11 @@
                 { name: 'Licensing', link: '/licensing', type: 'link' },
             ],
         },
-        // {
-        //     name: 'Loan Options',
-        //     type: 'link',
-        //     link: '/home-loans',
-        // },
+        {
+            name: 'Loan Options',
+            type: 'link',
+            link: '/home-loans',
+        },
         // {
         //     name: 'Education',
         //     type: 'dropdown',

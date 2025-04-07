@@ -1,12 +1,13 @@
 @use 'base';
 
 :root {
+
 	--font-heading: system-ui;
 	--font-body: system-ui;
 
 	/* set base values */
-	--text-base-size: 1rem;
-	--text-scale-ratio: 1.15;
+	--text-base-size: 20px;
+	--text-scale-ratio: 1.20;
 
 	/* line-height */
 	--heading-line-height: 1.1875;
@@ -43,7 +44,6 @@
 	}
 
 	@media (min-width:base.$xl) {
-		--text-base-size: 1.15rem;
 		--text-scale-ratio: 1.20;
 	}
 
@@ -88,7 +88,6 @@ h4 {
 }
 
 p {
-	line-height: var(--body-line-height);
 	margin-bottom: var(--space)
 }
 

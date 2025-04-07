@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '../styles/globals.scss'
+    import '/src/styles/globals.scss'
     import 'font-awesome/css/font-awesome.min.css'
     import Header from '$lib/components/Header.svelte'
     import Footer from '$lib/components/Footer.svelte'

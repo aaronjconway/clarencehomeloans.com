@@ -1,4 +1,6 @@
 <script lang="ts">
+    import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
+
     let { data } = $props()
 
     let loanPrograms = data.loanPrograms
@@ -145,6 +147,34 @@
                 </div>
             </div>
         {/if}
+        {#if categories.jumbo?.length > 0}
+            <div class="category-wrapper">
+                <h2>Jumbo Loans</h2>
+                <hr />
+                <div class="grid">
+                    {#each categories.jumbo as loan}
+                        <a
+                            class="card-link-wrapper"
+                            href={`/home-loans/${loan.slug.slug}`}
+                        >
+                            <div class="card">
+                                <div class="title">{loan.Name}</div>
+                                <div class="summary-wrapper">
+                                    <p class="short-summary">
+                                        {loan.short_summary}
+                                    </p>
+                                </div>
+                                <div class="tag-wrapper">
+                                    {#each loan.tags as tag}
+                                        <div class="tag">{tag}</div>
+                                    {/each}
+                                </div>
+                            </div>
+                        </a>
+                    {/each}
+                </div>
+            </div>
+        {/if}
         {#if categories.fha?.length > 0}
             <div class="category-wrapper">
                 <h2>FHA loans</h2>
@@ -229,6 +259,15 @@
                 </div>
             </div>
         {/if}
+    </div>
+</section>
+<section>
+    <div class="container">
+        <SimpleCta
+            subTitle="Learn More Today"
+            title={'Unsure of what the best option is? We can help!'}
+            buttonText="Get More Info"
+        />
     </div>
 </section>
 
@@ -328,7 +367,9 @@
 
         .card {
             padding: var(--space-sm);
+
             border-radius: 4px;
+            border: solid 1px var(--grey-300);
             background: var(--grey-100);
             display: flex;
             flex-direction: column;

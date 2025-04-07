@@ -7,17 +7,17 @@
         },
         {
             title: 'Loan Programs',
-            desc: 'Have a quick question we can answer?',
+            desc: 'Available Loan Options',
             link: '/home-loans',
         },
         {
             title: 'Mortgage Education',
-            desc: 'Helpful mortgage resources',
+            desc: 'Home buying articles',
             link: '/pending',
         },
         {
-            title: 'Lenders',
-            desc: 'Looking to be added to our list?',
+            title: 'Careers',
+            desc: 'Looking for a new Career?',
             link: '/pending',
         },
     ]
@@ -67,7 +67,7 @@
         }
 
         .card-link {
-            font-size: var(--text-sm);
+            font-size: var(--text);
         }
 
         &:hover {

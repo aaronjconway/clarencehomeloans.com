@@ -70,6 +70,10 @@
         margin-bottom: var(--space-xl);
     }
 
+    .step-content {
+        text-align: center;
+    }
+
     .cta {
         margin: var(--space-lg) 0;
         display: flex;
@@ -156,6 +160,10 @@
         }
         .step-header {
             padding-left: 0;
+        }
+
+        .step-content {
+            text-align: left;
         }
     }
 </style>

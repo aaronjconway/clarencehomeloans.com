@@ -3,7 +3,7 @@
         subTitle = 'sign up for free',
         title = 'Get your home buying and rate questions answered today.',
         description = 'Answer a few questions to get a personalized offer.',
-        buttonText = 'REQUEST INFO',
+        buttonText = 'Chat With a Loan Officer',
     } = $props()
 </script>
 
@@ -43,7 +43,7 @@
 </section>
 
 <style lang="scss">
-    @use '../../../styles/base.scss';
+    @use '/src/styles/base.scss';
 
     .credit-info-wrapper {
         background: var(--green-100);
@@ -65,7 +65,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: var(--space-md);
-        padding: var(--space-md);
+        padding: var(--space);
         background: var(--grey-200);
         border-radius: 4px;
 
@@ -78,7 +78,7 @@
         }
 
         .sub-title {
-            color: var(--green-500);
+            color: var(--green-400);
             text-transform: uppercase;
             font-weight: bold;
         }
@@ -90,8 +90,6 @@
 
         p {
             font-size: var(--text);
-            padding: 0;
-            margin: 0;
         }
     }
 
@@ -99,7 +97,7 @@
         .wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding: var(--space-md);
+            padding: var(--space-lg);
             background: var(--grey-100);
             border-radius: 4px;
 
@@ -113,7 +111,7 @@
             }
 
             .sub-title {
-                color: var(--green-500);
+                color: var(--green-400);
                 text-transform: uppercase;
                 font-weight: bold;
             }

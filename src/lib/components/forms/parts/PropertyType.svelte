@@ -1,0 +1,48 @@
+<script lang="ts">
+    const { stepName, formStore = $bindable() } = $props()
+    const data = [
+        {
+            text: 'Single Family',
+            id: 'single_family',
+        },
+        {
+            text: 'Condo',
+            id: 'condo',
+        },
+        {
+            text: 'Multi Family',
+            id: 'multi_family',
+        },
+        {
+            text: 'TownHome',
+            id: 'townhome',
+        },
+    ]
+
+    function handleClick() {
+        formStore.nextStep()
+    }
+</script>
+
+<div class="form-header">
+    <h1>What kind of property are you looking for?</h1>
+</div>
+<div class="radio-wrapper">
+    {#each data as item}
+        <div class="radio-button">
+            <input
+                type="radio"
+                value={item.id}
+                id={item.id}
+                bind:group={formStore.data[stepName]}
+                onclick={handleClick}
+            />
+            <label
+                for={item.id}
+                class:selected={item.id == formStore.data[stepName]}
+            >
+                {item.text}
+            </label>
+        </div>
+    {/each}
+</div>
