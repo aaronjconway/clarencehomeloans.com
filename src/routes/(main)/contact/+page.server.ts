@@ -1,5 +1,6 @@
 import type { Actions } from './$types';
-import { FUB_API_KEY, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/static/private';
+//TODO:-- register system and get key
+import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 
 // do post to followup boss
@@ -43,7 +44,7 @@ export const actions: Actions = {
 			headers: {
 				accept: 'application/json',
 				'content-type': 'application/json',
-				authorization: 'Basic ' + Buffer.from(`${FUB_API_KEY}:`).toString('base64'),
+				authorization: 'Basic ' + Buffer.from(`${env.FUB_API_KEY}:`).toString('base64'),
 				// 'SYSTEM-KEY': FUB_SYSTEM_KEY,
 				// 'X-SYSTEM-KEY': X_SYSTEM_KEY,
 			},
