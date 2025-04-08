@@ -6,7 +6,7 @@
 	--font-body: system-ui;
 
 	/* set base values */
-	--text-base-size: 20px;
+	--text-base-size: 16px;
 	--text-scale-ratio: 1.20;
 
 	/* line-height */
@@ -44,6 +44,7 @@
 	}
 
 	@media (min-width:base.$xl) {
+		--text-base-size: 18px;
 		--text-scale-ratio: 1.20;
 	}
 
