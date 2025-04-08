@@ -42,101 +42,101 @@
                     >
                 </div>
             </div>
-            <div class="right">
-                <section>
-                    <div class="container">
-                        <h1>🚧 Under Construction 🚧</h1>
-                        <p>
-                            We are working hard to bring you something amazing.
-                            Stay tuned! Please reach out via phone or email at
-                            the moment.
-                        </p>
-                        <div class="spinner"></div>
-                    </div>
-                </section>
-            </div>
             <!-- <div class="right"> -->
-            <!--     {#if form?.success} -->
-            <!--         <div> -->
-            <!--             <h2>Thank you!</h2> -->
-            <!--             <p>We typically reach out within a few hours.</p> -->
+            <!--     <section> -->
+            <!--         <div class="container"> -->
+            <!--             <h1>🚧 Under Construction 🚧</h1> -->
+            <!--             <p> -->
+            <!--                 We are working hard to bring you something amazing. -->
+            <!--                 Stay tuned! Please reach out via phone or email at -->
+            <!--                 the moment. -->
+            <!--             </p> -->
+            <!--             <div class="spinner"></div> -->
             <!--         </div> -->
-            <!--     {:else} -->
-            <!--         <form method="POST" use:enhance action="?/contact"> -->
-            <!--             <div class="name-group"> -->
-            <!--                 <div class="form-group"> -->
-            <!--                     <label for="first_name">First Name</label> -->
-            <!--                     <input -->
-            <!--                         type="text" -->
-            <!--                         id="first_name" -->
-            <!--                         name="first_name" -->
-            <!--                         required -->
-            <!--                     /> -->
-            <!--                 </div> -->
-            <!--                 <div class="form-group beans"> -->
-            <!--                     <label for="beans"> -->
-            <!--                         <input type="text" name="beans" /> -->
-            <!--                     </label> -->
-            <!--                 </div> -->
-            <!--                 <div class="form-group"> -->
-            <!--                     <label for="last_name">Last Name</label> -->
-            <!--                     <input -->
-            <!--                         type="text" -->
-            <!--                         id="last_name" -->
-            <!--                         name="last_name" -->
-            <!--                         required -->
-            <!--                     /> -->
-            <!--                 </div> -->
-            <!--             </div> -->
-            <!---->
-            <!--             <div class="form-group"> -->
-            <!--                 <label for="phone">Phone</label> -->
-            <!--                 <input -->
-            <!--                     type="tel" -->
-            <!--                     id="phone" -->
-            <!--                     name="phone" -->
-            <!--                     required -->
-            <!--                     bind:value={phone} -->
-            <!--                     oninput={formatPhone} -->
-            <!--                 /> -->
-            <!--             </div> -->
-            <!---->
-            <!--             <div class="form-group"> -->
-            <!--                 <label for="email">Email</label> -->
-            <!--                 <input -->
-            <!--                     type="email" -->
-            <!--                     id="email" -->
-            <!--                     name="email" -->
-            <!--                     required -->
-            <!--                 /> -->
-            <!--             </div> -->
-            <!--             <div class="form-group"> -->
-            <!--                 <label for="message">Message</label> -->
-            <!--                 <textarea name="message" required></textarea> -->
-            <!--             </div> -->
-            <!---->
-            <!--             <div class="form-group"> -->
-            <!--                 <label for="privacy" class="privacy"> -->
-            <!--                     <input -->
-            <!--                         type="checkbox" -->
-            <!--                         id="privacy" -->
-            <!--                         name="privacy" -->
-            <!--                         required -->
-            <!--                     /> -->
-            <!--                     I agree to be contacted by Clarence Home Loans via -->
-            <!--                     call, email, and text. To opt out, you can reply -->
-            <!--                     'stop' at any time or click the unsubscribe link -->
-            <!--                     in the emails. Message and data rates may apply. -->
-            <!--                     <a href="/privacy-policy?from=contact" -->
-            <!--                         >Privacy policy</a -->
-            <!--                     > -->
-            <!--                 </label> -->
-            <!--             </div> -->
-            <!---->
-            <!--             <button type="submit" class="primary">Submit</button> -->
-            <!--         </form> -->
-            <!--     {/if} -->
+            <!--     </section> -->
             <!-- </div> -->
+            <div class="right">
+                {#if form?.success}
+                    <div>
+                        <h2>Thank you!</h2>
+                        <p>We typically reach out within a few hours.</p>
+                    </div>
+                {:else}
+                    <form method="POST" use:enhance action="?/contact">
+                        <div class="name-group">
+                            <div class="form-group">
+                                <label for="first_name">First Name</label>
+                                <input
+                                    type="text"
+                                    id="first_name"
+                                    name="first_name"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group special">
+                                <label for="special">
+                                    <input type="text" name="special" />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input
+                                    type="text"
+                                    id="last_name"
+                                    name="last_name"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                bind:value={phone}
+                                oninput={formatPhone}
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="privacy" class="privacy">
+                                <input
+                                    type="checkbox"
+                                    id="privacy"
+                                    name="privacy"
+                                    required
+                                />
+                                I agree to be contacted by Clarence Home Loans via
+                                call, email, and text. To opt out, you can reply
+                                'stop' at any time or click the unsubscribe link
+                                in the emails. Message and data rates may apply.
+                                <a href="/privacy-policy?from=contact"
+                                    >Privacy policy</a
+                                >
+                            </label>
+                        </div>
+
+                        <button type="submit" class="primary">Submit</button>
+                    </form>
+                {/if}
+            </div>
         </div>
     </div>
 </section>
@@ -173,7 +173,7 @@
         }
     }
 
-    .beans {
+    .special {
         display: none;
     }
 </style>

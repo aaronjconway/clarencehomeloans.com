@@ -12,33 +12,37 @@
     const steps = $state([
         { id: 0, name: 'buying_stage', component: BuyingStage },
         { id: 1, name: 'property_type', component: PropertyType },
-        { id: 2, name: 'property_type', component: PropertyType },
     ])
 </script>
 
-<div class="form-wrapper">
-    {#each steps as step}
-        <div in:recieve={{ key: step.id }} out:send={{ key: step.id }}>
-            {#if formStore.currentStep == step.id}
-                <div class="form-step" transition:fade={{ duration: 150 }}>
-                    <div class="form-step-inner">
-                        <step.component bind:formStore stepName={step.name} />
+<div class="form-container">
+    <div class="form-wrapper">
+        {#each steps as step}
+            <div in:recieve={{ key: step.id }} out:send={{ key: step.id }}>
+                {#if formStore.currentStep == step.id}
+                    <div class="form-step" transition:fade={{ duration: 150 }}>
+                        <div class="form-step-inner">
+                            <step.component
+                                bind:formStore
+                                stepName={step.name}
+                            />
+                        </div>
                     </div>
-                </div>
-            {/if}
-        </div>
-    {/each}
-</div>
+                {/if}
+            </div>
+        {/each}
+    </div>
 
-<div class="container nav">
-    {#if formStore.currentStep > 0}
-        <button
-            onclick={() => {
-                formStore.previousStep()
-            }}
-        >
-            <i class="fa fa-arrow-left"></i>
-            Back
-        </button>
-    {/if}
+    <div class="nav">
+        {#if formStore.currentStep > 0}
+            <button
+                onclick={() => {
+                    formStore.previousStep()
+                }}
+            >
+                <i class="fa fa-arrow-left"></i>
+                Back
+            </button>
+        {/if}
+    </div>
 </div>

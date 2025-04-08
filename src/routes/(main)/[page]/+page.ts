@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit";
 const subPage = 'base';
 
-export const load = async ({ params, url }: any) => {
+export const load = async ({ params }: any) => {
 	try {
 		const page = await import(`/src/content/${subPage}/${params.page}.md`);
 		return { content: page.default, metadata: page.metadata };

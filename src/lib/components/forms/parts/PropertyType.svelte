@@ -28,21 +28,23 @@
     <h1>What kind of property are you looking for?</h1>
 </div>
 <div class="radio-wrapper">
-    {#each data as item}
-        <div class="radio-button">
-            <input
-                type="radio"
-                value={item.id}
-                id={item.id}
-                bind:group={formStore.data[stepName]}
-                onclick={handleClick}
-            />
-            <label
-                for={item.id}
-                class:selected={item.id == formStore.data[stepName]}
-            >
-                {item.text}
-            </label>
-        </div>
-    {/each}
+    <div class="radio-inner">
+        {#each data as item}
+            <div class="radio-button">
+                <input
+                    type="radio"
+                    value={item.id}
+                    id={item.id}
+                    bind:group={formStore.data[stepName]}
+                    onclick={handleClick}
+                />
+                <label
+                    for={item.id}
+                    class:selected={item.id == formStore.data[stepName]}
+                >
+                    {item.text}
+                </label>
+            </div>
+        {/each}
+    </div>
 </div>
