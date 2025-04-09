@@ -5,7 +5,7 @@
     import Location from '$lib/components/forms/parts/Location.svelte'
     import { FormStore } from '$lib/stores/formStore.svelte'
     import { crossfade, fade } from 'svelte/transition'
-    import PriceRange from '$lib/components/forms/parts/PriceRange.svelte'
+    // import PriceRange from '$lib/components/forms/parts/PriceRange.svelte'
     const [send, recieve] = crossfade({
         duration: 100,
     })
@@ -13,10 +13,10 @@
     let formStore = $state(new FormStore())
 
     const steps = $state([
-        // { id: 0, name: 'buying_stage', component: BuyingStage },
-        // { id: 1, name: 'property_type', component: PropertyType },
-        // { id: 2, name: 'occupancy_type', component: OccupancyType },
-        { id: 0, name: 'location', component: Location },
+        { id: 0, name: 'buying_stage', component: BuyingStage },
+        { id: 1, name: 'property_type', component: PropertyType },
+        { id: 2, name: 'occupancy_type', component: OccupancyType },
+        { id: 3, name: 'location', component: Location },
         // { id: 4, name: 'price', component: PriceRange },
     ])
 </script>
