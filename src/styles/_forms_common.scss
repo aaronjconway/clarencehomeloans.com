@@ -21,7 +21,6 @@ button.link {
 	color: #0864bb;
 }
 
-
 table {
 	text-align: left;
 	caption-side: bottom;
@@ -52,4 +51,15 @@ table tbody {
 table td,
 table th {
 	padding: 0.25em;
+}
+
+.floating-data {
+	min-width: 300px;
+	height: 80%;
+	margin: 1rem;
+	padding: 1rem;
+	position: absolute;
+	left: 0;
+	border: solid 1px;
+	border-radius: 4px;
 }

@@ -26,3 +26,38 @@ export const formatFileSize = (bytes: number): string => {
     const i = Math.floor(Math.log(bytes) / Math.log(1024));
     return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
 }
+
+export function mapGoogleAddressToTypes(addressComponents) {
+    const result = {};
+    if (!addressComponents) {
+        result.state = ""
+        result.city = ""
+        result.county = ""
+        result.zip = ""
+        return
+    }
+
+    addressComponents.forEach(component => {
+        component.types.forEach(type => {
+            // Check and map only relevant address components (State, City, County, and ZIP)
+            switch (type) {
+                case 'administrative_area_level_1':  // State
+                    result.state = component.long_name;
+                    break;
+                case 'locality':  // City
+                    result.city = component.long_name;
+                    break;
+                case 'administrative_area_level_2':  // County
+                    result.county = component.long_name;
+                    break;
+                case 'postal_code':  // ZIP
+                    result.zip = component.long_name;
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
+
+    return result;
+}

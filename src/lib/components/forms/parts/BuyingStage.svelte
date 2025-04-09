@@ -3,7 +3,7 @@
     const data = [
         {
             text: 'Just doing research',
-            id: 'doing_resesarch',
+            id: 'research',
         },
         {
             text: "I'd like to make an offer on a home",
