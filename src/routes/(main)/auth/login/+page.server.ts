@@ -1,6 +1,17 @@
 import { redirect } from '@sveltejs/kit'
 
 import type { Actions } from './$types'
+import type { PageServerLoad } from '../$types'
+
+
+export const load: PageServerLoad = async ({ locals: { safeGetSession } }) => {
+
+	const { session } = await safeGetSession()
+
+	if (session) {
+		redirect(303, '/account')
+	}
+}
 
 export const actions: Actions = {
 	signInWithGoogle: async ({ locals: { supabase } }) => {
