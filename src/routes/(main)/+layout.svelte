@@ -91,6 +91,6 @@
 {#if children}
     {@render children()}
 {:else}
-    <p>uh oh! Looks like something is missing.</p>
+    <p>Uh oh! Looks like something is missing.</p>
 {/if}
 <Footer />

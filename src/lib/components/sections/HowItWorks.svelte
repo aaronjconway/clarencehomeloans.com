@@ -7,8 +7,10 @@
         <div class="steps-wrapper">
             <div class="step">
                 <div class="step-header">
-                    <div class="step-number">1</div>
-                    <div class="step-header-text">Chat</div>
+                    <div class="step-inner-header">
+                        <div class="step-number">1</div>
+                        <div class="step-header-text">Chat</div>
+                    </div>
                 </div>
                 <div class="step-content">
                     Have a seasoned professional evaluate your needs.
@@ -16,8 +18,10 @@
             </div>
             <div class="step">
                 <div class="step-header">
-                    <div class="step-number">2</div>
-                    <div class="step-header-text">Strategize</div>
+                    <div class="step-inner-header">
+                        <div class="step-number">2</div>
+                        <div class="step-header-text">Strategize</div>
+                    </div>
                 </div>
                 <div class="step-content">
                     Review your options and home buying plan.
@@ -25,8 +29,10 @@
             </div>
             <div class="step">
                 <div class="step-header">
-                    <div class="step-number">3</div>
-                    <div class="step-header-text">Shop</div>
+                    <div class="step-inner-header">
+                        <div class="step-number">3</div>
+                        <div class="step-header-text">Shop</div>
+                    </div>
                 </div>
                 <div class="step-content">
                     Search with confidence that you're qualified and competitve.
@@ -34,10 +40,10 @@
             </div>
             <div class="step">
                 <div class="step-header">
-                    <div class="step-number-wrapper">
+                    <div class="step-inner-header">
                         <div class="step-number">4</div>
+                        <div class="step-header-text">Own</div>
                     </div>
-                    <div class="step-header-text">Own</div>
                 </div>
                 <div class="step-content">
                     Close and celebrate your new home.
@@ -72,6 +78,7 @@
 
     .step-content {
         text-align: center;
+        max-width: 300px;
     }
 
     .cta {
@@ -113,13 +120,21 @@
         font-weight: 700;
         font-size: var(--text-md);
         align-items: center;
-        padding-left: 30%;
         padding-bottom: var(--space-md);
+    }
+
+    .step-inner-header {
+        display: flex;
+        white-space: nowrap;
+        justify-content: start;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 200px;
     }
 
     .step-header-text {
         margin-left: var(--space-sm);
-        width: 100%;
     }
 
     .step-number {
@@ -155,6 +170,14 @@
     }
 
     @media (min-width: base.$lg) {
+        .step-inner-header {
+            display: flex;
+            white-space: nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
         .step-header-text {
             text-align: unset;
         }

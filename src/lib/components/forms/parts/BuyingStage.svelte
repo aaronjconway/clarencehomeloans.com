@@ -26,7 +26,10 @@
 
 <div class="form-header">
     <h1>Where are you at in the home buying process?</h1>
-    <p>These questions help us</p>
+    <i>
+        These questions will help us provide you with rates and relevant
+        information.
+    </i>
 </div>
 
 <div class="radio-wrapper">
@@ -50,3 +53,10 @@
         {/each}
     </div>
 </div>
+
+<style>
+    i {
+        font-size: var(--text-sm);
+        color: var(--grey-800);
+    }
+</style>

@@ -2,12 +2,54 @@
 
 dialog {
 	border: solid 1px var(--grey-200);
+	max-width: 800px;
 
-	.inner-dialog {}
+	.inner-dialog {
+		padding: var(--space)
+	}
+
+	button {
+		border: solid 1px;
+		border-radius: 4px;
+		padding: 4px 8px;
+		background: var(--ash-200);
+	}
 }
 
 
 button.link {
 	color: #0864bb;
+}
 
+
+table {
+	text-align: left;
+	caption-side: bottom;
+	margin-bottom: 2em;
+}
+
+table * {
+	border: none;
+}
+
+table thead,
+table tr {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+table tr:nth-child(even) {
+	background-color: rgba(200, 200, 200, 0.2);
+}
+
+table tbody {
+	display: block;
+	max-height: 70vh;
+	overflow-y: auto;
+}
+
+table td,
+table th {
+	padding: 0.25em;
 }

@@ -1,4 +1,8 @@
-<a href="/">
+<script lang="ts">
+    const { href = '/' } = $props()
+</script>
+
+<a {href} class="logo-wrapper">
     <div class="logo">
         <span class="title">Clarence Home Loans</span>
         <span class="subtitle">Powered by Nexa Mortgage</span>
@@ -6,14 +10,14 @@
 </a>
 
 <style lang="scss">
-    a {
+    a.logo-wrapper {
         color: inherit;
     }
     .logo {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         white-space: nowrap;
-        flex-direction: column;
         font-size: var(--text-md);
     }
 

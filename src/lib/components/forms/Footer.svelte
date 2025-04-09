@@ -1,11 +1,13 @@
 <script lang="ts">
-    import Dialog from '../Dialog.svelte'
+    import Privacy from '../Privacy.svelte'
+    import Licensing from '../Licensing.svelte'
 </script>
 
 <div class="footer">
     <hr />
     <div class="modal-wrapper">
-        <Dialog page={'privacy-policy'} />
+        <Privacy />
+        <Licensing />
     </div>
     <p>
         Clarence Home Loans is Powered by Nexa Mortgage, a mortgage broker NMLS
@@ -26,11 +28,13 @@
         justify-content: center;
         padding: 0 5%;
         margin: 0 auto;
+        max-width: 1280px;
     }
 
     .modal-wrapper {
         display: flex;
         justify-content: center;
         width: 100%;
+        gap: var(--space);
     }
 </style>
