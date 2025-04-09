@@ -1,6 +1,6 @@
 <script lang="ts">
     import * as GMAPILoader from '@googlemaps/js-api-loader'
-    import { env } from '$env/dynamic/public'
+    import { env } from '$env/dynamic/private'
     import { mapGoogleAddressToTypes } from '$lib/utils'
 
     // should be an input for an address
@@ -18,7 +18,7 @@
     let address = $state({})
 
     $effect(async () => {
-        const googleMapsApiKey = env.PUBLIC_PLACES_API_KEY ?? ''
+        const googleMapsApiKey = env.PLACES_API_KEY ?? ''
         const loader = new Loader({ apiKey: googleMapsApiKey })
         await loader.importLibrary('places')
 
