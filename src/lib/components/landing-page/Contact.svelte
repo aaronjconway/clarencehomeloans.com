@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { PageProps } from './$types'
-    let { form }: PageProps = $props()
     import { enhance } from '$app/forms'
     import Phone from 'virtual:icons/openmoji/mobile-phone'
     import Email from 'virtual:icons/openmoji/e-mail'
+
+    let { form } = $props()
 
     let phone = $state('')
     function formatPhone() {
@@ -99,7 +99,8 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea name="message" required></textarea>
+                            <textarea id="message" name="message" required
+                            ></textarea>
                         </div>
 
                         <div class="form-group">

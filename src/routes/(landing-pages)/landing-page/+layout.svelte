@@ -5,19 +5,7 @@
     import Footer from '$lib/components/Footer.svelte'
     import { partytownSnippet } from '@qwik.dev/partytown/integration'
 
-    import { invalidate } from '$app/navigation'
-    let { data, children } = $props()
-    let { session, supabase } = $derived(data)
-
-    $effect(() => {
-        const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-            if (newSession?.expires_at !== session?.expires_at) {
-                invalidate('supabase:auth')
-            }
-        })
-
-        return () => data.subscription.unsubscribe()
-    })
+    let { children } = $props()
 </script>
 
 <svelte:head>
@@ -87,7 +75,7 @@
     </script>
 </svelte:head>
 
-<Header {data} />
+<Header />
 {#if children}
     {@render children()}
 {:else}

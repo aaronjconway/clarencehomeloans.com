@@ -3,6 +3,10 @@
     import Accordion from '$lib/components/Accordion.svelte'
     import faqs from '$lib/data/career-faqs.ts'
     import Contact from '$lib/components/landing-page/Contact.svelte'
+
+    import type { PageProps } from './$types'
+    let { form }: PageProps = $props()
+    $inspect(form)
 </script>
 
 <svelte:head>
@@ -33,7 +37,7 @@
 
 <section>
     <div class="container">
-        <Contact />
+        <Contact {form} />
     </div>
 </section>
 

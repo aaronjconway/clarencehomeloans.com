@@ -1,5 +1,4 @@
 import type { Actions } from './$types';
-//TODO:-- register system and get key
 import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 
@@ -8,8 +7,8 @@ export const actions: Actions = {
 	contact: async ({ request }) => {
 
 		const formData = await request.formData();
-		const firstName = formData.get('first-name');
-		const lastName = formData.get('last-name');
+		const firstName = formData.get('first_name');
+		const lastName = formData.get('last_name');
 		const phone = formData.get('phone');
 		const email = formData.get('email');
 		const message = formData.get('message');
