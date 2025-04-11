@@ -7,6 +7,7 @@ compatibility_date = "2025-04-03"
 NODE_VERSION = "22.14.0"
 PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVia3pkeG9zZ213YXliZXN1cG51Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMwNDI1MDEsImV4cCI6MjA1ODYxODUwMX0.xsqrui9Nq-PEbNaqiAFRyxYVtQgdYuilAXGI7ZIwj74"
 PUBLIC_SUPABASE_URL = "https://ebkzdxosgmwaybesupnu.supabase.co"
+PUBLIC_PLACES_API_KEY="AIzaSyC86DxwuInO5GlKcG7BaBxIGIQWOWzUF-0"
 
 [env.production]
 compatibility_flags = [ "nodejs_compat" ]
