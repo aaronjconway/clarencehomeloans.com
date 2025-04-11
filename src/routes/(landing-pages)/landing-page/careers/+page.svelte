@@ -12,8 +12,8 @@
 
 <Hero
     title="Take Control of Your Income and Career"
-    subtitle=" Step out of the retail box — earn more, work your way."
-    text="Tired of capped commissions and limited product options? As a broker, you gain full control over your pipeline, access to hundreds of lenders, and the freedom to build your own brand — all while earning over upwards of 275bps per deal."
+    subtitle=" Step into a better position — earn more, work your way."
+    text="Tired of capped commissions and limited product options? In the broker world, you gain full control over your pipeline, access to hundreds of lenders, and the freedom to build your own brand — all while earning upwards of 275bps per deal."
 />
 
 <section>
