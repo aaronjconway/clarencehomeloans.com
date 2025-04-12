@@ -63,3 +63,86 @@ table th {
 	border: solid 1px;
 	border-radius: 4px;
 }
+
+.button-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin: var(--space-md) 0;
+}
+
+button.primary {
+	width: fit-content;
+	border-radius: 4px;
+	padding: var(--space-xs) var(--space-md);
+	transition-duration: 150ms;
+	background-color: var(--green-400);
+	color: white;
+	font-size: var(--text);
+	font-weight: bold;
+
+	&:hover {
+		filter: brightness(90%);
+
+	}
+
+}
+
+.range-input {
+	margin-top: var(--space-xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xl);
+	align-items: center;
+
+	label {
+		font-size: 40px;
+	}
+}
+
+input[type='range'] {
+	display: flex;
+}
+
+.custom-slider {
+	touch-action: manipulation;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 6px;
+	background: #ccc;
+	border-radius: 4px;
+	outline: none;
+}
+
+/* Track: WebKit */
+.custom-slider::-webkit-slider-runnable-track {
+	border-radius: 4px;
+}
+
+/* Thumb: WebKit */
+.custom-slider::-webkit-slider-thumb {
+	height: 32px;
+	width: 32px;
+	-webkit-appearance: none;
+	background: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: -5px;
+	/* centers the thumb */
+}
+
+/* Track: Firefox */
+.custom-slider::-moz-range-track {
+	height: 6px;
+	border-radius: 4px;
+}
+
+/* Thumb: Firefox */
+.custom-slider::-moz-range-thumb {
+	height: 32px;
+	width: 32px;
+	background: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}

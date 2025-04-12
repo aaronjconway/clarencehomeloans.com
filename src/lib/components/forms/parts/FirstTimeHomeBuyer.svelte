@@ -2,24 +2,12 @@
     const { stepName, formStore = $bindable() } = $props()
     const data = [
         {
-            text: 'Excellent 740+',
-            id: '740+',
+            text: 'Yes',
+            id: 'yes',
         },
         {
-            text: 'Good 680-720',
-            id: '680-720',
-        },
-        {
-            text: 'Fair 640-680',
-            id: '640-680',
-        },
-        {
-            text: 'Rebuilding 600-640',
-            id: '600-640',
-        },
-        {
-            text: 'Under 600',
-            id: 'under 600',
+            text: 'No',
+            id: 'no',
         },
     ]
 
@@ -29,10 +17,8 @@
 </script>
 
 <div class="form-header">
-    <h1>What is your estimated credit?</h1>
-    <div>
-        We have options from 500+ so no worries regardless of where you're at.
-    </div>
+    <h1>Are you a First Time Home Buyer</h1>
+    <div>We're experienced with both new buyers and savys investors.</div>
 </div>
 
 <div class="radio-wrapper">
@@ -58,4 +44,8 @@
 </div>
 
 <style>
+    i {
+        font-size: var(--text-sm);
+        color: var(--grey-800);
+    }
 </style>

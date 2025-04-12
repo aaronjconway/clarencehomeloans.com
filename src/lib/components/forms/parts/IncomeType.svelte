@@ -2,24 +2,28 @@
     const { stepName, formStore = $bindable() } = $props()
     const data = [
         {
-            text: 'Excellent 740+',
-            id: '740+',
+            text: 'Salary/Full-time Hourly',
+            id: 'salary',
         },
         {
-            text: 'Good 680-720',
-            id: '680-720',
+            text: 'Variable Hourly or Part Time',
+            id: 'variable',
         },
         {
-            text: 'Fair 640-680',
-            id: '640-680',
+            text: 'Commission Only',
+            id: 'commission',
         },
         {
-            text: 'Rebuilding 600-640',
-            id: '600-640',
+            text: 'Retirement/Benefit Income',
+            id: 'retirement/benefit',
         },
         {
-            text: 'Under 600',
-            id: 'under 600',
+            text: 'Self Employment',
+            id: 'self employment',
+        },
+        {
+            text: 'Other',
+            id: 'other',
         },
     ]
 
@@ -29,10 +33,8 @@
 </script>
 
 <div class="form-header">
-    <h1>What is your estimated credit?</h1>
-    <div>
-        We have options from 500+ so no worries regardless of where you're at.
-    </div>
+    <h1>What kind of income do you recieve?</h1>
+    <div>We have tons of options available for everyone.</div>
 </div>
 
 <div class="radio-wrapper">
@@ -56,6 +58,3 @@
         {/each}
     </div>
 </div>
-
-<style>
-</style>

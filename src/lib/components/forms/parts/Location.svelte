@@ -101,11 +101,14 @@
         />
     </div>
     <div class="address">{address?.formatted_address}</div>
-    <button
-        onclick={() => {
-            handleClick()
-        }}>next</button
-    >
+    <div class="button-wrapper">
+        <button
+            class="primary"
+            onclick={() => {
+                handleClick()
+            }}>Next</button
+        >
+    </div>
 </div>
 
 <style lang="scss">

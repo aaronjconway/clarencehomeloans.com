@@ -19,6 +19,15 @@ export const mimeChecker = (mimeType: string) => {
 
 }
 
+export function formatToUSD(value: string | number) {
+    const number = parseFloat(value);
+    if (isNaN(number)) return 'Invalid number';
+    return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+}
+
+
+
+
 export const formatFileSize = (bytes: number): string => {
     const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
     if (bytes === 0) return "0 Bytes";

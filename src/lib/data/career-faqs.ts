@@ -15,6 +15,11 @@ const faqs: Faq[] = [
 			"As much — or as little — as you want. Whether you want a hands-off platform or full support, we can get you setup.",
 	},
 	{
+		title: "Why \"Powered by Nexa\"?",
+		content:
+			"Nexa Mortgage is the overarching brokerage to the Clarence Home Loans team. Nexa allows us to focus on what matters instead of some of the larger brokerage related complications. Nexa also does a great job at providing training, support and updates on the current market to stay competitive.",
+	},
+	{
 		title: "What kind of commission split can I expect?",
 		content:
 			"Our commission strucutre is the most competitive in the industry — you keep more of what you earn, especially at volume. In general, you can easily earn over 200bps per client while still being extremely competitive.",
@@ -27,7 +32,7 @@ const faqs: Faq[] = [
 	{
 		title: "What lender options will I have access to?",
 		content:
-			"You'll have access to a wide network of over 150 wholesale lenders — giving your clients better pricing,options, and you more power to close.",
+			"You'll have access to a wide network of over 150 wholesale lenders, commercial options, and everything imaginable — giving your clients better pricing,options, and you more power to close.",
 	},
 	{
 		title: "How quickly can I get started?",

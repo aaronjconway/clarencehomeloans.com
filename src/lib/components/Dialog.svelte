@@ -1,17 +1,22 @@
 <script lang="ts">
-    import type { Component } from 'svelte'
+    import type { Component, SvelteComponent } from 'svelte'
 
     const { page, buttonText } = $props()
     let dialog: HTMLDialogElement
     let Document: Component | undefined = $state()
 
+    const pages = import.meta.glob('/src/content/dialogs/*.md')
     async function handleReadMore() {
-        let content = await import(
-            /*@vite-ignore*/
-            `/src/content/dialogs/${page}.md`
-        )
-        Document = content.default
-        dialog.open ? dialog.close() : dialog.showModal()
+        const path = `/src/content/dialogs/${page}.md`
+        const loadPage = pages[path]
+
+        if (loadPage) {
+            const content = (await loadPage()) as SvelteComponent
+            Document = content.default
+            dialog.open ? dialog.close() : dialog.showModal()
+        } else {
+            console.error('Page not found:', path)
+        }
     }
 </script>
 

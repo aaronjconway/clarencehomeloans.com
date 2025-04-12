@@ -9,26 +9,20 @@
 </script>
 
 <div class="form-header">
-    <h1>
-        How much would you like to put down on {formatToUSD(
-            formStore.data['price']
-        )}?
-    </h1>
-    <p>Don't stress on the details if you don't know what's best.</p>
+    <h1>How much do you make roughly?</h1>
 </div>
 
 <div class="range-input">
-    <label for="down_payment">
-        {formatToUSD(
-            (formStore.data[stepName] * formStore.data['price']) / 100
-        )} ({formStore.data[stepName]}%)
+    <label for="income_amount">
+        {formatToUSD(formStore.data[stepName])}
     </label>
     <input
         class="custom-slider"
-        name="down_payment"
+        name="income_amount"
         type="range"
         min="0"
-        max="100"
+        max="300000"
+        step="10000"
         bind:value={formStore.data[stepName]}
     />
     <div class="button-wrapper">
