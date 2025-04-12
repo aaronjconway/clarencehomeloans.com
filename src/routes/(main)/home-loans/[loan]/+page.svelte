@@ -32,6 +32,7 @@
                 title={loan.ad1.title}
                 subTitle={loan.ad1.subtitle}
                 description={loan.ad1.text}
+                buttonLink={loan.ad1.button_link}
             />
         {/if}
     </div>
@@ -48,6 +49,7 @@
                 title={loan.ad2.title}
                 subTitle={loan.ad2.subtitle}
                 description={loan.ad2.text}
+                buttonLink={loan.ad2.button_link}
             />
         {/if}
     </div>

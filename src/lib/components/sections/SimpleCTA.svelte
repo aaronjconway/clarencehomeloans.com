@@ -3,7 +3,8 @@
         subTitle = 'sign up for free',
         title = 'Get your home buying and rate questions answered today.',
         description = 'Answer a few questions to get a personalized offer.',
-        buttonText = 'Chat With a Loan Officer',
+        buttonText = 'Get Started Today',
+        buttonLink = 'purchase',
     } = $props()
 </script>
 
@@ -18,7 +19,7 @@
             </p>
         </div>
         <div class="right">
-            <a href={'/'} class="btn">{buttonText}</a>
+            <a href={`/form/${buttonLink}`} class="btn">{buttonText}</a>
             <div class="credit-info-wrapper">
                 <div>
                     <div>

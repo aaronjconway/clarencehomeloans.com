@@ -43,20 +43,17 @@
 		margin: var(--space-md) 0;
 	}
 
-	ol,
-	ul {
-		margin: 1em;
-	}
-
 	ul,
 	ol {
 		list-style: disc;
 		padding: 0;
 		margin: 0;
+		margin-left: var(--space);
 		padding-left: var(--space);
 
 		li {
-			padding: var(--space-xs) var(--space);
+			padding: 0;
+			margin: 0;
 		}
 
 		li:last-child {

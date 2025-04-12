@@ -1,11 +1,19 @@
 @use 'base';
 
 .form {
+	input {
+		width: unset;
+	}
 
 	input[type="radio"],
 	input[type="checkbox"] {
 		display: none;
 	}
+
+	input[type='range'] {
+		width: 100%;
+	}
+
 
 	//for privacy check box
 	.privacy {

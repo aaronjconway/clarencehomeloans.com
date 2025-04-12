@@ -264,9 +264,9 @@
 <section>
     <div class="container">
         <SimpleCta
-            subTitle="Learn More Today"
-            title={'Unsure of what the best option is? We can help!'}
-            buttonText="Get More Info"
+            subTitle="Start with Expert Advice"
+            title="Not sure which loan is right for you? We’ll point you in the right direction."
+            buttonText="Get Started"
         />
     </div>
 </section>

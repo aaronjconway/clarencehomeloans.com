@@ -7,7 +7,7 @@
                     Your Experienced and Trustworthy Mortgage Professionals
                 </h1>
                 <div class="action-wrapper">
-                    <a class="btn" href="/pending">Start on a Purchase</a>
+                    <a class="btn" href="/form/purchase">Start on a Purchase</a>
                     <a class="btn" href="/pending">Refinance</a>
                 </div>
             </div>
