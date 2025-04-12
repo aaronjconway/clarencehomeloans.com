@@ -57,9 +57,19 @@ export class FormStore {
         pushState('', { page: this.currentStep })
     }
 
+    scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     nextStep() {
-        this.currentStep++
-        pushState('', { page: this.currentStep })
+        setTimeout(() => {
+            this.currentStep++
+            pushState('', { page: this.currentStep })
+            this.scrollToTop()
+        }, 150);
     }
 
     previousStep() {

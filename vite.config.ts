@@ -8,6 +8,11 @@ import Icons from 'unplugin-icons/vite'
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
+	server: {
+		allowedHosts: [
+			'.ngrok-free.app'
+		],
+	},
 	plugins: [
 		sveltekit(),
 		enhancedImages(),

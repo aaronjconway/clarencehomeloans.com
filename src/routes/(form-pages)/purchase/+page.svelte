@@ -15,11 +15,7 @@
     import Derog from '$lib/components/forms/parts/Derog.svelte'
     //
     let formStore = $state(new FormStore())
-
-    //testing
-    formStore.currentStep = 1
-    //
-
+    formStore.currentStep = 0
     const steps = $state([
         { id: 0, name: 'buying_stage', component: BuyingStage },
         { id: 1, name: 'property_type', component: PropertyType },

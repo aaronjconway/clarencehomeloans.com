@@ -89,14 +89,17 @@ button.primary {
 }
 
 .range-input {
-	margin-top: var(--space-xl);
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-xl);
 	align-items: center;
 
+	padding: 0 7%;
+	margin-top: var(--space-xl);
+
 	label {
-		font-size: 40px;
+		font-size: 32px;
+		white-space: nowrap;
 	}
 }
 
@@ -106,6 +109,7 @@ input[type='range'] {
 
 .custom-slider {
 	touch-action: manipulation;
+	max-width: 600px;
 	-webkit-appearance: none;
 	appearance: none;
 	width: 100%;

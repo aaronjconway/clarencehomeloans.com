@@ -1,3 +1,5 @@
+@use 'base';
+
 .form {
 
 	input[type="radio"] {
@@ -6,6 +8,10 @@
 
 	input[type="checkbox"] {
 		display: none;
+	}
+
+	.range-input {
+		padding: 0 7%;
 	}
 
 	.form-container {
@@ -42,7 +48,7 @@
 		flex-direction: column;
 		gap: var(--space);
 
-		margin-top: var(--space-xl);
+		margin-top: var(--space-lg);
 		margin-bottom: var(--space-md);
 
 		justify-content: center;
@@ -50,6 +56,7 @@
 		text-align: center;
 
 		h1 {
+			font-size: var(--text-lg);
 			margin: 0;
 			padding: 0;
 		}
@@ -78,7 +85,7 @@
 		width: 100%;
 
 		label {
-			padding: var(--space-md);
+			padding: var(--space-sm);
 			width: 100%;
 			margin: 0;
 			border: solid 1px var(--grey-300);
@@ -86,20 +93,21 @@
 			border-radius: 4px;
 			background: var(--grey-100);
 			transition: all 300ms;
+			user-select: none;
 
 			&.selected {
 				border: solid 2px var(--green-200);
 				background: var(--green-100);
-				transition: all 200ms;
+				transition: all 150ms;
 				transform: scalex(1.04);
 			}
 
-			&:hover {
-				border: solid 2px var(--green-200);
-				background: var(--green-100);
-				transition: all 200ms;
-				transform: scalex(1.04);
-			}
+			/* &:hover { */
+			/* 	border: solid 2px var(--green-200); */
+			/* 	background: var(--green-100); */
+			/* 	transition: all 150ms; */
+			/* 	transform: scalex(1.04); */
+			/* } */
 		}
 	}
 
@@ -109,5 +117,30 @@
 		justify-content: center;
 	}
 
+
+	@media (min-width:base.$lg) {
+
+		.form-header {
+
+			h1 {
+				font-size: var(--text-xxl);
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.radio-button {
+			label {
+				padding: var(--space-md);
+
+				&:hover {
+					border: solid 2px var(--green-200);
+					background: var(--green-100);
+					transition: all 150ms;
+					transform: scalex(1.04);
+				}
+			}
+		}
+	}
 
 }

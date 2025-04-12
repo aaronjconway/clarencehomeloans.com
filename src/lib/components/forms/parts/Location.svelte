@@ -11,7 +11,11 @@
     const { Loader } = GMAPILoader
 
     function handleClick() {
-        formStore.nextStep()
+        if (formStore.data[stepName]) {
+            formStore.nextStep()
+        } else {
+            alert('Please enter a city')
+        }
     }
 
     let searchInput: HTMLInputElement

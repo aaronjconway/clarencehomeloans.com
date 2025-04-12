@@ -36,17 +36,17 @@
     <div class="radio-inner">
         {#each data as item}
             <div class="radio-button">
-                <input
-                    type="radio"
-                    value={item.id}
-                    id={item.id}
-                    bind:group={formStore.data[stepName]}
-                    onclick={handleClick}
-                />
                 <label
                     for={item.id}
                     class:selected={item.id == formStore.data[stepName]}
                 >
+                    <input
+                        type="radio"
+                        value={item.id}
+                        id={item.id}
+                        bind:group={formStore.data[stepName]}
+                        onclick={handleClick}
+                    />
                     {item.text}
                 </label>
             </div>

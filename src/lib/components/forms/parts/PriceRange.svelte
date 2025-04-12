@@ -5,13 +5,11 @@
         formStore.nextStep()
     }
 
-    import Dialog from '$lib/components/Dialog.svelte'
     import { formatToUSD } from '$lib/utils'
 </script>
 
 <div class="form-header">
     <h1>What price range are you looking at?</h1>
-    <Dialog page={'occupancy'} buttonText={'More on Occupancy Types'} />
 </div>
 
 <div class="range-input">
