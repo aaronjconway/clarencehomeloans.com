@@ -1,3 +1,21 @@
+import yaml from 'js-yaml';
+
+export function jsonToPrettyYaml(json: object): string {
+    try {
+        return yaml.dump(json, {
+            indent: 2,        // number of spaces for indentation
+            noArrayIndent: false,
+            lineWidth: 80,    // wrap lines at this width
+            noRefs: true,     // don't use anchors & references
+        });
+    } catch (e) {
+        console.error('Failed to convert JSON to YAML:', e);
+        return '';
+    }
+}
+
+
+
 //takes in a mime type and returns the friendly name if allowed
 export const mimeChecker = (mimeType: string) => {
     const mimeMap: Record<string, string> = {

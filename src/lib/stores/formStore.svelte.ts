@@ -8,6 +8,7 @@ import { page } from '$app/state'
 export class FormStore {
 
     currentStep: number = $state(0)
+    totalSteps: number = $state(13)
     data: Record<string, string> = $state({})
 
     constructor(currentStep: number = 0) {

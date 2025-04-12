@@ -38,8 +38,10 @@
 
 <div class="form-header">
     <h1>Have you had any of these events?</h1>
-    <div>You can select none, one, or more.</div>
-    <div>Again, we have tons of options available for everyone.</div>
+    <div>
+        You can select none, one, or more. Again, we have tons of options
+        available for everyone.
+    </div>
 </div>
 
 <div class="radio-wrapper">

@@ -33,8 +33,8 @@
 </script>
 
 <div class="form-header">
-    <h1>What kind of income do you recieve?</h1>
-    <div>We have tons of options available for everyone.</div>
+    <h1>What type of income do you receive?</h1>
+    <div>We have lots of options available for everyone.</div>
 </div>
 
 <div class="radio-wrapper">

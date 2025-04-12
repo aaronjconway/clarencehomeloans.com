@@ -6,7 +6,6 @@
 
     import type { PageProps } from './$types'
     let { form }: PageProps = $props()
-    $inspect(form)
 </script>
 
 <svelte:head>

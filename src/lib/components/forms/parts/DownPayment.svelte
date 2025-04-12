@@ -14,7 +14,34 @@
             formStore.data['price']
         )}?
     </h1>
-    <p>Don't stress on the details if you don't know what's best.</p>
+    <p>Don't stress on the details if you don't know what's best for you.</p>
+    <div class="options-wrapper">
+        <button
+            onclick={() => {
+                formStore.data[stepName] = 3.0
+            }}>3%</button
+        >
+        <button
+            onclick={() => {
+                formStore.data[stepName] = 3.5
+            }}>3.5%</button
+        >
+        <button
+            onclick={() => {
+                formStore.data[stepName] = 5.0
+            }}>5%</button
+        >
+        <button
+            onclick={() => {
+                formStore.data[stepName] = 10
+            }}>10%</button
+        >
+        <button
+            onclick={() => {
+                formStore.data[stepName] = 20
+            }}>20%</button
+        >
+    </div>
 </div>
 
 <div class="range-input">
@@ -40,3 +67,17 @@
         >
     </div>
 </div>
+
+<style lang="scss">
+    .options-wrapper {
+        button {
+            border: solid 1px var(--green-200);
+            padding: 4px 8px;
+            background: var(--green-100);
+            border-radius: 4px;
+            &:hover {
+                border: solid 1px var(--green-300);
+            }
+        }
+    }
+</style>

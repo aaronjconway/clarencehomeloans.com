@@ -2,12 +2,19 @@
     const { href = '/' } = $props()
 </script>
 
-<a {href} class="logo-wrapper">
+{#if href}
+    <a {href} class="logo-wrapper">
+        <div class="logo">
+            <span class="title">Clarence Home Loans</span>
+            <span class="subtitle">Powered by Nexa Mortgage</span>
+        </div>
+    </a>
+{:else}
     <div class="logo">
         <span class="title">Clarence Home Loans</span>
         <span class="subtitle">Powered by Nexa Mortgage</span>
     </div>
-</a>
+{/if}
 
 <style lang="scss">
     a.logo-wrapper {

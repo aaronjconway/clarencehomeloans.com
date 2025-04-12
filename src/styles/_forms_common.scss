@@ -1,5 +1,11 @@
 //buttons that look like links
 
+.container {
+	display: flex;
+	justify-content: center;
+
+}
+
 dialog {
 	border: solid 1px var(--grey-200);
 	max-width: 800px;
