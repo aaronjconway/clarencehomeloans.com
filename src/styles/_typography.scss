@@ -1,9 +1,13 @@
 @use 'base';
 
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+
 :root {
 
-	--font-heading: system-ui;
-	--font-body: system-ui;
+	/* --font-heading: system-ui; */
+	/* --font-body: system-ui; */
+	--font-heading: 'Hanken Grotesk';
+	--font-body: 'Hanken Grotesk';
 
 	/* set base values */
 	--text-base-size: 16px;

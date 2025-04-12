@@ -109,6 +109,7 @@
 
         .grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
         }
 
         .action-wrapper {
