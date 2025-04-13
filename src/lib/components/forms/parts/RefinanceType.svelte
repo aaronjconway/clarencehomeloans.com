@@ -1,21 +1,26 @@
 <script lang="ts">
     const { stepName, formStore = $bindable() } = $props()
+
     const data = [
         {
-            text: 'Just doing research',
-            id: 'research',
+            text: "I'd like to save money monthly",
+            id: 'rate and term',
         },
         {
-            text: "I'd like to make an offer on a home",
-            id: 'making_offers',
+            text: 'Pull cash out',
+            id: 'cash out',
         },
         {
-            text: 'I am under contract and shopping rates',
-            id: 'under_contract',
+            text: 'Get out of PMI or Hard Money',
+            id: 'PMI or Hard Money',
         },
         {
-            text: 'Within the next few months',
-            id: 'few_months',
+            text: 'Shorten/Lengthen my term',
+            id: 'shorter or length term',
+        },
+        {
+            text: 'Life event (Divorce, probate etc)',
+            id: 'life event',
         },
     ]
 
@@ -25,7 +30,7 @@
 </script>
 
 <div class="form-header">
-    <h1>Where are you at in the home buying process?</h1>
+    <h1>What type of refinance are you interested in?</h1>
     <i>
         These questions will help us provide you with rates and relevant
         information.

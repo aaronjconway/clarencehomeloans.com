@@ -55,8 +55,11 @@ export const formatFileSize = (bytes: number): string => {
 }
 
 export function mapGoogleAddressToTypes(addressComponents) {
-    const result = {};
+    const result = {}
+
     if (!addressComponents) {
+        result.street_number = ""
+        result.street_name = ""
         result.state = ""
         result.city = ""
         result.county = ""
@@ -66,18 +69,23 @@ export function mapGoogleAddressToTypes(addressComponents) {
 
     addressComponents.forEach(component => {
         component.types.forEach(type => {
-            // Check and map only relevant address components (State, City, County, and ZIP)
             switch (type) {
-                case 'administrative_area_level_1':  // State
+                case 'street_number':
+                    result.street_number = component.long_name;
+                    break;
+                case 'route':
+                    result.street_name = component.long_name;
+                    break;
+                case 'administrative_area_level_1':
                     result.state = component.long_name;
                     break;
-                case 'locality':  // City
+                case 'locality':
                     result.city = component.long_name;
                     break;
-                case 'administrative_area_level_2':  // County
+                case 'administrative_area_level_2':
                     result.county = component.long_name;
                     break;
-                case 'postal_code':  // ZIP
+                case 'postal_code':
                     result.zip = component.long_name;
                     break;
                 default:

@@ -11,12 +11,14 @@
     <p>Almost there.</p>
 </div>
 
-<div class="next-wrapper">
-    <p>
-        We respect your privacy — your information is never shared or sold. You
-        won’t receive any spam, just a personal response directly from the owner
-        of Clarence Home Loans.
-    </p>
+<div class="container">
+    <div class="next-wrapper">
+        <p>
+            We respect your privacy — your information is never shared or sold.
+            You won’t receive any spam, just a personal response directly from
+            the owner of Clarence Home Loans.
+        </p>
+    </div>
 </div>
 
 <div class="button-wrapper">

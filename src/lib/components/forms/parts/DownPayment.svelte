@@ -16,26 +16,28 @@
     </h1>
     <p>Don't stress on the details if you don't know what's best for you.</p>
     <div class="options-wrapper">
-        <button
-            onclick={() => {
-                formStore.data[stepName] = 3.0
-            }}>3%</button
-        >
-        <button
-            onclick={() => {
-                formStore.data[stepName] = 3.5
-            }}>3.5%</button
-        >
-        <button
-            onclick={() => {
-                formStore.data[stepName] = 5.0
-            }}>5%</button
-        >
-        <button
-            onclick={() => {
-                formStore.data[stepName] = 10
-            }}>10%</button
-        >
+        {#if formStore.data['loan_type'] != 'dscr'}
+            <button
+                onclick={() => {
+                    formStore.data[stepName] = 3.0
+                }}>3%</button
+            >
+            <button
+                onclick={() => {
+                    formStore.data[stepName] = 3.5
+                }}>3.5%</button
+            >
+            <button
+                onclick={() => {
+                    formStore.data[stepName] = 5.0
+                }}>5%</button
+            >
+            <button
+                onclick={() => {
+                    formStore.data[stepName] = 10
+                }}>10%</button
+            >
+        {/if}
         <button
             onclick={() => {
                 formStore.data[stepName] = 20

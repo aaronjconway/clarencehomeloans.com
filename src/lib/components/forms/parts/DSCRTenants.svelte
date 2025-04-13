@@ -2,33 +2,24 @@
     const { stepName, formStore = $bindable() } = $props()
     const data = [
         {
-            text: 'Single Family',
-            id: 'single_family',
+            text: 'Yes',
+            id: 'yes',
         },
         {
-            text: 'Condo',
-            id: 'condo',
-        },
-        {
-            text: 'Multi Family',
-            id: 'multi_family',
-        },
-        {
-            text: 'Townhome',
-            id: 'townhome',
+            text: 'No',
+            id: 'no',
         },
     ]
 
     function handleClick() {
         formStore.nextStep()
     }
-    import Dialog from '$lib/components/Dialog.svelte'
 </script>
 
 <div class="form-header">
-    <h1>Great! What kind of property are you looking for?</h1>
-    <Dialog page={'property'} buttonText={"More on Condo's and Townhomes"} />
+    <h1>Are there current tenants?</h1>
 </div>
+
 <div class="radio-wrapper">
     <div class="radio-inner">
         {#each data as item}

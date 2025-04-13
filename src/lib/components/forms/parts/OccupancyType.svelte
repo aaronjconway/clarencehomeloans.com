@@ -23,7 +23,7 @@
 </script>
 
 <div class="form-header">
-    <h1>How will you use the new property?</h1>
+    <h1>How will you use this property?</h1>
     <Dialog page={'occupancy'} buttonText={'More on Occupancy Types'} />
 </div>
 <div class="radio-wrapper">

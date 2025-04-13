@@ -2,14 +2,29 @@
     import Logo from '../Logo.svelte'
 </script>
 
-<div class="header">
-    <Logo href={''} />
+<div class="container">
+    <div class="header">
+        <Logo href={''} />
+        <div class="contact-wrapper">
+            <a href="tel:6027372576">(602) 737-2576</a>
+            <i class="fa fa-phone"></i>
+        </div>
+    </div>
 </div>
 
-<style>
+<style lang="scss">
+    .container {
+        max-width: 800px;
+    }
+    .contact-wrapper {
+        display: flex;
+        gap: var(--space);
+        align-items: center;
+        white-space: nowrap;
+    }
     .header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: var(--space) 0;
     }

@@ -4,11 +4,15 @@
     import Header from '$lib/components/forms/Header.svelte'
     import Footer from '$lib/components/forms/Footer.svelte'
 
-    const { children } = $props()
+    let { children } = $props()
 </script>
 
+<Header />
 <div class="form">
-    <Header />
-    {@render children()}
-    <Footer />
+    {#if children}
+        {@render children()}
+    {:else}
+        <p>Uh oh! Looks like something is missing.</p>
+    {/if}
 </div>
+<Footer />

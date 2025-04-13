@@ -9,6 +9,7 @@ export class FormStore {
 
     currentStep: number = $state(0)
     totalSteps: number = $state(13)
+    stepStack: number[] = $state([])
     data: Record<string, string> = $state({})
 
     constructor(currentStep: number = 0) {
@@ -35,9 +36,9 @@ export class FormStore {
     handleNavigate() {
         let currentPage = page.state.page
         if (page.state.page) {
-
             if (currentPage < this.currentStep) {
-                this.currentStep--
+                console.log(this.stepStack.pop())
+                this.currentStep == this.stepStack.pop()
             }
             if (currentPage > this.currentStep) {
                 this.currentStep++
@@ -49,15 +50,6 @@ export class FormStore {
 
     }
 
-    /*
-    * can go to specific step.
-    * TODO:-- consolidate to just a handleStep(), -1,n if omitted then next step
-    * */
-    gotoStep(n: number) {
-        this.currentStep = n
-        pushState('', { page: this.currentStep })
-    }
-
     scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -65,8 +57,25 @@ export class FormStore {
         })
     }
 
+    /*
+    * can go to specific step.
+    * TODO:-- consolidate to just a handleStep(), -1,n if omitted then next step
+    * */
+    gotoStep(n: number) {
+        setTimeout(() => {
+            this.stepStack.push(this.currentStep)
+            this.currentStep = n
+            pushState('', { page: this.currentStep })
+            this.scrollToTop()
+        }, 150);
+    }
+
+
     nextStep() {
         setTimeout(() => {
+            this.stepStack.push(this.currentStep)
+            // the active step shouldn't be in the step stack. that's why we do
+            // it AFTER the push to stack that way  a pop is the recent step
             this.currentStep++
             pushState('', { page: this.currentStep })
             this.scrollToTop()
@@ -74,7 +83,7 @@ export class FormStore {
     }
 
     previousStep() {
-        this.currentStep--
+        this.currentStep = this.stepStack.pop()
         pushState('', { page: this.currentStep })
     }
 }

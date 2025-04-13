@@ -2,32 +2,43 @@
     const { stepName, formStore = $bindable() } = $props()
     const data = [
         {
-            text: 'Single Family',
-            id: 'single_family',
+            text: 'Conventional',
+            id: 'conventional',
         },
         {
-            text: 'Condo',
-            id: 'condo',
+            text: 'HELOC',
+            id: 'heloc or small',
         },
         {
-            text: 'Multi Family',
-            id: 'multi_family',
+            text: 'VA',
+            id: 'va',
         },
         {
-            text: 'Townhome',
-            id: 'townhome',
+            text: 'FHA',
+            id: 'fha',
+        },
+        {
+            text: 'Hard Money or DSCR',
+            id: 'Hard Money',
+        },
+        {
+            text: 'None - Free & Clear',
+            id: 'free and clear',
         },
     ]
 
-    function handleClick() {
-        formStore.nextStep()
+    function handleClick(e) {
+        if (e.target.value == 'free and clear') {
+            formStore.gotoStep(formStore.currentStep + 2)
+            delete formStore.data['loan_amount']
+        } else {
+            formStore.nextStep()
+        }
     }
-    import Dialog from '$lib/components/Dialog.svelte'
 </script>
 
 <div class="form-header">
-    <h1>Great! What kind of property are you looking for?</h1>
-    <Dialog page={'property'} buttonText={"More on Condo's and Townhomes"} />
+    <h1>What kind of loan is currently on the property?</h1>
 </div>
 <div class="radio-wrapper">
     <div class="radio-inner">

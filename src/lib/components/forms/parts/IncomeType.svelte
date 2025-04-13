@@ -34,7 +34,9 @@
 
 <div class="form-header">
     <h1>What type of income do you receive?</h1>
-    <div>We have lots of options available for everyone.</div>
+    <div>
+        This is not an exhaustive list. We have options available for everyone.
+    </div>
 </div>
 
 <div class="radio-wrapper">

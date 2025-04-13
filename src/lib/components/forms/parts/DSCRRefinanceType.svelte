@@ -1,21 +1,22 @@
 <script lang="ts">
     const { stepName, formStore = $bindable() } = $props()
+
     const data = [
         {
-            text: 'Just doing research',
-            id: 'research',
+            text: 'Reduce the rate',
+            id: 'rate and term',
         },
         {
-            text: "I'd like to make an offer on a home",
-            id: 'making_offers',
+            text: 'Pull cash out',
+            id: 'cash out',
         },
         {
-            text: 'I am under contract and shopping rates',
-            id: 'under_contract',
+            text: 'Get out of current loan',
+            id: 'PMI or Hard Money',
         },
         {
-            text: 'Within the next few months',
-            id: 'few_months',
+            text: 'Shorten/Lengthen my term',
+            id: 'shorter or length term',
         },
     ]
 
@@ -25,11 +26,16 @@
 </script>
 
 <div class="form-header">
-    <h1>Where are you at in the home buying process?</h1>
+    <h1>What type of DSCR refinance are you looking for?</h1>
     <i>
         These questions will help us provide you with rates and relevant
         information.
     </i>
+    <div>
+        Looking for a purchase instead? <a href="/form/dscr-purchase"
+            >Click here</a
+        >
+    </div>
 </div>
 
 <div class="radio-wrapper">

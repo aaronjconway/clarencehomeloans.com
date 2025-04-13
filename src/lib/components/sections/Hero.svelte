@@ -8,7 +8,7 @@
                 </h1>
                 <div class="action-wrapper">
                     <a class="btn" href="/form/purchase">Start on a Purchase</a>
-                    <a class="btn" href="/pending">Refinance</a>
+                    <a class="btn" href="/form/refinance">Refinance</a>
                 </div>
             </div>
             <div class="right">
