@@ -48,6 +48,7 @@
     <div class="submission">
         <h1>Thank you!</h1>
         <div>We'll reach out shortly.</div>
+        <a href="/">back to home page</a>
     </div>
 {:else}
     <ProgressBar {formStore} />

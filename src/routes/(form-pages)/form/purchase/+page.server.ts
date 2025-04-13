@@ -54,13 +54,17 @@ export const actions: Actions = {
 
 		let errorMessage = '';
 
+		fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+			method: 'POST',
+			body: jsonToPrettyYaml(data)
+		})
 
-		fetch(url, options)
-			.then((res) => res.json())
-			.then((json) => console.log(json))
-			.catch((err) => {
-				console.log(err);
-			});
+		// fetch(url, options)
+		// 	.then((res) => res.json())
+		// 	.then((json) => console.log(json))
+		// 	.catch((err) => {
+		// 		console.log(err);
+		// 	});
 
 		if (errorMessage) {
 			return { success: false, message: errorMessage }

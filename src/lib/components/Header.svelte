@@ -176,7 +176,7 @@
         display: flex;
         align-items: center;
         gap: var(--space-sm);
-        padding: 0 var(--space-sm);
+        padding-left: var(--space-sm);
         a.btn {
             background: var(--grey-200);
             color: var(--grey-800);

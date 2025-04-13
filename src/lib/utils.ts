@@ -88,3 +88,39 @@ export function mapGoogleAddressToTypes(addressComponents) {
 
     return result;
 }
+
+export function generateTOC(containerClass) {
+    const containers = document.getElementsByClassName(containerClass);
+    const allHeadings = [];
+
+    // Gather all h2, h3, h4 from all matched containers
+    Array.from(containers).forEach(container => {
+        const headings = container.querySelectorAll('h2, h3, h4');
+        headings.forEach(h => allHeadings.push(h));
+    });
+
+    const toc = [];
+    const stack = [{ level: 1, children: toc }];
+
+    allHeadings.forEach((heading, index) => {
+        const level = parseInt(heading.tagName.slice(1));
+        const id = heading.id || `heading-${index}`;
+        heading.id = id;
+
+        const node = {
+            id,
+            text: heading.textContent,
+            level,
+            children: [],
+        };
+
+        while (stack.length && level <= stack[stack.length - 1].level) {
+            stack.pop();
+        }
+
+        stack[stack.length - 1].children.push(node);
+        stack.push(node);
+    });
+
+    return toc;
+}

@@ -1,10 +1,17 @@
 <script lang="ts">
     import BreadCrumbs from '$lib/components/BreadCrumbs.svelte'
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
+    import TOC from '$lib/components/TOC.svelte'
     import { format } from 'date-fns'
+    import { generateTOC } from '$lib/utils.js'
 
     const { data } = $props()
     const loan = $derived(data.loan?.[0])
+    let toc = $state()
+
+    $effect(() => {
+        toc = generateTOC('content')
+    })
 </script>
 
 <section class="header">
@@ -56,6 +63,10 @@
 <section>
     <div class="container content-wrapper">
         <div class="main-content">
+            <div class="toc-wrapper">
+                <h3>Table of Contents</h3>
+                <TOC {toc} />
+            </div>
             <div class="content">
                 {#if loan}
                     <div>
@@ -92,16 +103,15 @@
             </div>
         </div>
         <aside>
-            {loan?.category}
             <div class="sticky-div">
                 <div class="aside-item">
-                    <h3>Similar Options</h3>
-                    <a href="/about">About us</a>
-                    <a href="/licensing">Licensing</a>
+                    <h3>Table of Contents</h3>
+                    <TOC {toc} />
                 </div>
                 <hr />
                 <div class="aside-item">
                     <h3>Resources</h3>
+                    <a href="/contact">Contact</a>
                     <a href="/about">About us</a>
                     <a href="/licensing">Licensing</a>
                 </div>
@@ -113,12 +123,17 @@
 <style lang="scss">
     @use '/src/styles/base';
 
+    .toc-wrapper {
+        display: block;
+    }
+
     .verification {
         color: var(--green-600);
         background: var(--green-100);
         font-size: var(--text-xs);
         padding: 4px 8px;
         border-radius: 4px;
+        width: fit-content;
         div {
             display: flex;
             align-items: center;
@@ -156,6 +171,9 @@
     }
 
     @media (min-width: base.$lg) {
+        .toc-wrapper {
+            display: none;
+        }
         .meta-item {
             flex-direction: row;
             gap: var(--space);

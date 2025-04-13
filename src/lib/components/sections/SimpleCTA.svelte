@@ -19,7 +19,12 @@
             </p>
         </div>
         <div class="right">
-            <a href={`/form/${buttonLink}`} class="btn">{buttonText}</a>
+            <a
+                href={buttonLink != 'null'
+                    ? '/form/purchase'
+                    : `/form/${buttonLink}`}
+                class="btn">{buttonText}</a
+            >
             <div class="credit-info-wrapper">
                 <div>
                     <div>
