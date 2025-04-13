@@ -28,11 +28,19 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		min-height: 80vh;
+		min-height: 70vh;
+
+		.nav {
+			height: auto;
+			position: relative;
+			display: flex;
+			gap: var(--space);
+			justify-content: center;
+		}
 	}
 
 	.form-wrapper {
-		min-height: 80vh;
+		min-height: 70vh;
 		display: block;
 		flex-direction: column;
 		margin: 0 auto;
@@ -141,11 +149,6 @@
 		}
 	}
 
-	.nav {
-		display: flex;
-		gap: var(--space);
-		justify-content: center;
-	}
 
 
 	@media (min-width:base.$lg) {
