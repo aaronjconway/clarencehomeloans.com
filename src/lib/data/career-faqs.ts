@@ -10,9 +10,14 @@ const faqs: Faq[] = [
 			"Nope! Many of our top-performing brokers came straight from retail. We’ll guide you through the transition and help you hit the ground running.",
 	},
 	{
+		title: "Do I need to have broker experience to make the switch?",
+		content:
+			"Nope! Many of our top-performing brokers came straight from retail. We’ll guide you through the transition and help you hit the ground running.",
+	},
+	{
 		title: "How much support will I get?",
 		content:
-			"As much — or as little — as you want. Whether you want a hands-off platform or full support, we can get you setup.",
+			"NEXA has \"Loan Officer Support\" coaches available 12 hours a day, 6 days a week. These tenured loan officers will act as your advisors, coaches and will help your learn the NEXA technology and LOS, help your structure files and give loan investor recommendations. ",
 	},
 	{
 		title: "Why \"Powered by Nexa\"?",
@@ -22,7 +27,7 @@ const faqs: Faq[] = [
 	{
 		title: "What kind of commission split can I expect?",
 		content:
-			"Our commission strucutre is the most competitive in the industry — you keep more of what you earn, especially at volume. In general, you can easily earn over 200bps per client while still being extremely competitive.",
+			"Our commission structure is the most competitive in the industry — you keep more of what you earn, especially at volume.In general, you can easily earn over 200bps per client while still being extremely competitive.With our non- delegated correspondent channel you can earn up to 600 basis points and charge on the front and back end.Most importantly, with our NEXA100, offered by select lender partners of NEXA you earn 100 % of the profits. All loan officers are eligible for this for their first 6 months at NEXA.",
 	},
 	{
 		title: "Can I work remotely or build my own team?",
@@ -32,7 +37,7 @@ const faqs: Faq[] = [
 	{
 		title: "What lender options will I have access to?",
 		content:
-			"You'll have access to a wide network of over 150 wholesale lenders, commercial options, and everything imaginable — giving your clients better pricing,options, and you more power to close.",
+			"You'll have access to a largest network of mortgage lenders in the world, with of over 270 wholesale lenders, commercial options, and everything imaginable — giving your clients better pricing, options, and you more power to close. ",
 	},
 	{
 		title: "How quickly can I get started?",
