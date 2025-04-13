@@ -2,15 +2,15 @@
     import { FormStore } from '$lib/stores/formStore.svelte'
     //
     import BuyingStage from '$lib/components/forms/parts/BuyingStage.svelte'
-    import PropertyType from '$lib/components/forms/parts/DSCRPropertyType.svelte'
-    import FirstTimeHomeBuyer from '$lib/components/forms/parts/FirstTimeHomeBuyer.svelte'
+    import PropertyType from '$lib/components/forms/parts/PropertyType.svelte'
+    import OccupancyType from '$lib/components/forms/parts/OccupancyType.svelte'
+    import Location from '$lib/components/forms/parts/Location.svelte'
     import PriceRange from '$lib/components/forms/parts/PriceRange.svelte'
     import DownPayment from '$lib/components/forms/parts/DownPayment.svelte'
-    import Location from '$lib/components/forms/parts/LocationRefinance.svelte'
-    import HomeValue from '$lib/components/forms/parts/HomeValue.svelte'
-    import DSCRIncome from '$lib/components/forms/parts/DSCRincome.svelte'
-    import DscrOccupancy from '$lib/components/forms/parts/DSCROccupancy.svelte'
-    import DSCRTenants from '$lib/components/forms/parts/DSCRTenants.svelte'
+    import FirstTimeHomeBuyer from '$lib/components/forms/parts/FirstTimeHomeBuyer.svelte'
+    import Veteran from '$lib/components/forms/parts/Veteran.svelte'
+    import IncomeType from '$lib/components/forms/parts/IncomeType.svelte'
+    import IncomeAmount from '$lib/components/forms/parts/IncomeAmount.svelte'
     import Credit from '$lib/components/forms/parts/Credit.svelte'
     import Derog from '$lib/components/forms/parts/Derog.svelte'
     import NextSteps from '$lib/components/forms/parts/NextSteps.svelte'
@@ -24,22 +24,20 @@
 
     const steps = $state([
         { id: 0, name: 'buying_stage', component: BuyingStage },
-        { id: 1, name: '', component: DscrOccupancy },
-        { id: 2, name: 'property_type', component: PropertyType },
+        { id: 1, name: 'property_type', component: PropertyType },
+        { id: 2, name: 'occupancy', component: OccupancyType },
         { id: 3, name: 'fthb', component: FirstTimeHomeBuyer },
-        { id: 4, name: 'price', component: PriceRange },
-        { id: 5, name: 'down_payment', component: DownPayment },
-        { id: 6, name: 'home_value', component: HomeValue },
-        { id: 7, name: 'location', component: Location },
-        { id: 8, name: 'has_tenants', component: DSCRTenants },
-        { id: 9, name: 'predicted_income', component: DSCRIncome },
+        { id: 4, name: 'veteran', component: Veteran },
+        { id: 5, name: 'location', component: Location },
+        { id: 6, name: 'price', component: PriceRange },
+        { id: 7, name: 'down_payment', component: DownPayment },
+        { id: 8, name: 'income_type', component: IncomeType },
+        { id: 9, name: 'income_amount', component: IncomeAmount },
         { id: 10, name: 'credit', component: Credit },
         { id: 11, name: 'derogatory_events', component: Derog },
         { id: 12, name: '', component: NextSteps },
         { id: 13, name: 'contact', component: Contact },
     ])
-
-    formStore.data['loan_type'] = 'dscr'
     formStore.totalSteps = steps.length - 1
 </script>
 

@@ -3,6 +3,8 @@ import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 import { jsonToPrettyYaml } from '$lib/utils';
 
+const pageSource = 'dsrc-purchase'
+
 // do post to followup boss
 export const actions: Actions = {
 	submit: async ({ request }) => {
@@ -17,9 +19,9 @@ export const actions: Actions = {
 			source: 'clarencehomeloans.com',
 			system: 'Clarence Home Loans',
 			type: 'General Inquiry',
-			description: 'An inquiry generated from the contact form on the clarencehomeloans.com/purchase',
-			pageTitle: 'form-page/purchase',
-			pageUrl: 'clarencehomeloans.com/purchase',
+			description: 'An inquiry generated from the contact form on the clarencehomeloans.com/' + pageSource,
+			pageTitle: 'form/' + pageSource,
+			pageUrl: 'clarencehomeloans.com/form/' + pageSource,
 			message: jsonToPrettyYaml(data),
 			property: {
 				city: data.city,
@@ -33,7 +35,7 @@ export const actions: Actions = {
 				lastName: data.last_name,
 				emails: [{ value: data.email }],
 				phones: [{ value: data.phone }],
-				tags: ['clarencehomeloans-web', 'purchase-inquiry',],
+				tags: ['clarencehomeloans-web', pageSource + '-inquiry',],
 			},
 		};
 

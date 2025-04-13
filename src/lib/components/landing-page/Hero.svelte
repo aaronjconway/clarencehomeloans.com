@@ -1,5 +1,5 @@
 <script lang="ts">
-    const { title = '', subtitle = '', text = '' } = $props()
+    const { title = '', subtitle = '', text = '', imagePath = '' } = $props()
 </script>
 
 <section>
@@ -10,21 +10,13 @@
                 <h1 class="title">
                     {title}
                 </h1>
-                <!-- <div class="action-wrapper"> -->
-                <!--     <a class="btn" href="/pending">Start on a Purchase</a> -->
-                <!--     <a class="btn" href="/pending">Refinance</a> -->
-                <!-- </div> -->
                 <p>
                     {text}
                 </p>
             </div>
             <div class="right">
                 <div class="hero-image-wrapper">
-                    <enhanced:img
-                        class="hero-image"
-                        src="/static/images/wfh.avif"
-                        alt="A husband and wife, smiling, sitting on a couch in their home looking at a computer while kids run in the background."
-                    />
+                    <img class="hero-image" src={`/images/${imagePath}`} />
                 </div>
             </div>
         </div>
@@ -34,18 +26,6 @@
 <style lang="scss">
     @use '/src/styles/base';
 
-    .action-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-sm);
-        width: 100%;
-        text-align: center;
-        button,
-        a {
-            font-size: var(--text-md);
-        }
-    }
-
     //todo fix the image alt tag
     .hero-image-wrapper {
         display: flex;
@@ -54,6 +34,7 @@
         height: 100%;
         overflow: hidden;
         width: auto;
+        border-radius: 4px;
     }
 
     .hero-image {
@@ -97,10 +78,6 @@
         .grid {
             grid-template-columns: repeat(2, 1fr);
         }
-
-        .action-wrapper {
-            width: fit-content;
-        }
     }
 
     @media (min-width: base.$lg) {
@@ -117,17 +94,6 @@
         .grid {
             grid-template-columns: repeat(2, 1fr);
             gap: var(--space-xxl);
-        }
-
-        .action-wrapper {
-            display: flex;
-            flex-direction: row;
-
-            button,
-            a {
-                font-size: 20px;
-                white-space: nowrap;
-            }
         }
     }
 </style>

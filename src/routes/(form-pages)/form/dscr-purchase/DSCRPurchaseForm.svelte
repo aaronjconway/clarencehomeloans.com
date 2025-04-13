@@ -17,8 +17,7 @@
     import Contact from '$lib/components/forms/parts/Contact.svelte'
     import ProgressBar from '$lib/components/forms/ProgressBar.svelte'
     //
-    import type { ActionData } from './$types'
-    let { form }: { form: ActionData } = $props()
+    let { form } = $props()
 
     let formStore = $state(new FormStore())
 

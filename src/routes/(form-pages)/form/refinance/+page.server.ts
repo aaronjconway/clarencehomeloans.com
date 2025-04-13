@@ -3,12 +3,13 @@ import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 import { jsonToPrettyYaml } from '$lib/utils';
 
+const pageSource = 'purchase'
+
 // do post to followup boss
 export const actions: Actions = {
 	submit: async ({ request }) => {
-
-		console.log(request.url)
 		const data = await request.json()
+		console.log(data)
 
 		if (data.special) {
 			return fail(400, { message: 'Bot Detected' })
@@ -18,9 +19,9 @@ export const actions: Actions = {
 			source: 'clarencehomeloans.com',
 			system: 'Clarence Home Loans',
 			type: 'General Inquiry',
-			description: 'A Refinance inquiry generated from clarencehomeloans.com/refinance',
-			pageTitle: 'form-page/refinance',
-			pageUrl: request.url,
+			description: 'An inquiry generated from the contact form on ' + pageSource + ' form',
+			pageTitle: 'form/' + pageSource,
+			pageUrl: 'clarencehomeloans.com/form/' + pageSource,
 			message: jsonToPrettyYaml(data),
 			property: {
 				city: data.city,
@@ -34,10 +35,11 @@ export const actions: Actions = {
 				lastName: data.last_name,
 				emails: [{ value: data.email }],
 				phones: [{ value: data.phone }],
-				tags: ['clarencehomeloans-web', 'refinance-inquiry',],
+				tags: ['clarencehomeloans-web', pageSource + '-inquiry',],
 			},
 		};
 
+		console.log(eventData)
 
 		const url = 'https://api.followupboss.com/v1/events';
 		const options = {

@@ -3,7 +3,8 @@ import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 import { jsonToPrettyYaml } from '$lib/utils';
 
-const pageSource = 'dsrc-refinance'
+const pageSource = 'dscr-purchase'
+const testing = true
 
 // do post to followup boss
 export const actions: Actions = {
@@ -61,12 +62,14 @@ export const actions: Actions = {
 			body: jsonToPrettyYaml(data)
 		})
 
-		fetch(url, options)
-			.then((res) => res.json())
-			.then((json) => console.log(json))
-			.catch((err) => {
-				console.log(err);
-			});
+		if (!testing) {
+			fetch(url, options)
+				.then((res) => res.json())
+				.then((json) => console.log(json))
+				.catch((err) => {
+					console.log(err);
+				});
+		}
 
 		if (errorMessage) {
 			return { success: false, message: errorMessage }

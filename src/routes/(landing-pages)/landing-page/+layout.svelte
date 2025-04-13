@@ -7,10 +7,12 @@
     let { children } = $props()
 </script>
 
-<Header />
-{#if children}
-    {@render children()}
-{:else}
-    <p>Uh oh! Looks like something is missing.</p>
-{/if}
-<Footer />
+<main id="main">
+    <Header />
+    {#if children}
+        {@render children()}
+    {:else}
+        <p>Uh oh! Looks like something is missing.</p>
+    {/if}
+    <Footer />
+</main>

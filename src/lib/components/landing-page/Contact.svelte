@@ -21,7 +21,7 @@
     <div class="container">
         <div class="wrapper">
             <div class="left">
-                <h1>Reach out for more information.</h1>
+                <h1>Learn more with a short call or email.</h1>
                 <p>
                     Have a question about the process or ready to get started
                     earning more?

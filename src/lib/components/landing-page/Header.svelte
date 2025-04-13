@@ -1,11 +1,28 @@
-<script lang="ts">
-    import Logo from '$lib/components/Logo.svelte'
+<script>
+    import Logo from '../Logo.svelte'
 </script>
 
-<header>
-    <div class="container">
-        <div class="header-wrapper">
-            <Logo />
+<div class="container">
+    <div class="header">
+        <Logo href={''} />
+        <div class="contact-wrapper">
+            <a href="tel:6027372576">(602) 737-2576</a>
+            <i class="fa fa-phone"></i>
         </div>
     </div>
-</header>
+</div>
+
+<style lang="scss">
+    .contact-wrapper {
+        display: flex;
+        gap: var(--space);
+        align-items: center;
+        white-space: nowrap;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space) 0;
+    }
+</style>

@@ -1,62 +1,64 @@
 <section>
     <div class="container">
         <header>
-            <h2>Why work with Nexa Mortgage and Clarence Home Loans?</h2>
-            <p>The best pay and support — no compromises.</p>
+            <h2>Why Choose Us for Your DSCR Loan?</h2>
+            <p>
+                Expert guidance, flexible options, and a process built for
+                investors.
+            </p>
         </header>
         <div class="grid">
             <div class="item">
                 <i class="fa fa-phone"></i>
-                <div class="header">Support</div>
+                <div class="header">Expert Support</div>
                 <div class="content">
-                    12 hours per day 6 days a week get live support with
-                    licensed Loan Officer coaches.
+                    Get transparent and fast answers. Our experts are here 7
+                    days a week to guide you through every step — from
+                    pre-approval to closing.
                 </div>
             </div>
             <div class="item">
                 <i class="fa fa-dollar"></i>
-                <div class="header">Compensation</div>
+                <div class="header">Investor-Friendly Terms</div>
                 <div class="content">
-                    Keep 100% of your profits with Nexa100 and regularly earn
-                    over 200bps while still being highly competitive. Maximize
-                    your margins and your freedom—no caps, no nonsense.
+                    Competitive rates, great options, and flexible guidelines.
+                    We structure deals that make sense for your goals.
                 </div>
             </div>
             <div class="item">
                 <i class="fa fa-shield"></i>
-                <div class="header">Community</div>
+                <div class="header">Experience</div>
                 <div class="content">
-                    With close to 3,000 loan officers and an engaged Facebook
-                    group, your voice matters and we genuinely enjoy supporting
-                    one another.
+                    We’ve helped hundreds of investors close on cash-flowing
+                    properties. Our community of real estate pros knows: we get
+                    it done, and we get it done right.
                 </div>
             </div>
-
             <div class="item">
                 <i class="fa fa-bolt"></i>
-                <div class="header">Processing</div>
+                <div class="header">Fast Closings</div>
                 <div class="content">
-                    With close to 3,000 loan officers and an engaged Facebook
-                    group, your voice matters and we genuinely enjoy supporting
-                    one another.
+                    Skip the paperwork headache. DSCR loans are designed for
+                    speed, and our team is built for efficiency — often closing
+                    in 2–3 weeks or less.
                 </div>
             </div>
             <div class="item">
                 <i class="fa fa-percent"></i>
-                <div class="header">Rates</div>
+                <div class="header">Access to Top Lenders</div>
                 <div class="content">
-                    When it comes to mortgage rates, we don’t just compete — we
-                    lead. With access to hundreds of lenders, NEXA Mortgage
-                    helps you lock in the best rate for your unique situation.
+                    With hundreds of lender relationships, we shop your loan to
+                    find the best rate and structure for your unique property
+                    and rental income.
                 </div>
             </div>
             <div class="item">
                 <i class="fa fa-laptop"></i>
-                <div class="header">Technology</div>
+                <div class="header">Simple, Online Process</div>
                 <div class="content">
-                    Our advanced web-based platform makes the mortgage process
-                    faster, easier, and more reliable. Apply, track, and manage
-                    your loan—all from the convenience of your device.
+                    Apply and manage your loan from anywhere. Our secure online
+                    platform keeps everything moving smoothly, so you can focus
+                    on your next investment.
                 </div>
             </div>
         </div>

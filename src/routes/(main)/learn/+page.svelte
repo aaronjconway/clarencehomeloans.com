@@ -1,4 +1,6 @@
 <script lang="ts">
+    import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
+
     let { data } = $props()
 
     let loanPrograms = data.loanPrograms
@@ -23,11 +25,6 @@
     }
 
     const categories = $derived(aggregateCategories(loanPrograms, tagSelection))
-    //TODO:--
-    //the slug.slug is gross
-
-    // TODO: match the tag values to the selection in the aggregate categories
-    // so you don't have to if blah so many times.
 </script>
 
 <section>
@@ -259,6 +256,15 @@
         {/if}
     </div>
 </section>
+<section>
+    <div class="container">
+        <SimpleCta
+            subTitle="Start with Expert Advice"
+            title="Not sure which loan is right for you? We’ll point you in the right direction."
+            buttonText="Get Started"
+        />
+    </div>
+</section>
 
 <style lang="scss">
     @use '/src/styles/base';
@@ -356,7 +362,9 @@
 
         .card {
             padding: var(--space-sm);
+
             border-radius: 4px;
+            border: solid 1px var(--grey-300);
             background: var(--grey-100);
             display: flex;
             flex-direction: column;

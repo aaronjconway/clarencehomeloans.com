@@ -16,7 +16,7 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 
 export const load: PageServerLoad = async () => {
 	try {
-		const loanPrograms = await withTimeout(client.request(readItems('articles', { fields: ['*', { slug: ['slug'] }], })), 5000)
+		const loanPrograms = await withTimeout(client.request(readItems('Loan_Programs', { fields: ['*', { slug: ['slug'] }], })), 5000)
 		return {
 			loanPrograms
 		};
