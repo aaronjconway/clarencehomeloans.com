@@ -1,7 +1,7 @@
 node_modules
 
 # Output
-dist/
+/dist
 .output
 .vercel
 /.svelte-kit

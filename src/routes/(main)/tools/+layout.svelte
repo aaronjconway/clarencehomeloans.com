@@ -1,5 +1,5 @@
-<script>
-    let { children } = $props()
+<script lang="ts">
+    const { children } = $props()
 </script>
 
 <div class="container">
