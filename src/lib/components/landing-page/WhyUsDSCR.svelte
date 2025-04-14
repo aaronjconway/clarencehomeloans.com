@@ -1,6 +1,47 @@
 <section>
     <div class="container">
         <header>
+            <h2>DSCR Lending with an Investor’s Perspective</h2>
+        </header>
+        <p>
+            With over <strong
+                >nine years of experience in Arizona real estate</strong
+            >, we’re not just loan originators — we’re also active
+            <strong>short-term rental investors</strong> in the local market. This
+            gives us a unique perspective on what it takes to succeed as an investor.
+        </p>
+        <p>
+            Unlike many DSCR loan officers who simply offer a handful of
+            products, we <strong
+                >work with you to underwrite your investment opportunities</strong
+            >, helping you identify potential risks and offering guidance based
+            on our real-world investing experience.
+        </p>
+        <p>
+            From <strong>cash flow analysis</strong> and
+            <strong>vacancy risk</strong>
+            to <strong>maximizing returns</strong>, we’re here to help you make
+            well-informed decisions. When you work with us, you’re not just
+            getting a loan — you’re gaining a trusted partner who understands
+            exactly what makes a smart, profitable investment.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div
+            style="display:flex;flex-direction:column;justify-content: center; align-items: center;;"
+        >
+            <h3>Fill out a few questions for more information.</h3>
+            <a href="#main" class="btn">Start Now</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <header>
             <h2>Why Choose Us for Your DSCR Loan?</h2>
             <p>
                 Expert guidance, flexible options, and a process built for
