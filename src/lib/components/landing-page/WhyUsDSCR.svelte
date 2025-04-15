@@ -39,7 +39,7 @@
 <section>
     <div class="container">
         <div
-            style="display:flex;flex-direction:column;justify-content: center; align-items: center;;"
+            style="display:flex;flex-direction:column;justify-content: center; align-items: center;text-align: center;"
         >
             <h3>Fill out a few questions for more information.</h3>
             <a href="#main" class="btn">Start Now</a>
