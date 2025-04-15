@@ -89,26 +89,27 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                required
-                                bind:value={phone}
-                                oninput={formatPhone}
-                            />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                            />
+                        <div class="name-group">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    bind:value={phone}
+                                    oninput={formatPhone}
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>

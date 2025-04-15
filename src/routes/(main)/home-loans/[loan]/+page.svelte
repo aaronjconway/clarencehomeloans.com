@@ -4,6 +4,7 @@
     import TOC from '$lib/components/TOC.svelte'
     import { format } from 'date-fns'
     import { generateTOC } from '$lib/utils.js'
+    import SocialShare from '$lib/components/SocialShare.svelte'
 
     const { data } = $props()
     const loan = $derived(data.loan?.[0])
@@ -59,8 +60,8 @@
         </div>
     </div>
 </section>
-
-<section>
+<SocialShare />
+<section style="margin-top:0;">
     <div class="container content-wrapper">
         <div class="main-content">
             <div class="toc-wrapper">

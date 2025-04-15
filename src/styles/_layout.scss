@@ -16,6 +16,10 @@ section {
 	max-width: base.$xl;
 	padding: 0 16px;
 	margin: 0 auto;
+
+	&.compact {
+		max-width: 800px
+	}
 }
 
 .grid {
@@ -27,12 +31,6 @@ section {
 
 //larger than 786px
 @media (min-width:786px) {
-
-	.container {
-		&.compact {
-			width: 66%;
-		}
-	}
 
 	section {
 		margin: var(--space-xl) 0;

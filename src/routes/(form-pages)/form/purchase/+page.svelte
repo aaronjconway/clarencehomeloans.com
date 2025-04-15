@@ -38,6 +38,8 @@
         { id: 12, name: '', component: NextSteps },
         { id: 13, name: 'contact', component: Contact },
     ])
+    formStore.data['loan_type'] = 'purchase'
+    formStore.data['page_source'] = 'general-purchase'
     formStore.totalSteps = steps.length - 1
 </script>
 

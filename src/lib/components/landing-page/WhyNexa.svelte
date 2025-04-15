@@ -1,3 +1,11 @@
+<script lang="ts">
+    /*
+     * landing page section for explaining what nexa is or why nexa
+     *
+     *
+     * */
+</script>
+
 <section>
     <div class="container">
         <header>

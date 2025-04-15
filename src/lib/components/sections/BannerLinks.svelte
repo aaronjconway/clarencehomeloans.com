@@ -18,7 +18,7 @@
         {
             title: 'Careers',
             desc: 'Looking for a new Career?',
-            link: '/pending',
+            link: '/landing-page/careers',
         },
     ]
 </script>

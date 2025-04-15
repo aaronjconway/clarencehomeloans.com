@@ -1,5 +1,13 @@
+<!-- <script lang="ts"> -->
+<!--     /* -->
+<!--      * landing page section for explaining why austin specific -->
+<!--      * -->
+<!--      * -->
+<!--      * */ -->
+<!-- </script> -->
+
 <section>
-    <div class="container">
+    <div class="container compact">
         <header>
             <h2>DSCR Lending with an Investor’s Perspective</h2>
         </header>
@@ -111,6 +119,11 @@
 
     section {
         margin-bottom: var(--space-xxl);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
     }
 
     .item {

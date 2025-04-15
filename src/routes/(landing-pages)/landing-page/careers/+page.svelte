@@ -18,6 +18,7 @@
     title="Take Control of Your Income and Career"
     subtitle=" Step into a better position — earn more, work your way."
     text="Tired of capped commissions and limited product options as a Retail loan officer? In the broker world, you gain full control over your pipeline, access to hundreds of lenders, and the freedom to build your own brand — all while earning upwards of 275bps per deal."
+    imagePath="wfh.avif"
 />
 
 <WhyNexa />
@@ -26,13 +27,11 @@
     <div class="container">
         <div class="faq-wrapper">
             <h3>Frequently Asked Questions</h3>
-            <div>
-                {#each faqs as faq}
-                    <Accordion title={faq.title}>
-                        {@html faq.content}
-                    </Accordion>
-                {/each}
-            </div>
+            {#each faqs as faq}
+                <Accordion title={faq.title}>
+                    {@html faq.content}
+                </Accordion>
+            {/each}
         </div>
     </div>
 </section>
@@ -42,10 +41,3 @@
         <Contact {form} />
     </div>
 </section>
-
-<style lang="scss">
-    .faq-wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-</style>

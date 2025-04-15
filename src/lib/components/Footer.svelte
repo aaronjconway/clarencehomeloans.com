@@ -40,7 +40,7 @@
             <div class="footer-column">
                 <div class="footer-column-header">Company</div>
                 <ul>
-                    <li><a href="/pending">Careers</a></li>
+                    <li><a href="/landing-page/careers">Careers</a></li>
                     <li>
                         <a href="/faq">Frequently Asked Questions</a>
                     </li>

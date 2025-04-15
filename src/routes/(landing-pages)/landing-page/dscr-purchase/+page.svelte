@@ -31,13 +31,11 @@
     <div class="container">
         <div class="faq-wrapper">
             <h3>Frequently Asked Questions</h3>
-            <div>
-                {#each faqs as faq}
-                    <Accordion title={faq.title}>
-                        {@html faq.content}
-                    </Accordion>
-                {/each}
-            </div>
+            {#each faqs as faq}
+                <Accordion title={faq.title}>
+                    {@html faq.content}
+                </Accordion>
+            {/each}
         </div>
     </div>
 </section>
@@ -52,10 +50,3 @@
         />
     </div>
 </section>
-
-<style lang="scss">
-    .faq-wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-</style>

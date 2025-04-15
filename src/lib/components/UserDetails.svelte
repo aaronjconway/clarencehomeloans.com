@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { enhance } from '$app/forms'
     const { data } = $props()
     import { format } from 'date-fns'
 </script>
@@ -25,33 +24,13 @@
     </div>
 </section>
 
-<!-- <div class="warn header">DANGER</div> -->
-<!-- <hr /> -->
-
-<!-- <div class="form-wrapper"> -->
-<!--     <form action="?/deleteAccount" method="post" use:enhance> -->
-<!--         <button class="warn primary" type="submit">Delete Account</button> -->
-<!--     </form> -->
-<!-- </div> -->
-
 <style lang="scss">
-    .header {
-        margin-top: var(--space-lg);
-        &.warn {
-            color: indianred;
-        }
-    }
     .wrapper {
         margin-bottom: 1rem;
     }
 
     label {
         font-weight: bold;
-    }
-
-    hr {
-        padding: 0;
-        margin: var(--space-sm) 0;
     }
 
     .item-wrapper {

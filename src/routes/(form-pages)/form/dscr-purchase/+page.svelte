@@ -39,7 +39,9 @@
         { id: 13, name: 'contact', component: Contact },
     ])
 
-    formStore.data['loan_type'] = 'dscr'
+    formStore.data['loan_type'] = 'dsrc-purchase'
+    formStore.data['page_source'] = 'dscr-purchase'
+
     formStore.totalSteps = steps.length - 1
 </script>
 

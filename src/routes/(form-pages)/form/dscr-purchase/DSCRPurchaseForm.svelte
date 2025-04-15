@@ -16,11 +16,8 @@
     import NextSteps from '$lib/components/forms/parts/NextSteps.svelte'
     import Contact from '$lib/components/forms/parts/Contact.svelte'
     import ProgressBar from '$lib/components/forms/ProgressBar.svelte'
-    //
-    let { form } = $props()
 
     let formStore = $state(new FormStore())
-
     const steps = $state([
         { id: 0, name: 'buying_stage', component: BuyingStage },
         { id: 1, name: '', component: DscrOccupancy },
@@ -39,49 +36,43 @@
     ])
 
     formStore.data['loan_type'] = 'dscr'
+    formStore.data['page_source'] = 'dscr-purchase'
+
     formStore.totalSteps = steps.length - 1
 </script>
 
 <!-- <div class="floating-data"> -->
 <!--     <pre>{JSON.stringify(formStore.data, null, 4)}</pre> -->
 <!-- </div> -->
-{#if form?.success}
-    <div class="submission">
-        <h1>Thank you!</h1>
-        <div>We'll reach out shortly.</div>
-        <a href="/">back to home page</a>
-    </div>
-{:else}
-    <ProgressBar {formStore} />
-    <div class="form-container">
-        <div class="form-wrapper">
-            {#each steps as step}
-                <div>
-                    {#if formStore.currentStep == step.id}
-                        <div class="form-step">
-                            <div class="form-step-inner">
-                                <step.component
-                                    bind:formStore
-                                    stepName={step.name}
-                                />
-                            </div>
+<ProgressBar {formStore} />
+<div class="form-container">
+    <div class="form-wrapper">
+        {#each steps as step}
+            <div>
+                {#if formStore.currentStep == step.id}
+                    <div class="form-step">
+                        <div class="form-step-inner">
+                            <step.component
+                                bind:formStore
+                                stepName={step.name}
+                            />
                         </div>
-                    {/if}
-                </div>
-            {/each}
-        </div>
-
-        <div class="nav">
-            {#if formStore.currentStep > 0}
-                <button
-                    onclick={() => {
-                        formStore.previousStep()
-                    }}
-                >
-                    <i class="fa fa-arrow-left"></i>
-                    Back
-                </button>
-            {/if}
-        </div>
+                    </div>
+                {/if}
+            </div>
+        {/each}
     </div>
-{/if}
+
+    <div class="nav">
+        {#if formStore.currentStep > 0}
+            <button
+                onclick={() => {
+                    formStore.previousStep()
+                }}
+            >
+                <i class="fa fa-arrow-left"></i>
+                Back
+            </button>
+        {/if}
+    </div>
+</div>

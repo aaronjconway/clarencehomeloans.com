@@ -1,10 +1,17 @@
 <script lang="ts">
-    import { applyAction, deserialize, enhance } from '$app/forms'
-    import type { ActionResult } from '@sveltejs/kit'
+    /*
+     * Specific to the form store.
+     * Can't be used outside of forms or landing pages
+     * takes a form store and sends off to api/events
+     *
+     *
+     * */
+
     let { formStore = $bindable() } = $props()
 
     function formatPhone() {
         let value = formStore.data['phone']
+        console.log(value)
         value = value.replace(/\D/g, '')
         var size = value.length
         if (size > 0) value = '(' + value
@@ -14,23 +21,42 @@
     }
 
     let loading = $state(false)
+    let success = $state(false)
+    let errorMesasge = $state('')
 
     async function handleSubmit(e: SubmitEvent) {
         e.preventDefault()
+
         const data = JSON.stringify(formStore.data)
         loading = true
-        const response = await fetch(e.currentTarget.action, {
-            method: 'POST',
-            body: data,
-        })
-        const result: ActionResult = deserialize(await response.text())
-        applyAction(result)
-        loading = false
+        try {
+            const response = await fetch('/api/events', {
+                method: 'POST',
+                body: data,
+            })
+            const result = await response.json()
+
+            if (result.success) {
+                success = true
+            } else {
+                success = false
+                errorMesasge = result.message
+            }
+            loading = false
+        } catch (err) {
+            console.error('Error posting to /api/events: ', err)
+        }
     }
 </script>
 
-{#if loading}
-    Loading!
+{#if success}
+    <div class="submission">
+        <h1>Thank you!</h1>
+        <div>We'll reach out shortly.</div>
+        <a href="/">back to home page</a>
+    </div>
+{:else if errorMesasge}
+    {errorMesasge}
 {:else}
     <div class="form-header">
         <h1>Contact info</h1>
@@ -140,19 +166,6 @@
 
     .special {
         display: none;
-    }
-
-    .name-group {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        @media (min-width: base.$lg) {
-            flex-direction: row;
-        }
-    }
-    .form-group {
-        margin-bottom: 15px;
-        width: 100%;
     }
 
     input[type='text'],

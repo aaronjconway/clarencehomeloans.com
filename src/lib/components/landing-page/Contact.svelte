@@ -1,4 +1,10 @@
 <script lang="ts">
+    /*
+     * Not specific to any one page since uses action in +page.server to send events
+     TODO:-- not a huge fan that this is coupled to the page at /?contact form action
+     I think I would rather have a component with {data} {/path} whatever to make a post with contact
+     info
+     * */
     import { enhance } from '$app/forms'
     import Phone from 'virtual:icons/openmoji/mobile-phone'
     import Email from 'virtual:icons/openmoji/e-mail'
@@ -76,26 +82,28 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                required
-                                bind:value={phone}
-                                oninput={formatPhone}
-                            />
-                        </div>
+                        <div class="name-group">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    bind:value={phone}
+                                    oninput={formatPhone}
+                                />
+                            </div>
 
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                            />
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
@@ -159,6 +167,8 @@
     @media (min-width: 786px) {
         .wrapper {
             grid-template-columns: 1fr 1fr;
+            .form-group {
+            }
         }
     }
 

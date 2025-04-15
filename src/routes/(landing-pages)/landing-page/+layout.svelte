@@ -24,12 +24,12 @@
     </script>
 </svelte:head>
 
-<main id="main">
-    <Header />
+<Header />
+<div class="form">
     {#if children}
         {@render children()}
     {:else}
         <p>Uh oh! Looks like something is missing.</p>
     {/if}
-    <Footer />
-</main>
+</div>
+<Footer />

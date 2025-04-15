@@ -16,9 +16,9 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 
 export const load: PageServerLoad = async () => {
 	try {
-		const loanPrograms = await withTimeout(client.request(readItems('Loan_Programs', { fields: ['*', { slug: ['slug'] }], })), 5000)
+		const articles = await withTimeout(client.request(readItems('articles', { fields: ['*'], })), 5000)
 		return {
-			loanPrograms
+			articles
 		};
 	} catch (error) {
 		throw new Error('Failed to load Loan_Programs data');
