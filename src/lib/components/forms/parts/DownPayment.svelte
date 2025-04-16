@@ -6,6 +6,7 @@
     }
 
     import { formatToUSD } from '$lib/utils'
+    let downPaymentMessage = $state('')
 </script>
 
 <div class="form-header">
@@ -14,36 +15,51 @@
             formStore.data['price']
         )}?
     </h1>
-    <p>Don't stress on the details if you don't know what's best for you.</p>
+    <p>
+        Don't stress on the details if you don't know what's best for you. Here
+        are some helpful presets, although you can adjust this however you want.
+    </p>
     <div class="options-wrapper">
-        {#if formStore.data['loan_type'] != 'dscr'}
+        {#if formStore.data['loan_type'] != 'dscr' && formStore.data['occupancy'] != 'investment'}
             <button
                 onclick={() => {
                     formStore.data[stepName] = 3.0
+                    downPaymentMessage =
+                        'The minimum you can put down on conventional as a first time home buyer or low income.'
                 }}>3%</button
             >
             <button
                 onclick={() => {
                     formStore.data[stepName] = 3.5
+                    downPaymentMessage =
+                        'The minimum you can put down on FHA. Great for credit below 700.'
                 }}>3.5%</button
             >
             <button
                 onclick={() => {
                     formStore.data[stepName] = 5.0
+                    downPaymentMessage =
+                        'The minimum a non first time home buyer can put down on conventional when income is high.'
                 }}>5%</button
             >
             <button
                 onclick={() => {
                     formStore.data[stepName] = 10
+                    downPaymentMessage =
+                        'Great option for high income, good credit borrowers wanting to put less than 20% down.'
                 }}>10%</button
             >
         {/if}
         <button
             onclick={() => {
                 formStore.data[stepName] = 20
+                downPaymentMessage = ''
             }}>20%</button
         >
     </div>
+    <p>
+        {downPaymentMessage}
+    </p>
 </div>
 
 <div class="range-input">
@@ -59,6 +75,7 @@
         min="0"
         max="100"
         bind:value={formStore.data[stepName]}
+        onchange={(downPaymentMessage = '')}
     />
     <div class="button-wrapper">
         <button

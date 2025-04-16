@@ -1,5 +1,11 @@
 <script lang="ts">
-    const { title = '', subtitle = '', text = '', imagePath = '' } = $props()
+    const {
+        title = '',
+        subtitle = '',
+        text = '',
+        imagePath = '',
+        alt = '',
+    } = $props()
 </script>
 
 <section>
@@ -16,7 +22,11 @@
             </div>
             <div class="right">
                 <div class="hero-image-wrapper">
-                    <img class="hero-image" src={`/images/${imagePath}`} />
+                    <img
+                        {alt}
+                        class="hero-image"
+                        src={`/images/${imagePath}`}
+                    />
                 </div>
             </div>
         </div>
@@ -28,19 +38,18 @@
 
     //todo fix the image alt tag
     .hero-image-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        position: relative;
         overflow: hidden;
-        width: auto;
         border-radius: 4px;
+        width: 100%;
+        max-height: 400px;
     }
 
     .hero-image {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
+        object-position: center;
     }
 
     .grid {

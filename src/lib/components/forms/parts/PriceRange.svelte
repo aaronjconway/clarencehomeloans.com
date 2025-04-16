@@ -6,10 +6,11 @@
     }
 
     import { formatToUSD } from '$lib/utils'
+    formStore.data[stepName] = 400000
 </script>
 
 <div class="form-header">
-    <h1>What price range are you looking at?</h1>
+    <h1>What price range are you looking at roughly?</h1>
 </div>
 
 <div class="range-input">

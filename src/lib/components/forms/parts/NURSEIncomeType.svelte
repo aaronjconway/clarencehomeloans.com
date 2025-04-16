@@ -2,28 +2,28 @@
     const { stepName = '', formStore = $bindable() } = $props()
     const data = [
         {
-            text: '740+',
-            id: '740+',
+            text: 'Salary/Full-time hourly (36+hrs)',
+            id: 'salary',
         },
         {
-            text: '720-740',
-            id: '720-740',
+            text: 'Variable Hourly or Part Time',
+            id: 'variable',
         },
         {
-            text: '680-720',
-            id: '680-720',
+            text: 'Travel Nurse',
+            id: 'commission',
         },
         {
-            text: '640-680',
-            id: '640-680',
+            text: 'Retired/Benefit Income',
+            id: 'retirement/benefit',
         },
         {
-            text: '600-640',
-            id: '600-640',
+            text: 'Self Employment',
+            id: 'self employment',
         },
         {
-            text: '<600',
-            id: '<600',
+            text: 'Other',
+            id: 'other',
         },
     ]
 
@@ -33,9 +33,11 @@
 </script>
 
 <div class="form-header">
-    <h1>What is your estimated credit?</h1>
+    <h1>What type of income do you receive as a Nurse?</h1>
     <div>
-        We have options from 500+ so no worries regardless of where you're at.
+        This is not an exhaustive list. We have options available for everyone
+        and we know that Nurses can receive interesting pay types at
+        non-standard schedules.
     </div>
 </div>
 
@@ -60,6 +62,3 @@
         {/each}
     </div>
 </div>
-
-<style>
-</style>

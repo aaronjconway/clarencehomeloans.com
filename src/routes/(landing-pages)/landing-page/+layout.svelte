@@ -22,6 +22,7 @@
 
         gtag('config', 'G-51P86CD244')
     </script>
+    <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <div id="main">

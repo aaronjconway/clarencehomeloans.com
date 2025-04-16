@@ -4,10 +4,7 @@
     import Accordion from '$lib/components/Accordion.svelte'
     import faqs from '$lib/data/dscr-faqs.js'
     import DscrPurchaseForm from '../../../(form-pages)/form/dscr-purchase/DSCRPurchaseForm.svelte'
-
-    import type { PageProps } from './$types'
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
-    let { form }: PageProps = $props()
 </script>
 
 <svelte:head>
@@ -16,7 +13,7 @@
 </svelte:head>
 
 <div class="form">
-    <DscrPurchaseForm {form} />
+    <DscrPurchaseForm />
 </div>
 <Hero
     title="Buy Investment Properties Using Rental Income"

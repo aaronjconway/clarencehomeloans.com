@@ -4,12 +4,13 @@
     function handleClick() {
         formStore.nextStep()
     }
-
     import { formatToUSD } from '$lib/utils'
+    formStore.data[stepName] = 70000
 </script>
 
 <div class="form-header">
     <h1>How much do you make roughly?</h1>
+    <div>Annually</div>
 </div>
 
 <div class="range-input">

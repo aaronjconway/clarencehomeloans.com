@@ -18,11 +18,6 @@
     import NextSteps from '$lib/components/forms/parts/NextSteps.svelte'
     import Contact from '$lib/components/forms/parts/Contact.svelte'
 
-    //setup the setsps
-    //TODO:-- add in more details such as title of each steps
-    //Make more generic forms so that it can be input as data and reduce amount
-    //of custom compoennts there are.
-
     const steps = $state([
         { id: 0, name: 'dscr_refi_goal', component: RefinanceType },
         { id: 1, name: '', component: DscrOccupancy },
@@ -43,7 +38,7 @@
     let form = new FormStore()
 
     // add some specific data
-    form.data['loan_type'] = 'dsrc-refinance'
+    form.data['loan_type'] = 'dscr'
     form.data['page_source'] = 'dscr-refinance'
     form.totalSteps = steps.length - 1
 
