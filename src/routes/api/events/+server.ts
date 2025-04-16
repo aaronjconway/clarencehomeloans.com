@@ -43,11 +43,12 @@ export const POST = async ({ request }) => {
 	console.log(eventData)
 
 	const url = 'https://api.followupboss.com/v1/events';
+
 	const options = {
 		method: 'POST',
 		headers: {
-			accept: 'application/json',
-			'content-type': 'application/json',
+			'Content-Type': 'application/json',
+			'User-Agent': 'Mozilla/5.0',
 			authorization: 'Basic ' + Buffer.from(`${env.FUB_API_KEY}:`).toString('base64'),
 			// 'SYSTEM-KEY': FUB_SYSTEM_KEY,
 			// 'X-SYSTEM-KEY': X_SYSTEM_KEY,
@@ -56,13 +57,13 @@ export const POST = async ({ request }) => {
 	};
 
 
-	fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+	await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
 		method: 'POST',
 		body: jsonToPrettyYaml(data)
 	})
 
 	let errorMessage = '';
-	fetch(url, options)
+	await fetch(url, options)
 		.then((res) => res.json())
 		.then((json) => console.log(json))
 		.catch((err) => {

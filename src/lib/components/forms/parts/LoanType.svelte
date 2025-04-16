@@ -1,5 +1,5 @@
 <script lang="ts">
-    const { stepName, formStore = $bindable() } = $props()
+    const { stepName = '', formStore = $bindable() } = $props()
     const data = [
         {
             text: 'Conventional',

@@ -7,7 +7,7 @@
     // disclaimer for any location
     // delay on both server and client to rate limit
     // TODO:-- see if google has built in rate limiting
-    const { stepName, formStore = $bindable() } = $props()
+    const { stepName = '', formStore = $bindable() } = $props()
     const { Loader } = GMAPILoader
 
     function handleClick() {
