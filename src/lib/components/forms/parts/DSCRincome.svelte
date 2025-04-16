@@ -6,6 +6,7 @@
     }
 
     import { formatToUSD } from '$lib/utils'
+    formStore.data[stepName] = (formStore.data['home_value'] * 0.02) / 2
 </script>
 
 <div class="form-header">
@@ -21,7 +22,7 @@
         name="priceRange"
         type="range"
         min="0"
-        max={formStore.data['home_value'] * 0.014}
+        max={formStore.data['home_value'] * 0.025}
         step="100"
         bind:value={formStore.data[stepName]}
     />

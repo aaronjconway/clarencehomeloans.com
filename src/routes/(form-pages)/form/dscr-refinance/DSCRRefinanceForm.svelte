@@ -4,11 +4,10 @@
     import { FormStore } from '$lib/stores/formStore.svelte'
 
     // import parts
-    import BuyingStage from '$lib/components/forms/parts/BuyingStage.svelte'
+    import RefinanceType from '$lib/components/forms/parts/DSCRRefinanceType.svelte'
     import PropertyType from '$lib/components/forms/parts/DSCRPropertyType.svelte'
-    import FirstTimeHomeBuyer from '$lib/components/forms/parts/FirstTimeHomeBuyer.svelte'
-    import PriceRange from '$lib/components/forms/parts/PriceRange.svelte'
-    import DownPayment from '$lib/components/forms/parts/DownPayment.svelte'
+    import LoanType from '$lib/components/forms/parts/DSCRLoanType.svelte'
+    import LoanAmount from '$lib/components/forms/parts/LoanAmount.svelte'
     import Location from '$lib/components/forms/parts/LocationRefinance.svelte'
     import HomeValue from '$lib/components/forms/parts/HomeValue.svelte'
     import DSCRIncome from '$lib/components/forms/parts/DSCRincome.svelte'
@@ -25,28 +24,27 @@
     //of custom compoennts there are.
 
     const steps = $state([
-        { id: 0, name: 'buying_stage', component: BuyingStage },
+        { id: 0, name: 'dscr_refi_goal', component: RefinanceType },
         { id: 1, name: '', component: DscrOccupancy },
         { id: 2, name: 'property_type', component: PropertyType },
-        { id: 3, name: 'fthb', component: FirstTimeHomeBuyer },
-        { id: 4, name: 'price', component: PriceRange },
-        { id: 5, name: 'down_payment', component: DownPayment },
-        { id: 6, name: 'home_value', component: HomeValue },
-        { id: 7, name: 'location', component: Location },
-        { id: 8, name: 'has_tenants', component: DSCRTenants },
-        { id: 9, name: 'predicted_income', component: DSCRIncome },
-        { id: 10, name: 'credit', component: Credit },
-        { id: 11, name: 'derogatory_events', component: Derog },
-        { id: 12, name: '', component: NextSteps },
-        { id: 13, name: 'contact', component: Contact },
+        { id: 3, name: 'loan_type', component: LoanType },
+        { id: 4, name: 'loan_amount', component: LoanAmount },
+        { id: 5, name: 'home_value', component: HomeValue },
+        { id: 6, name: 'location', component: Location },
+        { id: 7, name: 'has_tenants', component: DSCRTenants },
+        { id: 8, name: 'dscr_current_income', component: DSCRIncome },
+        { id: 9, name: 'credit', component: Credit },
+        { id: 10, name: 'derogatory_events', component: Derog },
+        { id: 11, name: '', component: NextSteps },
+        { id: 12, name: 'contact', component: Contact },
     ])
 
     // create a new form
     let form = new FormStore()
 
     // add some specific data
-    form.data['loan_type'] = 'dsrc-purchase'
-    form.data['page_source'] = 'dscr-purchase'
+    form.data['loan_type'] = 'dsrc-refinance'
+    form.data['page_source'] = 'dscr-refinance'
     form.totalSteps = steps.length - 1
 
     //make state

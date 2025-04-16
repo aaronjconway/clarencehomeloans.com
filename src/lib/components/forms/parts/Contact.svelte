@@ -43,6 +43,7 @@
                 errorMesasge = result.message
             }
             loading = false
+            formStore.submitted = true
         } catch (err) {
             console.error('Error posting to /api/events: ', err)
         }

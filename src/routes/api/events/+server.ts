@@ -65,14 +65,14 @@ export const POST = async ({ request }) => {
 		body: jsonToPrettyYaml(data)
 	})
 
-	let errorMessage = '';
-	await fetch(url, options)
-		.then((res) => res.json())
-		.then((json) => console.log(json))
-		.catch((err) => {
-			console.log(err);
-			errorMessage = err
-		});
+	// let errorMessage = '';
+	// await fetch(url, options)
+	// 	.then((res) => res.json())
+	// 	.then((json) => console.log(json))
+	// 	.catch((err) => {
+	// 		console.log(err);
+	// 		errorMessage = err
+	// 	});
 
 	// if (errorMessage) {
 	// 	return { success: false, message: errorMessage }

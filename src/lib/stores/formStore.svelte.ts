@@ -11,6 +11,7 @@ export class FormStore {
     totalSteps: number = $state(13)
     stepStack: number[] = $state([])
     data: Record<string, string> = $state({})
+    submitted: boolean = $state(false)
 
     constructor(currentStep: number = 0) {
 
