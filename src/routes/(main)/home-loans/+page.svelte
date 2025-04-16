@@ -32,6 +32,28 @@
     // so you don't have to if blah so many times.
 </script>
 
+<svelte:head>
+    <title>Clarence Home Loans | Loan Options for Every Buyer</title>
+    <meta
+        name="description"
+        content="Explore home loan options with Clarence Home Loans. Compare rates, terms, and find the right mortgage for your needs."
+    />
+    <meta
+        name="keywords"
+        content="Clarence home loans, mortgage options, home loan programs, DSCR loans, bank statement loans, non-qm, fixed rate mortgage, FHA loans, VA loans, refinance, first-time buyer loans"
+    />
+    <meta property="og:title" content="Clarence Home Loans | Loan Options" />
+    <meta
+        property="og:description"
+        content="Browse a range of home loan options tailored to fit your goals. Learn more with Clarence Home Loans."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:url"
+        content="https://www.clarencehomeloans.com/home-loans"
+    />
+</svelte:head>
+
 <section>
     <div class="container">
         <header>

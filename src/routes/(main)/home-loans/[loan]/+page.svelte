@@ -15,6 +15,31 @@
     })
 </script>
 
+<svelte:head>
+    <title>{`${loan?.title} | Clarence Home Loans`}</title>
+    <meta
+        name="description"
+        content={`Learn about ${loan?.title} from Clarence Home Loans. Find the right loan option that fits your needs and financial goals.`}
+    />
+    <meta
+        name="keywords"
+        content={`${loan?.category} loans, Clarence home loans, mortgage options, home loan programs, ${loan?.title} info`}
+    />
+    <meta
+        property="og:title"
+        content={`${loan?.title} | Clarence Home Loans`}
+    />
+    <meta
+        property="og:description"
+        content={`Explore ${loan?.category} options with Clarence Home Loans. See if this loan is right for you.`}
+    />
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:url"
+        content={`https://www.clarencehomeloans.com/home-loan/${loan?.slug}`}
+    />
+</svelte:head>
+
 <section class="header">
     <BreadCrumbs />
     <div class="container">
