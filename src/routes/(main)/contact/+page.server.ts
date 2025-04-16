@@ -13,10 +13,10 @@ export const actions: Actions = {
 		const phone = formData.get('phone');
 		const email = formData.get('email');
 		const message = formData.get('message');
-		const beans = formData.get('special')
+		const special = formData.get('special')
 
 
-		if (beans) {
+		if (special) {
 			return fail(400, { message: 'Bot Detected' })
 		}
 
