@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DscrRefinanceForm from './DSCRRefinanceForm.svelte'
+    import DSCRPurchaseForm from './DSCRPurchaseForm.svelte'
 </script>
 
-<DscrRefinanceForm />
+<DSCRPurchaseForm />
