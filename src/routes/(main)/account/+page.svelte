@@ -49,7 +49,7 @@
             </tbody>
         </table>
     {:else}
-        Upload some documents!
+        No documents uploaded yet :(
     {/if}
 
     {#if docs && docs.length > 0 && docs[0]?.name != '.emptyFolderPlaceholder'}
