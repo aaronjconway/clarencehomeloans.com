@@ -12,6 +12,12 @@
     ]
 
     function handleClick() {
+        gtag('event', 'form_step_progress', {
+            step_name: stepName,
+            step_number: formStore.currentStep,
+            selected_option: formStore.data[stepName],
+            form_name: formStore.data['page_source'],
+        })
         formStore.nextStep()
     }
 </script>
@@ -19,9 +25,9 @@
 <div class="form-header">
     <h1>Do you work in the healthcare industry?</h1>
     <i>
-        Although we dont' stress about the exact title - this program is for
-        healthcare professionals only. If you're concerned, feel free to call
-        us.
+        While we’re not strict about job titles, this program is exclusively for
+        healthcare professionals. If you’re unsure whether you qualify, feel
+        free to give us a call.
     </i>
 </div>
 

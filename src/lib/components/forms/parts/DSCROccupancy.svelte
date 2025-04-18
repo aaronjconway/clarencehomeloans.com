@@ -2,6 +2,12 @@
     const { formStore = $bindable() } = $props()
 
     function handleClick() {
+        gtag('event', 'form_step_progress', {
+            step_name: 'confirm_investment',
+            step_number: formStore.currentStep,
+            selected_option: 'true',
+            form_name: formStore.data['page_source'],
+        })
         formStore.data['confirm_investment'] = 'true'
         formStore.nextStep()
     }

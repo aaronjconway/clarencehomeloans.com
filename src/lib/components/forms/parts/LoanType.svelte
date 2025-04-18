@@ -28,6 +28,12 @@
     ]
 
     function handleClick(e) {
+        gtag('event', 'form_step_progress', {
+            step_name: stepName,
+            step_number: formStore.currentStep,
+            selected_option: formStore.data[stepName],
+            form_name: formStore.data['page_source'],
+        })
         if (e.target.value == 'free and clear') {
             formStore.gotoStep(formStore.currentStep + 2)
             delete formStore.data['loan_amount']

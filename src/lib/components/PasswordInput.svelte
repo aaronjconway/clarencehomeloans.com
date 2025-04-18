@@ -20,6 +20,8 @@
 
 <style lang="scss">
     .password-wrapper {
+        display: flex;
+        align-items: center;
         position: relative;
         button {
             position: absolute;
