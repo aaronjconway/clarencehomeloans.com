@@ -57,10 +57,10 @@
 </script>
 
 {#if success}
-    <div class="submission">
+    <div class="le-submission">
         <h1>Thank you!</h1>
-        <div>We'll reach out shortly.</div>
-        <a href="/">back to home page</a>
+        <div>Please sign up and upload your rate quote.</div>
+        <a href="/auth/signup">Click for Sign up</a>
     </div>
 {:else if errorMesasge}
     {errorMesasge}
@@ -197,5 +197,24 @@
 
     .privacy {
         font-size: var(--text-sm);
+    }
+
+    .le-submission {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space);
+        min-height: 60vh;
+
+        margin-top: var(--space-lg);
+        margin-bottom: var(--space-md);
+
+        justify-content: center;
+        padding: var(--space-sm);
+
+        h1 {
+            font-size: var(--text-xl);
+            margin: 0;
+            padding: 0;
+        }
     }
 </style>

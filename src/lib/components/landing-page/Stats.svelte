@@ -1,6 +1,5 @@
 <script lang="ts">
     const { statData } = $props()
-    console.log(statData)
 </script>
 
 <section class="stats">

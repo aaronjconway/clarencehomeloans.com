@@ -44,7 +44,6 @@
             const addressDetails = mapGoogleAddressToTypes(
                 address.address_components
             )
-            console.log(addressDetails)
 
             if (addressDetails) {
                 formStore.data['street_number'] = addressDetails.street_number

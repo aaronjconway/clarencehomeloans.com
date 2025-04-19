@@ -11,7 +11,6 @@
 
 <svelte:head>
     <title>Careers | Clarence Home Loans</title>
-    <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <Hero

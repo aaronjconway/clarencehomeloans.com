@@ -1,6 +1,6 @@
 <script lang="ts">
     import '/src/styles/globals.scss'
-    import 'font-awesome/css/font-awesome.min.css'
+    import '@fortawesome/fontawesome-free/css/all.min.css'
     import Header from '$lib/components/landing-page/Header.svelte'
     import Footer from '$lib/components/Footer.svelte'
 
@@ -22,7 +22,6 @@
 
         gtag('config', 'G-51P86CD244')
     </script>
-    <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <div id="main">

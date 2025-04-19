@@ -40,8 +40,6 @@ export const POST = async ({ request }) => {
 		},
 	};
 
-	console.log(eventData)
-
 	const url = 'https://api.followupboss.com/v1/events';
 
 	const options = {

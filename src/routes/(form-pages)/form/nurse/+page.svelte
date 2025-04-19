@@ -4,6 +4,7 @@
     $effect(() => {
         gtag('event', 'nurse_page_view', {
             form_name: 'nurse_purchase',
+            page_type: 'form',
         })
     })
 </script>

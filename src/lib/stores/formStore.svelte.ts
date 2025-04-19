@@ -38,7 +38,6 @@ export class FormStore {
         let currentPage = page.state.page
         if (page.state.page) {
             if (currentPage < this.currentStep) {
-                console.log(this.stepStack.pop())
                 this.currentStep == this.stepStack.pop()
             }
             if (currentPage > this.currentStep) {

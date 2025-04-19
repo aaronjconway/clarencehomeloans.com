@@ -30,7 +30,6 @@ export const actions: Actions = {
 
 		// this will not send an email if already signed in.
 		const { data, error } = await supabase.auth.signUp({ email, password })
-		console.log(data)
 
 		if (error) {
 			return { message: error.message }
