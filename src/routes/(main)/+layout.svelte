@@ -1,6 +1,6 @@
 <script lang="ts">
     import '/src/styles/globals.scss'
-    // import 'font-awesome/css/font-awesome.min.css'
+    import '@fortawesome/fontawesome-free/css/all.min.css'
     import Header from '$lib/components/Header.svelte'
     import Footer from '$lib/components/Footer.svelte'
 
