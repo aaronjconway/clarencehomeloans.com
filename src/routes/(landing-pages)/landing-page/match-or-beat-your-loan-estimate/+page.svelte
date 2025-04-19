@@ -6,6 +6,7 @@
     import LoanEstimateForm from '../../../(form-pages)/form/match-or-beat-your-loan-estimate/LoanEstimateForm.svelte'
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
     import Stats from '$lib/components/landing-page/Stats.svelte'
+    import SkipQuestions from '$lib/components/landing-page/SkipQuestions.svelte'
 </script>
 
 <svelte:head>
@@ -15,6 +16,7 @@
 <div class="form">
     <LoanEstimateForm />
 </div>
+<SkipQuestions />
 <Hero
     title="Compare Your Mortgage Rates — We'll Match or Beat Your Loan Estimate!"
     subtitle="Get the best deal on your home loan — fast, easy, and no hassle."

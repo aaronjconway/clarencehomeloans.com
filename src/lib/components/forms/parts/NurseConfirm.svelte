@@ -23,7 +23,7 @@
 </script>
 
 <div class="form-header">
-    <h1>Do you work in the healthcare industry?</h1>
+    <h1>Let's get started! 😃 Do you work in healthcare?</h1>
     <i>
         While we’re not strict about job titles, this program is exclusively for
         healthcare professionals. If you’re unsure whether you qualify, feel

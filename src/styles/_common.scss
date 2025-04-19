@@ -159,7 +159,19 @@ button.google {
 }
 
 button.warn {
-	background-color: indianred
+	min-width: min-content;
+	border-radius: 4px;
+	padding: var(--space-xs) var(--space-md);
+	transition-duration: 150ms;
+	background-color: indianred;
+	color: white;
+	font-size: var(--text);
+	font-weight: bold;
+
+	&:hover {
+		filter: brightness(90%);
+
+	}
 }
 
 button[disabled] {
