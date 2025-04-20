@@ -15,7 +15,7 @@
             headers: {
                 'User-Agent': 'Mozilla/5.0',
             },
-            body: 'Person looked at nurse page',
+            body: 'Nurse landing page view',
         })
     }
 

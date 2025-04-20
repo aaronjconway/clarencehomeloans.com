@@ -17,7 +17,7 @@
                     headers: {
                         'User-Agent': 'Mozilla/5.0',
                     },
-                    body: 'GOE landing page looked at',
+                    body: 'GOE landing page view',
                 }
             )
         }

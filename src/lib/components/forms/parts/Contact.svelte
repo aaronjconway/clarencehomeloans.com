@@ -6,6 +6,17 @@
      *
      *
      * */
+    async function notify() {
+        await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+            method: 'POST',
+            headers: {
+                'User-Agent': 'Mozilla/5.0',
+            },
+            body: formStore.data['page_source'] + ' contact view',
+        })
+    }
+
+    notify()
 
     let { formStore = $bindable(), stepName } = $props()
 
@@ -25,6 +36,14 @@
 
     async function handleSubmit(e: SubmitEvent) {
         e.preventDefault()
+
+        await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+            method: 'POST',
+            headers: {
+                'User-Agent': 'Mozilla/5.0',
+            },
+            body: formStore.data['page_source'] + 'submit attempt',
+        })
 
         gtag('event', 'form_step_progress', {
             step_name: stepName,
