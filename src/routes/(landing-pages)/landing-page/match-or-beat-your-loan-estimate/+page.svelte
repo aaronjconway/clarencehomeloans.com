@@ -26,7 +26,7 @@
 
 <Stats
     statData={[
-        { number: '>$5,000', text: 'Saved on average' },
+        { number: '>$4,000', text: 'Saved on average' },
         { number: '17', text: 'Average days to close' },
         { number: '180+', text: 'Familes Helped' },
     ]}

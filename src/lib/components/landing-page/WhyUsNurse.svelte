@@ -1,3 +1,7 @@
+<script>
+    import SimpleCta from '../sections/SimpleCTA.svelte'
+</script>
+
 <!-- <script lang="ts"> -->
 <!--     /* -->
 <!--      * landing page section for explaining why austin specific -->
@@ -9,33 +13,40 @@
 <section>
     <div class="container compact">
         <header>
-            <h2>Homeownership Support Built for Nurses</h2>
+            <h2>Here’s how we help you</h2>
+            <h3>
+                <blockquote>
+                    We’re faster, better priced, less closing costs, more
+                    knowledgeable & more available than anyone else.
+                </blockquote>
+            </h3>
         </header>
         <p>
-            With over <strong
-                >nine years of experience in real estate and lending</strong
-            >, we understand the unique challenges healthcare professionals face
-            when buying a home. That’s why we’ve created a program specifically
-            for nurses — built around your schedule, your needs, and your goals.
-        </p>
-
-        <p>Most importanly, <strong>you deserve it.</strong></p>
-
-        <p>
-            We’re not just mortgage experts — we’re advocates for nurses. We <strong
-                >work closely with you throughout the entire process</strong
-            >, offering flexible loan options, personalized guidance, and a
-            commitment to making homeownership more accessible for those who
-            care for others every day.
+            Unfortunately, searching for “nurse” programs makes you a <strong
+                >prime target to be taken advantage of.</strong
+            >
         </p>
         <p>
-            From <strong>pre-approval to closing</strong>, we help simplify the
-            path to your new home. Whether you're a first-time buyer or
-            relocating, you’ll have a team that understands your profession and
-            works around your schedule. With us, you’re not just getting a
-            mortgage — <strong>you’re gaining a trusted partner</strong> who’s here
-            to support you every step of the way.
+            The majority of “Programs” out there are nothing but sales funnels
+            with no real benefits. The vast majority of those lenders are also
+            incredibly expensive because they pass the cost of marketing on to
+            the clients.
         </p>
+
+        <h3 style="text-align: center; margin-top:var(--space-lg)">
+            We simply just make less to provide this service.
+        </h3>
+        <p>
+            Not only are we better than the other "Heroes" or "Next Door"
+            programs up front, we additionally reduce our compensation.
+        </p>
+
+        <SimpleCta
+            subTitle="You Care for Others—Let Us Care for You"
+            title="Home buying support designed exclusively for nurses."
+            buttonText="Learn more"
+            buttonLink="#main"
+        />
     </div>
 </section>
 
@@ -64,7 +75,7 @@
                 <i class="fa fa-dollar"></i>
                 <div class="header">Save Thousands in Costs</div>
                 <div class="content">
-                    On average, nurses save over <strong>$4,000</strong> when working
+                    On average, nurses save over <strong>$5,000</strong> when working
                     with us compared to traditional "Hero's" programs. Lower fees,
                     better rates, and zero fluff — just real savings you deserve.
                 </div>
@@ -176,5 +187,13 @@
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-xl);
         }
+    }
+    blockquote {
+        color: #555;
+        border-left: 4px solid var(--green-400);
+        padding: var(--space-sm) var(--space);
+        margin: var(--space) 0;
+        background-color: #f9fafb;
+        position: relative;
     }
 </style>

@@ -55,7 +55,7 @@
 <Stats
     statData={[
         {
-            number: 'Over $5,000',
+            number: 'Over $4,000',
             text: 'Saved vs big lenders',
         },
         { number: '17', text: 'Average days to close' },

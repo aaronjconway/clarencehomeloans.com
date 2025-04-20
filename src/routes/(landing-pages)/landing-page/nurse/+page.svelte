@@ -45,17 +45,17 @@
     <NurseForm />
 </div>
 <Hero
-    title="Exclusive Home Buying Program for Nurses"
+    title="The Best Options, Rates, and Transparent Guidance"
     subtitle="Helping healthcare heroes become homeowners — with less hassle and more savings."
-    text="As a mortgage broker, we specialize in helping nurses navigate the home buying process with tailored loan options, low down payments, and flexible qualification guidelines. Whether you're a first-time buyer or moving into your next home, this program is designed specifically for you."
+    text="Buying a home can be tough! We’re here to provide you with the most accurate and transparent advice while delivering the best pricing and options."
     imagePath="nurse/hero-male-nurse-700-400.jpg"
 />
 
 <Stats
     statData={[
         {
-            number: 'Over $5,000',
-            text: 'Saved against other "Heroes" programs',
+            number: 'Over $4,000',
+            text: 'Saved against other "Heroes" or "Next Door" programs',
         },
         { number: '17', text: 'Average days to close' },
         { number: '180+', text: 'Familes Helped' },
