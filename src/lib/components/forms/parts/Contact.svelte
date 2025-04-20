@@ -7,7 +7,7 @@
      *
      * */
 
-    let { formStore = $bindable() } = $props()
+    let { formStore = $bindable(), stepName } = $props()
 
     function formatPhone() {
         let value = formStore.data['phone']
