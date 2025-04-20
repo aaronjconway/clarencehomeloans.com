@@ -32,7 +32,7 @@
             .stat {
                 h3 {
                     font-size: var(--text-xxl);
-                    color: var(--green-300);
+                    color: var(--green-500);
                     margin: 0;
                     font-weight: 700;
                 }

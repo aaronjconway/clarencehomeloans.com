@@ -87,10 +87,15 @@
             //
             font-weight: bold;
             font-size: var(--text-md);
-        }
-
-        .content {
-            //
+            &:after {
+                content: '';
+                display: block;
+                width: 40px;
+                height: 5px;
+                border-radius: 10px;
+                border: var(--green-400) solid 1px;
+                background: var(--green-400);
+            }
         }
     }
 
