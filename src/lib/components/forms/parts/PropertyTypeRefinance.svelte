@@ -21,7 +21,6 @@
     ]
 
     function handleClick() {
-
         gtag('event', 'form_step_progress', {
             step_name: stepName,
             step_number: formStore.currentStep,
@@ -33,7 +32,7 @@
 </script>
 
 <div class="form-header">
-    <h1>What kind of property is this?</h1>
+    <h1>What kind of property is it?</h1>
 </div>
 <div class="radio-wrapper">
     <div class="radio-inner">

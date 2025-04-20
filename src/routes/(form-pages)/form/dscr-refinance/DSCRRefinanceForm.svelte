@@ -8,7 +8,7 @@
     import PropertyType from '$lib/components/forms/parts/DSCRPropertyType.svelte'
     import LoanType from '$lib/components/forms/parts/DSCRLoanType.svelte'
     import LoanAmount from '$lib/components/forms/parts/LoanAmount.svelte'
-    import Location from '$lib/components/forms/parts/LocationRefinance.svelte'
+    import Location from '$lib/components/forms/parts/LocationExact.svelte'
     import HomeValue from '$lib/components/forms/parts/HomeValue.svelte'
     import DSCRIncome from '$lib/components/forms/parts/DSCRincome.svelte'
     import DscrOccupancy from '$lib/components/forms/parts/DSCROccupancy.svelte'

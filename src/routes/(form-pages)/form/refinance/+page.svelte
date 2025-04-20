@@ -6,7 +6,7 @@
     import LoanType from '$lib/components/forms/parts/LoanType.svelte'
     import LoanAmount from '$lib/components/forms/parts/LoanAmount.svelte'
     import OccupancyType from '$lib/components/forms/parts/OccupancyType.svelte'
-    import Location from '$lib/components/forms/parts/LocationRefinance.svelte'
+    import Location from '$lib/components/forms/parts/LocationExact.svelte'
     import HomeValue from '$lib/components/forms/parts/HomeValue.svelte'
     import Veteran from '$lib/components/forms/parts/Veteran.svelte'
     import IncomeType from '$lib/components/forms/parts/IncomeType.svelte'

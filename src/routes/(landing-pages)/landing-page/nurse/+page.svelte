@@ -9,10 +9,22 @@
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
     import Stats from '$lib/components/landing-page/Stats.svelte'
 
+    async function notify() {
+        await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+            method: 'POST',
+            headers: {
+                'User-Agent': 'Mozilla/5.0',
+            },
+            body: 'Person looked at nurse page',
+        })
+    }
+
     $effect(() => {
         gtag('event', 'nurse_page_view', {
             page_type: 'landing_page',
         })
+
+        notify()
     })
 </script>
 

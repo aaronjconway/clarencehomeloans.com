@@ -1,18 +1,13 @@
 <script lang="ts">
-    import Dialog from '$lib/components/Dialog.svelte'
     const { stepName = '', formStore = $bindable() } = $props()
     const data = [
         {
-            text: 'Primary Residence',
-            id: 'primary',
+            text: 'Yes',
+            id: 'yes',
         },
         {
-            text: 'Second Home',
-            id: 'second',
-        },
-        {
-            text: 'Investment',
-            id: 'investment',
+            text: 'No',
+            id: 'no',
         },
     ]
 
@@ -28,24 +23,24 @@
 </script>
 
 <div class="form-header">
-    <h1>How will you use this property?</h1>
-    <Dialog page={'occupancy'} buttonText={'More on Occupancy Types'} />
+    <h1>Do you or the seller currently live in the property?</h1>
 </div>
+
 <div class="radio-wrapper">
     <div class="radio-inner">
         {#each data as item}
             <div class="radio-button">
-                <input
-                    type="radio"
-                    value={item.id}
-                    id={item.id}
-                    bind:group={formStore.data[stepName]}
-                    onclick={handleClick}
-                />
                 <label
                     for={item.id}
                     class:selected={item.id == formStore.data[stepName]}
                 >
+                    <input
+                        type="radio"
+                        value={item.id}
+                        id={item.id}
+                        bind:group={formStore.data[stepName]}
+                        onclick={handleClick}
+                    />
                     {item.text}
                 </label>
             </div>
