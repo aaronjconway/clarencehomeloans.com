@@ -72,22 +72,27 @@
     <div class="container">
         <div class="faq-wrapper">
             <h2>Frequently Asked Questions</h2>
-
             <div class="item">
                 <div class="title">
                     How does the Family Home Buying Program work?
                 </div>
+
                 <p>
-                    Our Family Home Buying Program makes homeownership, when
-                    buying from family, easier by allowing you to <strong
-                        >wrap existing debts</strong
-                    >, like credit cards or personal loans, into your mortgage
-                    through a
+                    <strong>Our Family Home Buying Program</strong> makes it
+                    easier to buy a home from a family member. You can use a
                     <strong>gift of equity</strong>
-                    from a family member. In most cases, you can qualify for
-                    <strong>0 down payment</strong>, making homeownership more
-                    affordable with no upfront costs. Our team is here to guide
-                    you every step of the way.
+                    from your relative to help cover the purchase—and even
+                    <strong>roll in other debts</strong> like credit cards or personal
+                    loans into your mortgage.
+                </p>
+
+                <p>
+                    In many cases, you can qualify for a <strong
+                        >$0 down payment AND $0 out of pocket</strong
+                    >, which means you can become a homeowner without paying
+                    anything upfront (minus small things like an appraisal). Our
+                    team will be with you every step of the way to make the
+                    process simple and stress-free.
                 </p>
             </div>
 
@@ -102,7 +107,25 @@
                     picture, but we’ll get you the most competitive option available.
                 </p>
             </div>
-
+            <div class="item">
+                <div class="title">
+                    Does the seller have to pay any taxes on the gift?
+                </div>
+                <p>
+                    A <strong>gift of equity</strong> typically does
+                    <strong>not result in taxes</strong>
+                    for the buyer. However, the family member giving the gift may
+                    need to <strong>file a gift tax return</strong> if the
+                    amount exceeds the annual gift tax exclusion (currently
+                    $18,000 per person in 2024).
+                    <strong
+                        >Just filing the form doesn’t mean they owe taxes</strong
+                    >—most people won’t, because they can apply it toward their
+                    <strong>lifetime gift and estate tax exemption</strong> (which
+                    is over $13 million as of 2024). We always recommend consulting
+                    a tax advisor, and our team will help guide you through the process.
+                </p>
+            </div>
             <div class="item">
                 <div class="title">
                     Do I need to be a first-time homebuyer to qualify?

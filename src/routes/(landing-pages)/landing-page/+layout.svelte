@@ -16,7 +16,9 @@
     <script>
         window.dataLayer = window.dataLayer || []
         function gtag() {
-            dataLayer.push(arguments)
+            if (window.location.hostname !== 'localhost') {
+                dataLayer.push(arguments)
+            }
         }
         gtag('js', new Date())
 
