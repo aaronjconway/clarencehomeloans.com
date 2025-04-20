@@ -3,6 +3,8 @@
     import WhyUsNurse from '$lib/components/landing-page/WhyUsNurse.svelte'
     import Accordion from '$lib/components/Accordion.svelte'
     import faqs from '$lib/data/nurse-faqs.js'
+    import { reviews } from '$lib/data/reviews.js'
+    import Testimonials from '$lib/components/sections/Testimonials.svelte'
     import NurseForm from '../../../(form-pages)/form/nurse/NurseForm.svelte'
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
     import Stats from '$lib/components/landing-page/Stats.svelte'
@@ -39,11 +41,16 @@
 
 <Stats
     statData={[
-        { number: '>$4,000', text: 'Saved on average' },
+        {
+            number: 'Over $5,000',
+            text: 'Saved against other "Heroes" programs',
+        },
         { number: '17', text: 'Average days to close' },
         { number: '180+', text: 'Familes Helped' },
     ]}
 />
+
+<Testimonials {reviews} />
 
 <WhyUsNurse />
 

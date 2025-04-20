@@ -53,7 +53,7 @@
 <section>
     <div class="container">
         <header>
-            <h2>Why Nurses Choose Us for Home Financing</h2>
+            <h2>Why Healthcare Professionals Choose Us</h2>
             <p>
                 Dedicated support, flexible loan options, and a home buying
                 experience built around your life as a nurse.

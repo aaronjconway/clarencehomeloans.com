@@ -4,7 +4,7 @@
         title = 'Get your home buying and rate questions answered today.',
         description = 'Answer a few questions to get a personalized offer.',
         buttonText = 'Get Started Today',
-        buttonLink = 'purchase',
+        buttonLink = '/form/purchase',
     } = $props()
 </script>
 

@@ -1,5 +1,6 @@
 <script lang="ts">
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
+    import HeroLearnArticles from '$lib/components/HeroLearnArticles.svelte'
 
     let { data } = $props()
 
@@ -9,17 +10,16 @@
 <section>
     <div class="container">
         <header>
-            <h1>Home loan options for everyone</h1>
+            <h1>Transparent Home Loan Education</h1>
         </header>
-
-        <pre>{JSON.stringify(articles, null, 4)}</pre>
     </div>
 </section>
+<HeroLearnArticles articles={articles.slice(0, 4)} />
 <section>
     <div class="container">
         <SimpleCta
             subTitle="Start with Expert Advice"
-            title="Not sure which loan is right for you? We’ll point you in the right direction."
+            title="Have specific questions? We’ll point you in the right direction."
             buttonText="Get Started"
         />
     </div>

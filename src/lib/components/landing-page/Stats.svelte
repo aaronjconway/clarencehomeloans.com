@@ -18,7 +18,6 @@
 <style scoped lang="scss">
     .stats {
         padding: var(--space-lg) 0;
-        background: var(--grey-100);
 
         .stats-grid {
             display: grid;
