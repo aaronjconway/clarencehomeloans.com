@@ -6,17 +6,6 @@
      *
      *
      * */
-    async function notify() {
-        await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
-            method: 'POST',
-            headers: {
-                'User-Agent': 'Mozilla/5.0',
-            },
-            body: formStore.data['page_source'] + ' contact view',
-        })
-    }
-
-    notify()
 
     let { formStore = $bindable(), stepName } = $props()
 
@@ -32,7 +21,7 @@
 
     let loading = $state(false)
     let success = $state(false)
-    let errorMesasge = $state('')
+    let errorMessage = $state('')
 
     async function handleSubmit(e: SubmitEvent) {
         e.preventDefault()
@@ -65,7 +54,7 @@
                 success = true
             } else {
                 success = false
-                errorMesasge = result.message
+                errorMessage = result.message
             }
             loading = false
             formStore.submitted = true
@@ -81,8 +70,11 @@
         <div>We'll reach out shortly.</div>
         <a href="/">back to home page</a>
     </div>
-{:else if errorMesasge}
-    {errorMesasge}
+{:else if errorMessage}
+    <div class="submission">
+        <h1>Error Submitting form</h1>
+        <a href="/">back to home page</a>
+    </div>
 {:else}
     <div class="form-header">
         <h1>Contact info</h1>

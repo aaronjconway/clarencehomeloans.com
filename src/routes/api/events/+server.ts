@@ -41,6 +41,7 @@ export const POST = async ({ request }) => {
 	};
 
 	const url = 'https://api.followupboss.com/v1/events';
+	// const url = 'https://webhook.site/b121d451-bc88-4824-a5b5-83a53e8cb1e5';
 
 	const options = {
 		method: 'POST',
@@ -63,18 +64,16 @@ export const POST = async ({ request }) => {
 		body: jsonToPrettyYaml(data)
 	})
 
-	let errorMessage = '';
-	await fetch(url, options)
-		.then((res) => res.json())
-		.then((json) => console.log(json))
-		.catch((err) => {
-			console.log(err);
-			errorMessage = err
-		});
+	try {
+		const res = await fetch(url, options);
 
-	if (errorMessage) {
-		return { success: false, message: errorMessage }
+		if (!res.ok) {
+			throw new Error(`Request failed with status ${res.status}`);
+		}
+
+		return json({ success: true });
+	} catch (err) {
+		console.error(err);
+		return fail(400, { message: err.message || 'An error occurred' });
 	}
-
-	return json({ success: true })
 }
