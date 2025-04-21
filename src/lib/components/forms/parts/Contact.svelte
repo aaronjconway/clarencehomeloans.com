@@ -86,9 +86,9 @@
 {:else}
     <div class="form-header">
         <h1>Contact info</h1>
-        <div>
-            Expect to hear from us soon—we’ll never share or sell your info.
-        </div>
+        <p>
+            We respect your privacy — your information is never shared or sold.
+        </p>
     </div>
     <section>
         <div class="container">

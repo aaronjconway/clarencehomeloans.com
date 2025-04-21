@@ -15,7 +15,6 @@
     import DSCRTenants from '$lib/components/forms/parts/DSCRTenants.svelte'
     import Credit from '$lib/components/forms/parts/Credit.svelte'
     import Derog from '$lib/components/forms/parts/Derog.svelte'
-    import NextSteps from '$lib/components/forms/parts/NextSteps.svelte'
     import Contact from '$lib/components/forms/parts/Contact.svelte'
 
     const steps = $state([
@@ -30,8 +29,7 @@
         { id: 8, name: 'dscr_current_income', component: DSCRIncome },
         { id: 9, name: 'credit', component: Credit },
         { id: 10, name: 'derogatory_events', component: Derog },
-        { id: 11, name: '', component: NextSteps },
-        { id: 12, name: 'contact', component: Contact },
+        { id: 11, name: 'contact', component: Contact },
     ])
 
     // create a new form
