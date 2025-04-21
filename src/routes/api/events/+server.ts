@@ -41,7 +41,6 @@ export const POST = async ({ request }) => {
 	};
 
 	const url = 'https://api.followupboss.com/v1/events';
-	// const url = 'https://webhook.site/b121d451-bc88-4824-a5b5-83a53e8cb1e5';
 
 	const options = {
 		method: 'POST',
