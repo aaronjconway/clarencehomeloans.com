@@ -33,7 +33,7 @@
         await loader.importLibrary('places')
 
         const autocomplete = new google.maps.places.Autocomplete(searchInput, {
-            types: ['locality'],
+            types: ['locality', 'postal_code'],
             componentRestrictions: { country: 'us' },
         })
 
