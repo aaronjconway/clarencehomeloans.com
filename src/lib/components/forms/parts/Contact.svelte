@@ -31,7 +31,7 @@
             headers: {
                 'User-Agent': 'Mozilla/5.0',
             },
-            body: formStore.data['page_source'] + 'submit attempt',
+            body: formStore.data['page_source'] + ' submit attempt',
         })
 
         gtag('event', 'form_step_progress', {
