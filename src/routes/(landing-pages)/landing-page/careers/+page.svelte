@@ -2,17 +2,20 @@
     import Hero from '$lib/components/landing-page/Hero.svelte'
     import WhyNexa from '$lib/components/landing-page/WhyNexa.svelte'
     import Accordion from '$lib/components/Accordion.svelte'
-    import faqs from '$lib/data/career-faqs.ts'
-    import Contact from '$lib/components/landing-page/Contact.svelte'
 
-    import type { PageProps } from './$types'
-    let { form }: PageProps = $props()
+    // the larger contact
+    import Contact from '$lib/components/landing-page/Contact.svelte'
+    import faqs from '$lib/data/career-faqs.js'
+    import { FormStore } from '$lib/stores/formStore.svelte'
+    let formStore = new FormStore()
+    formStore.data['page_source'] = 'career'
 </script>
 
 <svelte:head>
     <title>Careers | Clarence Home Loans</title>
 </svelte:head>
 
+<Contact {formStore} />
 <Hero
     title="Take Control of Your Income and Career"
     subtitle=" Step into a better position — earn more, work your way."
@@ -32,11 +35,5 @@
                 </Accordion>
             {/each}
         </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <Contact {form} />
     </div>
 </section>

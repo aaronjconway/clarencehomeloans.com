@@ -71,8 +71,11 @@ export const POST = async ({ request }) => {
 		}
 
 		return json({ success: true });
+
 	} catch (err) {
+
 		console.error(err);
+
 		return fail(400, { message: err.message || 'An error occurred' });
 	}
 }

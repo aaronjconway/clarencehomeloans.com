@@ -1,6 +1,5 @@
 <script>
     import Logo from '$lib/components/Logo.svelte'
-    import { page } from '$app/state'
 </script>
 
 <footer>
