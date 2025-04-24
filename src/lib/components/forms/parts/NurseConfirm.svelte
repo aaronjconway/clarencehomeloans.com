@@ -24,11 +24,11 @@
 
 <div class="form-header">
     <h1>Let's get started! 😃 Do you work in healthcare?</h1>
-    <i>
-        While we’re not strict about job titles, this program is exclusively for
-        healthcare professionals. If you’re unsure whether you qualify, feel
-        free to give us a call.
-    </i>
+    <div>This short form will help us understand your situation and goals.</div>
+    <div>
+        FYI: We're much better in options and pricing than the "Next Door" or
+        "Home for Heroes" programs. :)
+    </div>
 </div>
 
 <div class="radio-wrapper">
