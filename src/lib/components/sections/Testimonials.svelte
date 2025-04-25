@@ -90,7 +90,6 @@
             border: solid 1px var(--grey-200);
             margin: auto;
             border-radius: 5px;
-            font-family: serif;
             font-size: 30px;
             overflow: scroll;
             white-space: wrap;
@@ -134,7 +133,6 @@
     }
 
     .review-text {
-        font-family: serif;
         font-size: var(--text-lg);
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -155,7 +153,6 @@
 
     @media (max-width: 768px) {
         .review-text {
-            font-family: serif;
             font-size: var(--text-md);
             display: -webkit-box;
             -webkit-box-orient: vertical;
