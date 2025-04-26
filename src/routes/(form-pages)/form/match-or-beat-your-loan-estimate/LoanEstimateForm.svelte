@@ -39,7 +39,6 @@
     form.data['loan_type'] = 'loan-estimate-unknown'
     //the lead type
     form.data['page_source'] = 'loan-estimate'
-    //testing
 
     form.totalSteps = steps.length - 1
 

@@ -64,10 +64,12 @@
     }
 </script>
 
-{#if success}
+{#if !success}
     <div class="submission">
         <h1>Thank you!</h1>
-        <div>We'll reach out shortly.</div>
+        <div>We'll reach out shortly to cover your information and goals.</div>
+        <div>We look forward to working with you! 😃</div>
+
         <a href="/">back to home page</a>
     </div>
 {:else if errorMessage}

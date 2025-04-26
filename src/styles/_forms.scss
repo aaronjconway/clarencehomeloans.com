@@ -88,17 +88,18 @@
 
 
 	.form-header {
-		max-width: 800px;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		gap: var(--space);
 
 		margin-top: var(--space-lg);
 		margin-bottom: var(--space-md);
-
-		justify-content: center;
 		padding: var(--space-sm);
+		max-width: 800px;
+
 		text-align: center;
+		font-size: var(--text-sm);
 
 		h1 {
 			font-size: var(--text-lg);
@@ -161,6 +162,7 @@
 	@media (min-width:base.$lg) {
 
 		.form-header {
+			font-size: var(--text);
 
 			h1 {
 				font-size: var(--text-xxl);
