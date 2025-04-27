@@ -64,7 +64,7 @@
     }
 </script>
 
-{#if !success}
+{#if success}
     <div class="submission">
         <h1>Thank you!</h1>
         <div>We'll reach out shortly to cover your information and goals.</div>

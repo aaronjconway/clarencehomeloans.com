@@ -34,10 +34,16 @@
 
 <div class="form-header">
     <h1>Where are you at in the home buying process?</h1>
-    <i>
-        These questions will help us provide you with rates and relevant
-        information.
-    </i>
+    <div>
+        This short form will help us navigate you to the right <b
+            >FHA or Conventional</b
+        > choice.
+    </div>
+    <div>
+        We respect your privacy — <b
+            >your information is never shared or sold.</b
+        >
+    </div>
 </div>
 
 <div class="radio-wrapper">

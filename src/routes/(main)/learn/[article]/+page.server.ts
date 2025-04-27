@@ -18,7 +18,6 @@ export const load: PageServerLoad = async ({ params }) => {
 	try {
 		const article = await withTimeout(client.request(readItems('articles', {
 			// fields: ['*', { ad1: ["*"] }, { ad2: ['*'] }],
-			// //testing
 			fields: ['*', { '*': ['*'] }],
 			filter: { 'slug': { '_eq': params.article } }
 		})), 5000); // 5 seconds timeout
