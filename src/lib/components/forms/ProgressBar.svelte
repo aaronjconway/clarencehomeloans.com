@@ -14,6 +14,7 @@
         display: flex;
         width: 100%;
         justify-content: center;
+        align-items: center;
         margin-top: var(--space-md);
     }
 
@@ -27,6 +28,10 @@
         padding: 0;
         margin: 0 var(--space-lg);
         transition: all 200ms;
+    }
+
+    div {
+        font-size: var(--text-sm);
     }
 
     .progress {

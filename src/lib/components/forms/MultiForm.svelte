@@ -33,6 +33,7 @@
     <div class="nav">
         {#if formStore.currentStep > 0 && !formStore.submitted}
             <button
+                class="back-button"
                 onclick={() => {
                     formStore.previousStep()
                 }}
