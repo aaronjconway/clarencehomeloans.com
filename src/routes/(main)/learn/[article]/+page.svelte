@@ -6,7 +6,7 @@
     import { generateTOC } from '$lib/utils.js'
 
     const { data } = $props()
-    const loan = $derived(data.loan?.[0])
+    const article = data.article[0]
     let toc = $state()
 
     $effect(() => {
@@ -19,16 +19,16 @@
     <div class="container">
         <div class="header-inner">
             <div>
-                <h1>{loan?.title}</h1>
-                <div class="summary">{loan?.short_summary}</div>
+                <h1>{article.title}</h1>
+                <div class="summary">{article.description}</div>
                 <div class="meta-item">
                     <div>
                         <strong>Updated:</strong>
-                        {format(loan?.date_updated, 'MMMM dd, yyyy')}
+                        {format(article.date_updated, 'MMMM dd, yyyy')}
                     </div>
                     <div>
                         <strong>Written:</strong>
-                        {format(loan?.date_updated, 'MMMM dd, yyyy')}
+                        {format(article.date_updated, 'MMMM dd, yyyy')}
                     </div>
                 </div>
                 <div class="meta-item">
@@ -56,6 +56,15 @@
                     </div>
                 </div>
             </div>
+            <div class="right">
+                <div class="article-card-image">
+                    <img
+                        src={`https://production-directus.8rjfpz.easypanel.host/assets/${article.image?.filename_disk}`}
+                        alt={article.image?.description}
+                    />
+                    <!-- {JSON.stringify(article.image?.filename_disk)} -->
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -68,36 +77,34 @@
                 <TOC {toc} />
             </div>
             <div class="content">
-                {#if loan}
-                    <div>
-                        {@html loan.content1}
-                    </div>
-                {/if}
+                <div>
+                    {@html article.content1}
+                </div>
             </div>
             <div>
-                {#if loan?.ad1}
+                {#if article?.ad1}
                     <SimpleCta
-                        title={loan.ad1.title}
-                        subTitle={loan.ad1.subtitle}
-                        description={loan.ad1.text}
-                        buttonLink={loan.ad1.button_link}
+                        title={article.ad1.title}
+                        subTitle={article.ad1.subtitle}
+                        description={article.ad1.text}
+                        buttonLink={article.ad1.button_link}
                     />
                 {/if}
             </div>
             <div class="content">
-                {#if loan?.content2}
+                {#if article?.content2}
                     <div>
-                        {@html loan.content2}
+                        {@html article.content2}
                     </div>
                 {/if}
             </div>
             <div>
-                {#if loan}
+                {#if article}
                     <SimpleCta
-                        title={loan.ad2.title}
-                        subTitle={loan.ad2.subtitle}
-                        description={loan.ad2.text}
-                        buttonLink={loan.ad2.button_link}
+                        title={article.ad2?.title}
+                        subTitle={article.ad2?.subtitle}
+                        description={article.ad2?.text}
+                        buttonLink={article.ad2?.button_link}
                     />
                 {/if}
             </div>
@@ -123,6 +130,17 @@
 <style lang="scss">
     @use '/src/styles/base';
 
+    .article-card-image {
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+        }
+    }
     .toc-wrapper {
         display: block;
     }
@@ -179,11 +197,14 @@
             gap: var(--space);
             margin-top: var(--space);
         }
-        .header-inner {
-            padding: var(--space-lg) 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
+
+        .header {
+            .header-inner {
+                padding: var(--space-lg) 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-xxl);
+            }
         }
 
         .content-wrapper {

@@ -1,5 +1,6 @@
 <script lang="ts">
     import Dialog from '$lib/components/Dialog.svelte'
+    import GetStartedArrow from '$lib/components/GetStartedArrow.svelte'
     const { stepName = '', formStore = $bindable() } = $props()
     const data = [
         {
@@ -24,16 +25,22 @@
 </script>
 
 <div class="form-header">
-    <h1>Let's get started! 😃 Are you buying from a family member?</h1>
+    <h1>Will you be buying from a family member?😃</h1>
     <Dialog
         page={'family-members'}
         buttonText={'More on which Family members count'}
     />
-    <i>
+    <div>
         The seller must be a direct family member. This program is exclusively
         for family-to-family transactions. If you're unsure whether your
         relationship qualifies, feel free to give us a call.
-    </i>
+    </div>
+    <div>This short form will help us understand your situation and goals.</div>
+    <div>
+        We respect your privacy — <b
+            >your information is never shared or sold.</b
+        >
+    </div>
 </div>
 
 <div class="radio-wrapper">
@@ -57,3 +64,4 @@
         {/each}
     </div>
 </div>
+<GetStartedArrow />

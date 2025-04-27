@@ -1,5 +1,6 @@
 <script lang="ts">
     import SimpleCta from '$lib/components/sections/SimpleCTA.svelte'
+    // the top 4 articles
     import HeroLearnArticles from '$lib/components/HeroLearnArticles.svelte'
 
     let { data } = $props()

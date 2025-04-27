@@ -16,11 +16,13 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 
 export const load: PageServerLoad = async ({ params }) => {
 	try {
-		const loan = await withTimeout(client.request(readItems('loan_page', {
-			fields: ['*', { ad1: ["*"] }, { ad2: ['*'] }],
-			filter: { 'slug': { '_eq': params.loan } }
+		const article = await withTimeout(client.request(readItems('articles', {
+			// fields: ['*', { ad1: ["*"] }, { ad2: ['*'] }],
+			// //testing
+			fields: ['*', { '*': ['*'] }],
+			filter: { 'slug': { '_eq': params.article } }
 		})), 5000); // 5 seconds timeout
-		return { loan };
+		return { article };
 	} catch (error) {
 		console.log(JSON.stringify(error, null, 4))
 	}
