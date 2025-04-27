@@ -39,7 +39,7 @@
     // add some specific data
     form.data['loan_type'] = 'purchase'
     //the lead type
-    form.data['page_source'] = 'general-purchase'
+    form.data['page_source'] = 'conventional-vs-fha-purchase'
 
     form.totalSteps = steps.length - 1
 
