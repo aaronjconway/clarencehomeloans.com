@@ -17,6 +17,8 @@
     import Contact from '$lib/components/forms/parts/Contact.svelte'
     //
 
+    const { source = 'general-purchase' } = $props()
+
     const steps = $state([
         { id: 0, name: 'buying_stage', component: BuyingStage },
         { id: 1, name: 'property_type', component: PropertyType },
@@ -39,7 +41,7 @@
     // add some specific data
     form.data['loan_type'] = 'purchase'
     //the lead type
-    form.data['page_source'] = 'general-purchase'
+    form.data['page_source'] = source
 
     form.totalSteps = steps.length - 1
 
