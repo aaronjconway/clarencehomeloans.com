@@ -24,17 +24,13 @@
 </script>
 
 <div class="form-header">
-	<h1>Do you work in healthcare? 🏥</h1>
+	<h1>We crush the "Homes for Heroes" and "Next Door program" rates.</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
 		We respect your privacy — <b>your information is never shared or sold.</b>
 	</div>
 	<div><u>We do not spam with calls.</u></div>
-	<div>
-		<b>FYI</b>
-		- We're much better in options and pricing than the "Next Door" or "Home for
-		Heroes" programs. :)
-	</div>
+	<h3>Please confirm you work in healthcare?</h3>
 </div>
 
 <div class="radio-wrapper">

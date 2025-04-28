@@ -27,7 +27,7 @@ const faqs: Faq[] = [
 	{
 		title: "How soon can I close on a new mortgage?",
 		content:
-			"Once you’ve decided on a mortgage offer and completed all the paperwork, we can typically help you close within 30-45 days. We work closely with you and the lenders to ensure the process is as quick and seamless as possible.",
+			"Once you’ve decided on a mortgage offer and completed all the paperwork, we can typically help you close within 14-21 days. We work closely with you and the lenders to ensure the process is as quick and seamless as possible.",
 	},
 	{
 		title: "Can I get a mortgage if I have bad credit?",
