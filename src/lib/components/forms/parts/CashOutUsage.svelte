@@ -34,7 +34,7 @@
 </script>
 
 <div class="form-header">
-	<h1>We have the best interest rates and options.</h1>
+	<h1>We have the best cash out interest rates and options.</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
 		We respect your privacy — <b>your information is never shared or sold.</b>

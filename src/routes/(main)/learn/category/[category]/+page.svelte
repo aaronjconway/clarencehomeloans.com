@@ -2,8 +2,11 @@
 	import SimpleCta from '$lib/components/sections/SimpleCTA.svelte';
 	// the top 4 articles
 	import HeroLearnArticles from '$lib/components/HeroLearnArticles.svelte';
+	import { page } from '$app/state';
+	console.log(page.params);
 
 	let { data } = $props();
+	console.log(data);
 
 	let articles = data.articles;
 </script>
@@ -11,13 +14,7 @@
 <section>
 	<div class="container">
 		<header>
-			<h1>Transparent Home Loan Education</h1>
-			<p>
-				<i class="fa fa-warning"></i>
-				Welcome! Our articles are exclusively written by
-				<u>state-licensed</u>
-				loan officers, not just "blog writers" like you might find with other companies.
-			</p>
+			<h1>{page.params.category}</h1>
 		</header>
 	</div>
 </section>
