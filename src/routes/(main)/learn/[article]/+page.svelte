@@ -20,7 +20,7 @@
 	<BreadCrumbs />
 	<div class="container">
 		<div class="header-inner">
-			<div>
+			<div class="left">
 				<h1>{article.title}</h1>
 				<div class="summary">{article.description}</div>
 				<div class="meta-item">
@@ -83,32 +83,31 @@
 					{@html article.content1}
 				</div>
 			</div>
-			<div>
-				{#if article?.ad1}
+			{#if article?.mid_content_ad}
+				<div>
 					<SimpleCta
-						title={article.ad1.title}
-						subTitle={article.ad1.subtitle}
-						description={article.ad1.text}
-						buttonLink={article.ad1.button_link}
+						title={article.mid_content_ad.title}
+						subTitle={article.mid_content_ad.subtitle}
+						description={article.mid_content_ad.text}
+						buttonLink={article.mid_content_ad?.button_link}
 					/>
-				{/if}
-			</div>
-			<div class="content">
-				{#if article?.content2}
+				</div>
+			{/if}
+			{#if article?.content2}
+				<div class="content">
 					<div>
 						{@html article.content2}
 					</div>
-				{/if}
-			</div>
+				</div>
+			{/if}
 			<div>
-				{#if article}
-					<SimpleCta
-						title={article.ad2?.title}
-						subTitle={article.ad2?.subtitle}
-						description={article.ad2?.text}
-						buttonLink={article.ad2?.button_link}
-					/>
-				{/if}
+				<!-- <pre>{JSON.stringify(article, null, 4)}</pre> -->
+				<SimpleCta
+					title={article.footer_ad.title}
+					subTitle={article.footer_ad.subtitle}
+					description={article.footer_ad.text}
+					buttonLink={article.footer_ad.button_link}
+				/>
 			</div>
 		</div>
 		<aside>
@@ -123,7 +122,7 @@
 			<div class="sticky-div">
 				<hr />
 				<div class="aside-item">
-					<AsideCta />
+					<AsideCta buttonLink={article.aside_cta?.button_link} />
 				</div>
 			</div>
 		</aside>
@@ -180,6 +179,12 @@
 			padding: var(--space-lg) 0;
 			display: grid;
 			gap: var(--space-lg);
+
+			.left {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
 		}
 	}
 

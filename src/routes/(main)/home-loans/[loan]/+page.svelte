@@ -87,7 +87,7 @@
 		</div>
 	</div>
 </section>
-<SocialShare />
+<SocialShare title={loan?.title} />
 <section style="margin-top:0;">
 	<div class="container content-wrapper">
 		<div class="main-content">

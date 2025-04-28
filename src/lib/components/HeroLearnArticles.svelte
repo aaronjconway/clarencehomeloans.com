@@ -3,7 +3,6 @@
 	 * takes in 4 posts and organizes them into one big one + three small ones on
 	 * the right for desktop and just three articles for normal
 	 *
-	 *
 	 * */
 
 	interface Article {
@@ -44,7 +43,7 @@
 
 							<div class="most-recent-content">
 								<div class="article-card-title">
-									{mostRecent.title}
+									Most Recent: {mostRecent.title}
 								</div>
 								<div class="article-card-description">
 									{mostRecent.short_descript}
@@ -84,6 +83,7 @@
 </section>
 
 <style lang="scss">
+	@use '/src/styles/base';
 	.article-card-image {
 		width: 100%;
 		img {
@@ -94,8 +94,8 @@
 		}
 	}
 	.main-wrapper {
-		display: grid;
-		grid-template-columns: 1.618fr 1fr;
+		display: flex;
+		flex-direction: column;
 		gap: var(--space-md);
 	}
 	.right {
@@ -150,6 +150,7 @@
 		gap: var(--space);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		transition: all 0.3s ease;
+		height: 100%;
 
 		&:hover {
 			transform: translateY(-4px);
@@ -163,12 +164,12 @@
 		.article-card-right {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-evenly;
+			justify-content: space-between;
 			padding: var(--space-xs);
 
 			.article-card-title {
 				color: #333;
-				font-size: var(--text-lg);
+				font-size: var(--text-md);
 				text-align: left;
 			}
 			.article-card-description {
@@ -176,6 +177,14 @@
 				text-align: left;
 				margin-bottom: 16px;
 			}
+		}
+	}
+
+	@media (min-width: base.$lg) {
+		.main-wrapper {
+			display: grid;
+			grid-template-columns: 1.618fr 1fr;
+			gap: var(--space-md);
 		}
 	}
 </style>

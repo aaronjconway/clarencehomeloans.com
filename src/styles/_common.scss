@@ -57,6 +57,23 @@ a {
 			filter: brightness(90%);
 
 		}
+
+	}
+
+	&.category {
+		border-radius: 4px;
+		padding: var(--space-xs) var(--space-md);
+		transition-duration: 150ms;
+		background-color: var(--grey-200);
+		color: var(--ink);
+		font-size: var(--text);
+		font-weight: bold;
+		height: fit-content;
+
+		&:hover {
+			filter: brightness(90%);
+
+		}
 	}
 
 	&.account-link {
