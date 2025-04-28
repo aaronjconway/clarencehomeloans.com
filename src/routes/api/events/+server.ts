@@ -55,6 +55,7 @@ export const POST = async ({ request }) => {
 	};
 
 
+	//fire off event notification
 	await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
 		method: 'POST',
 		headers: {
@@ -62,6 +63,7 @@ export const POST = async ({ request }) => {
 		},
 		body: jsonToPrettyYaml(data)
 	})
+
 
 	try {
 		const res = await fetch(url, options);
