@@ -1,9 +1,8 @@
 <script>
 	const {
-		subTitle = 'sign up for free',
+		// subTitle = 'sign up for free',
 		title = 'Get your home buying and rate questions answered today.',
-		description = 'Answer a few questions to get a personalized offer.',
-		buttonText = 'Get Started Today',
+		buttonText = 'Chat With an Expert',
 		buttonLink = '/form/purchase'
 	} = $props();
 </script>
@@ -11,12 +10,12 @@
 <section>
 	<div class="wrapper">
 		<div class="left">
-			<div class="sub-title">{subTitle}</div>
+			<!-- <div class="sub-title">{subTitle}</div> -->
 
 			<h2>{title}</h2>
-			<p>
-				{description}
-			</p>
+			<!-- <p> -->
+			<!-- 	{description} -->
+			<!-- </p> -->
 		</div>
 		<div class="right">
 			<a
@@ -65,22 +64,22 @@
 
 	section {
 		border-radius: 4px;
+		margin: 0;
 	}
 
 	.wrapper {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: var(--space-md);
 		padding: var(--space);
-		background: var(--grey-200);
+		background: var(--green-100);
 		border-radius: 4px;
 
 		.right {
 			display: flex;
 			gap: var(--space-sm);
 			flex-direction: column;
-			justify-content: start;
-			align-items: start;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.sub-title {
@@ -90,48 +89,11 @@
 		}
 
 		h2 {
-			font-size: var(--text-xl);
-			margin-top: var(--space-md);
+			font-size: var(--text-lg);
 		}
 
 		p {
 			font-size: var(--text);
-		}
-	}
-
-	@media (min-width: 786px) {
-		.wrapper {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			padding: var(--space-lg);
-			background: var(--grey-100);
-			border-radius: 4px;
-
-			.right {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: start;
-				width: fit-content;
-				margin: 0 auto;
-			}
-
-			.sub-title {
-				color: var(--green-400);
-				text-transform: uppercase;
-				font-weight: bold;
-			}
-
-			h2 {
-				font-size: var(--text-xl);
-				margin-top: var(--space-md);
-			}
-
-			p {
-				font-size: var(--text);
-				padding: 0;
-				margin: 0;
-			}
 		}
 	}
 </style>
