@@ -73,7 +73,7 @@ importers:
         specifier: ^0.12.3
         version: 0.12.3(svelte@5.27.3)
       prettier:
-        specifier: ^3.5.3
+        specifier: ^3.4.2
         version: 3.5.3
       prettier-plugin-svelte:
         specifier: ^3.3.3

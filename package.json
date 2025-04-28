@@ -29,7 +29,7 @@
 		"globals": "^16.0.0",
 		"js-yaml": "^4.1.0",
 		"mdsvex": "^0.12.3",
-		"prettier": "^3.5.3",
+		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"rehype-autolink-headings": "^7.1.0",
@@ -52,5 +52,10 @@
 		"@supabase/ssr": "^0.6.1",
 		"@supabase/supabase-js": "^2.49.4",
 		"@types/google.maps": "^3.58.1"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }

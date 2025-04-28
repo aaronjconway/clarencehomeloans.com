@@ -5,7 +5,6 @@ import { sequence } from '@sveltejs/kit/hooks'
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public'
 
 const supabase: Handle = async ({ event, resolve }) => {
-	console.log('calling supabase')
 	event.locals.supabase = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
 		cookies: {
 			getAll: () => event.cookies.getAll(),
@@ -23,7 +22,6 @@ const supabase: Handle = async ({ event, resolve }) => {
 	event.locals.supabase.auth.suppressGetSessionWarning = true
 
 	event.locals.safeGetSession = async () => {
-		console.log('calling safeGetSession')
 
 		const { data: { session }, } = await event.locals.supabase.auth.getSession()
 		if (!session) {
