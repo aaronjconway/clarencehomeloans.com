@@ -2,19 +2,12 @@ import type { PageServerLoad } from './$types';
 import { env } from '$env/dynamic/private';
 import { createDirectus, staticToken, rest, readItems } from '@directus/sdk';
 
-// interface Article {
-// 	id: string
-// 	status: string
-// 	sort: string | null
-// 	user_created: string
-// 	date_created: string
-// 	user_updated: string
-// 	date_updated: string
-// 	title: string
-// 	description: string
-// 	tags: string[]
-// 	image: Object
-// }
+interface Category {
+	id: string
+	name: string
+	title: string
+	description: string
+}
 
 
 const client = createDirectus('https://production-directus.8rjfpz.easypanel.host')
@@ -28,18 +21,16 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 	return Promise.race([promise, timeout]);
 };
 
-export const load: PageServerLoad = async ({ params }) => {
-	console.log(params)
+export const load: PageServerLoad = async () => {
+
 	try {
-		const articles = await withTimeout(client.request(readItems('articles', {
-			// fields: ['*', { ad1: ["*"] }, { ad2: ['*'] }],
+		const categories = await withTimeout(client.request(readItems('categories', {
 			fields: ['*', { '*': ['*'] }],
-			filter: { 'Category': { '_eq': params.category } }
-		})), 5000); // 5 seconds timeout
+		})), 5000) as Category[]
 		return {
-			articles
+			categories
 		};
 	} catch (error) {
-		throw new Error('Failed to load Loan_Programs data');
+		throw new Error('Failed to fetch articles data');
 	}
 };

@@ -2,19 +2,22 @@
 	import SimpleCta from '$lib/components/sections/SimpleCTA.svelte';
 	// the top 4 articles
 	import HeroLearnArticles from '$lib/components/HeroLearnArticles.svelte';
-	import { page } from '$app/state';
-	console.log(page.params);
+	import BreadCrumbs from '$lib/components/BreadCrumbs.svelte';
+	// import { page } from '$app/state';
 
 	let { data } = $props();
-	console.log(data);
 
 	let articles = data.articles;
 </script>
 
 <section>
+	<div style="margin-bottom:var(--space)">
+		<BreadCrumbs dark={true} />
+	</div>
 	<div class="container">
 		<header>
-			<h1>{page.params.category}</h1>
+			<h1>{articles[0].category.title}</h1>
+			<div>{articles[0].category.description}</div>
 		</header>
 	</div>
 </section>
