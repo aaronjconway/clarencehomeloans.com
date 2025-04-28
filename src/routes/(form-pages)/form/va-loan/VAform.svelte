@@ -38,9 +38,9 @@
 	let form = new FormStore();
 
 	// add some specific data
-	form.data['loan_type'] = 'purchase';
+	form.data['loan_type'] = 'va';
 	//the lead type
-	form.data['page_source'] = 'nurse-purchase';
+	form.data['page_source'] = 'va-purchase';
 
 	form.totalSteps = steps.length - 1;
 
