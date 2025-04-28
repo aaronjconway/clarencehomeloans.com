@@ -133,3 +133,14 @@ export function generateTOC(containerClass) {
 
     return toc;
 }
+
+export function amortization({ years = 30, amount = 100000, rate = 5 }) {
+    const monthlyRate = rate / 100 / 12; // Monthly interest rate
+    const numberOfPayments = years * 12; // Total number of payments (months)
+
+    // Monthly payment calculation using the amortization formula
+    const monthlyPayment = amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
+
+    // Return the initial full payment (principal + interest)
+    return monthlyPayment.toFixed(2);
+}

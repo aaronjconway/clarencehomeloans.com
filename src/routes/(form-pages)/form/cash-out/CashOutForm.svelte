@@ -2,7 +2,7 @@
 	import MultiForm from '$lib/components/forms/MultiForm.svelte';
 	import { FormStore } from '$lib/stores/formStore.svelte';
 	//
-	import RefinanceType from '$lib/components/forms/parts/RefinanceType.svelte';
+	import CashOutUsage from '$lib/components/forms/parts/CashOutUsage.svelte';
 	import PropertyType from '$lib/components/forms/parts/PropertyTypeRefinance.svelte';
 	import LoanType from '$lib/components/forms/parts/LoanType.svelte';
 	import LoanAmount from '$lib/components/forms/parts/LoanAmount.svelte';
@@ -17,7 +17,7 @@
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 
 	const steps = $state([
-		{ id: 0, name: 'refinance_type', component: RefinanceType },
+		{ id: 0, name: 'cashout_type', component: CashOutUsage },
 		{ id: 1, name: 'property_type', component: PropertyType },
 		{ id: 2, name: 'occupancy', component: OccupancyType },
 		{ id: 3, name: 'loan_type', component: LoanType },
@@ -36,9 +36,9 @@
 	let form = new FormStore();
 
 	// add some specific data
-	form.data['loan_type'] = 'refinance';
+	form.data['loan_type'] = 'cashout';
 	//the lead type
-	form.data['page_source'] = 'general-refinance';
+	form.data['page_source'] = 'general-cashout';
 
 	form.totalSteps = steps.length - 1;
 

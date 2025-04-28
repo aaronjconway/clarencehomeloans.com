@@ -2,22 +2,23 @@
 	import GetStartedArrow from '$lib/components/GetStartedArrow.svelte';
 
 	const { stepName = '', formStore = $bindable() } = $props();
+
 	const data = [
 		{
-			text: 'Just doing research',
-			id: 'research'
+			text: 'I have a large expense coming up.',
+			id: 'large expense'
 		},
 		{
-			text: "I'd like to make an offer on a home",
-			id: 'making_offers'
+			text: 'None ya business',
+			id: 'non-ya-business'
 		},
 		{
-			text: 'I am under contract and shopping rates',
-			id: 'under_contract'
+			text: 'Consolidate Debt',
+			id: 'consolidate_debts'
 		},
 		{
-			text: 'Within the next few months',
-			id: 'few_months'
+			text: 'Life event (Divorce, probate etc)',
+			id: 'life event'
 		}
 	];
 
@@ -33,28 +34,17 @@
 </script>
 
 <div class="form-header">
-	<h1>We have the best FHA and Conventional rates.</h1>
+	<h1>We have the best interest rates and options.</h1>
+	<div>This short form will help us understand your situation and goals.</div>
 	<div>
-		The problem is that the decision between FHA and conventional loans <b>
-			can be quite complicated,
-		</b>
-		and there are many myths out there with
-		<b>very little reliable information online.</b>
-		Sometimes conventional is the best option and other times FHA is the clear winner.
+		We respect your privacy — <b>your information is never shared or sold.</b>
 	</div>
-	<h3>Let's start with where you're at in the home buying process.</h3>
+	<div><u>We do not spam with calls.</u></div>
 	<div>
-		We respect your privacy — <b>
-			your information is <u>never</u>
-			shared or sold.
-		</b>
+		<b>FYI</b>
+		- As a broker we have tons of options others don't as well as the best pricing.
 	</div>
-	<div>
-		<u>
-			We do <b>not</b>
-			spam you with calls.
-		</u>
-	</div>
+	<h1>How will you use the cash?</h1>
 </div>
 
 <div class="radio-wrapper">
