@@ -3,12 +3,8 @@
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
-			text: 'Yes',
+			text: 'Confirm',
 			id: 'yes'
-		},
-		{
-			text: 'No',
-			id: 'no'
 		}
 	];
 
@@ -24,13 +20,11 @@
 </script>
 
 <div class="form-header">
-	<h1>We crush the "Homes for Heroes" and "Next Door program" rates.</h1>
+	<h1>Are you a Nurse or Healthcare worker?</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
-		We respect your privacy — <b>your information is never shared or sold.</b>
+		We respect your privacy — <b>we do not share or sell informtion..</b>
 	</div>
-	<div><u>We do not spam with calls.</u></div>
-	<h3>Please confirm you work in healthcare?</h3>
 </div>
 
 <div class="radio-wrapper">
