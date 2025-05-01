@@ -1,11 +1,10 @@
 <script lang="ts">
 	import GetStartedArrow from '$lib/components/GetStartedArrow.svelte';
-
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
 			text: 'Confirm',
-			id: 'buying_within_6_months'
+			id: 'yes'
 		}
 	];
 
@@ -21,7 +20,11 @@
 </script>
 
 <div class="form-header">
-	<h1>Are you looking to be in a home in the next 6 months?</h1>
+	<h1>Are you going to be buying in Arizona?</h1>
+	<div>This short form will help us understand your situation and goals.</div>
+	<div>
+		We respect your privacy — <b>we do not share or sell informtion..</b>
+	</div>
 </div>
 
 <div class="radio-wrapper">
@@ -38,6 +41,7 @@
 						id={item.id}
 						bind:group={formStore.data[stepName]}
 						onclick={handleClick}
+						ontouchend={handleClick}
 					/>
 					{item.text}
 				</label>
@@ -46,9 +50,3 @@
 	</div>
 </div>
 <GetStartedArrow />
-
-<style lang="scss">
-	.form-header {
-		max-width: 600px;
-	}
-</style>
