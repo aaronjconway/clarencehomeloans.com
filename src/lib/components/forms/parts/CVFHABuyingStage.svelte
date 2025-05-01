@@ -21,7 +21,7 @@
 </script>
 
 <div class="form-header">
-	<h1>Are you looking to be in a home in the next 6 months?</h1>
+	<h1>Are you looking to buy within the next 6 months?</h1>
 </div>
 
 <div class="radio-wrapper">
