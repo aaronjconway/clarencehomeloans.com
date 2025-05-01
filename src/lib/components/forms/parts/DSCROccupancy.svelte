@@ -1,40 +1,52 @@
 <script lang="ts">
-    const { formStore = $bindable() } = $props()
+	import GetStartedArrow from '$lib/components/GetStartedArrow.svelte';
+	const { stepName = '', formStore = $bindable() } = $props();
+	const data = [
+		{
+			text: 'Confirm',
+			id: 'yes'
+		}
+	];
 
-    function handleClick() {
-        gtag('event', 'form_step_progress', {
-            step_name: 'confirm_investment',
-            step_number: formStore.currentStep,
-            selected_option: 'true',
-            form_name: formStore.data['page_source'],
-        })
-        formStore.data['confirm_investment'] = 'true'
-        formStore.nextStep()
-    }
+	function handleClick() {
+		gtag('event', 'form_step_progress', {
+			step_name: stepName,
+			step_number: formStore.currentStep,
+			selected_option: formStore.data[stepName],
+			form_name: formStore.data['page_source']
+		});
+		formStore.nextStep();
+	}
 </script>
 
 <div class="form-header">
-    <h1>
-        DSCR loans are exclusively for investment properties and cannot be used
-        for primary residences.
-    </h1>
-</div>
-<div class="container">
-    <div class="wrapper">
-        <p>
-            If you're looking for a property as your primary residence, please
-            explore our other options.
-        </p>
-        <a href="/home-loans">Home Loan Options</a>
-        <button class="primary" onclick={handleClick}>Proceed</button>
-    </div>
+	<h1>DSCR loans are for investment properties only.</h1>
+	<div>This short form will help us understand your situation and goals.</div>
+	<div>
+		We respect your privacy — <b>we do not share or sell informtion..</b>
+	</div>
 </div>
 
-<style lang="scss">
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-xl);
-    }
-</style>
+<div class="radio-wrapper">
+	<div class="radio-inner">
+		{#each data as item}
+			<div class="radio-button">
+				<label
+					for={item.id}
+					class:selected={item.id == formStore.data[stepName]}
+				>
+					<input
+						type="radio"
+						value={item.id}
+						id={item.id}
+						bind:group={formStore.data[stepName]}
+						onclick={handleClick}
+						ontouchend={handleClick}
+					/>
+					{item.text}
+				</label>
+			</div>
+		{/each}
+	</div>
+</div>
+<GetStartedArrow />
