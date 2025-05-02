@@ -3,8 +3,8 @@
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
-			text: 'Confirm',
-			id: 'yes'
+			text: 'Get a quote',
+			id: 'want_a_quote'
 		}
 	];
 
@@ -20,10 +20,10 @@
 </script>
 
 <div class="form-header">
-	<h1>Are you going to be buying in Arizona?</h1>
+	<h1>Best rates, service, and options in Arizona.</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
-		We respect your privacy — <b>we do not share or sell informtion..</b>
+		We respect your privacy — <b>we do not share or sell informtion.</b>
 	</div>
 </div>
 
