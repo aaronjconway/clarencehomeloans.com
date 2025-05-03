@@ -4,6 +4,7 @@
 	 * the right for desktop and just three articles for normal
 	 *
 	 * */
+	import { format } from 'date-fns';
 
 	interface Article {
 		slug: string;
@@ -19,7 +20,7 @@
 		description: string;
 		tags: string[];
 		image: any;
-		test: any;
+		author: string;
 	}
 	// a list of 4 articles
 	const { articles }: { articles: Article[] } = $props();
@@ -32,13 +33,15 @@
 			<div class="left">
 				<div class="most-recent">
 					<div class="article-card-wrapper">
-						<a href={`/learn/${mostRecent.slug}`}>
+						<a
+							href={`/learn/${mostRecent.slug}`}
+							class="plain"
+						>
 							<div class="article-card-image">
 								<img
 									src={`https://production-directus.8rjfpz.easypanel.host/assets/${mostRecent.image?.filename_disk}`}
 									alt={mostRecent.image?.description}
 								/>
-								<!-- {JSON.stringify(article.image?.filename_disk)} -->
 							</div>
 
 							<div class="most-recent-content">
@@ -48,6 +51,12 @@
 								<div class="article-card-description">
 									{mostRecent.short_descript}
 								</div>
+								<div class="article-card-author">
+									by {mostRecent.author?.name} on {format(
+										mostRecent?.date_created,
+										'MMMM dd, yyyy'
+									)}
+								</div>
 							</div>
 						</a>
 					</div>
@@ -55,7 +64,10 @@
 			</div>
 			<div class="right">
 				{#each Array.from(articles.slice(1)) as article}
-					<a href={`/learn/${article.slug}`}>
+					<a
+						href={`/learn/${article.slug}`}
+						class="plain"
+					>
 						<div class="article-card-wrapper">
 							<div class="article-card-left">
 								<div class="article-card-image">
@@ -72,6 +84,12 @@
 								</div>
 								<div class="article-card-description">
 									{article.short_descript}
+								</div>
+								<div class="article-card-author">
+									by {article.author?.name} on {format(
+										article.date_created,
+										'MMMM dd, yyyy'
+									)}
 								</div>
 							</div>
 						</div>
@@ -114,21 +132,21 @@
 			display: flex;
 			gap: var(--space);
 			border-radius: 4px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 			height: 100%;
 
 			transition: all 0.3s ease;
 
 			&:hover {
 				transform: translateY(-4px);
-				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+				/* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 			}
 			.most-recent-content {
 				display: flex;
 				flex-direction: column;
 				padding: 1rem;
 				.article-card-title {
-					color: #333;
+					font-weight: bold;
 					font-size: var(--text-lg);
 					text-align: left;
 				}
@@ -137,6 +155,10 @@
 					line-height: 1.5;
 					text-align: left;
 					margin-bottom: 16px;
+				}
+
+				.article-card-author {
+					font-size: var(--text-sm);
 				}
 			}
 		}
@@ -148,13 +170,13 @@
 		display: grid;
 		grid-template-columns: 1fr 1.618fr;
 		gap: var(--space);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 		transition: all 0.3s ease;
 		height: 100%;
 
 		&:hover {
 			transform: translateY(-4px);
-			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+			/* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 		}
 
 		.article-card-left {
@@ -168,14 +190,18 @@
 			padding: var(--space-xs);
 
 			.article-card-title {
-				color: #333;
-				font-size: var(--text-md);
+				font-weight: bold;
+				font-size: var(--text);
 				text-align: left;
 			}
 			.article-card-description {
 				line-height: 1.5;
 				text-align: left;
 				margin-bottom: 16px;
+				font-size: var(--text-sm);
+			}
+			.article-card-author {
+				font-size: var(--text-sm);
 			}
 		}
 	}

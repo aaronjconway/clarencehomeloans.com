@@ -6,6 +6,7 @@
 	let { data } = $props();
 
 	let articles = data.articles;
+	let categories = data.categories;
 </script>
 
 <section>
@@ -28,34 +29,18 @@
 		<div class="button-wrapper">
 			<a
 				class="category"
-				href="/"
+				href="/categories"
 			>
-				All Posts
+				All Categories
 			</a>
-			<a
-				class="category"
-				href="/"
-			>
-				Refinance
-			</a>
-			<a
-				class="category"
-				href="/"
-			>
-				First Time Home Buyers
-			</a>
-			<a
-				class="category"
-				href="/"
-			>
-				Market Updates
-			</a>
-			<a
-				class="category"
-				href="/"
-			>
-				Investors
-			</a>
+			{#each categories as category}
+				<a
+					class="category"
+					href={`/learn/categories/${category.name}`}
+				>
+					{category.title}
+				</a>
+			{/each}
 		</div>
 	</div>
 </section>
