@@ -1,31 +1,12 @@
 <script lang="ts">
 	import GetStartedArrow from '$lib/components/GetStartedArrow.svelte';
+	import Dialog from '$lib/components/Dialog.svelte';
 
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
-			text: 'Army',
-			id: 'army'
-		},
-		{
-			text: 'Navy',
-			id: 'navy'
-		},
-		{
-			text: 'Air Force',
-			id: 'air-force'
-		},
-		{
-			text: 'Marine Corps',
-			id: 'marine-corps'
-		},
-		{
-			text: 'Coast Guard',
-			id: 'coast-guard'
-		},
-		{
-			text: 'National Guard',
-			id: 'national-guard'
+			text: 'Confirm',
+			id: 'confirm'
 		}
 	];
 
@@ -41,17 +22,13 @@
 </script>
 
 <div class="form-header">
-	<h1>Thank you for your service! 😃 Let's get started.</h1>
-	<div>
-		We have the best rates and options for veterans. We will crush companies
-		like Rocket Mortgage, Veterans United and Homes for Heroes in terms of Rates
-		and personalized service.
-	</div>
-	<div>
-		We respect your privacy — <b>your information is never shared or sold.</b>
-	</div>
-	<div><u>We do not spam with calls.</u></div>
-	<h3>What branch did you serve in?</h3>
+	<h1>We have the best rates and options for Veterans.</h1>
+	<Dialog
+		page={'va-rates'}
+		buttonText="How are we able to be so much better?"
+	/>
+	<div><u>We do not sell or share information</u></div>
+	<h3>Please confirm you served in the military</h3>
 </div>
 
 <div class="radio-wrapper">

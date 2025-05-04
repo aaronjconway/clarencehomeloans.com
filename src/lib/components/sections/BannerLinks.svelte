@@ -1,11 +1,6 @@
 <script lang="ts">
 	const links = [
 		{
-			title: 'Tools',
-			desc: 'Helpful tools for home buyers',
-			link: '/pending'
-		},
-		{
 			title: 'Loan Programs',
 			desc: 'Available Loan Options',
 			link: '/home-loans'
@@ -103,7 +98,7 @@
 	@media (min-width: base.$lg) {
 		.grid {
 			padding: 0;
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);

@@ -67,7 +67,7 @@ export class FormStore {
             this.currentStep = n
             pushState('', { page: this.currentStep })
             this.scrollToTop()
-        }, 150);
+        }, 200);
     }
 
 
@@ -79,7 +79,7 @@ export class FormStore {
             this.currentStep++
             pushState('', { page: this.currentStep })
             this.scrollToTop()
-        }, 150);
+        }, 200);
     }
 
     previousStep() {

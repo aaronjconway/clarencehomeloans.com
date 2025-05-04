@@ -29,7 +29,7 @@
 		type="range"
 		min="0"
 		max="300000"
-		step="10000"
+		step="1000"
 		bind:value={formStore.data[stepName]}
 	/>
 	<div class="button-wrapper">
