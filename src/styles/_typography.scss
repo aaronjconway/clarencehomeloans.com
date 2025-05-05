@@ -40,7 +40,7 @@
 	--space-xxl: calc(8 * var(--space));
 
 	@media (min-width:base.$sm) {
-		--text-scale-ratio: 1.10;
+		--text-scale-ratio: 1.20;
 	}
 
 	@media (min-width:base.$md) {
@@ -48,6 +48,7 @@
 	}
 
 	@media (min-width:base.$xl) {
+		--text-base-size: 18px;
 		--text-scale-ratio: 1.20;
 	}
 
@@ -59,7 +60,6 @@ body {
 	font-family: var(--font-body);
 	color: var(--ink);
 	line-height: var(--body-line-height);
-
 }
 
 
