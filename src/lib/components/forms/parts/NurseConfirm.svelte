@@ -25,6 +25,20 @@
 	<div>
 		We respect your privacy — <b>we do not share or sell informtion..</b>
 	</div>
+	<ul>
+		<li>
+			<i class="fa fa-check"></i>
+			No bait and switch
+		</li>
+		<li>
+			<i class="fa fa-check"></i>
+			No origination fees
+		</li>
+		<li>
+			<i class="fa fa-check"></i>
+			No credit check
+		</li>
+	</ul>
 </div>
 
 <div class="radio-wrapper">
@@ -41,7 +55,6 @@
 						id={item.id}
 						bind:group={formStore.data[stepName]}
 						onclick={handleClick}
-						ontouchend={handleClick}
 					/>
 					{item.text}
 				</label>
@@ -50,3 +63,14 @@
 	</div>
 </div>
 <GetStartedArrow />
+
+<style lang="scss">
+	ul {
+		text-align: left;
+		margin: 0 auto;
+		i {
+			color: green;
+			margin-right: var(--space-sm);
+		}
+	}
+</style>

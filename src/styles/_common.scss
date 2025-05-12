@@ -57,7 +57,7 @@ a {
 		min-width: min-content;
 		border-radius: 4px;
 		padding: var(--space-xs) var(--space-md);
-		transition-duration: 150ms;
+		transition-duration: 200ms;
 		background-color: var(--green-400);
 		color: white;
 		font-size: var(--text);
@@ -73,7 +73,7 @@ a {
 	&.category {
 		border-radius: 4px;
 		padding: var(--space-xs) var(--space-md);
-		transition-duration: 150ms;
+		transition-duration: 200ms;
 		background-color: var(--grey-200);
 		color: var(--ink);
 		font-size: var(--text);
@@ -91,7 +91,7 @@ a {
 		white-space: nowrap;
 		border-radius: 4px;
 		padding: var(--space-xs) var(--space-md);
-		transition-duration: 150ms;
+		transition-duration: 200ms;
 		background-color: var(--grey-100);
 		font-weight: bold;
 		color: var(--grey-800);
@@ -114,7 +114,7 @@ button.primary {
 	min-width: min-content;
 	border-radius: 4px;
 	padding: var(--space-xs) var(--space-md);
-	transition-duration: 150ms;
+	transition-duration: 200ms;
 	background-color: var(--green-400);
 	color: white;
 	font-size: var(--text);
@@ -139,7 +139,7 @@ button.apple {
 	min-width: min-content;
 	border-radius: 4px;
 	padding: var(--space-xs) var(--space-md);
-	transition-duration: 150ms;
+	transition-duration: 200ms;
 	background-color: white;
 	border: solid 1px var(--grey-500);
 	width: 100%;
@@ -168,7 +168,7 @@ button.google {
 	min-width: min-content;
 	border-radius: 4px;
 	padding: var(--space-xs) var(--space-md);
-	transition-duration: 150ms;
+	transition-duration: 200ms;
 	background-color: white;
 	border: solid 1px var(--grey-500);
 	width: 100%;
@@ -193,7 +193,7 @@ button.warn {
 	min-width: min-content;
 	border-radius: 4px;
 	padding: var(--space-xs) var(--space-md);
-	transition-duration: 150ms;
+	transition-duration: 200ms;
 	background-color: indianred;
 	color: white;
 	font-size: var(--text);
