@@ -20,7 +20,9 @@
 </script>
 
 <div class="form-header">
-	<h1>DSCR loans are for investment properties only.</h1>
+	<h1>
+		You're looking to use the properties cash flow instead of your own income.
+	</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
 		We respect your privacy — <b>we do not share or sell informtion..</b>

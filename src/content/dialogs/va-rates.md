@@ -1,6 +1,6 @@
 ## Why Are Our VA Loan Rates So Low?
 
-We are significanlty less than Rocket or Veterans United
+We are significanlty better in cost, rate and speed than Rocket Mortgage or Veterans United, or any other big lender.
 
 As a **mortgage broker**, we work for you — not the bank. Unlike big lenders, we aren't tied to just one set of rates. Instead, we shop around with multiple VA-approved lenders to find you the best deal.
 
