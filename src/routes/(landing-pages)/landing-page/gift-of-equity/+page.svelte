@@ -6,12 +6,6 @@
 	import GOEForm from '../../../(form-pages)/form/gift-of-equity/GOEForm.svelte';
 	import SimpleCta from '$lib/components/sections/SimpleCTA.svelte';
 	import Stats from '$lib/components/landing-page/Stats.svelte';
-
-	$effect(() => {
-		gtag('event', 'goe_page_view', {
-			page_type: 'landing_page'
-		});
-	});
 </script>
 
 <svelte:head>

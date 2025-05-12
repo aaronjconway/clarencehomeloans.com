@@ -8,12 +8,6 @@
 	import Stats from '$lib/components/landing-page/Stats.svelte';
 	import WhyUs from '$lib/components/landing-page/WhyUs.svelte';
 	import CashOutForm from '../../../(form-pages)/form/cash-out/CashOutForm.svelte';
-
-	$effect(() => {
-		gtag('event', 'cashout_landing_page_view', {
-			page_type: 'landing_page'
-		});
-	});
 </script>
 
 <svelte:head>

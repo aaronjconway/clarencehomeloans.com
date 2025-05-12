@@ -1,12 +1,5 @@
 <script lang="ts">
 	import CashOutForm from './CashOutForm.svelte';
-
-	$effect(() => {
-		gtag('event', 'cashout_form_page_view', {
-			form_name: 'general_cash_out_refinance',
-			page_type: 'form'
-		});
-	});
 </script>
 
 <svelte:head>

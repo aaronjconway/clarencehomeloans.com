@@ -1,57 +1,51 @@
 <script lang="ts">
-    const { stepName = '', formStore = $bindable() } = $props()
+	const { stepName = '', formStore = $bindable() } = $props();
 
-    const data = [
-        {
-            text: 'Single Family',
-            id: 'single_family',
-        },
-        {
-            text: 'Condo',
-            id: 'condo',
-        },
-        {
-            text: 'Multi Family',
-            id: 'multi_family',
-        },
-        {
-            text: 'Townhome',
-            id: 'townhome',
-        },
-    ]
+	const data = [
+		{
+			text: 'Single Family',
+			id: 'single_family'
+		},
+		{
+			text: 'Condo',
+			id: 'condo'
+		},
+		{
+			text: 'Multi Family',
+			id: 'multi_family'
+		},
+		{
+			text: 'Townhome',
+			id: 'townhome'
+		}
+	];
 
-    function handleClick() {
-        gtag('event', 'form_step_progress', {
-            step_name: stepName,
-            step_number: formStore.currentStep,
-            selected_option: formStore.data[stepName],
-            form_name: formStore.data['page_source'],
-        })
-        formStore.nextStep()
-    }
+	function handleClick() {
+		formStore.nextStep();
+	}
 </script>
 
 <div class="form-header">
-    <h1>What kind of property is it?</h1>
+	<h1>What kind of property is it?</h1>
 </div>
 <div class="radio-wrapper">
-    <div class="radio-inner">
-        {#each data as item}
-            <div class="radio-button">
-                <input
-                    type="radio"
-                    value={item.id}
-                    id={item.id}
-                    bind:group={formStore.data[stepName]}
-                    onclick={handleClick}
-                />
-                <label
-                    for={item.id}
-                    class:selected={item.id == formStore.data[stepName]}
-                >
-                    {item.text}
-                </label>
-            </div>
-        {/each}
-    </div>
+	<div class="radio-inner">
+		{#each data as item}
+			<div class="radio-button">
+				<input
+					type="radio"
+					value={item.id}
+					id={item.id}
+					bind:group={formStore.data[stepName]}
+					onclick={handleClick}
+				/>
+				<label
+					for={item.id}
+					class:selected={item.id == formStore.data[stepName]}
+				>
+					{item.text}
+				</label>
+			</div>
+		{/each}
+	</div>
 </div>

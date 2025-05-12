@@ -1,12 +1,5 @@
 <script lang="ts">
 	import VAform from './VAform.svelte';
-
-	$effect(() => {
-		gtag('event', 'va_form_view', {
-			form_name: 'va_purchase',
-			page_type: 'form'
-		});
-	});
 </script>
 
 <svelte:head>

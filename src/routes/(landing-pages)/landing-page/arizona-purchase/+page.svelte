@@ -8,12 +8,6 @@
 	import Stats from '$lib/components/landing-page/Stats.svelte';
 	import WhyUs from '$lib/components/landing-page/WhyUs.svelte';
 	import PurchaseForm from '../../../(form-pages)/form/purchase/PurchaseForm.svelte';
-
-	$effect(() => {
-		gtag('event', 'arizona_purchase_page_view', {
-			page_type: 'landing_page'
-		});
-	});
 </script>
 
 <svelte:head>

@@ -1,83 +1,79 @@
 <script lang="ts">
-    const { stepName = '', formStore = $bindable() } = $props()
-    const data = [
-        {
-            text: 'Chapter 13 Bankruptcy',
-            id: 'chapter-13',
-        },
-        {
-            text: 'Chapter 7 Bankruptcy',
-            id: 'chapter-7',
-        },
-        {
-            text: 'Foreclosure',
-            id: 'foreclosure',
-        },
-        {
-            text: 'Short Sale',
-            id: 'short-sale',
-        },
-        {
-            text: 'Late Payments on a Mortgage',
-            id: 'late-payments',
-        },
-        {
-            text: 'Nope!',
-            id: 'none',
-        },
-    ]
+	const { stepName = '', formStore = $bindable() } = $props();
+	const data = [
+		{
+			text: 'Chapter 13 Bankruptcy',
+			id: 'chapter-13'
+		},
+		{
+			text: 'Chapter 7 Bankruptcy',
+			id: 'chapter-7'
+		},
+		{
+			text: 'Foreclosure',
+			id: 'foreclosure'
+		},
+		{
+			text: 'Short Sale',
+			id: 'short-sale'
+		},
+		{
+			text: 'Late Payments on a Mortgage',
+			id: 'late-payments'
+		},
+		{
+			text: 'Nope!',
+			id: 'none'
+		}
+	];
 
-    function handleClick() {
-        gtag('event', 'form_step_progress', {
-            step_name: stepName,
-            step_number: formStore.currentStep,
-            selected_option: formStore.data[stepName],
-            form_name: formStore.data['page_source'],
-        })
-        if (formStore.data[stepName].length > 0) {
-            formStore.nextStep()
-        } else {
-            alert('Please select an item!')
-        }
-    }
+	function handleClick() {
+		if (formStore.data[stepName].length > 0) {
+			formStore.nextStep();
+		} else {
+			alert('Please select an item!');
+		}
+	}
 </script>
 
 <div class="form-header">
-    <h1>Have you had any of these events?</h1>
-    <div>
-        You can select none, one, or more. Again, we have tons of options
-        available for everyone.
-    </div>
+	<h1>Have you had any of these events?</h1>
+	<div>
+		You can select none, one, or more. Again, we have tons of options available
+		for everyone.
+	</div>
 </div>
 
 <div class="radio-wrapper">
-    <div class="radio-inner">
-        {#each data as item}
-            <div class="radio-button">
-                <input
-                    type="checkbox"
-                    multiple
-                    value={item.id}
-                    id={item.id}
-                    bind:group={formStore.data[stepName]}
-                />
-                <label
-                    for={item.id}
-                    class:selected={formStore.data[stepName]?.includes(item.id)}
-                >
-                    {item.text}
-                </label>
-            </div>
-        {/each}
-    </div>
+	<div class="radio-inner">
+		{#each data as item}
+			<div class="radio-button">
+				<input
+					type="checkbox"
+					multiple
+					value={item.id}
+					id={item.id}
+					bind:group={formStore.data[stepName]}
+				/>
+				<label
+					for={item.id}
+					class:selected={formStore.data[stepName]?.includes(item.id)}
+				>
+					{item.text}
+				</label>
+			</div>
+		{/each}
+	</div>
 </div>
 <div class="button-wrapper">
-    <button
-        class="primary"
-        onclick={() => {
-            handleClick()
-        }}>Next</button
-    >
+	<button
+		class="primary"
+		onclick={() => {
+			handleClick();
+		}}
+	>
+		Next
+	</button>
 </div>
 
 <style>
