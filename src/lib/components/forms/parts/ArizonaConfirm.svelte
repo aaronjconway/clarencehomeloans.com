@@ -35,7 +35,6 @@
 						id={item.id}
 						bind:group={formStore.data[stepName]}
 						onclick={handleClick}
-						ontouchend={handleClick}
 					/>
 					{item.text}
 				</label>

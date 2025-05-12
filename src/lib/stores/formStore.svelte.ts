@@ -1,8 +1,9 @@
 //the class responsible for handling the moving, storage of data from the multi
 //part forms
+// TODO:-- learn how to modify the page history so can navigate with
+// forward/back.
 //
-import { pushState } from "$app/navigation"
-import { page } from '$app/state'
+// Last attempt blobbered so it was not reliable
 
 
 export class FormStore {
@@ -17,38 +18,33 @@ export class FormStore {
 
         this.currentStep = currentStep
 
-        $effect(() => {
-            window.addEventListener('popstate', this.handleNavigate.bind(this))
-            return () => {
-                window.removeEventListener('popstate', this.handleNavigate.bind(this))
-            }
-        })
+        // $effect(() => {
+        //     window.addEventListener('popstate', this.handleNavigate.bind(this))
+        //     return () => {
+        //         window.removeEventListener('popstate', this.handleNavigate.bind(this))
+        //     }
+        // })
     }
 
     addData(k: string, v: string) {
         this.data[k] = v
     }
 
-    /*
-    * if the page state changes then we can also increment the steps
-    * TODO:-- unsure of how to modify the App.PageState type  learn more
-    * typescript
-    * */
-    handleNavigate() {
-        let currentPage = page.state.page
-        if (page.state.page) {
-            if (currentPage < this.currentStep) {
-                this.currentStep == this.stepStack.pop()
-            }
-            if (currentPage > this.currentStep) {
-                this.currentStep++
-            }
-        } else {
-            this.currentStep = 0
-        }
-
-
-    }
+    // handleNavigate() {
+    //     let currentPage = page.state.page
+    //     if (page.state.page) {
+    //         if (currentPage < this.currentStep) {
+    //             this.currentStep == this.stepStack.pop()
+    //         }
+    //         if (currentPage > this.currentStep) {
+    //             this.currentStep++
+    //         }
+    //     } else {
+    //         this.currentStep = 0
+    //     }
+    //
+    //
+    // }
 
     scrollToTop() {
         window.scrollTo({
@@ -65,7 +61,7 @@ export class FormStore {
         setTimeout(() => {
             this.stepStack.push(this.currentStep)
             this.currentStep = n
-            pushState('', { page: this.currentStep })
+            // pushState('', { page: this.currentStep })
             this.scrollToTop()
         }, 200);
     }
@@ -77,13 +73,13 @@ export class FormStore {
             // the active step shouldn't be in the step stack. that's why we do
             // it AFTER the push to stack that way  a pop is the recent step
             this.currentStep++
-            pushState('', { page: this.currentStep })
+            // pushState('', { page: this.currentStep })
             this.scrollToTop()
         }, 200);
     }
 
     previousStep() {
-        this.currentStep = this.stepStack.pop()
-        pushState('', { page: this.currentStep })
+        this.currentStep = this.stepStack.pop() ?? 0
+        // pushState('', { page: this.currentStep })
     }
 }
