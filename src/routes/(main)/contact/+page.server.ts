@@ -12,8 +12,20 @@ export const actions: Actions = {
 		const lastName = formData.get('last_name');
 		const phone = formData.get('phone');
 		const email = formData.get('email');
-		const message = formData.get('message');
+		const message = formData.get('message') as string;
 		const special = formData.get('special')
+
+
+		const badWords = ['seo', 'send you a quote', ' AI ', 'funnel', 'letsgetoptimize', 'price list', 'SEO', 'first page'];
+
+		function isFilteredMessage(message: string | null): boolean {
+			if (!message) return false;
+			return badWords.some(word => message.toLowerCase().includes(word.toLowerCase()));
+		}
+
+		if (isFilteredMessage(message)) {
+			return fail(400, { message: 'Go away.' })
+		}
 
 
 		if (special) {
