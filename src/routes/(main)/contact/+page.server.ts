@@ -16,7 +16,25 @@ export const actions: Actions = {
 		const special = formData.get('special')
 
 
-		const badWords = ['seo', 'send you a quote', ' AI ', 'funnel', 'letsgetoptimize', 'price list', 'SEO', 'first page'];
+		const badWords = [
+			'seo',
+			'may interest you',
+			'immediate access',
+			'premium digital',
+			'digital marketing',
+			'rebrand',
+			'build your list',
+			'audience',
+			'find out more',
+			'offerings',
+			'send you a quote',
+			' AI ',
+			'funnel',
+			'letsgetoptimize',
+			'price list',
+			'SEO',
+			'first page'
+		];
 
 		function isFilteredMessage(message: string | null): boolean {
 			if (!message) return false;
