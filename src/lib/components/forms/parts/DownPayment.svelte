@@ -7,6 +7,12 @@
 
 	import { formatToUSD } from '$lib/utils';
 	let downPaymentMessage = $state('');
+
+	// TODO:-- setup a local testing form so we can see all at the same time.
+	// while testing - sice price isn't previously set
+	if (!formStore.data['price']) {
+		formStore.data['price'] = 400000;
+	}
 </script>
 
 <div class="form-header">
@@ -109,10 +115,18 @@
 </div>
 
 <style lang="scss">
+	.range-input {
+		margin: 0;
+	}
 	.options-wrapper {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		gap: var(--space-sm);
 		button {
 			border: solid 1px var(--green-200);
 			padding: 4px 8px;
+			width: 100%;
 			background: var(--green-100);
 			border-radius: 4px;
 			&:hover {

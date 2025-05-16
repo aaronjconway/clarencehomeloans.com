@@ -1,5 +1,4 @@
 <script lang="ts">
-	//testing
 	import Hero from '$lib/components/landing-page/Hero.svelte';
 	import { reviews } from '$lib/data/reviews.js';
 	import Testimonials from '$lib/components/sections/Testimonials.svelte';

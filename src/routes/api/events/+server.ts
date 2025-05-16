@@ -1,19 +1,15 @@
-// for posting to crm
-
-import { json, fail } from '@sveltejs/kit';
-
+import { json, fail, type RequestHandler } from '@sveltejs/kit';
 import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
 import { jsonToPrettyYaml } from '$lib/utils';
 
 
-// do post to followup boss
-export const POST = async ({ request }) => {
+export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 
 	const data = await request.json()
 	const { page_source } = data
 
 	if (data.special) {
-		return fail(400, { message: 'Bot Detected' })
+		throw fail(400, { message: 'Bot Detected' })
 	}
 
 	const eventData = {
@@ -46,8 +42,10 @@ export const POST = async ({ request }) => {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'User-Agent': 'Mozilla/5.0',
 			authorization: 'Basic ' + Buffer.from(`${env.FUB_API_KEY}:`).toString('base64'),
+			// needed for high writes https://docs.followupboss.com/reference/rate-limiting
+			// I think posts to /events is not limited. We're small here
+			// anyways.
 			// 'SYSTEM-KEY': FUB_SYSTEM_KEY,
 			// 'X-SYSTEM-KEY': X_SYSTEM_KEY,
 		},
@@ -58,9 +56,6 @@ export const POST = async ({ request }) => {
 	//fire off event notification
 	await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
 		method: 'POST',
-		headers: {
-			'User-Agent': 'Mozilla/5.0',
-		},
 		body: jsonToPrettyYaml(data)
 	})
 
@@ -69,15 +64,13 @@ export const POST = async ({ request }) => {
 		const res = await fetch(url, options);
 
 		if (!res.ok) {
-			throw new Error(`Request failed with status ${res.status}`);
+			throw fail(500, { message: 'Error posting to crm.' })
 		}
 
 		return json({ success: true });
 
 	} catch (err) {
-
 		console.error(err);
-
-		return fail(400, { message: err.message || 'An error occurred' });
+		throw fail(500, { message: 'Error posting to crm.' })
 	}
 }
