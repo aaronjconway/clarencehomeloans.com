@@ -1,7 +1,6 @@
 import { json, fail, type RequestHandler } from '@sveltejs/kit';
 import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
-import { jsonToPrettyYaml } from '$lib/utils';
-
+import { jsonToPrettyYaml, getStateAbbr } from '$lib/utils';
 
 export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 
@@ -32,7 +31,7 @@ export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 			lastName: data.last_name,
 			emails: [{ value: data.email }],
 			phones: [{ value: data.phone }],
-			tags: ['clarencehomeloans-web', page_source + '-inquiry',],
+			tags: ['clarencehomeloans-web', page_source + '-inquiry', getStateAbbr(data.state)],
 		},
 	};
 
