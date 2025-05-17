@@ -139,7 +139,7 @@
 			height: auto;
 			object-fit: cover;
 			display: block;
-			border-radius: 4px;
+			border-radius: var(--border-radius);
 		}
 	}
 	.toc-wrapper {
@@ -151,7 +151,7 @@
 		background: var(--green-100);
 		font-size: var(--text-xs);
 		padding: 4px 8px;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		width: fit-content;
 		div {
 			display: flex;
@@ -228,7 +228,7 @@
 			.fixed-div {
 				display: flex;
 				background: var(--grey-100);
-				border-radius: 4px;
+				border-radius: var(--border-radius);
 				padding: var(--space);
 				height: fit-content;
 				position: relative;
@@ -238,8 +238,8 @@
 				display: flex;
 				flex-direction: column;
 				background: var(--grey-100);
-				border-radius: 4px;
 				padding: var(--space);
+				border-radius: var(--border-radius);
 				position: sticky;
 				top: var(--space-lg);
 				height: fit-content;

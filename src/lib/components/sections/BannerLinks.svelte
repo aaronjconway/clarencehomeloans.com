@@ -54,7 +54,7 @@
 		border: solid 1px var(--grey-500);
 		background: white;
 		padding: var(--space);
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		height: 100%;
 
 		.card-title {

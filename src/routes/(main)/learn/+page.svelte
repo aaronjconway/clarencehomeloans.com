@@ -106,7 +106,7 @@
 
 	// Info panel styles
 	.info-panel {
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		background: var(--blue-100);
 		padding: var(--space);
 		.info-panel-header {

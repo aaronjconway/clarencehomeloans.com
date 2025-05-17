@@ -63,7 +63,7 @@
 		margin-bottom: var(--space-lg);
 		max-width: 800px;
 		border: solid 1px var(--grey-300);
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		background: var(--grey-100);
 		padding: var(--space);
 

@@ -98,7 +98,7 @@
 										class="btn"
 										onclick={handleCloseNav}
 									>
-										My Account
+										<span class="btn-label">My Account</span>
 									</a>
 									<button
 										class="primary"
@@ -190,13 +190,13 @@
 							href="/auth/login"
 							class="btn"
 						>
-							Login
+							<span class="btn-label">Login</span>
 						</a>
 						<a
 							href="/auth/signup"
 							class="btn"
 						>
-							Signup
+							<span class="btn-label">Sign Up</span>
 						</a>
 					</div>
 				{/if}
@@ -212,15 +212,11 @@
 		gap: var(--space-sm);
 		padding-left: var(--space-sm);
 		a.btn {
-			background: var(--grey-200);
-			color: var(--grey-800);
 			font-weight: bold;
 			font-size: var(--text-sm);
 		}
 
 		button {
-			background: var(--green-400);
-			color: white;
 			font-weight: bold;
 			font-size: var(--text-sm);
 		}

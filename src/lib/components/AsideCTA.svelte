@@ -56,7 +56,7 @@
 		background: var(--green-100);
 		font-size: var(--text-xs);
 		padding: 4px 8px;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		div {
 			display: flex;
 			align-items: center;
@@ -65,7 +65,7 @@
 	}
 
 	section {
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		margin: 0;
 	}
 
@@ -74,7 +74,7 @@
 		grid-template-columns: 1fr;
 		padding: var(--space);
 		background: var(--green-100);
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 
 		.right {
 			display: flex;

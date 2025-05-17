@@ -116,7 +116,7 @@
 	}
 
 	.review-card {
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		height: 90%;
 		flex-direction: column;
 		justify-content: space-between;

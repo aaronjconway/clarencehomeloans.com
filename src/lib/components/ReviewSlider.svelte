@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide'
-	import { reviews } from '$lib/data/reviews'
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+	import { reviews } from '$lib/data/reviews';
 
 	const review_options = {
 		perPage: 1,
 		breakpoints: {
 			900: {
-				perPage: 1,
-			},
-		},
-	}
+				perPage: 1
+			}
+		}
+	};
 </script>
 
 <Splide
@@ -95,7 +95,7 @@
 
 	.review-card {
 		display: flex;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		height: 90%;
 		flex-direction: column;
 		justify-content: space-between;

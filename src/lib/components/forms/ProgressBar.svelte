@@ -23,7 +23,7 @@
 
 	.progress-bar {
 		display: flex;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		width: 100%;
 		max-width: 500px;
 		border: solid 1px var(--grey-600);

@@ -116,7 +116,7 @@
 			padding: 4px 8px;
 			width: 100%;
 			background: var(--green-100);
-			border-radius: 4px;
+			border-radius: var(--border-radius);
 			&:hover {
 				border: solid 1px var(--green-300);
 			}

@@ -116,6 +116,6 @@
 		margin: 0 auto;
 		padding: var(--space-xs) var(--space-sm);
 		border: solid 1px var(--grey-500);
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 	}
 </style>

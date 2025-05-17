@@ -377,7 +377,7 @@
 	.tag-wrapper {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 2px;
+		gap: var(--space-xxs);
 	}
 
 	.tag {

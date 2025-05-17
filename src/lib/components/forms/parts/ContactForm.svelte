@@ -194,7 +194,7 @@
 		padding: var(--space-sm);
 		margin: var(--space-sm) 0;
 		border: 1px solid #ddd;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 	}
 
 	input[type='checkbox'] {

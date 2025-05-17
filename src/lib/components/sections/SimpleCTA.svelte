@@ -57,7 +57,7 @@
 		background: var(--green-100);
 		font-size: var(--text-xs);
 		padding: 4px 8px;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		div {
 			display: flex;
 			align-items: center;
@@ -66,7 +66,7 @@
 	}
 
 	section {
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 	}
 
 	.wrapper {
@@ -75,7 +75,7 @@
 		gap: var(--space-md);
 		padding: var(--space);
 		background: var(--grey-200);
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 
 		.right {
 			display: flex;
@@ -107,7 +107,7 @@
 			grid-template-columns: 1fr 1fr;
 			padding: var(--space-lg);
 			background: var(--grey-100);
-			border-radius: 4px;
+			border-radius: var(--border-radius);
 
 			.right {
 				display: flex;
