@@ -8,13 +8,13 @@
 				</h1>
 				<div class="action-wrapper">
 					<a
-						class="btn"
+						class="btn green"
 						href="/form/purchase"
 					>
 						<span class="btn-label">Start on a Purchase</span>
 					</a>
 					<a
-						class="btn"
+						class="btn green"
 						href="/form/refinance"
 					>
 						<span class="btn-label">Refinance</span>

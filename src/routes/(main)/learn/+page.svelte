@@ -28,17 +28,19 @@
 		<h2>Categories</h2>
 		<div class="button-wrapper">
 			<a
-				class="category"
-				href="/categories"
+				class="btn grey"
+				href="/learn/categories"
 			>
-				All Categories
+				<span class="btn-label">All Categories</span>
 			</a>
 			{#each categories as category}
 				<a
-					class="category"
+					class="btn grey"
 					href={`/learn/categories/${category.name}`}
 				>
-					{category.title}
+					<span class="btn-label">
+						{category.title}
+					</span>
 				</a>
 			{/each}
 		</div>

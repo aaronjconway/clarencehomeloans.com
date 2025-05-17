@@ -9,7 +9,7 @@ interface Category {
 	description: string
 }
 
-
+console.log('test')
 const client = createDirectus('https://production-directus.8rjfpz.easypanel.host')
 	.with(staticToken(env.DIRECTUS_ACCESS_TOKEN))
 	.with(rest());
@@ -22,7 +22,6 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 };
 
 export const load: PageServerLoad = async () => {
-
 	try {
 		const categories = await withTimeout(client.request(readItems('categories', {
 			fields: ['*', { '*': ['*'] }],

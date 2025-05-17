@@ -61,33 +61,51 @@ a {
 		border: 1px solid var(--grey-700);
 		background-color: var(--primary-300);
 		border-radius: var(--border-radius);
+
+		.btn-label {
+			position: relative;
+			display: block;
+			padding: var(--space-xs) var(--space); // px-3.5 py-1.5
+			font-weight: bold;
+			text-align: center;
+			user-select: none;
+
+			border: 1px solid var(--grey-700);
+			border-radius: var(--border-radius);
+
+			background-color: white;
+			color: var(--ink);
+
+			transform: translateY(-2px);
+			transition: all 0.1s;
+
+
+			&:hover {
+				transform: translateY(-3px);
+			}
+
+			&:active {
+				transform: translateY(-1px);
+			}
+
+
+		}
 	}
 
-	.btn-label {
-		position: relative;
-		display: block;
-		padding: var(--space-xs) var(--space); // px-3.5 py-1.5
-		font-weight: bold;
-		text-align: center;
-		user-select: none;
-
-		border: 1px solid var(--grey-700);
-		border-radius: var(--border-radius);
-		background-color: white;
-		color: var(--ink);
-		transform: translateY(-2px);
-		transition: all 0.1s;
-
-		&:hover {
-			transform: translateY(-3px);
-		}
-
-		&:active {
-			transform: translateY(-1px);
-		}
-
-
+	&.btn.grey {
+		background-color: var(--grey-600);
 	}
+
+	&.btn.green {
+		background-color: var(--green-300);
+
+		.btn-label {
+			color: white;
+			border: solid 1px var(--green-600);
+			background-color: var(--green-400);
+		}
+	}
+
 
 	&.category {
 		border-radius: var(--border-radius);

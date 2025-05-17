@@ -130,7 +130,7 @@
 
 	.most-recent {
 		.article-card-wrapper {
-			padding: 1rem;
+			padding: var(--space);
 			display: flex;
 			gap: var(--space);
 			border-radius: var(--border-radius);
@@ -167,17 +167,21 @@
 	}
 
 	.article-card-wrapper {
-		border: solid 1px var(--grey-400);
+		padding: var(--space);
+		/* border: solid 1px var(--grey-400); */
 		border-radius: var(--border-radius);
 		display: grid;
 		grid-template-columns: 1fr 1.618fr;
 		gap: var(--space);
 		/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-		transition: all 0.3s ease;
+		transition: 0.3s ease;
 		height: 100%;
+		border: solid 1px var(--grey-200);
 
 		&:hover {
+			background: var(--grey-100);
 			transform: translateY(-4px);
+			border: solid 1px var(--grey-200);
 		}
 
 		.article-card-left {

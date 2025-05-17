@@ -1,9 +1,6 @@
 <script lang="ts">
 	import SimpleCta from '$lib/components/sections/SimpleCTA.svelte';
-	// the top 4 articles
-	import HeroLearnArticles from '$lib/components/HeroLearnArticles.svelte';
 	import BreadCrumbs from '$lib/components/BreadCrumbs.svelte';
-	// import { page } from '$app/state';
 
 	let { data } = $props();
 

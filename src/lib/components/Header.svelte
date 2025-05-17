@@ -221,4 +221,8 @@
 			font-size: var(--text-sm);
 		}
 	}
+
+	.mobile-button-wrapper {
+		margin: 0 var(--space-sm);
+	}
 </style>
