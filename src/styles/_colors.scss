@@ -1,6 +1,8 @@
 :root {
+
 	/*idk*/
-	--ink: #454e53;
+	--ink: #545454;
+	--red: de3341;
 	--yellow: #fff2c5;
 	--light-green: #e6f0f0;
 	--medium-green: #c2d6db;
@@ -18,8 +20,6 @@
 	--blue-800: #0f364b;
 	--blue-900: #071b25;
 
-	/* Caribbean Current */
-	--green: #38686a;
 	--green-100: #d2e6e7;
 	--green-200: #a4cecf;
 	--green-300: #77b5b7;
@@ -29,6 +29,16 @@
 	--green-700: #223f40;
 	--green-800: #172a2b;
 	--green-900: #0b1515;
+
+	--primary-100: #d2e6e7;
+	--primary-200: #a4cecf;
+	--primary-300: #77b5b7;
+	--primary-400: #509698;
+	--primary-500: #38686a;
+	--primary-600: #2d5456;
+	--primary-700: #223f40;
+	--primary-800: #172a2b;
+	--primary-900: #0b1515;
 
 	/* Ash Gray */
 	--ash: #a3b4a2;
@@ -44,7 +54,7 @@
 
 	/* grey */
 	--grey: #d5dadc;
-	--grey-100: #f7f8f8;
+	--grey-100: #f7f7f7;
 	--grey-200: #eef0f1;
 	--grey-300: #e6e9ea;
 	--grey-400: #dee2e3;

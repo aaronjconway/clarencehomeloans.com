@@ -4,7 +4,6 @@ mark {
 	font-weight: bold;
 }
 
-
 .faq-wrapper {
 	max-width: 600px;
 	width: 100%;
@@ -28,7 +27,7 @@ textarea {
 	padding: var(--space-sm);
 	margin: var(--space-sm) 0;
 	border: 1px solid #ddd;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 }
 
 input[type="checkbox"] {
@@ -46,32 +45,52 @@ a {
 	&.plain {
 		color: unset;
 
+		// filter tends to go unnoticed and clober other people later. Be
+		// explicit and use the most common semantic things or else you'll get
+		// weird behavior later;
 		&:hover {
-			filter: brightness(90%);
-
+			color: black;
 		}
 
 	}
 
+
 	&.btn {
-		min-width: min-content;
-		border-radius: 4px;
-		padding: var(--space-xs) var(--space-md);
-		transition-duration: 200ms;
-		background-color: var(--green-400);
-		color: white;
-		font-size: var(--text);
+		position: relative;
+		text-align: center;
+		border: 1px solid var(--grey-700);
+		background-color: var(--primary-300);
+		border-radius: var(--border-radius);
+	}
+
+	.btn-label {
+		position: relative;
+		display: block;
+		padding: var(--space-xs) var(--space); // px-3.5 py-1.5
 		font-weight: bold;
+		text-align: center;
+		user-select: none;
+
+		border: 1px solid var(--grey-700);
+		border-radius: var(--border-radius);
+		background-color: white;
+		color: var(--ink);
+		transform: translateY(-2px);
+		transition: all 0.1s;
 
 		&:hover {
-			filter: brightness(90%);
-
+			transform: translateY(-3px);
 		}
+
+		&:active {
+			transform: translateY(-1px);
+		}
+
 
 	}
 
 	&.category {
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		padding: var(--space-xs) var(--space-md);
 		transition-duration: 200ms;
 		background-color: var(--grey-200);
@@ -89,7 +108,7 @@ a {
 	&.account-link {
 		min-width: min-content;
 		white-space: nowrap;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		padding: var(--space-xs) var(--space-md);
 		transition-duration: 200ms;
 		background-color: var(--grey-100);
@@ -111,17 +130,37 @@ a {
 
 
 button.primary {
-	min-width: min-content;
-	border-radius: 4px;
-	padding: var(--space-xs) var(--space-md);
-	transition-duration: 200ms;
-	background-color: var(--green-400);
-	color: white;
-	font-size: var(--text);
-	font-weight: bold;
 
-	&:hover {
-		filter: brightness(90%);
+	position: relative;
+	text-align: center;
+	border: 1px solid var(--grey-700);
+	background-color: var(--primary-300);
+	border-radius: var(--border-radius);
+
+
+	.btn-label {
+		position: relative;
+		display: block;
+		padding: var(--space-xs) var(--space); // px-3.5 py-1.5
+		font-weight: bold;
+		text-align: center;
+		user-select: none;
+
+		border: 1px solid var(--grey-700);
+		border-radius: 24px;
+		background-color: white;
+		color: var(--ink);
+		transform: translateY(-2px);
+		transition: all 0.1s;
+
+		&:hover {
+			transform: translateY(-3px);
+		}
+
+		&:active {
+			transform: translateY(-1px);
+		}
+
 
 	}
 
@@ -137,7 +176,7 @@ button.apple {
 	gap: var(--space-lg);
 	align-items: center;
 	min-width: min-content;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 	padding: var(--space-xs) var(--space-md);
 	transition-duration: 200ms;
 	background-color: white;
@@ -166,7 +205,7 @@ button.google {
 	gap: var(--space-lg);
 	align-items: center;
 	min-width: min-content;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 	padding: var(--space-xs) var(--space-md);
 	transition-duration: 200ms;
 	background-color: white;
@@ -191,7 +230,7 @@ button.google {
 
 button.warn {
 	min-width: min-content;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 	padding: var(--space-xs) var(--space-md);
 	transition-duration: 200ms;
 	background-color: indianred;

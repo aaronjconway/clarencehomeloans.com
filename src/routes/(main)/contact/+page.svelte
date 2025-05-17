@@ -62,9 +62,12 @@
 			<!--     </section> -->
 			<!-- </div> -->
 			<div class="right">
-				{#if form?.message == 'Go away.'}
+				{#if form?.message == 'spam'}
 					<div>
-						<h2>Go away!</h2>
+						<h2>
+							We have detected unsolicited spam. If this is not spam, please
+							call us...
+						</h2>
 					</div>
 				{:else if form?.success}
 					<div>

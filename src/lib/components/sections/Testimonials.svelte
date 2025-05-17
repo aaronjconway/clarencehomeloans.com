@@ -18,7 +18,6 @@
 	const { reviews } = $props();
 </script>
 
-<!-- <pre>{JSON.stringify(reviews, null, 4)}</pre> -->
 <section>
 	<div class="container">
 		<Splide aria-label="Testimonials">

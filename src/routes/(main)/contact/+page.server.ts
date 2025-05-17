@@ -18,6 +18,16 @@ export const actions: Actions = {
 
 		const badWords = [
 			'seo',
+			'animations',
+			'images',
+			'videos',
+			'generate',
+			'across social media',
+			'advertise your business',
+			'examples of our',
+			'previous work',
+			'unsubscribe',
+			'impressive result',
 			'may interest you',
 			'immediate access',
 			'premium digital',
@@ -42,7 +52,7 @@ export const actions: Actions = {
 		}
 
 		if (isFilteredMessage(message)) {
-			return fail(400, { message: 'Go away.' })
+			return fail(400, { message: 'spam' })
 		}
 
 

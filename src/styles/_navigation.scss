@@ -82,13 +82,14 @@ nav {
 	z-index: 100000;
 
 
+	/* // testing */
 	/* opacity: 1; */
 	/* visibility: visible; */
 	/* // */
 
 	transition: all 0.2s ease;
 	border: solid var(--grey-500) 1px;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 
 	&.show {
 		opacity: 1;

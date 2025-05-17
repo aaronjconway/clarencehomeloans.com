@@ -24,7 +24,7 @@
 	.splide__arrow {
 		-ms-flex-align: center;
 		align-items: center;
-		border-radius: 0;
+		border-radius: var(--border-radius);
 		cursor: pointer;
 		display: -ms-flexbox;
 		display: flex;
@@ -34,10 +34,11 @@
 		border: 0;
 		position: absolute;
 		background: transparent;
-		fill: var(--green-400);
+		fill: var(--green-500);
 	}
 
 	.splide__arrow:disabled {
+		fill: var(--green-200);
 		opacity: 0.3;
 		cursor: default;
 	}

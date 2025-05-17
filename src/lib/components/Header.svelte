@@ -104,7 +104,7 @@
 										class="primary"
 										onclick={logout}
 									>
-										Sign Out
+										<span class="btn-label">Sign Out</span>
 									</button>
 								</div>
 							{:else}
@@ -114,14 +114,14 @@
 										class="btn"
 										onclick={handleCloseNav}
 									>
-										Login
+										<span class="btn-label">Login</span>
 									</a>
 									<a
 										href="/auth/signup"
 										onclick={handleCloseNav}
 										class="btn"
 									>
-										Signup
+										<span class="btn-label">Signup</span>
 									</a>
 								</div>
 							{/if}
@@ -175,13 +175,13 @@
 							href="/account"
 							class="btn"
 						>
-							My Account
+							<span class="btn-label">My Account</span>
 						</a>
 						<button
 							class="primary"
 							onclick={logout}
 						>
-							Sign Out
+							<span class="btn-label">Sign Out</span>
 						</button>
 					</div>
 				{:else}

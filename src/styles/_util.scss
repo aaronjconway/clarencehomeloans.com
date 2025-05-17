@@ -11,7 +11,7 @@
 }
 
 mark {
-	border-radius: 3px;
+	border-radius: var(--border-radius);
 	position: relative;
 	background: none;
 	color: inherit

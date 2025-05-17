@@ -19,19 +19,19 @@
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 
 	const steps = $state([
-		{ id: 0, name: 'confirm_healthcare', component: NurseConfirm },
-		{ id: 1, name: 'buying_stage', component: BuyingStage },
-		{ id: 2, name: 'property_type', component: PropertyType },
-		{ id: 3, name: 'occupancy', component: OccupancyType },
-		{ id: 4, name: 'fthb', component: FirstTimeHomeBuyer },
-		{ id: 5, name: 'price', component: PriceRange },
-		{ id: 6, name: 'down_payment', component: DownPayment },
-		{ id: 7, name: 'location', component: Location },
-		{ id: 8, name: 'income_type', component: IncomeType },
-		{ id: 9, name: 'income_amount', component: IncomeAmount },
-		{ id: 10, name: 'credit', component: Credit },
-		{ id: 11, name: 'derogatory_events', component: Derog },
-		{ id: 12, name: 'contact', component: Contact }
+		// { id: 0, name: 'confirm_healthcare', component: NurseConfirm },
+		{ id: 0, name: 'buying_stage', component: BuyingStage },
+		{ id: 1, name: 'property_type', component: PropertyType },
+		{ id: 2, name: 'occupancy', component: OccupancyType },
+		{ id: 3, name: 'fthb', component: FirstTimeHomeBuyer },
+		{ id: 4, name: 'price', component: PriceRange },
+		{ id: 5, name: 'down_payment', component: DownPayment },
+		{ id: 6, name: 'location', component: Location },
+		{ id: 7, name: 'income_type', component: IncomeType },
+		{ id: 8, name: 'income_amount', component: IncomeAmount },
+		{ id: 9, name: 'credit', component: Credit },
+		{ id: 10, name: 'derogatory_events', component: Derog },
+		{ id: 11, name: 'contact', component: Contact }
 	]);
 
 	// create a new form

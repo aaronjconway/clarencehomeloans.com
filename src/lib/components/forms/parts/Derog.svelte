@@ -1,4 +1,6 @@
 <script lang="ts">
+	import NextButton from '../NextButton.svelte';
+
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
@@ -26,14 +28,6 @@
 			id: 'none'
 		}
 	];
-
-	function handleClick() {
-		if (formStore.data[stepName].length > 0) {
-			formStore.nextStep();
-		} else {
-			alert('Please select an item!');
-		}
-	}
 </script>
 
 <div class="form-header">
@@ -65,16 +59,10 @@
 		{/each}
 	</div>
 </div>
-<div class="button-wrapper">
-	<button
-		class="primary"
-		onclick={() => {
-			handleClick();
-		}}
-	>
-		Next
-	</button>
-</div>
+
+{#if formStore.data[stepName]?.length > 0}
+	<NextButton {formStore} />
+{/if}
 
 <style>
 </style>

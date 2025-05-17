@@ -1,11 +1,8 @@
 <script lang="ts">
-	const { stepName = '', formStore = $bindable() } = $props();
-
-	function handleClick() {
-		formStore.nextStep();
-	}
-
 	import { formatToUSD } from '$lib/utils';
+	import NextButton from '../NextButton.svelte';
+
+	const { stepName = '', formStore = $bindable() } = $props();
 </script>
 
 <div class="form-header">
@@ -25,14 +22,5 @@
 		step="5000"
 		bind:value={formStore.data[stepName]}
 	/>
-	<div class="button-wrapper">
-		<button
-			class="primary"
-			onclick={() => {
-				handleClick();
-			}}
-		>
-			Next
-		</button>
-	</div>
+	<NextButton {formStore} />
 </div>

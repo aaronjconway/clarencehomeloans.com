@@ -1,13 +1,14 @@
 @use 'base';
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 :root {
 
-	/* --font-heading: system-ui; */
-	/* --font-body: system-ui; */
-	--font-heading: 'Hanken Grotesk';
-	--font-body: 'Hanken Grotesk';
+	--font-heading: 'Nunito';
+	--font-body: 'Nunito';
+
+	/* --font-heading: 'WintleText'; */
+	/* --font-body: 'WintleText'; */
 
 	/* set base values */
 	--text-base-size: 16px;
@@ -52,6 +53,8 @@
 		--text-scale-ratio: 1.20;
 	}
 
+	--border-radius-lg:12px;
+	--border-radius:8px
 }
 
 //body font size
@@ -99,7 +102,7 @@ p {
 
 .sub-title {
 	margin-bottom: var(--space-sm);
-	color: var(--green-500);
+	color: var(--primary-500);
 	font-weight: bold;
 }
 

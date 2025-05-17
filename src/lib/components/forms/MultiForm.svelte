@@ -15,10 +15,12 @@
 			<div>
 				{#if formStore.currentStep == step.id}
 					<div class="form-step">
-						<step.component
-							bind:formStore
-							stepName={step.name}
-						/>
+						<div class="form-step-inner">
+							<step.component
+								bind:formStore
+								stepName={step.name}
+							/>
+						</div>
 					</div>
 				{/if}
 			</div>

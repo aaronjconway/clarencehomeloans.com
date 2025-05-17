@@ -4,8 +4,7 @@
   background-color: white;
   position: absolute !important;
   z-index: 1000;
-
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
 
   border-top: 0;
   border-left: 1px solid var(--grey-400);
@@ -69,7 +68,7 @@
 
 .pac-matched {
   font-weight: 600;
-  color: var(--green-600);
+  color: var(--primary-600);
   border: none;
 }
 

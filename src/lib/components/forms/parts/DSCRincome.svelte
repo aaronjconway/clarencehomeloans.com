@@ -1,11 +1,8 @@
 <script lang="ts">
 	const { stepName = '', formStore = $bindable() } = $props();
 
-	function handleClick() {
-		formStore.nextStep();
-	}
-
 	import { formatToUSD } from '$lib/utils';
+	import NextButton from '../NextButton.svelte';
 	formStore.data[stepName] = (formStore.data['price'] * 0.02) / 2;
 </script>
 
@@ -26,14 +23,5 @@
 		step="100"
 		bind:value={formStore.data[stepName]}
 	/>
-	<div class="button-wrapper">
-		<button
-			class="primary"
-			onclick={() => {
-				handleClick();
-			}}
-		>
-			Next
-		</button>
-	</div>
+	<NextButton {formStore} />
 </div>

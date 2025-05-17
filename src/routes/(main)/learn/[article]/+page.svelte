@@ -101,7 +101,6 @@
 				</div>
 			{/if}
 			<div>
-				<!-- <pre>{JSON.stringify(article, null, 4)}</pre> -->
 				<SimpleCta
 					title={article.footer_ad.title}
 					subTitle={article.footer_ad.subtitle}

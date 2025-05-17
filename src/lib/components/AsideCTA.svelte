@@ -22,7 +22,9 @@
 				href={buttonLink}
 				class="btn"
 			>
-				{buttonText}
+				<span class="btn-label">
+					{buttonText}
+				</span>
 			</a>
 			<div class="credit-info-wrapper">
 				<div>

@@ -17,7 +17,7 @@
 .splide__arrow {
 	-ms-flex-align: center;
 	align-items: center;
-	border-radius: 0;
+	border-radius: var(--border-radius);
 	cursor: pointer;
 	display: -ms-flexbox;
 	display: flex;
@@ -29,20 +29,22 @@
 	top: 42%;
 	z-index: 1;
 	background: transparent;
-	fill: var(--green-400);
+	fill: var(--green-500);
 }
 
 .splide__arrow:disabled {
-	opacity: 0.3;
+	background: transparent;
+	opacity: .3;
+	fill: var(--green-200);
 	cursor: default;
 }
 
 .splide__arrow--prev {
-	left: -1.5rem;
+	left: -.5rem;
 }
 
 .splide__arrow--next {
-	right: -1.5rem;
+	right: -.5rem;
 }
 
 .splide__arrow--prev svg {

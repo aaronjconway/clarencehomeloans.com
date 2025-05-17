@@ -2,6 +2,7 @@
 	import * as GMAPILoader from '@googlemaps/js-api-loader';
 	import { env } from '$env/dynamic/public';
 	import { mapGoogleAddressToTypes } from '$lib/utils';
+	import NextButton from '../NextButton.svelte';
 
 	// should be an input for an address
 	// disclaimer for any location
@@ -9,14 +10,6 @@
 	// TODO:-- see if google has built in rate limiting
 	const { stepName = '', formStore = $bindable() } = $props();
 	const { Loader } = GMAPILoader;
-
-	function handleClick() {
-		if (formStore.data[stepName]) {
-			formStore.nextStep();
-		} else {
-			alert('Please enter an Address');
-		}
-	}
 
 	let searchInput: HTMLInputElement;
 	let address = $state({});
@@ -98,16 +91,7 @@
 		/>
 	</div>
 	<div class="address">{address?.formatted_address}</div>
-	<div class="button-wrapper">
-		<button
-			class="primary"
-			onclick={() => {
-				handleClick();
-			}}
-		>
-			Next
-		</button>
-	</div>
+	<NextButton {formStore} />
 </div>
 
 <style lang="scss">

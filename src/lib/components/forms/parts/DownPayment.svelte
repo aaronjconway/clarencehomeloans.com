@@ -1,12 +1,9 @@
 <script lang="ts">
-	const { stepName = '', formStore = $bindable() } = $props();
-
-	function handleClick() {
-		formStore.nextStep();
-	}
-
 	import { formatToUSD } from '$lib/utils';
+	import NextButton from '../NextButton.svelte';
 	let downPaymentMessage = $state('');
+
+	const { stepName = '', formStore = $bindable() } = $props();
 
 	// TODO:-- setup a local testing form so we can see all at the same time.
 	// while testing - sice price isn't previously set
@@ -102,16 +99,7 @@
 		bind:value={formStore.data[stepName]}
 		onchange={(downPaymentMessage = '')}
 	/>
-	<div class="button-wrapper">
-		<button
-			class="primary"
-			onclick={() => {
-				handleClick();
-			}}
-		>
-			Next
-		</button>
-	</div>
+	<NextButton {formStore} />
 </div>
 
 <style lang="scss">
