@@ -161,7 +161,7 @@
 							type="submit"
 							class="primary"
 						>
-							Submit
+							<span class="btn-label">Submit</span>
 						</button>
 					</form>
 				{/if}
