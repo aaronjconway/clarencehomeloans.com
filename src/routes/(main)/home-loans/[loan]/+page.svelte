@@ -156,11 +156,11 @@
 	}
 
 	.verification {
-		color: var(--green-600);
-		background: var(--green-100);
+		color: var(--grey-900);
+		background: var(--primary-100);
 		font-size: var(--text-xs);
 		padding: 4px 8px;
-		border-radius: 4px;
+		border-radius: var(--border-radius);
 		width: fit-content;
 		div {
 			display: flex;
@@ -179,7 +179,7 @@
 
 	.header {
 		margin: 0;
-		background: var(--green-600);
+		background: var(--primary-800);
 		padding: var(--space-md) 0;
 		color: white;
 
@@ -227,7 +227,7 @@
 				display: flex;
 				flex-direction: column;
 				background: var(--grey-100);
-				border-radius: 4px;
+				border-radius: var(--border-radius);
 				padding: var(--space);
 				height: fit-content;
 				position: sticky;
