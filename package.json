@@ -4,14 +4,12 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm run sass:build && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write .",
-		"sass:dev": "sass --watch --embed-source-map src/styles:dist",
-		"sass:build": "sass --no-source-map --style=compressed src/styles:dist"
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@iconify-json/openmoji": "^1.2.8",
