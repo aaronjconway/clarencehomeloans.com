@@ -44,9 +44,6 @@
 
 	form.totalSteps = steps.length - 1;
 
-	//testing
-	form.currentStep = 12;
-
 	//make state
 	let formStore = $state(form);
 </script>
