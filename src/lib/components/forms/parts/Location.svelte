@@ -60,6 +60,7 @@
 
 				address = autocomplete.getPlace();
 				formStore.data[stepName] = address?.formatted_address;
+				//TODO:-- bug
 				const addressDetails = mapGoogleAddressToTypes(
 					address?.address_components
 				);
@@ -79,7 +80,7 @@
 </script>
 
 <div class="form-header">
-	<h1>What city would you like to buy in?</h1>
+	<h1>What area are you most interested in?</h1>
 	<i>If you don't know, select an area close by.</i>
 </div>
 
@@ -89,7 +90,7 @@
 			type="text"
 			name="location"
 			id="autocomplete"
-			placeholder="Search for a city..."
+			placeholder="Search by city or zipcode..."
 			bind:this={searchInput}
 			value=""
 			autocomplete="off"

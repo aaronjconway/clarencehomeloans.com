@@ -26,58 +26,64 @@
 		{#if formStore.data['loan_type'] != 'dscr' && formStore.data['occupancy'] != 'investment'}
 			{#if formStore.data['loan_type'] == 'va'}
 				<button
+					class="primary"
 					onclick={() => {
 						formStore.data[stepName] = 0;
 						downPaymentMessage = 'Veterans are allowed to put 0% down.';
 					}}
 				>
-					0%
+					<span class="btn-label">0%</span>
 				</button>
 			{/if}
 			<button
+				class="primary"
 				onclick={() => {
 					formStore.data[stepName] = 3.0;
 					downPaymentMessage =
 						'The minimum you can put down on conventional as a first time home buyer or low income.';
 				}}
 			>
-				3%
+				<span class="btn-label">3%</span>
 			</button>
 			<button
+				class="primary"
 				onclick={() => {
 					formStore.data[stepName] = 3.5;
 					downPaymentMessage =
 						'The minimum you can put down on FHA. Great for credit below 700.';
 				}}
 			>
-				3.5%
+				<span class="btn-label">3.5%</span>
 			</button>
 			<button
+				class="primary"
 				onclick={() => {
 					formStore.data[stepName] = 5.0;
 					downPaymentMessage =
 						'The minimum a non first time home buyer can put down on conventional when income is high.';
 				}}
 			>
-				5%
+				<span class="btn-label">5%</span>
 			</button>
 			<button
+				class="primary"
 				onclick={() => {
 					formStore.data[stepName] = 10;
 					downPaymentMessage =
 						'Great option for high income, good credit borrowers wanting to put less than 20% down.';
 				}}
 			>
-				10%
+				<span class="btn-label">10%</span>
 			</button>
 		{/if}
 		<button
+			class="primary"
 			onclick={() => {
 				formStore.data[stepName] = 20;
 				downPaymentMessage = '';
 			}}
 		>
-			20%
+			<span class="btn-label">20%</span>
 		</button>
 	</div>
 	<p>
@@ -97,7 +103,7 @@
 		min="0"
 		max="100"
 		bind:value={formStore.data[stepName]}
-		onchange={(downPaymentMessage = '')}
+		onchange={() => (downPaymentMessage = '')}
 	/>
 	<NextButton {formStore} />
 </div>
@@ -111,15 +117,5 @@
 		flex-wrap: nowrap;
 		justify-content: center;
 		gap: var(--space-sm);
-		button {
-			border: solid 1px var(--green-200);
-			padding: 4px 8px;
-			width: 100%;
-			background: var(--green-100);
-			border-radius: var(--border-radius);
-			&:hover {
-				border: solid 1px var(--green-300);
-			}
-		}
 	}
 </style>

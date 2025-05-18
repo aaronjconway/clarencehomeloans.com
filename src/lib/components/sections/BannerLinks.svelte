@@ -8,7 +8,7 @@
 		{
 			title: 'Mortgage Education',
 			desc: 'Home buying articles',
-			link: '/pending'
+			link: '/learn'
 		},
 		{
 			title: 'Careers',

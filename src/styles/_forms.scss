@@ -63,7 +63,11 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		position: relative
+		position: relative;
+
+		.form-step-inner {
+			padding: 0 2%;
+		}
 	}
 
 	.submission {
@@ -89,13 +93,14 @@
 
 	.form-header {
 		display: flex;
+
 		flex-direction: column;
 		justify-content: center;
 		gap: var(--space);
 
+		margin: 0 auto;
 		margin-top: var(--space-lg);
 		margin-bottom: var(--space-md);
-		padding: var(--space-sm);
 		max-width: 800px;
 
 		text-align: center;
@@ -120,7 +125,6 @@
 		align-items: center;
 		font-size: var(--text-md);
 		font-weight: bold;
-		padding: var(--space-sm);
 		width: 100%;
 		gap: var(--space)
 	}

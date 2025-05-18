@@ -179,7 +179,7 @@
 
 	.header {
 		margin: 0;
-		background: var(--primary-800);
+		background: var(--primary-400);
 		padding: var(--space-md) 0;
 		color: white;
 
