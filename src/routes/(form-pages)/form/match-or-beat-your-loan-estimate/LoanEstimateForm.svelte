@@ -12,7 +12,6 @@
 	import IncomeAmount from '$lib/components/forms/parts/IncomeAmount.svelte';
 	import Credit from '$lib/components/forms/parts/Credit.svelte';
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
-	import NextSteps from '$lib/components/forms/parts/NextSteps.svelte';
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 
 	const steps = $state([
@@ -28,8 +27,7 @@
 		{ id: 5, name: 'income_amount', component: IncomeAmount },
 		{ id: 6, name: 'credit', component: Credit },
 		{ id: 7, name: 'derogatory_events', component: Derog },
-		{ id: 8, name: '', component: NextSteps },
-		{ id: 9, name: 'LEcontact', component: Contact }
+		{ id: 8, name: 'contact', component: Contact }
 	]);
 
 	// create a new form
