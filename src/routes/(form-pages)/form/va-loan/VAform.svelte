@@ -43,7 +43,6 @@
 	form.data['page_source'] = 'va-purchase';
 
 	form.totalSteps = steps.length - 1;
-	form.currentStep = 6;
 
 	//make state
 	let formStore = $state(form);

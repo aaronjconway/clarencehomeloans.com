@@ -19,7 +19,7 @@
 <div class="form-header">
 	<h1>
 		Our average rate at <u>no points</u>
-		as of today is 6.125% on a 30 year fixed VA loan
+		is 6.125% on a 30 year fixed VA loan
 	</h1>
 	<!-- <Dialog -->
 	<!-- 	page={'va-rates'} -->
@@ -29,25 +29,21 @@
 		page={'va-rate-comparison'}
 		buttonText="Read More: But this other company said X.XX rate??!??"
 	/>
-	<!-- <div><u>We do not sell or share information</u></div> -->
-	<!-- <ul> -->
-	<!-- 	<li> -->
-	<!-- 		<i class="fa fa-check"></i> -->
-	<!-- 		Possibility to buy down the rate to under 5.875 -->
-	<!-- 	</li> -->
-	<!-- 	<li> -->
-	<!-- 		<i class="fa fa-check"></i> -->
-	<!-- 		No origination fee -->
-	<!-- 	</li> -->
-	<!-- 	<li> -->
-	<!-- 		<i class="fa fa-check"></i> -->
-	<!-- 		No processing or underwriting -->
-	<!-- 	</li> -->
-	<!-- 	<li> -->
-	<!-- 		<i class="fa fa-check"></i> -->
-	<!-- 		No credit check -->
-	<!-- 	</li> -->
-	<!-- </ul> -->
+	<div><u>We do not sell or share information</u></div>
+	<ul>
+		<li>
+			<i class="fa fa-check"></i>
+			Can buy down the rate to under 5.875
+		</li>
+		<li>
+			<i class="fa fa-check"></i>
+			No origination fees
+		</li>
+		<li>
+			<i class="fa fa-check"></i>
+			No processing or underwriting fees
+		</li>
+	</ul>
 	<h3>Please confirm you served in the military</h3>
 </div>
 
@@ -98,6 +94,7 @@
 		margin-top: var(--space-lg);
 	}
 	ul {
+		font-weight: bold;
 		text-align: left;
 		margin: 0 auto;
 		i {
