@@ -18,8 +18,9 @@
 
 <div class="form-header">
 	<h1>
-		Our average rate at <u>no points</u>
-		is 6.125% on a 30 year fixed VA loan
+		We’ll Send You Your Rates and Eligibility With This Short Form.
+		<!-- Our average rate at <u>no points</u> -->
+		<!-- is 6.125% on a 30 year fixed VA loan -->
 	</h1>
 	<!-- <Dialog -->
 	<!-- 	page={'va-rates'} -->
@@ -42,6 +43,10 @@
 		<li>
 			<i class="fa fa-check"></i>
 			No processing or underwriting fees
+		</li>
+		<li>
+			<i class="fa fa-check"></i>
+			No credit check
 		</li>
 	</ul>
 	<h3>Please confirm you served in the military</h3>
@@ -70,15 +75,15 @@
 </div>
 <GetStartedArrow />
 
-<p class="disclaimer">
-	Rates and terms effective as of {format(new Date(), 'EEEE, MMM dd yyyy')} and subject
-	to change without notice. The 6.125% interest rate (6.125% APR) is based on a $500,000
-	VA loan with 0% down payment, a 30-year fixed term, and assumes a borrower with
-	excellent credit. This would be a P.I payment of $3,038.05 There are no points,
-	origination or processing fees at this rate. Rate may vary based on credit score,
-	loan amount, property type, and other factors. VA loans may require a one-time
-	VA funding fee, which may be financed into the loan. Not all applicants will qualify.
-</p>
+<!-- <p class="disclaimer"> -->
+<!-- 	Rates and terms effective as of {format(new Date(), 'EEEE, MMM dd yyyy')} and subject -->
+<!-- 	to change without notice. The 6.125% interest rate (6.125% APR) is based on a $500,000 -->
+<!-- 	VA loan with 0% down payment, a 30-year fixed term, and assumes a borrower with -->
+<!-- 	excellent credit. This would be a P.I payment of $3,038.05 There are no points, -->
+<!-- 	origination or processing fees at this rate. Rate may vary based on credit score, -->
+<!-- 	loan amount, property type, and other factors. VA loans may require a one-time -->
+<!-- 	VA funding fee, which may be financed into the loan. Not all applicants will qualify. -->
+<!-- </p> -->
 
 <style lang="scss">
 	h3 {
