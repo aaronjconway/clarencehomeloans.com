@@ -114,7 +114,7 @@
 	}
 	.options-wrapper {
 		display: flex;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		justify-content: center;
 		gap: var(--space-sm);
 	}
