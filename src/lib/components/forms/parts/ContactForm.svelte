@@ -128,6 +128,19 @@
 						/>
 					</div>
 				{/if}
+				{#if !formStore.data['contact_preference']}
+					<div class="form-group">
+						<label for="phone">Phone</label>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							required
+							bind:value={formStore.data['phone']}
+							oninput={formatPhone}
+						/>
+					</div>
+				{/if}
 
 				<div class="form-group">
 					<label for="email">Email</label>

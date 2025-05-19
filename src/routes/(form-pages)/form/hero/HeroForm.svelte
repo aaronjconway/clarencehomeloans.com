@@ -18,6 +18,7 @@
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 	import Veteran from '$lib/components/forms/parts/Veteran.svelte';
+	import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
 
 	const steps = $state([
 		{ id: 0, name: 'confirm_healthcare', component: HeroConfirm },
@@ -33,7 +34,8 @@
 		{ id: 10, name: 'income_amount', component: IncomeAmount },
 		{ id: 11, name: 'credit', component: Credit },
 		{ id: 12, name: 'derogatory_events', component: Derog },
-		{ id: 13, name: 'contact', component: Contact }
+		{ id: 13, name: 'contact_preference', component: ContactPreference },
+		{ id: 14, name: 'contact', component: Contact }
 	]);
 
 	// create a new form
@@ -45,6 +47,7 @@
 	form.data['page_source'] = 'hero-purchase';
 
 	form.totalSteps = steps.length - 1;
+	form.currentStep = 13;
 
 	//make state
 	let formStore = $state(form);

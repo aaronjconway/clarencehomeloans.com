@@ -17,6 +17,7 @@
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 	import VAConfirm from '$lib/components/forms/parts/VAConfirm.svelte';
+	import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
 
 	const steps = $state([
 		{ id: 0, name: 'military_branch', component: VAConfirm },
@@ -31,7 +32,8 @@
 		{ id: 9, name: 'income_amount', component: IncomeAmount },
 		{ id: 10, name: 'credit', component: Credit },
 		{ id: 11, name: 'derogatory_events', component: Derog },
-		{ id: 12, name: 'contact', component: Contact }
+		{ id: 12, name: 'contact_preference', component: ContactPreference },
+		{ id: 13, name: 'contact', component: Contact }
 	]);
 
 	// create a new form
