@@ -14,7 +14,7 @@
 			</h3>
 		</header>
 		<p>
-			Unfortunately, searching for “nurse” programs makes you a <strong>
+			Unfortunately, searching for “hero” programs makes you a <strong>
 				prime target to be taken advantage of.
 			</strong>
 		</p>
@@ -34,7 +34,7 @@
 
 		<SimpleCta
 			subTitle="You Care for Others—Let Us Care for You"
-			title="Home buying support designed exclusively for nurses."
+			title="Home buying support designed exclusively for heroes."
 			buttonText="Learn more"
 			buttonLink="#main"
 		/>
@@ -44,10 +44,10 @@
 <section>
 	<div class="container">
 		<header>
-			<h2>Why Healthcare Professionals Choose Us</h2>
+			<h2>Why Heroes Choose Us</h2>
 			<p>
 				Dedicated support, flexible loan options, and a home buying experience
-				built around your life as a nurse.
+				built around your life.
 			</p>
 		</header>
 		<div class="grid">
@@ -55,7 +55,7 @@
 				<i class="fa fa-dollar"></i>
 				<div class="header">Save Thousands in Costs</div>
 				<div class="content">
-					On average, nurses save over <strong>$5,000</strong>
+					On average, heroes save over <strong>$5,000</strong>
 					when working with us compared to traditional "Hero's" programs. Lower fees,
 					better rates, and zero fluff — just real savings you deserve.
 				</div>
@@ -71,19 +71,19 @@
 			</div>
 			<div class="item">
 				<i class="fa fa-heart"></i>
-				<div class="header">Nurse-Focused Programs</div>
+				<div class="header">Hero-Focused Programs</div>
 				<div class="content">
 					From low down payments to relaxed credit guidelines, our loan options
-					are designed to support nurses and healthcare professionals like you.
+					are designed to support professionals like you.
 				</div>
 			</div>
 			<div class="item">
 				<i class="fa fa-user-md"></i>
-				<div class="header">We Understand Nurse Income</div>
+				<div class="header">We Understand Complicated Income</div>
 				<div class="content">
 					Whether you're paid hourly, work per diem, rely on overtime, or have
 					travel nurse contracts — we know how to navigate and document your
-					income to help you qualify. We've helped nurses in every kind of role
+					income to help you qualify. We've helped heroes in every kind of role
 					buy homes, and we tailor the process to fit your unique pay structure.
 				</div>
 			</div>
