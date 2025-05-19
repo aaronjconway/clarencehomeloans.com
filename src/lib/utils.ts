@@ -146,6 +146,7 @@ export function amortization({ years = 30, amount = 100000, rate = 5 }) {
 }
 
 export function getStateAbbr(state: string) {
+    if (!state) return ""
     const states: Record<string, string> = {
         "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR", "california": "CA",
         "colorado": "CO", "connecticut": "CT", "delaware": "DE", "florida": "FL", "georgia": "GA",

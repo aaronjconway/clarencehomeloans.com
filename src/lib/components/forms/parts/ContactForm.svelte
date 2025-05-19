@@ -6,7 +6,7 @@
 	 *
 	 * */
 
-	let { formStore = $bindable(), stepName = 'contact' } = $props();
+	let { formStore = $bindable() } = $props();
 
 	function formatPhone() {
 		let value = formStore.data['phone'];
@@ -115,17 +115,19 @@
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label for="phone">Phone</label>
-					<input
-						type="tel"
-						id="phone"
-						name="phone"
-						required
-						bind:value={formStore.data['phone']}
-						oninput={formatPhone}
-					/>
-				</div>
+				{#if ['phone', 'text', 'any'].includes(formStore.data['contact_preference'])}
+					<div class="form-group">
+						<label for="phone">Phone</label>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							required
+							bind:value={formStore.data['phone']}
+							oninput={formatPhone}
+						/>
+					</div>
+				{/if}
 
 				<div class="form-group">
 					<label for="email">Email</label>

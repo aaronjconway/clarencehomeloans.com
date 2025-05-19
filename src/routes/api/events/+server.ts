@@ -1,5 +1,5 @@
 import { json, fail, type RequestHandler } from '@sveltejs/kit';
-import { env, /* FUB_SYSTEM_KEY, X_SYSTEM_KEY  */ } from '$env/dynamic/private';
+import { env } from '$env/dynamic/private';
 import { jsonToPrettyYaml, getStateAbbr } from '$lib/utils';
 
 export const POST: RequestHandler = async ({ request }): Promise<Response> => {
@@ -30,23 +30,19 @@ export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 			firstName: data.first_name,
 			lastName: data.last_name,
 			emails: [{ value: data.email }],
-			phones: [{ value: data.phone }],
+			phones: [{ value: data?.phone }],
 			tags: ['clarencehomeloans-web', page_source + '-inquiry', getStateAbbr(data.state)],
 		},
 	};
 
-	const url = 'https://api.followupboss.com/v1/events';
+	// const url = 'https://api.followupboss.com/v1/events';
+	const url = 'https://webhook.site/1a9c3ebd-7c94-46b1-a793-c9c983d1cebf';
 
 	const options = {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 			authorization: 'Basic ' + Buffer.from(`${env.FUB_API_KEY}:`).toString('base64'),
-			// needed for high writes https://docs.followupboss.com/reference/rate-limiting
-			// I think posts to /events is not limited. We're small here
-			// anyways.
-			// 'SYSTEM-KEY': FUB_SYSTEM_KEY,
-			// 'X-SYSTEM-KEY': X_SYSTEM_KEY,
 		},
 		body: JSON.stringify(eventData),
 	};
