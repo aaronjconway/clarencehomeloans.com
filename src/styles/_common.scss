@@ -81,7 +81,7 @@ a {
 
 
 			&:hover {
-				transform: translateY(-3px);
+				transform: translateY(-4px);
 			}
 
 			&:active {
@@ -93,7 +93,7 @@ a {
 	}
 
 	&.btn.grey {
-		background-color: var(--grey-600);
+		background-color: var(--grey-500);
 	}
 
 	&.btn.green {
