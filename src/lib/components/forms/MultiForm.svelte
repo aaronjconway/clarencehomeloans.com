@@ -11,9 +11,9 @@
 <ProgressBar {formStore} />
 <div class="form-container">
 	<div class="form-wrapper">
-		{#each steps as step}
+		{#each steps as step, i}
 			<div>
-				{#if formStore.currentStep == step.id}
+				{#if formStore.currentStep == i}
 					<div class="form-step">
 						<div class="form-step-inner">
 							<step.component

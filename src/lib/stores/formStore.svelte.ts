@@ -79,7 +79,9 @@ export class FormStore {
     }
 
     previousStep() {
-        this.currentStep = this.stepStack.pop() ?? 0
-        // pushState('', { page: this.currentStep })
+        setTimeout(() => {
+            this.currentStep = this.stepStack.pop() ?? 0
+            this.scrollToTop()
+        }, 100);
     }
 }

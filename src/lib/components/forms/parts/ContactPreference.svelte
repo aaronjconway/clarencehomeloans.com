@@ -33,8 +33,10 @@
 
 {#if formStore.data['contact_preference'] == 'no_contact'}
 	<div class="form-header-annoying">
-		<h1>We know it's annoying.</h1>
-		<h1>We know you don't want to talk with an annoying sales person.</h1>
+		<h1>
+			We know you you just want answers and don't want to talk with an annoying
+			sales person you don't trust.
+		</h1>
 		<div>How can we help you get the answers you're looking for?</div>
 		<div>
 			<button

@@ -20,20 +20,20 @@
 	import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
 
 	const steps = $state([
-		{ id: 0, name: 'military_branch', component: VAConfirm },
-		{ id: 1, name: 'buying_stage', component: BuyingStage },
-		{ id: 2, name: 'property_type', component: PropertyType },
-		{ id: 3, name: 'occupancy', component: OccupancyType },
-		{ id: 4, name: 'fthb', component: FirstTimeHomeBuyer },
-		{ id: 5, name: 'price', component: PriceRange },
-		{ id: 6, name: 'down_payment', component: DownPayment },
-		{ id: 7, name: 'location', component: Location },
-		{ id: 8, name: 'income_type', component: IncomeType },
-		{ id: 9, name: 'income_amount', component: IncomeAmount },
-		{ id: 10, name: 'credit', component: Credit },
-		{ id: 11, name: 'derogatory_events', component: Derog },
-		{ id: 12, name: 'contact_preference', component: ContactPreference },
-		{ id: 13, name: 'contact', component: Contact }
+		{ name: 'military_branch', component: VAConfirm },
+		{ name: 'buying_stage', component: BuyingStage },
+		{ name: 'property_type', component: PropertyType },
+		{ name: 'occupancy', component: OccupancyType },
+		{ name: 'fthb', component: FirstTimeHomeBuyer },
+		{ name: 'price', component: PriceRange },
+		{ name: 'down_payment', component: DownPayment },
+		{ name: 'location', component: Location },
+		{ name: 'income_type', component: IncomeType },
+		{ name: 'income_amount', component: IncomeAmount },
+		{ name: 'credit', component: Credit },
+		{ name: 'derogatory_events', component: Derog },
+		{ name: 'contact_preference', component: ContactPreference },
+		{ name: 'contact', component: Contact }
 	]);
 
 	// create a new form
