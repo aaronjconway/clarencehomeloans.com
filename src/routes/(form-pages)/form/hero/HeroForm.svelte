@@ -47,7 +47,6 @@
 	form.data['page_source'] = 'hero-purchase';
 
 	form.totalSteps = steps.length - 1;
-	form.currentStep = 13;
 
 	//make state
 	let formStore = $state(form);
