@@ -22,11 +22,14 @@
 	<div class="container">
 		<div class="grid">
 			{#each links as link}
-				<a href={link.link}>
-					<div class="card">
-						<div class="card-title">{link.title}</div>
-						<div class="card-link">{link.desc}</div>
-					</div>
+				<a
+					href={link.link}
+					class="btn grey"
+				>
+					<span class="btn-label">
+						<div class="title">{link.title}</div>
+						<div class="description">{link.desc}</div>
+					</span>
 				</a>
 			{/each}
 		</div>
@@ -48,26 +51,12 @@
 		padding: 0;
 	}
 
-	.card {
-		display: flex;
-		flex-direction: column;
-		border: solid 1px var(--grey-500);
-		background: white;
-		padding: var(--space);
-		border-radius: var(--border-radius);
-		height: 100%;
+	.title {
+		font-weight: bold;
+	}
 
-		.card-title {
-			font-weight: bold;
-		}
-
-		.card-link {
-			font-size: var(--text);
-		}
-
-		&:hover {
-			outline: solid 1px black;
-		}
+	.description {
+		font-size: var(--text-sm);
 	}
 
 	.grid {
