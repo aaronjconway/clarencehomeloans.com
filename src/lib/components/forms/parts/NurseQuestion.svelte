@@ -1,5 +1,4 @@
 <script lang="ts">
-	import GetStartedArrow from '$lib/components/GetStartedArrow.svelte';
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
@@ -26,7 +25,7 @@
 </script>
 
 <div class="form-header">
-	<h1>Please specify why the medicaiton is being documented late.</h1>
+	<h1>Please specify why the medication is being documented late.</h1>
 	<div class="card">
 		<div class="card-title">aspirin</div>
 		<div class="card-text">
