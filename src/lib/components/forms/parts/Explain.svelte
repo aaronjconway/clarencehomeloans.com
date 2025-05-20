@@ -10,7 +10,7 @@
 			id: 'cat'
 		},
 		{
-			text: "I accidentally clicked through 10 previous questions steps but don't actually want anything.",
+			text: "I accidentally clicked through 10 previous questions but don't actually want anything.",
 			id: 'accident'
 		},
 		{
