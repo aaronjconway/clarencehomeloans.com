@@ -18,7 +18,7 @@
 
 <div class="form-header">
 	<h1>Are you a First Time Home Buyer</h1>
-	<div>We're experienced with both new buyers and savys investors.</div>
+	<div>We're experienced with both new buyers and savy investors.</div>
 </div>
 
 <div class="radio-wrapper">
