@@ -3,7 +3,7 @@
 // TODO:-- learn how to modify the page history so can navigate with
 // forward/back.
 //
-// Last attempt blobbered so it was not reliable
+// Last attempt clobbered the history so it was not reliable
 
 
 export class FormStore {
@@ -13,38 +13,43 @@ export class FormStore {
     stepStack: number[] = $state([])
     data: Record<string, string> = $state({})
     submitted: boolean = $state(false)
+    formName: string = $state('')
 
+    // if we construct on 0 then i think we'll alwasy end up gettting 0
     constructor(currentStep: number = 0) {
-
         this.currentStep = currentStep
-
-        // $effect(() => {
-        //     window.addEventListener('popstate', this.handleNavigate.bind(this))
-        //     return () => {
-        //         window.removeEventListener('popstate', this.handleNavigate.bind(this))
-        //     }
-        // })
     }
 
     addData(k: string, v: string) {
         this.data[k] = v
     }
 
-    // handleNavigate() {
-    //     let currentPage = page.state.page
-    //     if (page.state.page) {
-    //         if (currentPage < this.currentStep) {
-    //             this.currentStep == this.stepStack.pop()
-    //         }
-    //         if (currentPage > this.currentStep) {
-    //             this.currentStep++
-    //         }
-    //     } else {
-    //         this.currentStep = 0
-    //     }
-    //
-    //
-    // }
+    clearStorage() {
+        this.data = {}
+        localStorage.removeItem(`formCurrentStep-${this.formName}`)
+        localStorage.removeItem(`formData-${this.formName}`)
+    }
+
+    initializeFromStorage() {
+        const savedStep = localStorage.getItem(`formCurrentStep-${this.formName}`)
+        console.log('saved step', savedStep)
+        if (savedStep !== null && !isNaN(parseInt(savedStep))) {
+            this.currentStep = parseInt(savedStep)
+        }
+
+        const savedData = localStorage.getItem(`formData-${this.formName}`)
+        console.log('saved data', savedData)
+        if (savedData) {
+            try {
+                const parsed = JSON.parse(savedData)
+                if (parsed && typeof parsed === 'object') {
+                    this.data = parsed
+                }
+            } catch (e) {
+                console.warn('Failed to parse saved formData from localStorage:', e)
+            }
+        }
+    }
 
     scrollToTop() {
         window.scrollTo({
@@ -70,9 +75,15 @@ export class FormStore {
     nextStep() {
         setTimeout(() => {
             this.stepStack.push(this.currentStep)
-            // the active step shouldn't be in the step stack. that's why we do
-            // it AFTER the push to stack that way  a pop is the recent step
+
+            // the active step shouldn't be in the step stack. that's why we
+            // increment AFTER the push to stack that way a pop returns the previous step
             this.currentStep++
+
+            // save to local storage the active step.
+            localStorage.setItem(`formData-${this.formName}`, JSON.stringify(this.data))
+            localStorage.setItem(`formCurrentStep-${this.formName}`, this.currentStep.toString())
+
             // pushState('', { page: this.currentStep })
             this.scrollToTop()
         }, 200);
@@ -80,7 +91,12 @@ export class FormStore {
 
     previousStep() {
         setTimeout(() => {
-            this.currentStep = this.stepStack.pop() ?? 0
+            // todo this doesn't respect the step stack
+            // stack would have to be saved into local storage as well.
+            this.currentStep--
+            localStorage.setItem(`formData-${this.formName}`, JSON.stringify(this.data))
+            localStorage.setItem(`formCurrentStep-${this.formName}`, this.currentStep.toString())
+
             this.scrollToTop()
         }, 100);
     }

@@ -25,14 +25,6 @@
 	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
 
-		await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
-			method: 'POST',
-			headers: {
-				'User-Agent': 'Mozilla/5.0'
-			},
-			body: formStore.data['page_source'] + ' submit attempt'
-		});
-
 		const data = JSON.stringify(formStore.data);
 		loading = true;
 		try {
@@ -51,8 +43,10 @@
 			}
 			loading = false;
 			formStore.submitted = true;
+			formStore.clearStorage();
 		} catch (err) {
 			console.error('Error posting to /api/events: ', err);
+			formStore.clearStorage();
 		}
 	}
 </script>
@@ -74,7 +68,7 @@
 	<div class="wrapper">
 		{#if loading}
 			<div class="loader-overlay">
-				<div class="loading-wrapper">
+				<div class="loader-wrapper">
 					<div class="loader"></div>
 				</div>
 			</div>
@@ -227,13 +221,12 @@
 	.loader-overlay {
 		display: flex;
 		justify-content: center;
-		height: 100%;
+		height: 50vh;
 	}
 
 	//loading wrappek to place the loader
 	.loader-wrapper {
 		display: flex;
-		height: 100%;
 		justify-content: center;
 		align-items: center;
 	}

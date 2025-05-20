@@ -156,7 +156,7 @@
 			Calling lenders asking for the rates - is playing a game of who's the
 			biggest liar. You're optimizing for a bad time.
 		</div>
-		<div>With that being said - we guaruntee we will match or beat anyone.</div>
+		<div>With that being said, we will match or beat anyone.</div>
 		<div>
 			<button
 				class="primary"

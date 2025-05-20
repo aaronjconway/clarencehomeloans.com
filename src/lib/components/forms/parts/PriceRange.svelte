@@ -3,7 +3,9 @@
 	import NextButton from '../NextButton.svelte';
 
 	const { stepName = '', formStore = $bindable() } = $props();
-	formStore.data[stepName] = 400000;
+	if (!formStore.data['price']) {
+		formStore.data['price'] = 400000;
+	}
 </script>
 
 <div class="form-header">
