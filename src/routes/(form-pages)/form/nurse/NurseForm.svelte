@@ -5,7 +5,7 @@
 
 	// import parts
 	import NurseConfirm from '$lib/components/forms/parts/NurseConfirm.svelte';
-	import NurseQuestion from '$lib/components/forms/parts/NurseQuestion.svelte';
+	// import NurseQuestion from '$lib/components/forms/parts/NurseQuestion.svelte';
 	import BuyingStage from '$lib/components/forms/parts/BuyingStage.svelte';
 	import PropertyType from '$lib/components/forms/parts/PropertyType.svelte';
 	import OccupancyType from '$lib/components/forms/parts/OccupancyType.svelte';
@@ -17,13 +17,13 @@
 	import IncomeAmount from '$lib/components/forms/parts/IncomeAmount.svelte';
 	import Credit from '$lib/components/forms/parts/Credit.svelte';
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
-	import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
-	import Explain from '$lib/components/forms/parts/Explain.svelte';
+	// import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
+	// import Explain from '$lib/components/forms/parts/Explain.svelte';
 
 	const steps = $state([
 		{ name: 'confirm_healthcare', component: NurseConfirm },
-		{ name: '', component: NurseQuestion },
+		// { name: '', component: NurseQuestion },
 		{ name: 'buying_stage', component: BuyingStage },
 		{ name: 'property_type', component: PropertyType },
 		{ name: 'occupancy', component: OccupancyType },
@@ -35,8 +35,8 @@
 		{ name: 'income_amount', component: IncomeAmount },
 		{ name: 'credit', component: Credit },
 		{ name: 'derogatory_events', component: Derog },
-		{ name: 'contact_preference', component: ContactPreference },
-		{ name: '', component: Explain },
+		// { name: 'contact_preference', component: ContactPreference },
+		// { name: '', component: Explain },
 		{ name: 'contact', component: Contact }
 	]);
 

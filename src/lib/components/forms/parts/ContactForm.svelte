@@ -1,6 +1,6 @@
 <script lang="ts">
 	/*
-	 * just the input/form part of the contact peice
+	 * just the input/form part of the contact piece
 	 * takes a form store and sends off to api/events
 	 *
 	 *
@@ -224,7 +224,7 @@
 		height: 50vh;
 	}
 
-	//loading wrappek to place the loader
+	//loading wrapper to place the loader
 	.loader-wrapper {
 		display: flex;
 		justify-content: center;

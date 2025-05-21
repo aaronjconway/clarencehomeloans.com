@@ -42,10 +42,3 @@
 		{/each}
 	</div>
 </div>
-
-<style>
-	i {
-		font-size: var(--text-sm);
-		color: var(--grey-800);
-	}
-</style>

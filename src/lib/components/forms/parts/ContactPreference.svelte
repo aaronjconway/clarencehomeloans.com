@@ -23,7 +23,7 @@
 		}
 	];
 
-	function handleClick(e: Event) {
+	function handleClick(e: any) {
 		const selectedValue = e.target.value;
 		if (selectedValue == 'no_contact') {
 			formStore.nextStep();
@@ -92,22 +92,22 @@
 <!-- {/if} -->
 
 <style lang="scss">
-	.form-header-annoying {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: var(--space);
+	// .form-header-annoying {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	gap: var(--space);
 
-		margin: 0 auto;
-		margin-top: var(--space-xl);
-		margin-bottom: var(--space-md);
-		max-width: 800px;
+	// 	margin: 0 auto;
+	// 	margin-top: var(--space-xl);
+	// 	margin-bottom: var(--space-md);
+	// 	max-width: 800px;
 
-		text-align: center;
-		font-size: var(--text-md);
+	// 	text-align: center;
+	// 	font-size: var(--text-md);
 
-		h1 {
-			margin: 0;
-		}
-	}
+	// 	h1 {
+	// 		margin: 0;
+	// 	}
+	// }
 </style>

@@ -33,7 +33,7 @@
 	<h1>Which kind of Hero are you?</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
-		We respect your privacy — <b>we do not share or sell informtion..</b>
+		We respect your privacy — <b>we do not share or sell information..</b>
 	</div>
 	<ul>
 		<li>
@@ -42,11 +42,11 @@
 		</li>
 		<li>
 			<i class="fa fa-check"></i>
-			No origination fees
+			No origination, processing, or underwriting fees
 		</li>
 		<li>
 			<i class="fa fa-check"></i>
-			No credit check
+			No credit check till you're happy.
 		</li>
 	</ul>
 </div>
@@ -79,9 +79,10 @@
 
 <style lang="scss">
 	.subtext {
-		font-size: var(--text-sm);
+		font-size: var(--text);
 	}
 	ul {
+		font-size: var(--text-md);
 		text-align: left;
 		margin: 0 auto;
 		i {

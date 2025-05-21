@@ -17,7 +17,7 @@
 	<h1>Are you a Nurse or Healthcare worker?</h1>
 	<div>This short form will help us understand your situation and goals.</div>
 	<div>
-		We respect your privacy — <b>we do not share or sell informtion..</b>
+		We respect your privacy — <b>we do not share or sell information.</b>
 	</div>
 	<ul>
 		<li>

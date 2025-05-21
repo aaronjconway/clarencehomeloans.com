@@ -21,7 +21,7 @@
 
 	let loading = $state(false);
 	let success = $state(false);
-	let errorMesasge = $state('');
+	let errorMessage = $state('');
 
 	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
@@ -46,7 +46,7 @@
 				success = true;
 			} else {
 				success = false;
-				errorMesasge = result.message;
+				errorMessage = result.message;
 			}
 			loading = false;
 			formStore.submitted = true;
@@ -68,8 +68,8 @@
 		</ol>
 		<a href="/">back to home page</a>
 	</div>
-{:else if errorMesasge}
-	{errorMesasge}
+{:else if errorMessage}
+	{errorMessage}
 {:else}
 	<div class="form-header">
 		<h1>Contact info</h1>

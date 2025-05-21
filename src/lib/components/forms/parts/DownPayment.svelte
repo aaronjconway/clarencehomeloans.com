@@ -6,7 +6,7 @@
 	const { stepName = '', formStore = $bindable() } = $props();
 
 	// TODO:-- setup a local testing form so we can see all at the same time.
-	// while testing - sice price isn't previously set
+	// while testing - since price isn't previously set
 	if (!formStore.data['down_payment']) {
 		formStore.data['down_payment'] = 10;
 	}

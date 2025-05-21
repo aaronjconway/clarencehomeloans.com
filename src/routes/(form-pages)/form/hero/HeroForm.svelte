@@ -18,8 +18,8 @@
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 	import Veteran from '$lib/components/forms/parts/Veteran.svelte';
-	import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
-	import Explain from '$lib/components/forms/parts/Explain.svelte';
+	// import ContactPreference from '$lib/components/forms/parts/ContactPreference.svelte';
+	// import Explain from '$lib/components/forms/parts/Explain.svelte';
 
 	const steps = $state([
 		{ name: 'confirm_healthcare', component: HeroConfirm },
@@ -35,8 +35,8 @@
 		{ name: 'income_amount', component: IncomeAmount },
 		{ name: 'credit', component: Credit },
 		{ name: 'derogatory_events', component: Derog },
-		{ name: 'contact_preference', component: ContactPreference },
-		{ name: '', component: Explain },
+		// { name: 'contact_preference', component: ContactPreference },
+		// { name: '', component: Explain },
 		{ name: 'contact', component: Contact }
 	]);
 
