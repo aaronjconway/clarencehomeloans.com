@@ -21,16 +21,24 @@
 	</div>
 	<ul>
 		<li>
-			<i class="fa fa-check"></i>
-			No bait and switch
+			<div>
+				<i class="fa fa-check"></i>
+			</div>
+
+			<div>No bait and switch</div>
 		</li>
 		<li>
-			<i class="fa fa-check"></i>
-			No origination fees
+			<div>
+				<i class="fa fa-check"></i>
+			</div>
+
+			<div>No origination, processing, or underwriting fees</div>
 		</li>
 		<li>
-			<i class="fa fa-check"></i>
-			No credit check
+			<div>
+				<i class="fa fa-check"></i>
+			</div>
+			<div>No credit check till you're happy.</div>
 		</li>
 	</ul>
 </div>
@@ -60,11 +68,16 @@
 
 <style lang="scss">
 	ul {
+		padding: 0 var(--space-lg);
+		font-size: var(--text-md);
 		text-align: left;
 		margin: 0 auto;
-		i {
-			color: green;
-			margin-right: var(--space-sm);
+		li {
+			display: flex;
+			i {
+				color: green;
+				margin-right: var(--space-sm);
+			}
 		}
 	}
 </style>
