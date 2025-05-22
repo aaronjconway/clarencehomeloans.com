@@ -39,7 +39,7 @@
 <Stats
 	statData={[
 		{
-			number: 'Over $4,000',
+			number: 'Over $5,000',
 			text: 'Saved against other "Heroes" or "Next Door" programs'
 		},
 		{ number: '17', text: 'Average days to close' },

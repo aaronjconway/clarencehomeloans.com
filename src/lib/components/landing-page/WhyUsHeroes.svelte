@@ -12,7 +12,30 @@
 					more available than anyone else.
 				</blockquote>
 			</h3>
+			<ul>
+				<li>
+					<div>
+						<i class="fa fa-check"></i>
+					</div>
+
+					<div>No bait and switch</div>
+				</li>
+				<li>
+					<div>
+						<i class="fa fa-check"></i>
+					</div>
+
+					<div>No origination, processing, or underwriting fees</div>
+				</li>
+				<li>
+					<div>
+						<i class="fa fa-check"></i>
+					</div>
+					<div>No credit check till you're happy.</div>
+				</li>
+			</ul>
 		</header>
+
 		<p>
 			Unfortunately, searching for “hero” programs makes you a <strong>
 				prime target to be taken advantage of.
@@ -109,6 +132,25 @@
 
 <style lang="scss">
 	@use '/src/styles/base';
+
+	ul {
+		padding: 0 var(--space-lg);
+		font-size: var(--text-md);
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		max-width: 400px;
+		margin: 0 auto;
+		margin-top: var(--space-xl);
+		li {
+			padding: var(--space-xs) 0;
+			display: flex;
+			i {
+				color: green;
+				margin-right: var(--space-sm);
+			}
+		}
+	}
 
 	section {
 		margin-bottom: var(--space-xxl);

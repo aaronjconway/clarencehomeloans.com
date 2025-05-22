@@ -71,6 +71,7 @@
 		padding: 0 var(--space-lg);
 		font-size: var(--text-md);
 		text-align: left;
+		max-width: 400px;
 		margin: 0 auto;
 		li {
 			display: flex;

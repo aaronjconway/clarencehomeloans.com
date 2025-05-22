@@ -8,6 +8,10 @@ export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 	const { page_source } = data
 
 	if (data.special) {
+		await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+			method: 'POST',
+			body: 'bot detected: special failed'
+		})
 		throw fail(400, { message: 'Bot Detected' })
 	}
 
@@ -56,8 +60,11 @@ export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 
 	try {
 		const res = await fetch(url, options);
-
 		if (!res.ok) {
+			await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+				method: 'POST',
+				body: 'error posting to crm: bad response'
+			})
 			throw fail(500, { message: 'Error posting to crm.' })
 		}
 
@@ -65,6 +72,10 @@ export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 
 	} catch (err) {
 		console.error(err);
+		await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+			method: 'POST',
+			body: `Error posting to crm: ${err}`
+		})
 		throw fail(500, { message: 'Error posting to crm.' })
 	}
 }

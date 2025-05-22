@@ -91,6 +91,7 @@
 	}
 	ul {
 		padding: 0 var(--space-lg);
+		max-width: 400px;
 		font-size: var(--text-md);
 		text-align: left;
 		margin: 0 auto;

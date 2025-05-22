@@ -52,11 +52,19 @@ export const actions: Actions = {
 		}
 
 		if (isFilteredMessage(message)) {
+			await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+				method: 'POST',
+				body: `bad message attempt: ${message}`
+			})
 			return fail(400, { message: 'spam' })
 		}
 
 
 		if (special) {
+			await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+				method: 'POST',
+				body: `special field on contact page: ${message}`
+			})
 			return fail(400, { message: 'Bot Detected' })
 		}
 
@@ -93,7 +101,7 @@ export const actions: Actions = {
 
 		let errorMessage = '';
 
-		fetch(url, options)
+		await fetch(url, options)
 			.then((res) => res.json())
 			.then((json) => console.log(json))
 			.catch((err) => {
@@ -101,6 +109,11 @@ export const actions: Actions = {
 			});
 
 		if (errorMessage) {
+
+			await fetch('https://production-ntfy.8rjfpz.easypanel.host/chl-web', {
+				method: 'POST',
+				body: `error from contact ${errorMessage}`
+			})
 			return { success: false, message: errorMessage }
 		}
 
