@@ -38,15 +38,11 @@
 		</li>
 		<li>
 			<i class="fa fa-check"></i>
-			No origination fees
+			No origination or processing fees
 		</li>
 		<li>
 			<i class="fa fa-check"></i>
-			No processing or underwriting fees
-		</li>
-		<li>
-			<i class="fa fa-check"></i>
-			No credit check
+			No credit check till you're happy
 		</li>
 	</ul>
 	<h3>Please confirm you served in the military</h3>

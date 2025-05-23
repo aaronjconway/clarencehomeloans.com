@@ -25,7 +25,7 @@
 					<i class="fa fa-check"></i>
 				</div>
 
-				<div>No origination, processing, or underwriting fees</div>
+				<div>No origination or processing fees</div>
 			</li>
 			<li>
 				<div>
