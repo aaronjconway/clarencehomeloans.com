@@ -3,7 +3,7 @@
 	import WhyUsLe from '$lib/components/landing-page/WhyUsLE.svelte';
 	import Accordion from '$lib/components/Accordion.svelte';
 	import faqs from '$lib/data/loanestimate-faqs.js';
-	import LoanEstimateForm from '../../../(form-pages)/form/match-or-beat-your-loan-estimate/LoanEstimateForm.svelte';
+	import LoanEstimateForm from '/src/routes/(form-pages)/form/loan-estimate/LoanEstimateForm.svelte';
 	import SimpleCta from '$lib/components/sections/SimpleCTA.svelte';
 	import Stats from '$lib/components/landing-page/Stats.svelte';
 </script>
