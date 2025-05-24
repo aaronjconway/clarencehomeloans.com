@@ -18,10 +18,12 @@
 			formStore.data['price']
 		)}?
 	</h1>
-	<p>
-		Bear in mind that jumbo loans do not have PMI and get significanly better
-		pricing over 20% down.
-	</p>
+	{#if formStore.data['loan_type'] == 'jumbo'}
+		<p>
+			Bear in mind that jumbo loans do not have PMI and get significanly better
+			pricing over 20% down.
+		</p>
+	{/if}
 	<div class="options-wrapper">
 		{#if formStore.data['loan_type'] == 'jumbo'}
 			<button
