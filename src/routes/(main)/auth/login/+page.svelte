@@ -45,7 +45,7 @@
 				class="btn"
 				href="/auth/signup"
 			>
-				Sign up
+				<span class="btn-label">Sign Up</span>
 			</a>
 		</div>
 		<div class="forgot-pass">
