@@ -5,11 +5,82 @@
 
 	const { stepName = '', formStore = $bindable() } = $props();
 
-	// TODO:-- setup a local testing form so we can see all at the same time.
-	// while testing - since price isn't previously set
 	if (!formStore.data['down_payment']) {
 		formStore.data['down_payment'] = 10;
 	}
+	formStore.data['loan_type'] = 'dscr';
+	console.log(formStore.data);
+	const downOptions = {
+		jumbo: [
+			{
+				downpayment: 10.01,
+				message: 'The (weird) minimum down for jumbo loans. Still no PMI.'
+			},
+			{
+				downpayment: 20,
+				message:
+					'Standard jumbo loan down payment. Better rates and terms may apply.'
+			},
+			{
+				downpayment: 30,
+				message: 'Higher down payment can help bypass stricter underwriting.'
+			}
+		],
+		dscr: [
+			{
+				downpayment: 20,
+				message: 'Recommended down payment for broader lender acceptance.'
+			},
+			{
+				downpayment: 25,
+				message:
+					'Preferred by lenders for investors with limited rental history.'
+			}
+		],
+		va: [
+			{
+				downpayment: 0,
+				message:
+					'VA loans offer 100% financing for eligible veterans with no down payment.'
+			},
+			{
+				downpayment: 5,
+				message:
+					'Optional down payment can reduce VA funding fee and monthly payments.'
+			}
+		],
+		fha: [
+			{
+				downpayment: 3.5,
+				message:
+					'Minimum FHA down payment for borrowers with credit scores of 580 or higher.'
+			},
+			{
+				downpayment: 10,
+				message: 'Required down payment if credit score is between 500–579.'
+			}
+		],
+		conventional: [
+			{
+				downpayment: 3,
+				message:
+					'Available for first-time homebuyers or income-qualified borrowers.'
+			},
+			{
+				downpayment: 5,
+				message: 'Standard minimum for many conventional loan programs.'
+			},
+			{
+				downpayment: 10,
+				message: 'Improves loan terms and may reduce PMI costs.'
+			},
+			{
+				downpayment: 20,
+				message:
+					'Avoids private mortgage insurance (PMI) and improves loan terms.'
+			}
+		]
+	};
 </script>
 
 <div class="form-header">
@@ -18,113 +89,27 @@
 			formStore.data['price']
 		)}?
 	</h1>
+
 	{#if formStore.data['loan_type'] == 'jumbo'}
 		<p>
 			Bear in mind that jumbo loans do not have PMI and get significanly better
 			pricing over 20% down.
 		</p>
 	{/if}
-	<div class="options-wrapper">
-		{#if formStore.data['loan_type'] == 'jumbo'}
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 10.01;
-					downPaymentMessage = 'The minimum you can put down on a jumbo loan.';
-				}}
-			>
-				<span class="btn-label">10.01%</span>
-			</button>
 
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 20;
-					downPaymentMessage = '';
-				}}
-			>
-				<span class="btn-label">20%</span>
-			</button>
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 25;
-					downPaymentMessage = '';
-				}}
-			>
-				<span class="btn-label">25%</span>
-			</button>
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 30;
-					downPaymentMessage = '';
-				}}
-			>
-				<span class="btn-label">30%</span>
-			</button>
-		{:else if formStore.data['loan_type'] != 'dscr' && formStore.data['occupancy'] != 'investment'}
-			{#if formStore.data['loan_type'] == 'va'}
+	<div class="options-wrapper">
+		{#if downOptions[formStore.data['loan_type']]}
+			{#each downOptions[formStore.data['loan_type']] as item}
 				<button
 					class="primary"
 					onclick={() => {
-						formStore.data[stepName] = 0;
-						downPaymentMessage = 'Veterans are allowed to put 0% down.';
+						formStore.data[stepName] = item.downpayment;
+						downPaymentMessage = item.message;
 					}}
 				>
-					<span class="btn-label">0%</span>
+					<span class="btn-label">{item.downpayment}%</span>
 				</button>
-			{/if}
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 3.0;
-					downPaymentMessage =
-						'The minimum you can put down on conventional as a first time home buyer or low income.';
-				}}
-			>
-				<span class="btn-label">3%</span>
-			</button>
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 3.5;
-					downPaymentMessage =
-						'The minimum you can put down on FHA. Great for credit below 700.';
-				}}
-			>
-				<span class="btn-label">3.5%</span>
-			</button>
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 5.0;
-					downPaymentMessage =
-						'The minimum a non first time home buyer can put down on conventional when income is high.';
-				}}
-			>
-				<span class="btn-label">5%</span>
-			</button>
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 10;
-					downPaymentMessage =
-						'Great option for high income, good credit borrowers wanting to put less than 20% down.';
-				}}
-			>
-				<span class="btn-label">10%</span>
-			</button>
-		{:else}
-			<button
-				class="primary"
-				onclick={() => {
-					formStore.data[stepName] = 20;
-					downPaymentMessage = '';
-				}}
-			>
-				<span class="btn-label">20%</span>
-			</button>
+			{/each}
 		{/if}
 	</div>
 	<p>

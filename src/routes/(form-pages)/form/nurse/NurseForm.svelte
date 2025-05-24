@@ -42,12 +42,8 @@
 
 	// create a new form
 	let form = new FormStore();
-	//todo:-- I don't think there's any readson to have form name.
-	//it's for the local storage unique id  - but we can just use th
-	//form.data['page_source'] if we're setting that first.
+	//need to set the formname here
 	form.formName = 'nurse';
-	form.data['loan_type'] = 'purchase';
-	form.data['page_source'] = 'nurse-purchase';
 	form.totalSteps = steps.length - 1;
 
 	//make state

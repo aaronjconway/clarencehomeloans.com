@@ -24,17 +24,19 @@ export class FormStore {
 
     clearStorage() {
         this.data = {};
-        localStorage.removeItem(`formCurrentStep-${this.formName}`);
-        localStorage.removeItem(`formData-${this.formName}`);
+        sessionStorage.removeItem(`formCurrentStep-${this.formName}`);
+        sessionStorage.removeItem(`formData-${this.formName}`);
     }
 
     initializeFromStorage() {
-        const savedStep = localStorage.getItem(`formCurrentStep-${this.formName}`);
+        const savedStep = sessionStorage.getItem(
+            `formCurrentStep-${this.formName}`
+        );
         if (savedStep !== null && !isNaN(parseInt(savedStep))) {
             this.currentStep = parseInt(savedStep);
         }
 
-        const savedData = localStorage.getItem(`formData-${this.formName}`);
+        const savedData = sessionStorage.getItem(`formData-${this.formName}`);
         if (savedData) {
             try {
                 const parsed = JSON.parse(savedData);
@@ -42,7 +44,7 @@ export class FormStore {
                     this.data = parsed;
                 }
             } catch (e) {
-                console.warn('Failed to parse saved formData from localStorage:', e);
+                console.warn('Failed to parse saved formData from sessionStorage:', e);
             }
         }
     }
@@ -76,11 +78,11 @@ export class FormStore {
             this.currentStep++;
 
             // save to local storage the active step.
-            localStorage.setItem(
+            sessionStorage.setItem(
                 `formData-${this.formName}`,
                 JSON.stringify(this.data)
             );
-            localStorage.setItem(
+            sessionStorage.setItem(
                 `formCurrentStep-${this.formName}`,
                 this.currentStep.toString()
             );
@@ -95,11 +97,11 @@ export class FormStore {
             // todo this doesn't respect the step stack
             // stack would have to be saved into local storage as well.
             this.currentStep--;
-            localStorage.setItem(
+            sessionStorage.setItem(
                 `formData-${this.formName}`,
                 JSON.stringify(this.data)
             );
-            localStorage.setItem(
+            sessionStorage.setItem(
                 `formCurrentStep-${this.formName}`,
                 this.currentStep.toString()
             );

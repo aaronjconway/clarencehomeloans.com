@@ -9,6 +9,8 @@
 	];
 
 	function handleClick() {
+		formStore.data['loan_type'] = 'purchase';
+		formStore.data['page_source'] = 'nurse-purchase';
 		formStore.nextStep();
 	}
 </script>

@@ -15,7 +15,7 @@
 	import DSCRTenants from '$lib/components/forms/parts/DSCRTenants.svelte';
 	import Credit from '$lib/components/forms/parts/Credit.svelte';
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
-	import Contact from '$lib/components/forms/parts/Contact.svelte';
+	import Contact from '$lib/components/forms/parts/ContactDSCR.svelte';
 
 	const steps = $state([
 		{ id: 0, name: 'dscr_confirm', component: DscrOccupancy },
@@ -32,15 +32,9 @@
 		{ id: 11, name: 'contact', component: Contact }
 	]);
 
-	// create a new form
 	let form = new FormStore();
-
-	// add some specific data
-	form.data['loan_type'] = 'dscr';
-	form.data['page_source'] = 'dscr-purchase';
+	form.formName = 'dscr-purchase';
 	form.totalSteps = steps.length - 1;
-
-	//make state
 	let formStore = $state(form);
 </script>
 

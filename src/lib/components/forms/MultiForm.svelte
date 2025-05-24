@@ -1,8 +1,10 @@
 <script lang="ts">
 	/*
-	 * A Generic
+	 * Generic handler of multi form-step
+	 * DO NOT ADD ANY NON GENERIC CONTENT
 	 *
 	 * */
+
 	import ProgressBar from '$lib/components/forms/ProgressBar.svelte';
 
 	let { formStore = $bindable(), steps } = $props();

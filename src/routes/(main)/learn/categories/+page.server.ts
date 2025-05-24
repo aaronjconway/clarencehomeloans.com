@@ -3,14 +3,15 @@ import { env } from '$env/dynamic/private';
 import { createDirectus, staticToken, rest, readItems } from '@directus/sdk';
 
 interface Category {
-	id: string
-	name: string
-	title: string
-	description: string
+	id: string;
+	name: string;
+	title: string;
+	description: string;
 }
 
-console.log('test')
-const client = createDirectus('https://production-directus.8rjfpz.easypanel.host')
+const client = createDirectus(
+	'https://production-directus.8rjfpz.easypanel.host'
+)
 	.with(staticToken(env.DIRECTUS_ACCESS_TOKEN))
 	.with(rest());
 
@@ -23,9 +24,14 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 
 export const load: PageServerLoad = async () => {
 	try {
-		const categories = await withTimeout(client.request(readItems('categories', {
-			fields: ['*', { '*': ['*'] }],
-		})), 5000) as Category[]
+		const categories = (await withTimeout(
+			client.request(
+				readItems('categories', {
+					fields: ['*', { '*': ['*'] }]
+				})
+			),
+			5000
+		)) as Category[];
 		return {
 			categories
 		};

@@ -26,7 +26,7 @@
 </script>
 
 <div class="form-header">
-	<h1>What kind of property is this?</h1>
+	<h1>What kind of property are you looking for?</h1>
 </div>
 
 <div class="radio-wrapper">
