@@ -100,6 +100,29 @@
 			person_profiles: 'always'
 		});
 	</script>
+
+	<script>
+		window.chatwootSettings = {
+			position: 'right',
+			type: 'expanded_bubble',
+			launcherTitle: 'Chat With a Loan Officer'
+		};
+		(function (d, t) {
+			var BASE_URL = 'https://production-chatwoot.8rjfpz.easypanel.host';
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.src = BASE_URL + '/packs/js/sdk.js';
+			g.defer = true;
+			g.async = true;
+			s.parentNode.insertBefore(g, s);
+			g.onload = function () {
+				window.chatwootSDK.run({
+					websiteToken: 'xGPEdHvAydFFEpmAkk71LaYG',
+					baseUrl: BASE_URL
+				});
+			};
+		})(document, 'script');
+	</script>
 </svelte:head>
 
 {#if children}
