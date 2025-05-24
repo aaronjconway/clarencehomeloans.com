@@ -12,29 +12,24 @@
 	import IncomeAmount from '$lib/components/forms/parts/IncomeAmount.svelte';
 	import Credit from '$lib/components/forms/parts/Credit.svelte';
 	import Derog from '$lib/components/forms/parts/Derog.svelte';
-	import Contact from '$lib/components/forms/parts/Contact.svelte';
+	import ContactUpload from '$lib/components/forms/parts/ContactUpload.svelte';
 
 	const steps = $state([
-		{
-			id: 0,
-			name: 'confirm_loan_estimate',
-			component: LoanEstimateConfirm
-		},
-		{ id: 1, name: 'property_type', component: PropertyType },
-		{ id: 2, name: 'occupancy', component: OccupancyType },
-		{ id: 3, name: 'fthb', component: FirstTimeHomeBuyer },
-		{ id: 4, name: 'income_type', component: IncomeType },
-		{ id: 5, name: 'income_amount', component: IncomeAmount },
-		{ id: 6, name: 'credit', component: Credit },
-		{ id: 7, name: 'derogatory_events', component: Derog },
-		{ id: 8, name: 'contact', component: Contact }
+		{ name: 'confirm_loan_estimate', component: LoanEstimateConfirm },
+		{ name: 'occupancy', component: OccupancyType },
+		{ name: 'fthb', component: FirstTimeHomeBuyer },
+		{ name: 'income_type', component: IncomeType },
+		{ name: 'income_amount', component: IncomeAmount },
+		{ name: 'credit', component: Credit },
+		{ name: 'derogatory_events', component: Derog },
+		{ name: 'contact', component: ContactUpload }
 	]);
 
 	// create a new form
 	let form = new FormStore();
 
 	// add some specific data
-	form.data['loan_type'] = 'loan-estimate-unknown';
+	form.data['loan_type'] = 'unknown';
 	//the lead type
 	form.data['page_source'] = 'loan-estimate';
 

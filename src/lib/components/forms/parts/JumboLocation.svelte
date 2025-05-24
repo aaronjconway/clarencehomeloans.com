@@ -80,9 +80,8 @@
 </script>
 
 <div class="form-header">
-	<h1>What area are you looking in?</h1>
+	<h1>What area are you most interested in?</h1>
 	<i>If you don't know, select an area close by.</i>
-	<div>We'll automatically calculate the jumbo loan limit.</div>
 </div>
 
 <div class="step-wrapper">

@@ -1,9 +1,10 @@
 <script lang="ts">
+	import GetStartedArrow from '$lib/components/GetStartedArrow.svelte';
 	const { stepName = '', formStore = $bindable() } = $props();
 	const data = [
 		{
-			text: 'Continue',
-			id: 'continue'
+			text: 'Coninue',
+			id: 'yes'
 		}
 	];
 
@@ -13,16 +14,26 @@
 </script>
 
 <div class="form-header">
-	<h1>
-		Answer a few questions, upload your loan estimate, and get a same day quote.
-	</h1>
-	<a
-		href="https://www.consumerfinance.gov/static/apps/owning-a-home/img/loan-estimate-H24B-1.639aeb7e50d5.png"
-	>
-		<i class="fa fa-arrow-right"></i>
-		loan estimate example
-	</a>
+	<h1>We Specialize in Serving High-Net-Worth Clients</h1>
+	<div>This short form will help us understand your situation and goals.</div>
+	<div>
+		We respect your privacy — <b>we do not share or sell information.</b>
+	</div>
 	<ul>
+		<li>
+			<div>
+				<i class="fa fa-check"></i>
+			</div>
+
+			<div>Excellent rates</div>
+		</li>
+		<li>
+			<div>
+				<i class="fa fa-check"></i>
+			</div>
+
+			<div>Experts in complicated income</div>
+		</li>
 		<li>
 			<div>
 				<i class="fa fa-check"></i>
@@ -43,7 +54,6 @@
 			<div>No credit check till you're happy.</div>
 		</li>
 	</ul>
-	<div>We will beat large lenders by a significant amount.</div>
 </div>
 
 <div class="radio-wrapper">
@@ -67,6 +77,7 @@
 		{/each}
 	</div>
 </div>
+<GetStartedArrow />
 
 <style lang="scss">
 	ul {

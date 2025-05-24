@@ -3,16 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 :root {
-
 	--font-heading: 'Nunito';
 	--font-body: 'Nunito';
 
-	/* --font-heading: 'WintleText'; */
-	/* --font-body: 'WintleText'; */
-
 	/* set base values */
 	--text-base-size: 16px;
-	--text-scale-ratio: 1.20;
+	--text-scale-ratio: 1.2;
 
 	/* line-height */
 	--heading-line-height: 1.1875;
@@ -28,8 +24,6 @@
 	--text-xxl: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 4));
 	--text-xxxl: calc(var(--text-base-size) * pow(var(--text-scale-ratio), 5));
 
-
-
 	// spacing
 	--space: 1rem;
 	--space-xxs: calc(0.25 * var(--space));
@@ -40,21 +34,8 @@
 	--space-xl: calc(4 * var(--space));
 	--space-xxl: calc(8 * var(--space));
 
-	@media (min-width:base.$sm) {
-		--text-scale-ratio: 1.20;
-	}
-
-	@media (min-width:base.$md) {
-		--text-scale-ratio: 1.20;
-	}
-
-	@media (min-width:base.$xl) {
-		--text-base-size: 18px;
-		--text-scale-ratio: 1.20;
-	}
-
-	--border-radius-lg:12px;
-	--border-radius:8px
+	--border-radius-lg: 12px;
+	--border-radius: 8px;
 }
 
 //body font size
@@ -64,7 +45,6 @@ body {
 	color: var(--ink);
 	line-height: var(--body-line-height);
 }
-
 
 h1,
 h2,
@@ -83,21 +63,21 @@ h1 {
 
 h2 {
 	font-size: var(--text-xl);
-	margin-bottom: var(--space-lg)
+	margin-bottom: var(--space-lg);
 }
 
 h3 {
 	font-size: var(--text-lg);
-	margin-bottom: var(--space-md)
+	margin-bottom: var(--space-md);
 }
 
 h4 {
 	font-size: var(--text-md);
-	margin-bottom: var(--space-sm)
+	margin-bottom: var(--space-sm);
 }
 
 p {
-	margin-bottom: var(--space)
+	margin-bottom: var(--space);
 }
 
 .sub-title {
@@ -105,5 +85,3 @@ p {
 	color: var(--primary-500);
 	font-weight: bold;
 }
-
-/*links are text - typography*/

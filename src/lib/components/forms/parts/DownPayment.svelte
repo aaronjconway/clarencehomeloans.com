@@ -19,11 +19,49 @@
 		)}?
 	</h1>
 	<p>
-		Don't stress on the details if you don't know what's best for you. Here are
-		some helpful presets, although you can adjust this however you want.
+		Bear in mind that jumbo loans do not have PMI and get significanly better
+		pricing over 20% down.
 	</p>
 	<div class="options-wrapper">
-		{#if formStore.data['loan_type'] != 'dscr' && formStore.data['occupancy'] != 'investment'}
+		{#if formStore.data['loan_type'] == 'jumbo'}
+			<button
+				class="primary"
+				onclick={() => {
+					formStore.data[stepName] = 10.01;
+					downPaymentMessage = 'The minimum you can put down on a jumbo loan.';
+				}}
+			>
+				<span class="btn-label">10.01%</span>
+			</button>
+
+			<button
+				class="primary"
+				onclick={() => {
+					formStore.data[stepName] = 20;
+					downPaymentMessage = '';
+				}}
+			>
+				<span class="btn-label">20%</span>
+			</button>
+			<button
+				class="primary"
+				onclick={() => {
+					formStore.data[stepName] = 25;
+					downPaymentMessage = '';
+				}}
+			>
+				<span class="btn-label">25%</span>
+			</button>
+			<button
+				class="primary"
+				onclick={() => {
+					formStore.data[stepName] = 30;
+					downPaymentMessage = '';
+				}}
+			>
+				<span class="btn-label">30%</span>
+			</button>
+		{:else if formStore.data['loan_type'] != 'dscr' && formStore.data['occupancy'] != 'investment'}
 			{#if formStore.data['loan_type'] == 'va'}
 				<button
 					class="primary"
@@ -75,16 +113,17 @@
 			>
 				<span class="btn-label">10%</span>
 			</button>
+		{:else}
+			<button
+				class="primary"
+				onclick={() => {
+					formStore.data[stepName] = 20;
+					downPaymentMessage = '';
+				}}
+			>
+				<span class="btn-label">20%</span>
+			</button>
 		{/if}
-		<button
-			class="primary"
-			onclick={() => {
-				formStore.data[stepName] = 20;
-				downPaymentMessage = '';
-			}}
-		>
-			<span class="btn-label">20%</span>
-		</button>
 	</div>
 	<p>
 		{downPaymentMessage}
