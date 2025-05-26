@@ -8,7 +8,7 @@
 	if (!formStore.data['down_payment']) {
 		formStore.data['down_payment'] = 10;
 	}
-	formStore.data['loan_type'] = 'dscr';
+
 	console.log(formStore.data);
 	const downOptions = {
 		jumbo: [
@@ -49,18 +49,12 @@
 					'Optional down payment can reduce VA funding fee and monthly payments.'
 			}
 		],
-		fha: [
+		purchase: [
 			{
 				downpayment: 3.5,
 				message:
 					'Minimum FHA down payment for borrowers with credit scores of 580 or higher.'
 			},
-			{
-				downpayment: 10,
-				message: 'Required down payment if credit score is between 500–579.'
-			}
-		],
-		conventional: [
 			{
 				downpayment: 3,
 				message:

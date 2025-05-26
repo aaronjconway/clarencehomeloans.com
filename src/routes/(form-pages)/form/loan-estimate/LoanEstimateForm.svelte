@@ -29,7 +29,7 @@
 	let form = new FormStore();
 
 	// add some specific data
-	form.data['loan_type'] = 'unknown';
+	form.data['loan_type'] = 'purchase';
 	//the lead type
 	form.data['page_source'] = 'loan-estimate';
 
