@@ -1,4 +1,3 @@
-//screenreader - this is probably more of a utility
 .sr {
 	position: absolute;
 	width: 1px;
@@ -14,5 +13,5 @@ mark {
 	border-radius: var(--border-radius);
 	position: relative;
 	background: none;
-	color: inherit
+	color: inherit;
 }

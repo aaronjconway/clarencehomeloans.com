@@ -17,29 +17,25 @@
 	import Contact from '$lib/components/forms/parts/Contact.svelte';
 
 	const steps = $state([
-		{ id: 0, name: 'cashout_type', component: CashOutUsage },
-		{ id: 1, name: 'property_type', component: PropertyType },
-		{ id: 2, name: 'occupancy', component: OccupancyType },
-		{ id: 3, name: 'loan_type', component: LoanType },
-		{ id: 4, name: 'loan_amount', component: LoanAmount },
-		{ id: 5, name: 'home_value', component: HomeValue },
-		{ id: 6, name: 'location', component: Location },
-		{ id: 7, name: 'veteran', component: Veteran },
-		{ id: 8, name: 'income_type', component: IncomeType },
-		{ id: 9, name: 'income_amount', component: IncomeAmount },
-		{ id: 10, name: 'credit', component: Credit },
-		{ id: 11, name: 'derogatory_events', component: Derog },
-		{ id: 12, name: 'contact', component: Contact }
+		{ name: 'cashout_type', component: CashOutUsage },
+		{ name: 'property_type', component: PropertyType },
+		{ name: 'occupancy', component: OccupancyType },
+		{ name: 'loan_type', component: LoanType },
+		{ name: 'loan_amount', component: LoanAmount },
+		{ name: 'home_value', component: HomeValue },
+		{ name: 'location', component: Location },
+		{ name: 'veteran', component: Veteran },
+		{ name: 'income_type', component: IncomeType },
+		{ name: 'income_amount', component: IncomeAmount },
+		{ name: 'credit', component: Credit },
+		{ name: 'derogatory_events', component: Derog },
+		{ name: 'contact', component: Contact }
 	]);
 
 	// create a new form
 	let form = new FormStore();
 
-	// add some specific data
-	form.data['loan_type'] = 'cashout';
-	//the lead type
-	form.data['page_source'] = 'general-cashout';
-
+	form.formName = 'cashout';
 	form.totalSteps = steps.length - 1;
 
 	//make state

@@ -40,8 +40,8 @@ export const POST: RequestHandler = async ({ request }): Promise<Response> => {
 				'clarencehomeloans-web',
 				page_source + '-inquiry',
 				getStateAbbr(data.state)
-			]
-			// customState: data.state
+			],
+			customState: getStateAbbr(data.state)
 		}
 	};
 
