@@ -15,6 +15,15 @@ export const actions: Actions = {
 		const special = formData.get('special');
 
 		const badWords = [
+			'vettedvas',
+			'we deliver',
+			'"yes"',
+			'portfolio',
+			'portfolios',
+			'real examples',
+			'virtual',
+			'assistants',
+			'growth',
 			'seo',
 			'animations',
 			'images',
