@@ -5,56 +5,55 @@ type Faq = {
 
 const faqs: Faq[] = [
 	{
-		title: "Do I need to be a first-time homebuyer to qualify?",
+		title: 'Do I need to be a first-time homebuyer to qualify?',
 		content:
-			"No! Whether you're buying your first home or your fifth, our Hero Home Buying Program is designed to help all community heroes get the best deal possible.",
+			"No! Whether you're buying your first home or your fifth, our Hero Home Buying Program is designed to help all community heroes get the best deal possible."
 	},
 	{
-		title: "What if I have variable income (overtime, per diem, contracts)?",
+		title: 'What if I have variable income (overtime, per diem, contracts)?',
 		content:
-			"We understand that income can vary. Whether it’s overtime, shift-based work, or contract positions, we’ll help you document and qualify based on your unique income structure.",
+			'We understand that income can vary. Whether it’s overtime, shift-based work, or contract positions, we’ll help you document and qualify based on your unique income structure.'
 	},
 	{
-		title: "How much down payment will I need?",
+		title: 'How much down payment will I need?',
 		content:
-			"Our programs offer low down payment options, and in some cases, you may be eligible for down payment assistance — making homeownership more affordable for you.",
+			'Our programs offer low down payment options, and in some cases, you may be eligible for down payment assistance — making homeownership more affordable for you.'
 	},
 	{
-		title: "What kind of support can I expect during the home buying process?",
+		title: 'What kind of support can I expect during the home buying process?',
 		content:
-			"We provide personalized support from start to finish. Our team is available 7 days a week to guide you through every step, from pre-approval to closing. We know your schedule can be demanding, so we work around it.",
+			'We provide personalized support from start to finish. Our team is available 7 days a week to guide you through every step, from pre-approval to closing. We know your schedule can be demanding, so we work around it.'
 	},
 	{
-		title: "What if I have student loan debt or other financial obligations?",
+		title: 'What if I have student loan debt or other financial obligations?',
 		content:
-			"We work with individuals who have various financial backgrounds, including student loan debt. Our team is skilled at navigating these challenges and finding the best path for you to qualify for a mortgage.",
+			'We work with individuals who have various financial backgrounds, including student loan debt. Our team is skilled at navigating these challenges and finding the best path for you to qualify for a mortgage.'
 	},
 	{
-		title: "Can I buy a home if I work on a contract or travel basis?",
+		title: 'Can I buy a home if I work on a contract or travel basis?',
 		content:
-			"Yes! We have specific loan programs that cater to heroes with non-traditional employment, and we know how to work with your unique pay structure and contracts to get you into a home.",
+			'Yes! We have specific loan programs that cater to heroes with non-traditional employment, and we know how to work with your unique pay structure and contracts to get you into a home.'
 	},
 	{
-		title: "How quickly can I get pre-approved?",
+		title: 'How quickly can I get pre-approved?',
 		content:
-			"Our pre-approval process is quick and easy, and you can often get pre-approved within a few days. We’ll make sure you know exactly where you stand before you start shopping for a home.",
+			'Our pre-approval process is quick and easy, and you can often get pre-approved within a few days. We’ll make sure you know exactly where you stand before you start shopping for a home.'
 	},
 	{
-		title: "Do I need perfect credit to qualify?",
+		title: 'Do I need perfect credit to qualify?',
 		content:
-			"No, perfect credit isn’t required. We offer flexible loan options that can accommodate a variety of credit profiles, and we’ll work with you to find the best solution for your situation.",
+			'No, perfect credit isn’t required. We offer flexible loan options that can accommodate a variety of credit profiles, and we’ll work with you to find the best solution for your situation.'
 	},
 	{
-		title: "What makes your Hero Home Buying Program different?",
+		title: 'What makes your Hero Home Buying Program different?',
 		content:
-			"Our program is tailored specifically to community heroes, with flexible qualifications, low down payment options, and fast, easy closings. We understand your profession and your needs — that’s why we designed this program just for you.",
+			'Our program is tailored specifically to community heroes, with flexible qualifications, low down payment options, and fast, easy closings. We understand your profession and your needs — that’s why we designed this program just for you.'
 	},
 	{
-		title: "Can I apply if I’m part-time or on a contract basis?",
+		title: 'Can I apply if I’m part-time or on a contract basis?',
 		content:
-			"Absolutely! Whether you’re full-time, part-time, or working on a contract basis, we can work with your income type to help you get approved for a home loan.",
-	},
+			'Absolutely! Whether you’re full-time, part-time, or working on a contract basis, we can work with your income type to help you get approved for a home loan.'
+	}
 ];
 
 export default faqs;
-

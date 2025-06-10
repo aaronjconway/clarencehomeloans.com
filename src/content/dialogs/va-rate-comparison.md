@@ -7,4 +7,3 @@ They’ll flash a **5.00% rate** in bold, but the fine print reveals it’s base
 This isn’t just misleading. It’s **borderline fraud**.
 
 We'll never do this to you.
-

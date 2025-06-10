@@ -90,13 +90,12 @@ a {
 	text-decoration: none;
 }
 
-
 select {
 	appearance: none;
 	-webkit-appearance: none;
 }
 
-input[type="submit"],
+input[type='submit'],
 button {
 	width: auto;
 	overflow: visible;
@@ -115,18 +114,16 @@ button::-moz-focus-inner {
 }
 
 /* safari requires some special resets for input type="search" */
-input[type="search"] {
+input[type='search'] {
 	-webkit-appearance: textfield;
 }
 
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
 /* ie 11 has it's own magic font-size rules for sub and sup */
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	sub,
 	sup {
 		font-size: 120%;

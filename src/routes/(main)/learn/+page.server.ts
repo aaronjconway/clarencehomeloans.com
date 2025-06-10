@@ -17,14 +17,15 @@ import { createDirectus, staticToken, rest, readItems } from '@directus/sdk';
 // }
 
 interface Category {
-	id: string
-	name: string
-	title: string
-	description: string
+	id: string;
+	name: string;
+	title: string;
+	description: string;
 }
 
-
-const client = createDirectus('https://production-directus.8rjfpz.easypanel.host')
+const client = createDirectus(
+	'https://production-directus.8rjfpz.easypanel.host'
+)
 	.with(staticToken(env.DIRECTUS_ACCESS_TOKEN))
 	.with(rest());
 
@@ -37,10 +38,23 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 
 export const load: PageServerLoad = async () => {
 	try {
-		const articles = await withTimeout(client.request(readItems('articles', { fields: ['*', { '*': ['*'] }], sort: ['sort', '-date_created'], })), 5000)
-		const categories = await withTimeout(client.request(readItems('categories', {
-			fields: ['*', { '*': ['*'] }],
-		})), 5000) as Category[]
+		const articles = await withTimeout(
+			client.request(
+				readItems('articles', {
+					fields: ['*', { '*': ['*'] }],
+					sort: ['sort', '-date_created']
+				})
+			),
+			5000
+		);
+		const categories = (await withTimeout(
+			client.request(
+				readItems('categories', {
+					fields: ['*', { '*': ['*'] }]
+				})
+			),
+			5000
+		)) as Category[];
 		return {
 			articles,
 			categories

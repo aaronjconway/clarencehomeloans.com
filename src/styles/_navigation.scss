@@ -18,7 +18,7 @@ button.dropdown-button {
 
 nav {
 	a {
-		color: inherit
+		color: inherit;
 	}
 }
 
@@ -42,8 +42,6 @@ nav {
 		display: block;
 	}
 }
-
-
 
 .nav-list {
 	list-style-type: none;
@@ -75,13 +73,11 @@ nav {
 	display: inline-block;
 	background-color: white;
 	top: 100%;
-	right: calc(-1*var(--space-md));
+	right: calc(-1 * var(--space-md));
 	min-width: 300px;
 	opacity: 0;
 	visibility: hidden;
 	z-index: 100000;
-
-
 
 	transition: all 0.2s ease;
 	border: solid var(--grey-500) 1px;
@@ -89,10 +85,9 @@ nav {
 
 	&.show {
 		opacity: 1;
-		visibility: visible
+		visibility: visible;
 	}
 }
-
 
 li.nav-item:hover .dropdown {
 	opacity: 1;

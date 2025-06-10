@@ -1,5 +1,5 @@
-import type { Actions } from '@sveltejs/kit'
-import { redirect } from '@sveltejs/kit'
+import type { Actions } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 
 export const actions: Actions = {
 	// deleteAccount: async ({ locals: { supabase, safeGetSession } }) => {
@@ -19,19 +19,18 @@ export const actions: Actions = {
 	// 	}
 	// },
 	deleteDocuments: async ({ locals: { supabase, safeGetSession } }) => {
-
 		// do check
-		const { session } = await safeGetSession()
+		const { session } = await safeGetSession();
 		if (!session) {
-			redirect(303, '/auth/login')
+			redirect(303, '/auth/login');
 		}
 
-		const { error, data } = await supabase.storage.emptyBucket('documents')
+		const { error, data } = await supabase.storage.emptyBucket('documents');
 
 		if (error) {
-			return { message: error.message }
+			return { message: error.message };
 		} else {
-			return { message: "Documents permanently deleted." }
+			return { message: 'Documents permanently deleted.' };
 		}
-	},
-}
+	}
+};

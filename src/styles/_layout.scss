@@ -5,7 +5,7 @@
 
 hr {
 	border: none;
-	border-bottom: 1px solid var(--grey-500)
+	border-bottom: 1px solid var(--grey-500);
 }
 
 section {
@@ -18,7 +18,7 @@ section {
 	margin: 0 auto;
 
 	&.compact {
-		max-width: 800px
+		max-width: 800px;
 	}
 }
 
@@ -27,13 +27,9 @@ section {
 	grid-template-columns: 1fr 1fr;
 }
 
-
-
 //larger than 786px
-@media (min-width:786px) {
-
+@media (min-width: 786px) {
 	section {
 		margin: var(--space-xl) 0;
 	}
-
 }

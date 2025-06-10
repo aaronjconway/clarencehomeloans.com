@@ -26,7 +26,7 @@ Examples of information we receive from you include
 
 - Your name, address, telephone number, social security number, credit history and other financial information.
 
- - Information about your transactions with us or others. Examples of information relating to your transactions include payment histories, account balances and account activity.
+- Information about your transactions with us or others. Examples of information relating to your transactions include payment histories, account balances and account activity.
 
 - Information we receive from a consumer reporting agency. Examples of
   information from consumer reporting agencies include your credit score, credit
@@ -43,17 +43,16 @@ party** except as required and necessary to be disclosed to any related entity
 for the purpose intended or as required to be disclosed under law.
 
 - By submitting data on our website, the visitor is providing explicit consent to
-transmission of data collected on the website.
+  transmission of data collected on the website.
 
 - We treat data as confidential within our firm and require a strict adherence of
-all our employees to data protection and our confidentiality policies.
+  all our employees to data protection and our confidentiality policies.
 
 - All visitors, however, should be aware that our website may contain links to
-other sites that are not governed by this or any other privacy statement.
+  other sites that are not governed by this or any other privacy statement.
 
 - We reserve the right to amend (that is, add to, delete or change) the terms of
-this Privacy Statement from time to time.
-
+  this Privacy Statement from time to time.
 
 <div style ="margin-top:var(--space-lg)">
 <SimpleCTA title="Your information is secure with us." />

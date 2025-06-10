@@ -12,9 +12,9 @@
 
 ## 📈 How DSCR Is Calculated
 
-- **DSCR \> 1.0** → Property generates more income than the debt payment (positive cash flow)
+- **DSCR above 1.0** → Property generates more income than the debt payment (positive cash flow)
 - **DSCR = 1.0** → Break-even point (income equals debt obligation)
-- **DSCR \< 1.0** → Property does not generate enough to cover the loan (negative cash flow)
+- **DSCR below 1.0** → Property does not generate enough to cover the loan (negative cash flow)
 
 Example:
 If a rental property generates \$2,000/month in income and the monthly loan payment is \$1,500:

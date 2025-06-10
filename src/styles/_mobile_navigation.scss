@@ -22,9 +22,7 @@
 		height: 100vh;
 		background: white;
 		z-index: 1;
-
 	}
-
 
 	.nav-list {
 		display: flex;
@@ -58,14 +56,11 @@
 		font-size: var(--text-md);
 	}
 
-
 	.dropdown {
 		display: flex;
 		border: none;
 		flex-direction: column;
 		position: unset;
-
-
 
 		visibility: visible;
 		opacity: 1;
@@ -77,10 +72,8 @@
 		font-size: var(--text-md);
 	}
 
-
 	//interactive
 	.nav-item:hover .dropdown {
 		transform: none;
 	}
-
 }

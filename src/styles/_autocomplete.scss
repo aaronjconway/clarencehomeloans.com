@@ -1,126 +1,133 @@
 // specific to googles auto complete used on the forms page
 
 .pac-container {
-  background-color: white;
-  position: absolute !important;
-  z-index: 1000;
-  border-radius: 4px;
+	background-color: white;
+	position: absolute !important;
+	z-index: 1000;
+	border-radius: 4px;
 
-  border-top: 0;
-  border-left: 1px solid var(--grey-400);
-  border-bottom: 1px solid var(--grey-400);
-  border-right: 1px solid var(--grey-400);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
-  font-size: var(--text-base-size);
-  box-shadow: none;
+	border-top: 0;
+	border-left: 1px solid var(--grey-400);
+	border-bottom: 1px solid var(--grey-400);
+	border-right: 1px solid var(--grey-400);
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu;
+	font-size: var(--text-base-size);
+	box-shadow: none;
 
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .pac-logo:after {
-  content: "";
-  padding: var(--space-sm);
-  height: 12px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: right;
-  display: bloc;
-  background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: 120px 14px;
-  background-size: 120px 14px;
-  border: none;
+	content: '';
+	padding: var(--space-sm);
+	height: 12px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: right;
+	display: bloc;
+	background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	-webkit-background-size: 120px 14px;
+	background-size: 120px 14px;
+	border: none;
 }
 
 .hdpi.pac-logo:after {
-  background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png);
-  border: none;
+	background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png);
+	border: none;
 }
 
 .pac-item {
-  cursor: default;
-  padding: 0 4px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+	cursor: default;
+	padding: 0 4px;
+	text-overflow: ellipsis;
+	overflow: hidden;
 
-  white-space: nowrap;
-  line-height: 30px;
+	white-space: nowrap;
+	line-height: 30px;
 
-  text-align: left;
-  border: none;
-  font-size: var(--text-base-size);
-  color: #515151;
+	text-align: left;
+	border: none;
+	font-size: var(--text-base-size);
+	color: #515151;
 }
 
 .pac-item:hover {
-  background-color: #fafafa;
+	background-color: #fafafa;
 }
 
 .pac-item-selected,
 .pac-item-selected:hover {
-  background-color: var(--grey-100);
-  border: none;
+	background-color: var(--grey-100);
+	border: none;
 }
 
 .pac-matched {
-  font-weight: 600;
-  color: var(--primary-600);
-  border: none;
+	font-weight: 600;
+	color: var(--primary-600);
+	border: none;
 }
 
 .pac-item-query {
-  font-size: var(--text);
-  padding-right: 3px;
-  color: #000;
-  border: none;
+	font-size: var(--text);
+	padding-right: 3px;
+	color: #000;
+	border: none;
 }
 
 .pac-icon {
-  display: none;
-  border: none;
+	display: none;
+	border: none;
 }
 
 /*
 * google logo
 * */
 .pac-container {
-  &:after {
-    display: none;
-    border: none;
-  }
+	&:after {
+		display: none;
+		border: none;
+	}
 }
 
 .hdpi .pac-icon {
-  display: none;
-  background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png);
-  border: none;
+	display: none;
+	background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png);
+	border: none;
 }
 
 .pac-icon-search {
-  background-position: -1px -1px;
-  border: none;
+	background-position: -1px -1px;
+	border: none;
 }
 
 .pac-item-selected .pac-icon-search {
-  background-position: -18px -1px;
-  border: none;
+	background-position: -18px -1px;
+	border: none;
 }
 
 .pac-icon-marker {
-  background-position: -1px -161px;
-  border: none;
+	background-position: -1px -161px;
+	border: none;
 }
 
 .pac-item-selected .pac-icon-marker {
-  background-position: -18px -161px;
-  border: none;
+	background-position: -18px -161px;
+	border: none;
 }
 
 .pac-placeholder {
-  color: var(--grey-500);
-  border: none;
+	color: var(--grey-500);
+	border: none;
 }

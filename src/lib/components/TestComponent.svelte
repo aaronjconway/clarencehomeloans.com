@@ -1,10 +1,9 @@
 <script lang="ts">
+	let count = $state(0);
 
-    let count = $state(0)
-
-    function handleClick() {
-        count++
-    }
+	function handleClick() {
+		count++;
+	}
 </script>
 
 <button onclick={handleClick}>Count: {count}</button>

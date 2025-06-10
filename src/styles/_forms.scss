@@ -7,8 +7,8 @@
 		width: unset;
 	}
 
-	input[type="radio"],
-	input[type="checkbox"] {
+	input[type='radio'],
+	input[type='checkbox'] {
 		display: none;
 	}
 
@@ -16,15 +16,12 @@
 		width: 100%;
 	}
 
-
 	//for privacy check box
 	.privacy {
-		input[type="checkbox"] {
+		input[type='checkbox'] {
 			display: inline;
 		}
-
 	}
-
 
 	.form-container {
 		display: flex;
@@ -90,7 +87,6 @@
 		}
 	}
 
-
 	.form-header {
 		display: flex;
 
@@ -109,7 +105,6 @@
 		h1 {
 			margin: 0;
 		}
-
 	}
 
 	.radio-wrapper {
@@ -126,7 +121,7 @@
 		font-size: var(--text-md);
 		font-weight: bold;
 		width: 100%;
-		gap: var(--space)
+		gap: var(--space);
 	}
 
 	.radio-button {
@@ -135,7 +130,6 @@
 		border: 1px solid var(--grey-700);
 		background-color: var(--primary-300);
 		border-radius: var(--border-radius);
-
 
 		label {
 			width: 100%;
@@ -164,13 +158,10 @@
 			&.selected {
 				background: var(--primary-200);
 			}
-
-
 		}
 	}
 
-	@media (min-width:base.$lg) {
-
+	@media (min-width: base.$lg) {
 		.radio-button {
 			label {
 				padding: var(--space-md);
@@ -181,5 +172,4 @@
 			}
 		}
 	}
-
 }

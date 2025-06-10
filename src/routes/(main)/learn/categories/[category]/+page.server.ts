@@ -16,8 +16,9 @@ import { createDirectus, staticToken, rest, readItems } from '@directus/sdk';
 // 	image: Object
 // }
 
-
-const client = createDirectus('https://production-directus.8rjfpz.easypanel.host')
+const client = createDirectus(
+	'https://production-directus.8rjfpz.easypanel.host'
+)
 	.with(staticToken(env.DIRECTUS_ACCESS_TOKEN))
 	.with(rest());
 
@@ -29,15 +30,19 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 };
 
 export const load: PageServerLoad = async ({ params }) => {
-
 	//params.category is the /category/[category] from the url
 
 	try {
-		const articles = await withTimeout(client.request(readItems('articles', {
-			// fields: ['*', { ad1: ["*"] }, { ad2: ['*'] }],
-			fields: ['*', { '*': ['*'] }],
-			filter: { 'category': { 'name': { '_eq': params.category } } }
-		})), 5000); // 5 seconds timeout
+		const articles = await withTimeout(
+			client.request(
+				readItems('articles', {
+					// fields: ['*', { ad1: ["*"] }, { ad2: ['*'] }],
+					fields: ['*', { '*': ['*'] }],
+					filter: { category: { name: { _eq: params.category } } }
+				})
+			),
+			5000
+		); // 5 seconds timeout
 		return {
 			articles
 		};

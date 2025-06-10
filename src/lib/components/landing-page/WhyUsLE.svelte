@@ -23,8 +23,8 @@
 			With over <strong>
 				nine years of experience in real estate and lending
 			</strong>
-			, we understand the unique demands of your profession. Our program is
-			built to work around your schedule, your needs, and your goals.
+			, we understand the unique demands of your profession. Our program is built
+			to work around your schedule, your needs, and your goals.
 		</p>
 
 		<p>
@@ -33,13 +33,13 @@
 			>
 				We make the process simple, transparent, and stress-free
 			</strong>
-			 — just like it should be.
+			— just like it should be.
 		</p>
 
 		<p>
 			From <strong>pre-approval through closing</strong>
-			, you’ll have a dedicated team in your corner. We don’t just help you get
-			a mortgage —
+			, you’ll have a dedicated team in your corner. We don’t just help you get a
+			mortgage —
 			<strong>we help you feel confident every step of the way.</strong>
 		</p>
 	</div>

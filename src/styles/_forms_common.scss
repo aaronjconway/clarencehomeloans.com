@@ -3,7 +3,7 @@ dialog {
 	max-width: 800px;
 
 	.inner-dialog {
-		padding: var(--space)
+		padding: var(--space);
 	}
 
 	button {
@@ -13,7 +13,6 @@ dialog {
 		background: var(--ash-200);
 	}
 }
-
 
 button.link {
 	color: #0864bb;
@@ -88,15 +87,12 @@ input[type='range'] {
 	display: flex;
 }
 
-
 button.primary {
-
 	position: relative;
 	text-align: center;
 	border: 1px solid var(--grey-700);
 	background-color: var(--primary-300);
 	border-radius: var(--border-radius);
-
 
 	.btn-label {
 		position: relative;
@@ -120,13 +116,8 @@ button.primary {
 		&:active {
 			transform: translateY(-1px);
 		}
-
-
 	}
-
 }
-
-
 
 .custom-slider {
 	touch-action: manipulation;

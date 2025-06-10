@@ -1,49 +1,60 @@
-import { createServerClient } from '@supabase/ssr'
-import { type Handle } from '@sveltejs/kit'
-import { sequence } from '@sveltejs/kit/hooks'
+import { createServerClient } from '@supabase/ssr';
+import { type Handle } from '@sveltejs/kit';
+import { sequence } from '@sveltejs/kit/hooks';
 
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public'
+import {
+	PUBLIC_SUPABASE_URL,
+	PUBLIC_SUPABASE_ANON_KEY
+} from '$env/static/public';
 
 const supabase: Handle = async ({ event, resolve }) => {
-	event.locals.supabase = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
-		cookies: {
-			getAll: () => event.cookies.getAll(),
-			setAll: (cookiesToSet) => {
-				cookiesToSet.forEach(({ name, value, options }) => {
-					if (event.cookies) {
-						event.cookies.set(name, value, { ...options, path: '/' })
-					}
-				})
-			},
-		},
-	})
+	event.locals.supabase = createServerClient(
+		PUBLIC_SUPABASE_URL,
+		PUBLIC_SUPABASE_ANON_KEY,
+		{
+			cookies: {
+				getAll: () => event.cookies.getAll(),
+				setAll: (cookiesToSet) => {
+					cookiesToSet.forEach(({ name, value, options }) => {
+						if (event.cookies) {
+							event.cookies.set(name, value, { ...options, path: '/' });
+						}
+					});
+				}
+			}
+		}
+	);
 
 	// @ts-expect-error: suppressGetSessionWarning is not part of the public API
-	event.locals.supabase.auth.suppressGetSessionWarning = true
+	event.locals.supabase.auth.suppressGetSessionWarning = true;
 
 	event.locals.safeGetSession = async () => {
-
-		const { data: { session }, } = await event.locals.supabase.auth.getSession()
+		const {
+			data: { session }
+		} = await event.locals.supabase.auth.getSession();
 		if (!session) {
-			return { session: null, user: null }
+			return { session: null, user: null };
 		}
 
-		const { data: { user }, error, } = await event.locals.supabase.auth.getUser()
+		const {
+			data: { user },
+			error
+		} = await event.locals.supabase.auth.getUser();
 
 		if (error) {
 			// JWT validation has failed
-			return { session: null, user: null }
+			return { session: null, user: null };
 		}
 
-		return { session, user }
-	}
+		return { session, user };
+	};
 
 	return resolve(event, {
 		filterSerializedResponseHeaders(name) {
-			return name === 'content-range' || name === 'x-supabase-api-version'
-		},
-	})
-}
+			return name === 'content-range' || name === 'x-supabase-api-version';
+		}
+	});
+};
 
 // const authGuard: Handle = async ({ event, resolve }) => {
 // 	const { session, user } = await event.locals.safeGetSession()
@@ -65,4 +76,4 @@ const supabase: Handle = async ({ event, resolve }) => {
 // 	return resolve(event)
 // }
 
-export const handle: Handle = sequence(supabase)
+export const handle: Handle = sequence(supabase);

@@ -13,31 +13,32 @@ short_summary: 'a short summary of this page'
 		Clarence Mortgage was founded in June 2016 in Arizona with a commitment to providing exceptional service and expert guidance to homebuyers and homeowners. Owned and operated by Austin Clarence, the company has built a strong reputation for offering accurate, competitive pricing and a smooth, hassle-free mortgage process.
 	    </p>
 
-	    <p>
-	    With a focus on delivering personalized mortgage solutions, Clarence Mortgage is dedicated to ensuring that every client receives the best possible experience. Whether it's purchasing a first home, refinancing, or exploring various mortgage options, the team at Clarence Mortgage is here to provide clear communication and expert advice tailored to each individual’s needs.
-	    </p>
+        <p>
+        With a focus on delivering personalized mortgage solutions, Clarence Mortgage is dedicated to ensuring that every client receives the best possible experience. Whether it's purchasing a first home, refinancing, or exploring various mortgage options, the team at Clarence Mortgage is here to provide clear communication and expert advice tailored to each individual’s needs.
+        </p>
 
-	    <p>
-	    At Clarence Mortgage, integrity, reliability, and client satisfaction are at the core of everything we do. The company’s dedication to accuracy and great pricing continues to drive its growth and success in the Arizona market.
-	    </p>
+        <p>
+        At Clarence Mortgage, integrity, reliability, and client satisfaction are at the core of everything we do. The company’s dedication to accuracy and great pricing continues to drive its growth and success in the Arizona market.
+        </p>
 
-	</div>
-	<div class="right">
-
-	    <div class="image-wrapper">
-		<enhanced:img
-		class="image"
-		src="/static/images/austin.webp"
-		alt="Image of owner Austin Clarence in suit similing."
-		/>
-		<div>
-		Austin Clarence - Owner
-		</div>
-	</div>
     </div>
-	    <p>
-	    Thank you for considering Clarence Mortgage – where your homeownership goals are our priority.
-	    </p>
+    <div class="right">
+
+        <div class="image-wrapper">
+    	<enhanced:img
+    	class="image"
+    	src="/static/images/austin.webp"
+    	alt="Image of owner Austin Clarence in suit similing."
+    	/>
+    	<div>
+    	Austin Clarence - Owner
+    	</div>
+    </div>
+    </div>
+        <p>
+        Thank you for considering Clarence Mortgage – where your homeownership goals are our priority.
+        </p>
+
 </div>
 
 <style lang="scss">
@@ -113,4 +114,3 @@ short_summary: 'a short summary of this page'
 		}
 	}
 </style>
-

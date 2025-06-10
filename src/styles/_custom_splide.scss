@@ -34,17 +34,17 @@
 
 .splide__arrow:disabled {
 	background: transparent;
-	opacity: .3;
+	opacity: 0.3;
 	fill: var(--green-200);
 	cursor: default;
 }
 
 .splide__arrow--prev {
-	left: -.5rem;
+	left: -0.5rem;
 }
 
 .splide__arrow--next {
-	right: -.5rem;
+	right: -0.5rem;
 }
 
 .splide__arrow--prev svg {

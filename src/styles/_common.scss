@@ -10,19 +10,17 @@ mark {
 	margin: 0 auto;
 }
 
-
 label {
 	color: #555;
 	margin-bottom: 5px;
 	display: block;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
 textarea {
-
 	width: 100%;
 	padding: var(--space-sm);
 	margin: var(--space-sm) 0;
@@ -30,16 +28,14 @@ textarea {
 	border-radius: var(--border-radius);
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
 	margin-right: 5px;
 	height: 25px;
 	width: 25px;
 	vertical-align: bottom;
-
 }
 
 a {
-
 	color: #0864bb;
 
 	&.plain {
@@ -51,9 +47,7 @@ a {
 		&:hover {
 			color: black;
 		}
-
 	}
-
 
 	&.btn {
 		position: relative;
@@ -79,7 +73,6 @@ a {
 			transform: translateY(-2px);
 			transition: all 0.1s;
 
-
 			&:hover {
 				transform: translateY(-4px);
 			}
@@ -87,8 +80,6 @@ a {
 			&:active {
 				transform: translateY(-1px);
 			}
-
-
 		}
 	}
 
@@ -106,7 +97,6 @@ a {
 		}
 	}
 
-
 	&.category {
 		border-radius: var(--border-radius);
 		padding: var(--space-xs) var(--space-md);
@@ -119,7 +109,6 @@ a {
 
 		&:hover {
 			filter: brightness(90%);
-
 		}
 	}
 
@@ -139,22 +128,16 @@ a {
 
 		&:hover {
 			filter: brightness(90%);
-
 		}
-
 	}
-
 }
 
-
 button.primary {
-
 	position: relative;
 	text-align: center;
 	border: 1px solid var(--grey-700);
 	background-color: var(--primary-300);
 	border-radius: var(--border-radius);
-
 
 	.btn-label {
 		position: relative;
@@ -178,14 +161,11 @@ button.primary {
 		&:active {
 			transform: translateY(-1px);
 		}
-
-
 	}
-
 }
 
 .error {
-	color: indianred
+	color: indianred;
 }
 
 button.apple {
@@ -209,7 +189,6 @@ button.apple {
 		position: absolute;
 		left: 0;
 		padding: 0 1rem;
-		;
 	}
 
 	span {
@@ -238,7 +217,6 @@ button.google {
 		position: absolute;
 		left: 0;
 		padding: 0 1rem;
-		;
 	}
 
 	span {
@@ -258,16 +236,14 @@ button.warn {
 
 	&:hover {
 		filter: brightness(90%);
-
 	}
 }
 
 button[disabled] {
-	background: var(--grey-200)
+	background: var(--grey-200);
 }
 
 .faq {
-
 	ul {
 		list-style: disc;
 		padding: 0;

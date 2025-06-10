@@ -1,24 +1,25 @@
-import { redirect } from '@sveltejs/kit'
-import type { LayoutServerLoad } from '../$types'
+import { redirect } from '@sveltejs/kit';
+import type { LayoutServerLoad } from '../$types';
 
+export const load: LayoutServerLoad = async ({
+	depends,
+	locals: { safeGetSession, supabase }
+}) => {
+	depends('supabase:documents');
 
-export const load: LayoutServerLoad = async ({ depends, locals: { safeGetSession, supabase } }) => {
-
-	depends('supabase:documents')
-
-	const { session, user } = await safeGetSession()
+	const { session, user } = await safeGetSession();
 
 	if (!session) {
-		redirect(303, '/auth/login')
+		redirect(303, '/auth/login');
 	}
 
-
-	const { data, error } = await supabase.storage.from('documents').list(`${user?.id}`)
+	const { data, error } = await supabase.storage
+		.from('documents')
+		.list(`${user?.id}`);
 
 	if (error) {
-		console.error(`Error getting documents`)
+		console.error(`Error getting documents`);
 	}
 
-	return { documents: data }
-}
-
+	return { documents: data };
+};
